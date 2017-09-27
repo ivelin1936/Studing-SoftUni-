@@ -1,0 +1,115 @@
+psvm
+Scanner scanner = new Scanner(System.in);
+
+*********************************************************************************************************************
+Place Holders
+
+%s - String
+%d - int, Integer, Long
+%c - char
+%f - double, float
+%.2f - zakryglq do 2ri znak
+%.15f - zakryglq do 15ti znak
+
+Primer:     System.out.printf("You are %s %s, a %d-years old person from %s.", firstName,lastName,age,town);
+
+************************************************************************************************************************
+Math biblioteka
+
+Math.floor(number) - zakraglq chisloto na dolu
+Math.ceil(number) - zakraglq na gore
+Math.round(number) - 5,6->6  5,3->5
+Math.PI - 3,14..........
+Math.pow(a,b) - povdiga chisloto a na stepen b
+Math.abs(a) - vzima absolutna stoinost  ;;   |a|   ;;   PR:: Math.abs(a) -> a, Math.abs(-a) -> a 
+Math.max(a,b) - vzima po golqmoto chislo  
+Math.min(a,b) - vzima po malkoto chislo
+
+***********************************************************************************************************************
+
+123123 %10 = 3  ----- chislo %10 vzima vinagi poslednata cifra
+
+**************************************************************equals*********************************************************
+String pass = scanner.nextLine();
+        if (pass.equals("s3cr3t!P@ssw0rd"))   --->>>> equals e za sravnenie na stringove (malki i golemi bukvi imat znachenie)
+                                                      v sluchaq -> ako pass = s3cr3t!P@ssw0rd.....
+
+*********************************************************equalsIgnorCase*************************************************** 
+ String word = scanner.nextLine();
+        String word2 = scanner.nextLine();
+
+        if (word.equalsIgnoreCase(word2)) {    --->> ako word = word (bez znachenie malki i golemi bukvi)
+            System.out.println("yes");
+        } else {
+            System.out.println("no"); }
+
+****************************************************************************************************************************
+String word = scanner.nextLine();   // четем "Hello"
+
+word.length()  -->  дължина на думата   // "Hello" -> h,e,l,l,o -> 5
+
+word.charAt() --> изкарва буквата на опр позиция   // "Hello"  word.charAt(3) --> "l" ;  word.charAt(4) --> "o"
+
+*****************************************************************************************************************************
+
+String word = scanner.nextLine();
+        String newWord = "";                   
+
+        if (word.endsWith("y")) {                            // ако думата завършва на "y"
+            newWord = word.replaceAll("y", "ies");           // замени "y" със  "ies"
+
+*****************************************************************************************************************************
+
+****************************************************************************************************************************** 
+************************************************ МЕТОД ЗА ЧЕРТАНЕ НА ФИГУРИ **************************************************
+
+private static String print(String element, int count) {
+        return new String(new char[count]).replace("\0", element);         
+    }                                                                                 // copy/paste always after "psvm { }" 
+
+
+
+* ...::: E X A M P L E :::... *
+
+import java.util.Scanner;
+ 
+public class test {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+ 
+        int n = Integer.parseInt(scanner.nextLine());
+ 
+        for (int i = 0; i < n; i++) {
+            System.out.println(print("*",n));                                 // Извикване на Метода "sout(print("*",n))" ->> принтирай *, n на брой пъти 
+        }
+ 
+    }
+ 
+    private static String print(String element, int count) {                           //  Метод
+        return new String(new char[count]).replace("\0", element);                     //  Метод
+    }                                                                                  //  Метод
+ 
+}
+
+
+**************************************************************************************************************************************
+************************************************************************************************************************************** 
+if () { 
+} if () {
+} if () {      --> ще влезне във всичните проверки!!!
+}
+
+if () { 
+} else if () {
+} else if () {      --> ще влезне сама във първата на която отговаря условието!!!
+} 
+*********************************************************************************************************************************
+******************************************************************************************************************************
+
+
+
+
+
+
+
+
