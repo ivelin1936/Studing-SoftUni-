@@ -1,1 +1,0 @@
-Training for the Examp on Programming Basic
