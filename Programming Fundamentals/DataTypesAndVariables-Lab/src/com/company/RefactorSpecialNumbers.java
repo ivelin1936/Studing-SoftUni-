@@ -6,21 +6,29 @@ public class RefactorSpecialNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int number = Integer.parseInt(scanner.nextLine());
-        int sum = 0;
-        Boolean isSpecial = false;
+        int number = scanner.nextInt();
 
-        for (int i = 1; i <= number; i++)
-        {
-            sum += i % 10 + i / 10;
+        for (int index = 1; index <= number; index++){
+            int sum = 0;
+            int actualNumber = index;
+            String tF = "";
 
-            if ((sum == 5) || (sum == 7) || (sum == 11)) {
-                System.out.println(i  + " -> True");
-            } else {
-                System.out.println(i  + " -> " + isSpecial);
+            while (index > 0){
+                sum += index % 10;
+                index = index / 10;
             }
 
-            sum = 0;
+            boolean trueFalse = (sum == 5) || (sum == 7) || (sum == 11);
+
+            if (trueFalse){
+                tF = "True";
+            } else {
+                tF = "False";
+            }
+
+            System.out.printf("%d -> " + tF + "%n", actualNumber);
+            index = actualNumber;
         }
+
     }
 }
