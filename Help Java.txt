@@ -104,12 +104,68 @@ if () {
 } else if () {      --> ще влезне сама във първата на която отговаря условието!!!
 } 
 *********************************************************************************************************************************
-******************************************************************************************************************************
+*******************************************************ARRAY READING*************************************************************
+
+String[] arr=scanner.nextLine().split(" ");             // Reading all row like string array with split by " "
+        
+        int[] intArray=new int[arr.length];             // declare new int[] with length = our old string arr
+
+        for(int i=0;i<arr.length;i++) {                 // for every element in string arr we will parse it to int in our new int[]
+            intArray[i] = Integer.parseInt(arr[i]);
+        }
 
 
+*************************************************************************************************************************************
+****************************************************String[] ->> int[] in Java8*************************************************************
+
+int[] intArray = Arrays.stream(arr).mapToInt(i -> Integer.parseInt(i)).toArray();
+
+**************************************************************************************************************************************
+***************************************************Combinate two int Arrays into one**************************************************
+
+int[] array1and2 = new int[array1.length + array2.length];
+System.arraycopy(array1, 0, array1and2, 0, array1.length);
+System.arraycopy(array2, 0, array1and2, array1.length, array2.length);
+**************************************************************************************************************************************
+*************************************************Combinate two int Arrays into one 2 way *********************************************
+
+int count=0;
+        for(int i=0; i<firstArr.length; i++) {
+            combFirstAndSecArray[i]=firstArr[i];
+            count++;
+        }
+        for(int j=0;j<lastArr.length;j++) {
+            combFirstAndSecArray[count++]=lastArr[j];
+        }
 
 
+***************************************************************************************************************************************
+**************************************************Rotate Array*********************************************************
+int firstArr = {.............................};
+
+int left = 0;
+int right = firstArr.length - 1;
+        while(left < right){
+            int temp = firstArr[left];
+            firstArr[left] = firstArr[right];
+            firstArr[right] = temp;
+            left++;
+            right--;
+        }
+
+***************************************************************************************************************************************
+****************Array.stream().**************************stream commands Java*********************Array.stream().**********************
+
+int[] intArr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+int[] leftSum = Arrays.stream(intArray).limit(3).toArray();       ->// vzima parvite 3 elementa ot masiv intArr -> sout -> 1 2 3 
+int[] rightSum = Arrays.stream(intArray).skip(2).toArray();     ->// propuska parvite elementa na pozicii 0,1,2 ot masiv intArr -> sout -> 4 5 6 7 8 9 10
+
+int sumLeft = IntStream.of(leftSum).sum();      ----------------->// sumira elementite ot masiv leftSum -> sout -> 6
+int sumRight = IntStream.of(rightSum).sum();    ----------------->// sumira elementite ot masiv rightSum ->sout -> 49
 
 
+int[] leftSum = Arrays.stream(intArray).limit(3).forEach(System.out::println);     ------>// printira masiva leftSum -> 1 2 3
 
-
+******************************************************************************************************************************************
+****************************************************************************************************************************************** 
