@@ -1,6 +1,8 @@
-psvm
-Scanner scanner = new Scanner(System.in);
+http://www.codejava.net/java-core/collections/java-set-collection-tutorial-and-examples
+https://softuni.bg/trainings/resources/video/6421/video-14-october-2015-ivan-ionkov-srabsko-unleashed-java-fundamentals-october-2015 - interesni video uroci Java SoftUni
 
+*********************************************************************************************************************
+BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));   -->> its more fast than Scaner
 *********************************************************************************************************************
 Place Holders
 
@@ -120,6 +122,23 @@ String[] arr=scanner.nextLine().split(" ");             // Reading all row like 
             intArray[i] = Integer.parseInt(arr[i]);
         }
 
+************************************************************************************************************************************
+****************************************************Reading ArrayList<int> by nextLine**********************************************************
+
+ArrayList<Integer> mylist = new ArrayList<Integer>();
+        while (scanner.hasNextInt()) {
+            int i = scanner.nextInt();
+            mylist.add(i);
+        }
+
+**********************************************REading on one row (Reading StringList -> intList) ************************************************
+
+ArrayList<String> myList = new ArrayList<String>(Arrays.asList(scanner.nextLine().split("\\s+")));
+        ArrayList<Integer> myIntList = new ArrayList<Integer>();
+        for(String s : myList) {
+            myIntList.add(Integer.valueOf(s));
+        }
+
 
 *************************************************************************************************************************************
 ****************************************************String[] ->> int[] in Java8*************************************************************
@@ -174,4 +193,32 @@ int sumRight = IntStream.of(rightSum).sum();    ----------------->// sumira elem
 int[] leftSum = Arrays.stream(intArray).limit(3).forEach(System.out::println);     ------>// printira masiva leftSum -> 1 2 3
 
 ******************************************************************************************************************************************
-****************************************************************************************************************************************** 
+**************************************************** limit() print first n elements from List *********************************************
+
+List<Integer> resultList = myList.stream().limit(3).collect(Collectors.toList());  ----------->> // print first 3 elements from myList
+
+*******************************************************************************************************************************************
+*********************************************************** Min Max Sum Average ***********************************************************
+
+int min = Collections.min(myList);
+int max = Collections.max(myList);
+int sum = myList.stream().mapToInt(Integer::intValue).sum();
+Double average = 1.0d * sum / myList.size();
+
+*******************************************************************************************************************************************
+***************************************************Remove short words from String**********************************************************
+
+String cutLittleWords = myList.replaceAll("\\b\\w{1,4}\\b\\s?", "");
+
+*******************************************************************************************************************************************
+************Erase Whitespace Before the String************  String trim()  ****************************************************************
+
+String text = " I am Ivo";     sout text --->> " I am Ivo"
+
+String[] testArr = text.split(" ");        -->>  sout-testArr --->> [ I, am, Ivo]
+String[] myArr = text.trim().split( " ");  -->>  sout myArr[] --->> [I, am, Ivo]
+
+*******************************************************************************************************************************************
+*******************************************************************************************************************************************
+
+ 
