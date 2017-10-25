@@ -87,6 +87,7 @@ public class ParkingValidation {
         return isBussy;
     }
 
+
     private static boolean CheckingLicenseForValidation(String licenseCode)
     {
         String leftPastCode = licenseCode.substring(0, 2);
