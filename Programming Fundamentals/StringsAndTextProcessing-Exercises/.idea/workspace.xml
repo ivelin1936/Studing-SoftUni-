@@ -76,10 +76,12 @@
       <file leaf-file-name="SumBigNumbers.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/SumBigNumbers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state relative-caret-position="289">
+              <caret line="17" column="87" lean-forward="false" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#addIntegers#0;class#SumBigNumbers#0" expanded="false" />
+                <element signature="method#formatToSameLength#0;class#SumBigNumbers#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -184,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MagicExchangeableWords">
+  <component name="RunManager" selected="Application.SumBigNumbers">
     <configuration name="CharacterMultiplier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -242,6 +244,25 @@
       <module name="StringsAndTextProcessing-Exercises" />
       <envs />
     </configuration>
+    <configuration name="SumBigNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.company.SumBigNumbers" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="StringsAndTextProcessing-Exercises" />
+      <envs />
+    </configuration>
     <configuration name="UnicodeCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -276,39 +297,20 @@
       <envs />
       <method />
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.company.test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="StringsAndTextProcessing-Exercises" />
-      <envs />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.test" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ConvertFromBaseNtoBase10" />
-      <item index="2" class="java.lang.String" itemvalue="Application.UnicodeCharacters" />
-      <item index="3" class="java.lang.String" itemvalue="Application.CharacterMultiplier" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MagicExchangeableWords" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ConvertFromBaseNtoBase10" />
+      <item index="1" class="java.lang.String" itemvalue="Application.UnicodeCharacters" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CharacterMultiplier" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MagicExchangeableWords" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SumBigNumbers" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MagicExchangeableWords" />
-        <item index="1" class="java.lang.String" itemvalue="Application.CharacterMultiplier" />
-        <item index="2" class="java.lang.String" itemvalue="Application.UnicodeCharacters" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ConvertFromBaseNtoBase10" />
-        <item index="4" class="java.lang.String" itemvalue="Application.test" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SumBigNumbers" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MagicExchangeableWords" />
+        <item index="2" class="java.lang.String" itemvalue="Application.CharacterMultiplier" />
+        <item index="3" class="java.lang.String" itemvalue="Application.UnicodeCharacters" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ConvertFromBaseNtoBase10" />
       </list>
     </recent_temporary>
   </component>
@@ -322,12 +324,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508939940384</updated>
-      <workItem from="1508939943732" duration="17690000" />
+      <workItem from="1508939943732" duration="21464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17690000" />
+    <option name="totallyTimeSpent" value="21464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -444,10 +446,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/SumBigNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="289">
+          <caret line="17" column="87" lean-forward="false" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addIntegers#0;class#SumBigNumbers#0" expanded="false" />
+            <element signature="method#formatToSameLength#0;class#SumBigNumbers#0" expanded="false" />
           </folding>
         </state>
       </provider>
