@@ -10,20 +10,20 @@ public class SumBigNumbers {
         String firstNumber = reader.readLine();
         String secondNumber = reader.readLine();
 
-        String result = addIntegers(firstNumber, secondNumber);
+        String result = AddIntegers(firstNumber, secondNumber);
         System.out.println(result.trim());
 
     }
 
-    private static String addIntegers(String number1, String number2) throws Exception {
+    private static String AddIntegers(String number1, String number2) throws Exception {
         char[] num1char = number1.toCharArray();
         char[] num2char = number2.toCharArray();
 
         if (num1char.length > num2char.length) {
-            num2char = formatToSameLength(num1char, num2char);
+            num2char = FormatToSameLength(num1char, num2char);
         }
         else if (num1char.length < num2char.length) {
-            num1char = formatToSameLength(num2char, num1char);
+            num1char = FormatToSameLength(num2char, num1char);
         }
 
         char[] addition = new char[num1char.length + 1];
@@ -49,7 +49,7 @@ public class SumBigNumbers {
         return String.valueOf(addition);
     }
 
-    private static char[] formatToSameLength(char[] num1char, char[] num2char) {
+    private static char[] FormatToSameLength(char[] num1char, char[] num2char) {
         int diff = num1char.length - num2char.length;
         char[] num = new char[num1char.length];
 
