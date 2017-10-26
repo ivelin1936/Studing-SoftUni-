@@ -1,5 +1,5 @@
 package com.company;
-//In Judge 100/100
+//In Judge 100/100 ->> working with big numbers
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
