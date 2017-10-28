@@ -12,11 +12,15 @@ public class ExtractEmails {
 
         String text = reader.readLine();
 
-        Pattern pattern = Pattern.compile("\\b(([a-z]+((-|\\.|-)[a-z0-9]+)?)@((?:(?:[a-z0-9\\-]+)){1,3})(\\.[a-z]+(?:\\.[a-z]+)?))");
+        Pattern pattern = Pattern.compile("([\\w.-]+@[a-zA-Z-]+)(\\.[a-zA-Z-]+)+");
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
-            System.out.println(matcher.group());
+            String email = matcher.group().toString();
+
+            if (!(email.startsWith(".") || email.startsWith("-") || email.startsWith("_") || email.endsWith(".") || email.endsWith("-") || email.endsWith("_"))) {
+                System.out.println(matcher.group());
+            }
         }
     }
 }
