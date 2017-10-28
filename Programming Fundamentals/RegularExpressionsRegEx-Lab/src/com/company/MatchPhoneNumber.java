@@ -11,17 +11,22 @@ public class MatchPhoneNumber {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        String toCheck = reader.readLine();
+        String input = reader.readLine();
 
-        Pattern pattern = Pattern.compile("(\\+[0-9]{3})([-| ])[0-9]\\2[0-9]{3}\\2[1-9]{4}\\b");
-        Matcher matcher = pattern.matcher(toCheck);
+        Pattern pattern = Pattern.compile("[+359]{4}(-|\\s)[2]\\1[0-9]{3}\\1[0-9]{4}\\b");
 
-        Set<String> result = new HashSet<>();
+        List<String> resultList = new ArrayList<>();
+        Matcher matcher = pattern.matcher(input);
 
         while (matcher.find()) {
-            String phoneNumber = matcher.group();
-            result.add(phoneNumber.trim());
+            resultList.add(matcher.group());
         }
-        System.out.println(String.join(", ", result));
+
+        System.out.println(String.join(", ", resultList));
     }
 }
+//*****input******
+//+359 2 222 2222,359-2-222-2222, +359/2/222/2222, +359-2 222 2222 +359 2-222-2222, +359-2-222-222, +359-2-222-22222 +359-2-222-2222
+//
+//****True Answer*****
+//+359 2 222 2222, +359-2-222-2222
