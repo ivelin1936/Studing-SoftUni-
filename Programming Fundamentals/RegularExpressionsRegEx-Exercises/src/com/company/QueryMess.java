@@ -1,67 +1,69 @@
+/*
+-Input
+The input comes from the console on a variable number of lines and ends when the keyword "END" is received.
+For each row of the input, the query string contains field=value pairs. Within each pair, the field name and value are
+separated by an equals sign, '='. The series of pairs are separated by an ampersand, '&'. The question mark is used as
+a separator and is not part of the query string. A URL query string may contain another URL as value. The input data
+will always be valid and in the format described. There is no need to check it explicitly.
+-Output
+For each input line, print on the console a line containing the processed string as follows:
+key=[value]nextkey=[another value] ... etc.
+Multiple whitespace characters should be reduced to one inside value/key names, but there shouldn’t be any
+whitespaces before/after extracted keys and values. If a key already exists, the value is added with comma and
+space after other values of the existing key in the current string. See the examples below.
+-Constraints
+ SPACE is encoded as "+" or "%20". Letters (A-Z and a-z), numbers (0-9), the characters '*','-','.','_' and
+other non-special symbols are left as-is.
+ Allowed working time: 0.1 seconds. Allowed memory: 16 MB.
+ */
+
 package com.company;
-// 63/100 in Judge
+// 100/100 in Judge
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class QueryMess {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        ArrayList<String> myList = new ArrayList<>(Arrays.asList(reader.readLine().split("&")));
+        String line = reader.readLine();
 
-        Pattern pattern = Pattern.compile(
-                "((\\b[A-Za-z0-9_\\-.*]+\\b(\\+)?)(=)(?:\\+|[%20])?(\\b(?:[0-9]{2})?(\\w+)(?:(\\+)?([%20])?(\\+)?)?\\w+(\\+)?)?(\\d+)?((://\\w+.\\w+)?(/\\w+)?(/\\w+)?(/\\w+)?(/\\w+)?(/\\w+)?(/\\w+)?(/\\w+)?(/\\w+)?)?\\b)");
-        while (!myList.get(0).equals("END"))
-        {
-            LinkedHashMap<String, List<String>> myMap = new LinkedHashMap<>();
+        while (!"end".equalsIgnoreCase(line)) {
+            Map<String, ArrayList<String>> keyMap = new LinkedHashMap<>();
 
-            for (String str : myList) {
-                Matcher matcher = pattern.matcher(str);
+            line = line.replaceAll(".+\\?", "");
+            line = line.replaceAll("\\+|%20", " ");
+            line = line.replaceAll("\\s{2,}", " ").trim();
 
-                if (matcher.find()) {
-                    String matchStr = matcher.group();
-                    List<String> matcherSplit = new ArrayList<>(Arrays.asList(matchStr.split("=")));
+            String[] keyValues = line.split("&");
 
-                    String keyWord = matcherSplit.get(0).trim();
-                    if (keyWord.startsWith("+")) {
-                        keyWord = keyWord.substring(1,keyWord.length());
-                    } else if (keyWord.endsWith("+")) {
-                        keyWord = keyWord.substring(0,keyWord.length() - 1);
-                    }
+            for (int i = 0; i < keyValues.length; i++) {
+                String[] pairs = keyValues[i].split("=");
+                String key = pairs[0].trim();
+                String value = pairs[1].trim();
 
-                    if (!myMap.containsKey(keyWord)) {
-                        myMap.put(keyWord, new ArrayList<>());
-                    }
-
-                    matchStr = matcherSplit.get(1).trim();
-
-                    Pattern p = Pattern.compile("(?:%20)?(?:\\+)?([A-Za-z:/.\\-_0-9]+)(?:%20|\\+)?");
-                    Matcher m = p.matcher(matchStr);
-                    StringBuilder sb = new StringBuilder();
-                    while (m.find()) {
-                        sb.append(m.group(1) + " ");
-                    }
-                    myMap.get(keyWord).add(sb.toString().trim());
+                if (!keyMap.containsKey(key)) {
+                    keyMap.put(key, new ArrayList<>());
                 }
+                keyMap.get(key).add(value);
             }
 
-            for (String keyWord : myMap.keySet()) {
-                System.out.print(keyWord + "=" + myMap.get(keyWord));
+            for (String key : keyMap.keySet()) {
+                System.out.print(key + "=");
+                System.out.print(keyMap.get(key));
             }
             System.out.println();
 
-            myMap.clear();
-            myList = new ArrayList<>(Arrays.asList(reader.readLine().split("&")));
+            line = reader.readLine();
         }
-
     }
 }
 
-//**********Input*************
+//********<< Input >>***********
 //login=student&password=student
 //field=value1&field=value2&field=value3
 //http://example.com/over/there?name=ferret
