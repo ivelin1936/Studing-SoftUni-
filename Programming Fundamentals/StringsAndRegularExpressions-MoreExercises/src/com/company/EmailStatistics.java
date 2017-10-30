@@ -13,7 +13,7 @@ public class EmailStatistics {
 
         int n = Integer.parseInt(reader.readLine());
 
-        Pattern pattern = Pattern.compile("\\b([A-Za-z]{5,}@[a-z]{3,}((.bg)|(.com)|(.org)))\\b");
+        Pattern pattern = Pattern.compile("(\\b[A-Za-z]{5,}@[a-z]{3,}((.bg)|(.com)|(.org))\\b)");
         ArrayList<String> emailsList = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
@@ -76,10 +76,12 @@ public class EmailStatistics {
 
             hostCountMap.put(hostDomain, 1);
         } else {
-            hostUsernameMap.get(hostDomain).add(userName);
+            if (!hostUsernameMap.get(hostDomain).contains(userName)) {
+                hostUsernameMap.get(hostDomain).add(userName);
 
-            int count = hostCountMap.get(hostDomain) + 1;
-            hostCountMap.replace(hostDomain, count);
+                int count = hostCountMap.get(hostDomain) + 1;
+                hostCountMap.replace(hostDomain, count);
+            }
         }
     }
 }

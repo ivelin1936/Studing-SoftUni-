@@ -76,16 +76,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailStatistics.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmailStatistics.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/EmailStatistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="641">
+              <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#PrintResult#0;class#EmailStatistics#0" expanded="false" />
                 <element signature="method#AddHostUsernameCount#0;class#EmailStatistics#0" expanded="false" />
                 <element signature="method#UpdateHashMaps#0;class#EmailStatistics#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hideout.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Hideout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/com/company/MorseCodeUpgraded.java" />
         <option value="$PROJECT_DIR$/src/com/company/OnlyLetters.java" />
         <option value="$PROJECT_DIR$/src/com/company/EmailStatistics.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Hideout.java" />
       </list>
     </option>
   </component>
@@ -328,12 +341,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509382927780</updated>
-      <workItem from="1509382947104" duration="19395000" />
+      <workItem from="1509382947104" duration="21014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19395000" />
+    <option name="totallyTimeSpent" value="21014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -453,13 +466,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/EmailStatistics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="641">
+          <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#PrintResult#0;class#EmailStatistics#0" expanded="false" />
             <element signature="method#AddHostUsernameCount#0;class#EmailStatistics#0" expanded="false" />
             <element signature="method#UpdateHashMaps#0;class#EmailStatistics#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Hideout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
