@@ -1,3 +1,14 @@
+/*
+You are an amateur photographer and you want to calculate what will be seen in your pictures.
+On the first line, you will receive an array of integers with exactly two elements:
+First element – m will be the elements, which you have to skip. The second element – n will be the elements, which
+you have to take.
+On the next line, you will receive a string, in which every camera will be marked with "|<". Skip the next m elements
+immediately after the camera and take the next n elements.
+If you encounter new camera in the view  stop the current camera and start new view with the newly found.
+Output
+Print all the taken views separated with ", ".
+ */
 package com.company;
 
 import java.io.BufferedReader;
