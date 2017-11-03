@@ -21,11 +21,11 @@ public class PokemonEvolution {
             if (inputArr.length == 3) {
                 //Store every pokemon and his evolutions
                 //If you receive an existent pokemonName, you should add the new evolution to it.
-                updatePokemonMap(pokemonLTI, inputArr);
+                UpdatePokemonMap(pokemonLTI, inputArr);
             }
             else if (inputArr.length == 1) {
                 //If you have received a pokemonName and you are printing its evolutions, the order is – by order of input.
-                checkForPokemonAndPrintIfFound(pokemonLTI, inputArr[0]);
+                CheckForPokemonAndPrintIfFound(pokemonLTI, inputArr[0]);
             }
 
             input = reader.readLine();
@@ -33,11 +33,11 @@ public class PokemonEvolution {
 
         //The pokemons must be printed by order of input.
         // Each pokemon’s evolutions must be ordered by evolution index in descending order.
-        printPokemonsEvolutions(pokemonLTI);
+        PrintPokemonsEvolutions(pokemonLTI);
 
     }
 
-    private static void printPokemonsEvolutions(Map<String, List<String>> pokemonLTI)
+    private static void PrintPokemonsEvolutions(Map<String, List<String>> pokemonLTI)
     {
         pokemonLTI.forEach((key, value) -> {
             System.out.println("# " + key);
@@ -51,7 +51,7 @@ public class PokemonEvolution {
         });
     }
 
-    private static void checkForPokemonAndPrintIfFound(Map<String, List<String>> pokemonLTI, String pokemonName)
+    private static void CheckForPokemonAndPrintIfFound(Map<String, List<String>> pokemonLTI, String pokemonName)
     {
         if (pokemonLTI.containsKey(pokemonName))
         {
@@ -62,7 +62,7 @@ public class PokemonEvolution {
         }
     }
 
-    private static void updatePokemonMap(Map<String, List<String>> pokemonLTI, String[] inputArr)
+    private static void UpdatePokemonMap(Map<String, List<String>> pokemonLTI, String[] inputArr)
     {
         String pokemonName = inputArr[0];
         String evolutionTypeIndex = inputArr[1] + " <-> " + inputArr[2];
