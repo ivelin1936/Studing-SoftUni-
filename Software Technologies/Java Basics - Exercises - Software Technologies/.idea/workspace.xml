@@ -117,13 +117,94 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AverageGrades.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AverageGrades.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/AverageGrades.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <folding>
+                <element signature="e#502#511#0" expanded="true" />
+                <element signature="method#CreateStudent#0;class#AverageGrades#0" expanded="false" />
+                <element signature="e#1262#1270#0" expanded="true" />
+                <element signature="class#Student#0;class#AverageGrades#0" expanded="false" />
+                <element signature="e#2296#2297#0" expanded="true" />
+                <element signature="e#2333#2334#0" expanded="true" />
+                <element signature="e#2392#2393#0" expanded="true" />
+                <element signature="e#2431#2432#0" expanded="true" />
+                <element signature="e#2466#2467#0" expanded="true" />
+                <element signature="e#2501#2502#0" expanded="true" />
+                <element signature="e#2545#2546#0" expanded="true" />
+                <element signature="e#2580#2581#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookLibraryModification.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/BookLibraryModification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#PrintTitlesAfterDate#0;class#BookLibraryModification#0" expanded="false" />
+                <element signature="e#2212#2230#0" expanded="true" />
+                <element signature="e#2653#2671#0" expanded="true" />
+                <element signature="e#2723#2741#0" expanded="true" />
+                <element signature="method#PrintByPricePerAuthor#0;class#BookLibraryModification#0" expanded="false" />
+                <element signature="e#3016#3032#0" expanded="true" />
+                <element signature="e#3601#3617#0" expanded="true" />
+                <element signature="e#3669#3685#0" expanded="true" />
+                <element signature="class#Library#0;class#BookLibraryModification#0" expanded="false" />
+                <element signature="e#4199#4200#0" expanded="true" />
+                <element signature="e#4234#4235#0" expanded="true" />
+                <element signature="e#4278#4279#0" expanded="true" />
+                <element signature="e#4313#4314#0" expanded="true" />
+                <element signature="e#4358#4359#0" expanded="true" />
+                <element signature="e#4394#4395#0" expanded="true" />
+                <element signature="e#4449#4450#0" expanded="true" />
+                <element signature="e#4486#4487#0" expanded="true" />
+                <element signature="class#Book#0;class#BookLibraryModification#0" expanded="false" />
+                <element signature="e#5063#5064#0" expanded="true" />
+                <element signature="e#5099#5100#0" expanded="true" />
+                <element signature="e#5145#5146#0" expanded="true" />
+                <element signature="e#5182#5183#0" expanded="true" />
+                <element signature="e#5219#5220#0" expanded="true" />
+                <element signature="e#5256#5257#0" expanded="true" />
+                <element signature="e#5304#5305#0" expanded="true" />
+                <element signature="e#5343#5344#0" expanded="true" />
+                <element signature="e#5383#5384#0" expanded="true" />
+                <element signature="e#5423#5424#0" expanded="true" />
+                <element signature="e#5477#5478#0" expanded="true" />
+                <element signature="e#5522#5523#0" expanded="true" />
+                <element signature="e#5566#5567#0" expanded="true" />
+                <element signature="e#5608#5609#0" expanded="true" />
+                <element signature="e#5668#5669#0" expanded="true" />
+                <element signature="e#5717#5718#0" expanded="true" />
+                <element signature="e#5752#5753#0" expanded="true" />
+                <element signature="e#5787#5788#0" expanded="true" />
+                <element signature="e#5831#5832#0" expanded="true" />
+                <element signature="e#5871#5872#0" expanded="true" />
+                <element signature="e#5907#5908#0" expanded="true" />
+                <element signature="e#5943#5944#0" expanded="true" />
+                <element signature="e#5989#5990#0" expanded="true" />
+                <element signature="e#6026#6027#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookLibrary.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/BookLibrary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#printSalesByAuthorOrdered#0;class#BookLibrary#0" expanded="false" />
+                <element signature="method#calcSalesByAuthor#0;class#BookLibrary#0" expanded="false" />
+                <element signature="method#getBooks#0;class#BookLibrary#0" expanded="false" />
+                <element signature="class#Book#0;class#BookLibrary#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -169,6 +250,8 @@
         <option value="$PROJECT_DIR$/src/com/company/AdvertisementMessage.java" />
         <option value="$PROJECT_DIR$/src/com/company/IntersectionOfCircles.java" />
         <option value="$PROJECT_DIR$/src/com/company/AverageGrades.java" />
+        <option value="$PROJECT_DIR$/src/com/company/BookLibraryModification.java" />
+        <option value="$PROJECT_DIR$/src/com/company/BookLibrary.java" />
       </list>
     </option>
   </component>
@@ -243,7 +326,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IntersectionOfCircles">
+  <component name="RunManager" selected="Application.BookLibraryModification">
     <configuration name="BombNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -263,14 +346,14 @@
       <module name="Java Basics - Exercises - Software Technologies" />
       <envs />
     </configuration>
-    <configuration name="ChangeToUppercase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="BookLibraryModification" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.company.ChangeToUppercase" />
+      <option name="MAIN_CLASS_NAME" value="com.company.BookLibraryModification" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -355,19 +438,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.ChangeToUppercase" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Phonebook" />
-      <item index="2" class="java.lang.String" itemvalue="Application.BombNumbers" />
-      <item index="3" class="java.lang.String" itemvalue="Application.CountWorkingDays" />
-      <item index="4" class="java.lang.String" itemvalue="Application.IntersectionOfCircles" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Phonebook" />
+      <item index="1" class="java.lang.String" itemvalue="Application.BombNumbers" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CountWorkingDays" />
+      <item index="3" class="java.lang.String" itemvalue="Application.IntersectionOfCircles" />
+      <item index="4" class="java.lang.String" itemvalue="Application.BookLibraryModification" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.IntersectionOfCircles" />
-        <item index="1" class="java.lang.String" itemvalue="Application.CountWorkingDays" />
-        <item index="2" class="java.lang.String" itemvalue="Application.BombNumbers" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Phonebook" />
-        <item index="4" class="java.lang.String" itemvalue="Application.ChangeToUppercase" />
+        <item index="0" class="java.lang.String" itemvalue="Application.BookLibraryModification" />
+        <item index="1" class="java.lang.String" itemvalue="Application.IntersectionOfCircles" />
+        <item index="2" class="java.lang.String" itemvalue="Application.CountWorkingDays" />
+        <item index="3" class="java.lang.String" itemvalue="Application.BombNumbers" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Phonebook" />
       </list>
     </recent_temporary>
   </component>
@@ -382,12 +465,12 @@
       <option name="presentableId" value="Default" />
       <updated>1512128615536</updated>
       <workItem from="1512128617765" duration="21010000" />
-      <workItem from="1512213056333" duration="479000" />
+      <workItem from="1512213056333" duration="1684000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21489000" />
+    <option name="totallyTimeSpent" value="22694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -429,7 +512,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -746,10 +829,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/AverageGrades.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding>
+            <element signature="e#502#511#0" expanded="true" />
+            <element signature="method#CreateStudent#0;class#AverageGrades#0" expanded="false" />
+            <element signature="e#1262#1270#0" expanded="true" />
+            <element signature="class#Student#0;class#AverageGrades#0" expanded="false" />
+            <element signature="e#2296#2297#0" expanded="true" />
+            <element signature="e#2333#2334#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2431#2432#0" expanded="true" />
+            <element signature="e#2466#2467#0" expanded="true" />
+            <element signature="e#2501#2502#0" expanded="true" />
+            <element signature="e#2545#2546#0" expanded="true" />
+            <element signature="e#2580#2581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/BookLibraryModification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#PrintTitlesAfterDate#0;class#BookLibraryModification#0" expanded="false" />
+            <element signature="e#2212#2230#0" expanded="true" />
+            <element signature="e#2653#2671#0" expanded="true" />
+            <element signature="e#2723#2741#0" expanded="true" />
+            <element signature="method#PrintByPricePerAuthor#0;class#BookLibraryModification#0" expanded="false" />
+            <element signature="e#3016#3032#0" expanded="true" />
+            <element signature="e#3601#3617#0" expanded="true" />
+            <element signature="e#3669#3685#0" expanded="true" />
+            <element signature="class#Library#0;class#BookLibraryModification#0" expanded="false" />
+            <element signature="e#4199#4200#0" expanded="true" />
+            <element signature="e#4234#4235#0" expanded="true" />
+            <element signature="e#4278#4279#0" expanded="true" />
+            <element signature="e#4313#4314#0" expanded="true" />
+            <element signature="e#4358#4359#0" expanded="true" />
+            <element signature="e#4394#4395#0" expanded="true" />
+            <element signature="e#4449#4450#0" expanded="true" />
+            <element signature="e#4486#4487#0" expanded="true" />
+            <element signature="class#Book#0;class#BookLibraryModification#0" expanded="false" />
+            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5099#5100#0" expanded="true" />
+            <element signature="e#5145#5146#0" expanded="true" />
+            <element signature="e#5182#5183#0" expanded="true" />
+            <element signature="e#5219#5220#0" expanded="true" />
+            <element signature="e#5256#5257#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5343#5344#0" expanded="true" />
+            <element signature="e#5383#5384#0" expanded="true" />
+            <element signature="e#5423#5424#0" expanded="true" />
+            <element signature="e#5477#5478#0" expanded="true" />
+            <element signature="e#5522#5523#0" expanded="true" />
+            <element signature="e#5566#5567#0" expanded="true" />
+            <element signature="e#5608#5609#0" expanded="true" />
+            <element signature="e#5668#5669#0" expanded="true" />
+            <element signature="e#5717#5718#0" expanded="true" />
+            <element signature="e#5752#5753#0" expanded="true" />
+            <element signature="e#5787#5788#0" expanded="true" />
+            <element signature="e#5831#5832#0" expanded="true" />
+            <element signature="e#5871#5872#0" expanded="true" />
+            <element signature="e#5907#5908#0" expanded="true" />
+            <element signature="e#5943#5944#0" expanded="true" />
+            <element signature="e#5989#5990#0" expanded="true" />
+            <element signature="e#6026#6027#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/BookLibrary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#printSalesByAuthorOrdered#0;class#BookLibrary#0" expanded="false" />
+            <element signature="method#calcSalesByAuthor#0;class#BookLibrary#0" expanded="false" />
+            <element signature="method#getBooks#0;class#BookLibrary#0" expanded="false" />
+            <element signature="class#Book#0;class#BookLibrary#0" expanded="false" />
           </folding>
         </state>
       </provider>
