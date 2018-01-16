@@ -1,51 +1,76 @@
 package com.company.Car;
 
-import com.sun.org.apache.xpath.internal.operations.String;
-
 public class Car {
 
     private double speed;
     private double fuel;
     private double fuelEconomy;
+    private double distanceTravelled;
+    private double timeTravelled;
 
     public Car(double speed, double fuel, double fuelEconomy) {
-        this.speed = speed;
+        this.setSpeed(speed);
+        this.setFuel(fuel);
+        this.setFuelEconomy(fuelEconomy);
+    }
+
+    public double getDistanceTravelled() {
+        return distanceTravelled;
+    }
+
+    public double getTimeTravelled() {
+        return timeTravelled;
+    }
+
+    public double getFuel() {
+        return fuel;
+    }
+
+    private void setFuel(double fuel) {
+        if (fuel < 0) {
+            throw new IllegalArgumentException("Fuel cannot be negative!");
+        }
+
         this.fuel = fuel;
+    }
+
+    private void setSpeed(double speed) {
+        if (speed < 0) {
+            throw new IllegalArgumentException("Speed cannot be negative!");
+        }
+
+        this.speed = speed;
+    }
+
+    private void setFuelEconomy(double fuelEconomy) {
+        if (fuelEconomy < 0) {
+            throw new IllegalArgumentException("Fuel Economy cannot be negative!");
+        }
         this.fuelEconomy = fuelEconomy;
     }
 
-    public void totalDistance(double travelDistance) {
-        double fullDistance = fuel * (100 / fuelEconomy);
-        if (travelDistance <= fullDistance) {
-            System.out.printf("Total distance: %.1f kilometers %n", travelDistance);
-        } else {
-            System.out.printf("Total distance: %.1f kilometers %n", fullDistance);
+
+    public void travel(double distance) {
+        double possibleDistance = distance;
+        if (distance > this.calculatePossibleDistance()) {
+            possibleDistance = this.calculatePossibleDistance();
         }
+
+        this.distanceTravelled += possibleDistance;
+        this.setFuel(calculateUsedFuel(possibleDistance));
+        this.timeTravelled = calculateTimeForTravelling(possibleDistance);
     }
 
-    public void totalTime(double travelDistance) {
-        double fullDistance = fuel * (100 / fuelEconomy);
-        if (travelDistance <= fullDistance) {
-            double time = (travelDistance / speed) * 60;
-            int h = (int)time / 60;
-            int min = (int)time % 60;
-            System.out.printf("Total time: %d hours and %d minutes %n", h, min);
-        } else {
-            double time = (fullDistance / speed) * 60;
-            int h = (int)time / 60;
-            int min = (int)time % 60;
-            System.out.printf("Total time: %d hours and %d minutes %n", h, min);
-        }
+    private double calculateTimeForTravelling(double possibleDistance) {
+        return possibleDistance / this.speed;
     }
 
-    public void leftFuel(double travelDistance) {
-        double fullDistance = fuel * (100 / fuelEconomy);
-        if (travelDistance >= fullDistance) {
-            System.out.println("Fuel left: 0.0 liters");
-        } else {
-            double useFuel = (travelDistance / 100) * fuelEconomy;
-            double leftFuel = fuel - useFuel;
-            System.out.printf("Fuel left: %.1f liters", leftFuel);
-        }
+    private double calculateUsedFuel(double possibleDistance) {
+        return this.fuel - (possibleDistance * fuelEconomy / 100);
     }
+
+    private double calculatePossibleDistance() {
+        return fuel / fuelEconomy * 100;
+    }
+
 }

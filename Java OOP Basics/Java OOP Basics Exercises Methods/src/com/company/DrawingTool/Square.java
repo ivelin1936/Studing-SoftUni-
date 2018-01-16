@@ -1,7 +1,5 @@
 package com.company.DrawingTool;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 public class Square implements Figure{
 
     private int size;

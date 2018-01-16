@@ -17,27 +17,33 @@ public class Main {
         double travelDis = Double.parseDouble(travelDistance[1]);
 
         Car car = new Car(speed, fuel, fuelEconomy);
+        car.travel(travelDis);
 
         String command = reader.readLine();
         while (!command.equals("END")) {
 
-            executeCommand(command, car, travelDis);
+            executeCommand(command, car);
 
             command = reader.readLine();
         }
     }
 
-    private static void executeCommand(String command, Car car, double travelDis) {
+    private static void executeCommand(String command, Car car) {
 
         switch (command) {
             case "Distance":
-                car.totalDistance(travelDis);
+                System.out.println(String.format("Total distance: %.1f kilometers", car.getDistanceTravelled()));
                 break;
+
             case "Time":
-                car.totalTime(travelDis);
+                double time = car.getTimeTravelled() * 60;
+                int h = (int)time / 60;
+                int min = (int)time % 60;
+                System.out.println(String.format("Total time: %d hours and %d minutes", h, min));
                 break;
+
             case "Fuel":
-                car.leftFuel(travelDis);
+                System.out.println(String.format("Fuel left: %.1f liters", car.getFuel()));
                 break;
         }
     }
