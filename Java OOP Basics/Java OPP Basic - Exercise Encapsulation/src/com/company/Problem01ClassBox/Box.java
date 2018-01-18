@@ -1,4 +1,4 @@
-package com.company.Problem01ClassBox;
+package com.company.problem01ClassBox;
 
 public class Box {
     private double length;

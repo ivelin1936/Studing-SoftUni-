@@ -1,4 +1,4 @@
-package com.company.Problem3AnimalFarm;
+package com.company.problem3AnimalFarm;
 
 public class Chicken {
     private final static int MIN_AGE = 0;

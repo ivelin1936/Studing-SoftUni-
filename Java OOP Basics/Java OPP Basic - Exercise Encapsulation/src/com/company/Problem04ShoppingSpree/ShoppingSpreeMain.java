@@ -1,4 +1,4 @@
-package com.company.Problem04ShoppingSpree;
+package com.company.problem04ShoppingSpree;
 
 import java.io.BufferedReader;
 import java.io.IOException;

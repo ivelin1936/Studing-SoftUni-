@@ -1,4 +1,4 @@
-package com.company.Problem04ShoppingSpree;
+package com.company.problem04ShoppingSpree;
 
 import java.util.ArrayList;
 import java.util.List;

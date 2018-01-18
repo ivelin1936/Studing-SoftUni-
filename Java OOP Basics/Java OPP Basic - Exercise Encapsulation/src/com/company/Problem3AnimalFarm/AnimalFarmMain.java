@@ -1,4 +1,4 @@
-package com.company.Problem3AnimalFarm;
+package com.company.problem3AnimalFarm;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
