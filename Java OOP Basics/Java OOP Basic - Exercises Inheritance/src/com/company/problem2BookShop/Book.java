@@ -18,6 +18,10 @@ public class Book {
         this.title = title;
     }
 
+    private String getTitle() {
+        return title;
+    }
+
     private void setAuthor(String author) {
         if (validateAuthorName(author)) {
             throw new IllegalArgumentException("Author not valid!");
@@ -25,11 +29,19 @@ public class Book {
         this.author = author;
     }
 
+    private String getAuthor() {
+        return author;
+    }
+
     protected void setPrice(double price) {
         if (price <= 0) {
             throw new IllegalArgumentException("Price not valid!");
         }
         this.price = price;
+    }
+
+    private double getPrice() {
+        return price;
     }
 
     private boolean validateAuthorName(String author) {
@@ -48,6 +60,16 @@ public class Book {
 
     @Override
     public String toString() {
-        return String.format("%s from %s Price: %.2f", this.title, this.author, this.price);
+        final StringBuilder sb = new StringBuilder();
+        sb.append("Type: ").append(this.getClass().getSimpleName())
+                .append(System.lineSeparator())
+                .append("Title: ").append(this.getTitle())
+                .append(System.lineSeparator())
+                .append("Author: ").append(this.getAuthor())
+                .append(System.lineSeparator())
+                .append("Price: ").append(this.getPrice())
+                .append(System.lineSeparator());
+        return sb.toString();
+
     }
 }
