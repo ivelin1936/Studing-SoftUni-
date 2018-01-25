@@ -1,5 +1,7 @@
 package com.company.centers;
 
+import com.company.exceptions.InvalidCenterNameException;
+
 public abstract class Center {
 
     private String name;
@@ -14,7 +16,7 @@ public abstract class Center {
 
     private void setName(String name) {
         if (name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("Name cannot be null.");
+            throw new InvalidCenterNameException();
         }
         this.name = name;
     }

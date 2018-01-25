@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.animals.Animal;
+import com.company.animals.models.Cat;
 import com.company.commandEngine.AnimalCenterManager;
 
 import java.io.BufferedReader;
@@ -14,10 +16,15 @@ public class Main {
         AnimalCenterManager centerManager = new AnimalCenterManager();
 
         String stopCommand = "Paw Paw Pawah";
-        String[] commandLine = reader.readLine().split(" \\| ");
+        String[] commandLine = reader.readLine().split("\\|");
         while (!commandLine[0].equals(stopCommand)) {
-            processingCommands(commandLine, centerManager);
-            commandLine = reader.readLine().split(" \\| ");
+            try {
+                processingCommands(commandLine, centerManager);
+            } catch (IllegalArgumentException ex) {
+                System.out.println(ex.getMessage());
+            }
+
+            commandLine = reader.readLine().split("\\|");
         }
         centerManager.printStatistics();
     }

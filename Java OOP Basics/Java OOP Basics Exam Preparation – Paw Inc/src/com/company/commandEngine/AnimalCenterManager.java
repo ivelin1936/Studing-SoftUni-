@@ -1,11 +1,11 @@
 package com.company.commandEngine;
 
 import com.company.animals.Animal;
-import com.company.animals.Cat;
-import com.company.animals.Dog;
-import com.company.centers.AdoptionCenter;
-import com.company.centers.CastrationCenter;
-import com.company.centers.CleansingCenter;
+import com.company.animals.models.Cat;
+import com.company.animals.models.Dog;
+import com.company.centers.models.AdoptionCenter;
+import com.company.centers.models.CastrationCenter;
+import com.company.centers.models.CleansingCenter;
 import com.company.commandEngine.interfaces.IAnimalCenterManager;
 
 import java.util.ArrayList;
@@ -22,14 +22,6 @@ public class AnimalCenterManager implements IAnimalCenterManager {
         this.adoptionCentersDB = new HashMap<>();
         this.cleansingCentersDB = new HashMap<>();
         this.castrationCentersDB = new HashMap<>();
-    }
-
-    private void addAdoptionCenter(AdoptionCenter centers) {
-        this.adoptionCentersDB.putIfAbsent(centers.getName(), centers);
-    }
-
-    private void addCleansingCenter(CleansingCenter centers) {
-        this.cleansingCentersDB.putIfAbsent(centers.getName(), centers);
     }
 
     @Override
@@ -54,12 +46,6 @@ public class AnimalCenterManager implements IAnimalCenterManager {
         addAnimalToCurrentAdoptionCenterName(adoptionCenterName, cat);
     }
 
-    private void addAnimalToCurrentAdoptionCenterName(String adoptionCenterName, Animal animal) {
-        if (adoptionCentersDB.containsKey(adoptionCenterName)) {
-            adoptionCentersDB.get(adoptionCenterName).registerAnimal(animal);
-        }
-    }
-
     @Override
     public void sendForCleansing(String adoptionCenterName, String cleansingCenterName) {
         if (adoptionCentersDB.containsKey(adoptionCenterName ))
@@ -77,14 +63,8 @@ public class AnimalCenterManager implements IAnimalCenterManager {
     public void cleanse(String cleansingCenterName) {
         if (cleansingCentersDB.containsKey(cleansingCenterName)) {
             HashMap<String, List<Animal>> cleanedAnimals =
-                    new HashMap<>(cleansingCentersDB.get(cleansingCenterName).cleaseAnimals());
+                    new HashMap<>(cleansingCentersDB.get(cleansingCenterName).cleanseAnimals());
             sentCleanedAnimalsBackToCenters(cleanedAnimals);
-        }
-    }
-
-    private void sentCleanedAnimalsBackToCenters(HashMap<String, List<Animal>> cleansedAnimals) {
-        for (String centerName : cleansedAnimals.keySet()) {
-            adoptionCentersDB.get(centerName).returnBackCleansedAnimals(cleansedAnimals.get(centerName));
         }
     }
 
@@ -98,10 +78,6 @@ public class AnimalCenterManager implements IAnimalCenterManager {
     @Override
     public void registerCastrationCenter(String name) {
         addCastrationCenter(new CastrationCenter(name));
-    }
-
-    private void addCastrationCenter(CastrationCenter center) {
-        this.castrationCentersDB.putIfAbsent(center.getName(), center);
     }
 
     @Override
@@ -123,12 +99,6 @@ public class AnimalCenterManager implements IAnimalCenterManager {
             HashMap<String, List<Animal>> castratedAnimals =
                     new HashMap<>(castrationCentersDB.get(castrationCenterName).castrateAnimals());
             sentCastratedAnimalsBackToCenters(castratedAnimals);
-        }
-    }
-
-    private void sentCastratedAnimalsBackToCenters(HashMap<String, List<Animal>> castratedAnimals) {
-        for (String centerName : castratedAnimals.keySet()) {
-            adoptionCentersDB.get(centerName).returnBackCastratedAnimals(castratedAnimals.get(centerName));
         }
     }
 
@@ -210,5 +180,35 @@ public class AnimalCenterManager implements IAnimalCenterManager {
             counter += adoptionCentersDB.get(aCenter).getAnimalsAwaitingAdoption();
         }
         return counter;
+    }
+
+    private void addAdoptionCenter(AdoptionCenter centers) {
+        this.adoptionCentersDB.putIfAbsent(centers.getName(), centers);
+    }
+
+    private void addCleansingCenter(CleansingCenter centers) {
+        this.cleansingCentersDB.putIfAbsent(centers.getName(), centers);
+    }
+
+    private void addAnimalToCurrentAdoptionCenterName(String adoptionCenterName, Animal animal) {
+        if (adoptionCentersDB.containsKey(adoptionCenterName)) {
+            adoptionCentersDB.get(adoptionCenterName).registerAnimal(animal);
+        }
+    }
+
+    private void sentCleanedAnimalsBackToCenters(HashMap<String, List<Animal>> cleansedAnimals) {
+        for (String centerName : cleansedAnimals.keySet()) {
+            adoptionCentersDB.get(centerName).returnBackCleansedAnimals(cleansedAnimals.get(centerName));
+        }
+    }
+
+    private void addCastrationCenter(CastrationCenter center) {
+        this.castrationCentersDB.putIfAbsent(center.getName(), center);
+    }
+
+    private void sentCastratedAnimalsBackToCenters(HashMap<String, List<Animal>> castratedAnimals) {
+        for (String centerName : castratedAnimals.keySet()) {
+            adoptionCentersDB.get(centerName).returnBackCastratedAnimals(castratedAnimals.get(centerName));
+        }
     }
 }
