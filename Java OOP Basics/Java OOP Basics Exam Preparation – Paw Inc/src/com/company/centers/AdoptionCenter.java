@@ -1,6 +1,7 @@
 package com.company.centers;
 
 import com.company.animals.Animal;
+import com.company.animals.CastrateStatus;
 import com.company.animals.CleansingStatus;
 
 import java.util.ArrayList;
@@ -24,18 +25,38 @@ public class AdoptionCenter extends Center {
     public void returnBackCleansedAnimals(List<Animal> cleansedAnimals) {
         storedAnimals.addAll(cleansedAnimals);
     }
+    public void returnBackCastratedAnimals(List<Animal> castratedAnimals) {
+        storedAnimals.addAll(castratedAnimals);
+    }
 
     public List<Animal> getStoredUncleansedAnimals() {
         List<Animal> animalsForCleansing = new ArrayList<>();
+        addAnimalsForCleansing(animalsForCleansing);
+        return animalsForCleansing;
+    }
 
+    private void addAnimalsForCleansing(List<Animal> animalsForCleansing) {
         for (Animal animal : storedAnimals) {
             if (animal.getCleansingStatus().equals(CleansingStatus.Uncleansed)) {
                 animalsForCleansing.add(animal);
             }
         }
         storedAnimals.removeAll(animalsForCleansing);
+    }
 
-        return animalsForCleansing;
+    public List<Animal> getStoredNonCastratedAnimals() {
+        List<Animal> animalsForCastration = new ArrayList<>();
+        addAnimalsForCastration(animalsForCastration);
+        return animalsForCastration;
+    }
+
+    private void addAnimalsForCastration(List<Animal> animalsForCastration) {
+        for (Animal animal : storedAnimals) {
+            if (animal.getCastrateStatus().equals(CastrateStatus.NonCastrated)) {
+                animalsForCastration.add(animal);
+            }
+        }
+        storedAnimals.removeAll(animalsForCastration);
     }
 
     public void adoptedAnimals() {

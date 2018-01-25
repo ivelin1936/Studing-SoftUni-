@@ -4,6 +4,7 @@ import com.company.animals.Animal;
 import com.company.animals.Cat;
 import com.company.animals.Dog;
 import com.company.centers.AdoptionCenter;
+import com.company.centers.CastrationCenter;
 import com.company.centers.CleansingCenter;
 import com.company.commandEngine.interfaces.IAnimalCenterManager;
 
@@ -15,10 +16,12 @@ public class AnimalCenterManager implements IAnimalCenterManager {
 
     private HashMap<String, AdoptionCenter> adoptionCentersDB;
     private HashMap<String, CleansingCenter> cleansingCentersDB;
+    private HashMap<String, CastrationCenter> castrationCentersDB;
 
     public AnimalCenterManager() {
         this.adoptionCentersDB = new HashMap<>();
         this.cleansingCentersDB = new HashMap<>();
+        this.castrationCentersDB = new HashMap<>();
     }
 
     private void addAdoptionCenter(AdoptionCenter centers) {
@@ -93,6 +96,53 @@ public class AnimalCenterManager implements IAnimalCenterManager {
     }
 
     @Override
+    public void registerCastrationCenter(String name) {
+        addCastrationCenter(new CastrationCenter(name));
+    }
+
+    private void addCastrationCenter(CastrationCenter center) {
+        this.castrationCentersDB.putIfAbsent(center.getName(), center);
+    }
+
+    @Override
+    public void sendForCastration(String adoptionCenterName, String castrationCenterName) {
+        if (adoptionCentersDB.containsKey(adoptionCenterName ))
+        {
+            if (castrationCentersDB.containsKey(castrationCenterName))
+            {
+                castrationCentersDB.get(castrationCenterName)
+                        .addAnimalsForCastration(adoptionCenterName,
+                                adoptionCentersDB.get(adoptionCenterName).getStoredNonCastratedAnimals());
+            }
+        }
+    }
+
+    @Override
+    public void castrate(String castrationCenterName) {
+        if (castrationCentersDB.containsKey(castrationCenterName)) {
+            HashMap<String, List<Animal>> castratedAnimals =
+                    new HashMap<>(castrationCentersDB.get(castrationCenterName).castrateAnimals());
+            sentCastratedAnimalsBackToCenters(castratedAnimals);
+        }
+    }
+
+    private void sentCastratedAnimalsBackToCenters(HashMap<String, List<Animal>> castratedAnimals) {
+        for (String centerName : castratedAnimals.keySet()) {
+            adoptionCentersDB.get(centerName).returnBackCastratedAnimals(castratedAnimals.get(centerName));
+        }
+    }
+
+    @Override
+    public void castrationStatistics() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Paw Inc. Regular Castration Statistics%n"))
+                .append(String.format("Castration Centers: %d%n", castrationCentersDB.size()))
+                .append(String.format("Castrated Animals: %s", castratedAnimals()));
+
+        System.out.println(sb.toString());
+    }
+
+    @Override
     public void printStatistics() {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Paw Incorporative Regular Statistics%n"))
@@ -113,14 +163,7 @@ public class AnimalCenterManager implements IAnimalCenterManager {
         }
         adoptedAnimals.sort(String::compareToIgnoreCase);
 
-        String adoAnimals = null;
-        if (adoptedAnimals.size() > 0) {
-            adoAnimals = String.join(", ", adoptedAnimals);
-        } else {
-            adoAnimals = "None";
-        }
-
-        return adoAnimals;
+        return buildAnimalsString(adoptedAnimals);
     }
 
     private String cleansedAnimals() {
@@ -130,14 +173,27 @@ public class AnimalCenterManager implements IAnimalCenterManager {
         }
         cleansedAnimals.sort(String::compareToIgnoreCase);
 
-        String cleanAnimals = null;
-        if (cleansedAnimals.size() > 0) {
-            cleanAnimals = String.join(", ", cleansedAnimals);
-        } else {
-            cleanAnimals = "None";
-        }
+        return buildAnimalsString(cleansedAnimals);
+    }
 
-        return cleanAnimals;
+    private String castratedAnimals() {
+        List<String> castratedAnimals = new ArrayList<>();
+        for (String casCenter : castrationCentersDB.keySet()) {
+            castratedAnimals.addAll(castrationCentersDB.get(casCenter).getCastratedAnimalsNames());
+        }
+        castratedAnimals.sort(String::compareToIgnoreCase);
+
+        return buildAnimalsString(castratedAnimals);
+    }
+
+    private String buildAnimalsString(List<String> animalsList) {
+        String animalsStr = null;
+        if (animalsList.size() > 0) {
+            animalsStr = String.join(", ", animalsList);
+        } else {
+            animalsStr = "None";
+        }
+        return animalsStr;
     }
 
     private int getAnimalsAwaitingCleansing() {

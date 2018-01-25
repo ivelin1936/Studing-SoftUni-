@@ -16,6 +16,14 @@ public interface IAnimalCenterManager {
 
     void adopt(String adoptionCenterName);
 
+    void registerCastrationCenter(String name);
+
+    void sendForCastration(String adoptionCenterName, String castrationCenterName);
+
+    void castrate(String castrationCenterName);
+
+    void castrationStatistics();
+
     void printStatistics();
 
 }

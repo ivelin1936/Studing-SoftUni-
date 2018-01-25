@@ -47,7 +47,48 @@ public class Main {
             case "Adopt":
                 adopt(commandLine, centerManager);
                 break;
+            case "RegisterCastrationCenter":
+                registerCastrationCenter(commandLine, centerManager);
+                break;
+            case "SendForCastration":
+                sendForCastration(commandLine, centerManager);
+                break;
+            case "Castrate":
+                castrate(commandLine, centerManager);
+                break;
+            case "CastrationStatistics":
+                castrationStatistics(centerManager);
+                break;
         }
+    }
+
+    private static void castrationStatistics(AnimalCenterManager centerManager) {
+//    o  Prints statistics about all the animals that have been castrated.
+//    o  The format is:
+//          “Paw Inc. Regular Castration Statistics
+//           Castration Centers: {amountOfCastrationCenters}
+//           Castrated Animals: {castratedAnimal1Name}, {castratedAnimal2Name}…”
+
+        centerManager.castrationStatistics();
+    }
+
+    private static void castrate(String[] commandLine, AnimalCenterManager centerManager) {
+        //input -> Castrate | {castrationCenterName}
+        String castrationCenterName = commandLine[1].trim();
+        centerManager.castrate(castrationCenterName);
+    }
+
+    private static void sendForCastration(String[] commandLine, AnimalCenterManager centerManager) {
+        //input -> SendForCleansing | {adoptionCenterName} | {castrationCenterName}
+        String adoptionCenterName = commandLine[1].trim();
+        String castrationCenterName = commandLine[2].trim();
+        centerManager.sendForCastration(adoptionCenterName, castrationCenterName);
+    }
+
+    private static void registerCastrationCenter(String[] commandLine, AnimalCenterManager centerManager) {
+        //input -> RegisterCastrationCenter | {name}
+        String name = commandLine[1].trim();
+        centerManager.registerCastrationCenter(name);
     }
 
     private static void adopt(String[] commandLine, AnimalCenterManager centerManager) {

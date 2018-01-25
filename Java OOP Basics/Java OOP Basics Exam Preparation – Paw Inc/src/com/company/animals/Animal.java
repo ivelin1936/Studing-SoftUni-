@@ -6,12 +6,14 @@ public abstract class Animal {
     private int age;
     private int specialSkill;
     private CleansingStatus cleansingStatus;
+    private CastrateStatus castrateStatus;
 
     public Animal(String name, int age, int specialSkill) {
         this.setName(name);
         this.setAge(age);
         this.setSpecialSkill(specialSkill);
         this.cleansingStatus = CleansingStatus.Uncleansed;
+        this.castrateStatus = CastrateStatus.NonCastrated;
     }
 
     public String getName() {
@@ -53,5 +55,13 @@ public abstract class Animal {
 
     public void setCleansingStatus(CleansingStatus cleansingStatus) {
         this.cleansingStatus = cleansingStatus;
+    }
+
+    public CastrateStatus getCastrateStatus() {
+        return castrateStatus;
+    }
+
+    public void setCastrateStatus(CastrateStatus castrateStatus) {
+        this.castrateStatus = castrateStatus;
     }
 }
