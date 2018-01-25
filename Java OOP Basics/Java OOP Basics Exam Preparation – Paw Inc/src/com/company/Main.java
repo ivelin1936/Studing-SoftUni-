@@ -1,7 +1,5 @@
 package com.company;
 
-import com.company.animals.Animal;
-import com.company.animals.models.Cat;
 import com.company.commandEngine.AnimalCenterManager;
 
 import java.io.BufferedReader;
