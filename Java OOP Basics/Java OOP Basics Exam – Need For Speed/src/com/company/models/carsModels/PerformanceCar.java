@@ -25,14 +25,10 @@ public class PerformanceCar extends Car {
     public void tune(int tuneIndex, String tuneAddOn) {
         super.setHorsepower(super.getHorsepower() + tuneIndex);
         super.setSuspension(super.getSuspension() + (tuneIndex / 2));
-        this.addOns.add(tuneAddOn);
+        this.setAddOns(tuneAddOn);
     }
 
-    public List<String> getAddOns() {
-        return addOns;
-    }
-
-    public void setAddOns(String addOnsName) {
+    private void setAddOns(String addOnsName) {
         addOns.add(addOnsName);
     }
 

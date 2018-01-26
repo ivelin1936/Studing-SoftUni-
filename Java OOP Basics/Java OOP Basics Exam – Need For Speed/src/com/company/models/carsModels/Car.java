@@ -1,8 +1,9 @@
 package com.company.models.carsModels;
 
 import com.company.exceptions.*;
+import com.company.interfaces.ICar;
 
-public abstract class Car {
+public abstract class Car implements ICar {
 
     private String brand;
     private String model;
@@ -12,13 +13,13 @@ public abstract class Car {
     private int suspension;
     private int durability;
 
-    public Car(String brand,
-               String model,
-               int yearOfProduction,
-               int horsepower,
-               int acceleration,
-               int suspension,
-               int durability) {
+    Car(String brand,
+        String model,
+        int yearOfProduction,
+        int horsepower,
+        int acceleration,
+        int suspension,
+        int durability) {
 
         this.setBrand(brand);
         this.setModel(model);
@@ -29,6 +30,28 @@ public abstract class Car {
         this.setDurability(durability);
     }
 
+    @Override
+    public int getOverallPerformance() {
+        // (horsepower / acceleration) + (suspension + durability)
+        return (this.getHorsepower() / this.getAcceleration()) + (this.getSuspension() + this.getDurability());
+    }
+
+    @Override
+    public int getEnginePerformance() {
+        // (horsepower / acceleration)
+        return this.getHorsepower() / this.getAcceleration();
+    }
+
+    @Override
+    public int getSuspensionPerformance() {
+        // (suspension + durability)
+        return this.getSuspension() + this.getDurability();
+    }
+
+    @Override
+    public abstract String toString();
+
+    @Override
     public abstract void tune(int tuneIndex, String tuneAddOn);
 
     public String getBrand() {
@@ -39,51 +62,34 @@ public abstract class Car {
         return model;
     }
 
-    public int getYearOfProduction() {
-        return yearOfProduction;
-    }
-
-    public int getHorsepower() {
-        return horsepower;
-    }
-
-    public int getAcceleration() {
-        return acceleration;
-    }
-
     public int getSuspension() {
         return suspension;
     }
 
-    public int getDurability() {
+    int getYearOfProduction() {
+        return yearOfProduction;
+    }
+
+    int getHorsepower() {
+        return horsepower;
+    }
+
+    int getAcceleration() {
+        return acceleration;
+    }
+
+    int getDurability() {
         return durability;
     }
 
-    public int getOverallPerformance() {
-        // (horsepower / acceleration) + (suspension + durability)
-        return (this.getHorsepower() / this.getAcceleration()) + (this.getSuspension() + this.getDurability());
-    }
-
-    public int getEnginePerformance() {
-        // (horsepower / acceleration)
-        return this.getHorsepower() / this.getAcceleration();
-    }
-
-    public int getSuspensionPerformance() {
-        // (suspension + durability)
-        return this.getSuspension() + this.getDurability();
-    }
-
-    public abstract String toString();
-
-    protected void setHorsepower(int horsepower) {
+    void setHorsepower(int horsepower) {
         if (horsepower < 0 || horsepower > 100000) {
             throw new InvalidCarHorsePowerException();
         }
         this.horsepower = horsepower;
     }
 
-    protected void setSuspension(int suspension) {
+    void setSuspension(int suspension) {
         if (suspension < 0 || suspension > 100000) {
             throw new InvalidCarSuspensionException();
         }

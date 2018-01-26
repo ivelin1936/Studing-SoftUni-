@@ -3,13 +3,14 @@ package com.company.models.raceModels;
 import com.company.exceptions.InvalidRaceLengthException;
 import com.company.exceptions.InvalidRacePrizePoolException;
 import com.company.exceptions.InvalidRaceRouteException;
+import com.company.interfaces.IRace;
 import com.company.models.carsModels.Car;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public abstract class Race {
+public abstract class Race implements IRace {
 
     private int length;
     private String route;
@@ -31,10 +32,12 @@ public abstract class Race {
         return participants.size();
     }
 
+    @Override
     public void addParticipants(int carId, Car car) {
         this.participants.putIfAbsent(carId, car);
     }
 
+    @Override
     public String startRace() {
         HashMap<Car, Integer> winners = this.getWinners();
 
@@ -74,7 +77,8 @@ public abstract class Race {
         return prizePool;
     }
 
-    protected abstract HashMap<Car, Integer> getWinners();
+    @Override
+    public abstract HashMap<Car, Integer> getWinners();
 
     private void setLength(int length) {
         if (length < 0 || length > 100000) {

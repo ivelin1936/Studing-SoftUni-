@@ -12,7 +12,7 @@ public class CasualRace extends Race {
     }
 
     @Override
-    protected HashMap<Car, Integer> getWinners() {
+    public HashMap<Car, Integer> getWinners() {
         HashMap<Car, Integer> winners = new LinkedHashMap<>();
 
         super.getParticipants().values().stream()

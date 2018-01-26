@@ -18,15 +18,15 @@ public class ShowCar extends Car {
         this.stars = DEFAULT_STARS;
     }
 
-    public int getStars() {
-        return stars;
+    private void setStars(int tuneIndex) {
+        this.stars += tuneIndex;
     }
 
     @Override
     public void tune(int tuneIndex, String tuneAddOn) {
         super.setHorsepower(super.getHorsepower() + tuneIndex);
         super.setSuspension(super.getSuspension() + (tuneIndex / 2));
-        this.stars = this.stars + tuneIndex;
+        this.setStars(tuneIndex);
     }
 
     @Override
