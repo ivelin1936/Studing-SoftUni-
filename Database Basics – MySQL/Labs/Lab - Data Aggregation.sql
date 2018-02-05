@@ -31,10 +31,8 @@ SELECT
     e.department_id, ROUND(MIN(e.salary), 2) AS `Min Salary`
 FROM
     `employees` AS e
-WHERE
-    e.salary > 800
 GROUP BY e.department_id
-LIMIT 1;
+HAVING MIN(e.salary) > 800;
 
 -- 4.Appetizers Count ------------------------------------------
 -- -------------------------------------------------------------
