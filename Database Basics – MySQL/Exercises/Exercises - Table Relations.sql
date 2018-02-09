@@ -181,6 +181,7 @@ CREATE TABLE `items` (
 CREATE TABLE `order_items` (
     order_id INT NOT NULL,
     item_id INT NOT NULL,
+    CONSTRAINT pk_order_items PRIMARY KEY (order_id, item_id),
     CONSTRAINT fk_oi_order FOREIGN KEY (order_id)
         REFERENCES `orders` (order_id),
     CONSTRAINT fk_oi_item FOREIGN KEY (item_id)
@@ -212,6 +213,7 @@ CREATE TABLE `students` (
 CREATE TABLE `agenda` (
     student_id INT,
     subject_id INT,
+    CONSTRAINT pk_agenda PRIMARY KEY (student_id, subject_id),
     CONSTRAINT fk_agenda_students FOREIGN KEY (student_id)
         REFERENCES `students` (student_id),
     CONSTRAINT fk_agenda_subjects FOREIGN KEY (subject_id)
