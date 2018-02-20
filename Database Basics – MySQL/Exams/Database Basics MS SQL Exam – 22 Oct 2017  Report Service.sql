@@ -326,6 +326,202 @@ ORDER BY r.open_date ASC , `reporter_email` ASC , r.id ASC;
 -- 13.Numbers Coincidence -----------------------------------------------------
 -- ----------------------------------------------------------------------------
 
+SELECT DISTINCT
+    u.username
+FROM
+    `users` AS u
+        JOIN
+    `reports` AS r ON r.user_id = u.id
+        JOIN
+    `categories` AS c ON c.id = r.category_id
+WHERE
+    c.id = LEFT(u.username, 1)
+        OR c.id = RIGHT(u.username, 1)
+ORDER BY u.username ASC;
+
+-- 14.Open/Closed Statistics --------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+SELECT 
+    co_projects.name,
+    CONCAT_WS('/',
+            co_projects.closed,
+            co_projects.open) AS 'closed_open_reports'
+FROM
+    (SELECT 
+        CONCAT_WS(' ', e.first_name, e.last_name) AS 'name',
+            COUNT(CASE
+                WHEN YEAR(r.close_date) = 2016 THEN 'closed'
+                WHEN
+                    YEAR(r.open_date) < 2016
+                        AND YEAR(close_date) = 2016
+                THEN
+                    'closed'
+            END) AS 'closed',
+            COUNT(CASE
+                WHEN YEAR(r.open_date) = 2016 THEN 'open'
+            END) AS 'open'
+    FROM
+        `employees` AS e
+    JOIN `reports` AS r ON r.employee_id = e.id
+    GROUP BY e.id) AS co_projects
+WHERE
+    co_projects.closed + co_projects.open >= 1
+ORDER BY `name` ASC;
+
+-- 15.Average Closing Time ----------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+SELECT 
+    id_avg_duration.name AS 'department_name',
+    id_avg_duration.average_duration AS 'average_duration'
+FROM
+    `reports` AS r
+        INNER JOIN
+    (SELECT 
+        r.id,
+            d.name,
+            CASE
+                WHEN SUM(TIMESTAMPDIFF(DAY, r.open_date, r.close_date)) IS NULL THEN 'no info'
+                ELSE FLOOR(AVG(TIMESTAMPDIFF(DAY, r.open_date, r.close_date)))
+            END AS 'average_duration'
+    FROM
+        `departments` AS d
+    INNER JOIN `categories` AS c ON c.department_id = d.id
+    LEFT JOIN `reports` AS r ON r.category_id = c.id
+    GROUP BY d.name) AS id_avg_duration ON id_avg_duration.id = r.id
+ORDER BY department_name ASC;
+
+-- 16.Most Reported Category --------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+SELECT 
+    d.name AS 'department_name',
+    c.name AS 'category_name',
+    CAST((COUNT(r.category_id) / total.total_count * 100)
+        AS DECIMAL (4 , 0 )) AS 'percentage'
+FROM
+    `departments` AS d
+        INNER JOIN
+    `categories` AS c ON c.department_id = d.id
+        INNER JOIN
+    `reports` AS r ON r.category_id = c.id
+        JOIN
+    (SELECT 
+        de.id, COUNT(ca.name) AS 'total_count'
+    FROM
+        `departments` AS de
+    INNER JOIN `categories` AS ca ON ca.department_id = de.id
+    INNER JOIN `reports` AS re ON re.category_id = ca.id
+    GROUP BY de.id) AS total ON total.id = d.id
+GROUP BY d.id , c.id
+ORDER BY department_name ASC , category_name ASC , percentage ASC;
+
+-- Section 4. Programmability (20 pts) ----------------------------------------
+-- 17.Get Reports -------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE FUNCTION udf_get_reports_count(employee_id INT, status_id INT)
+RETURNS INT
+BEGIN
+DECLARE reports_count INT;
+	SET reports_count := 
+			(SELECT COUNT(r.id)
+			FROM `reports` AS r
+			WHERE r.employee_id = employee_id 
+			AND r.status_id = status_id);
+RETURN reports_count;
+END
+DELIMITER ;
+
+-- 18.Assign Employee ---------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE PROCEDURE usp_assign_employee_to_report(employee_id INT, report_id INT)
+BEGIN
+    DECLARE employee_department_id int;
+    DECLARE report_category_id int;
+    DECLARE category_department_id int;
+   
+    set employee_department_id := 
+		(SELECT department_id FROM employees AS e WHERE e.id = employee_id);
+    set report_category_id := 
+		(SELECT category_id FROM reports AS r WHERE r.id = report_id);
+    set category_department_id := 
+		(SELECT department_id FROM categories as c WHERE c.id = report_category_id);
+   
+    START TRANSACTION;
+        IF(employee_department_id != category_department_id) THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Employee doesn\'t belong to the appropriate department!';
+            ROLLBACK;
+        ELSE
+            UPDATE reports AS r
+            SET r.employee_id = employee_id
+            WHERE r.id = report_id;
+        END IF;
+    COMMIT;
+END $$
+DELIMITER ;
+
+-- 19.Close Reports -----------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE TRIGGER tr_update_reports_status
+BEFORE UPDATE 
+ON `reports` 
+FOR EACH ROW
+BEGIN
+	IF (OLD.close_date IS NULL AND NEW.close_date IS NOT NULL)
+    THEN SET NEW.status_id = 3;
+    END IF;
+END $$
+DELIMITER ;
+
+-- Second way to fix the problem -----------------------------------------------
+
+DELIMITER $$
+CREATE TRIGGER tr_update_reports_status
+BEFORE UPDATE 
+ON `reports` 
+FOR EACH ROW
+BEGIN
+	IF (OLD.status_id <> 3)
+    THEN SET NEW.status_id = 3;
+    END IF;
+END $$
+DELIMITER ;
+
+-- 20.Categories Revision -----------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+SELECT c.name,
+    COUNT(r.id),
+    CASE
+        WHEN (SELECT COUNT(*) FROM reports rr 
+            WHERE rr.status_id = (SELECT id FROM status WHERE label = 'waiting') 
+				AND rr.category_id = c.id) >
+					(SELECT COUNT(*) FROM reports rr 
+                    WHERE rr.status_id = (SELECT id FROM status WHERE label = 'in progress')  AND rr.category_id = c.id)
+        THEN 'waiting'
+        WHEN (SELECT COUNT(*) FROM reports rr 
+			WHERE rr.status_id = (SELECT id FROM status WHERE label = 'waiting')  
+				AND rr.category_id = c.id) <
+					(SELECT COUNT(*) FROM reports rr 
+                    WHERE rr.status_id = (SELECT id FROM status WHERE label = 'in progress')  AND rr.category_id = c.id)
+        THEN 'in progress'
+        ELSE 'equal'
+    END AS `main_status`
+FROM `categories` c
+JOIN `reports` r ON r.category_id = c.id
+JOIN `status` s ON r.status_id = s.id
+WHERE s.label IN ('waiting', 'in progress')
+GROUP BY c.name;
+
+-- ----------------------------------------------------------------------------
+
 
 
 
