@@ -235,22 +235,45 @@ VALUES
 (24, 7),(29, 26),(6, 15),(6, 30),(20, 30),(3, 28),(14, 13),(17, 13),(25, 2),
 (24, 16),(10, 22),(23, 16),(10, 7),(10, 25),(7, 10),(29, 8),(27, 10);
 
--- 02.Data Insertion ----------------------------------------------------------
+-- 02.Data Insertion From SELECT ----------------------------------------------
+-- ----------------------------------------------------------------------------
 
+INSERT INTO `submissions` (`passed_tests`, `problem_id`, `user_id`)
+SELECT 
+		CEIL(SQRT(POWER(CHAR_LENGTH(p.name), 3)) - CHAR_LENGTH(p.name)),
+		p.id,
+        CEIL(p.id * 3 / 2)
+	FROM `problems` AS p
+    WHERE p.id BETWEEN 1 AND 10;
 
+-- 03.Data Update -------------------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+UPDATE `problems` AS p
+JOIN `contests` AS c ON c.id = p.contest_id
+JOIN `categories` AS ca ON ca.id = c.category_id
+SET p.tests = 
+    CASE p.id % 3
+		WHEN 0 THEN CHAR_LENGTH(c.name)
+        WHEN 1 THEN ( SELECT SUM(s.id) 
+					  FROM `submissions` AS s
+                      WHERE s.problem_id = p.id )
+        WHEN 2 THEN CHAR_LENGTH(c.name)
+	END
+WHERE p.tests = 0;
 
+-- 04.Date Deletion -----------------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+DELETE u FROM `users` AS u
+        LEFT JOIN
+    `users_contests` AS uc ON uc.user_id = u.id 
+WHERE
+    uc.user_id IS NULL;
 
-
-
-
-
-
-
-
-
-
+-- Section 3: Querying – 100 pts ----------------------------------------------
+-- 05.Users -------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
 
 
 
