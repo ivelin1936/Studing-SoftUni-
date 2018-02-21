@@ -349,9 +349,176 @@ ORDER BY u.username ASC , u.id ASC;
 -- 11.Most Participated Contests ----------------------------------------------
 -- ----------------------------------------------------------------------------
 
+SELECT 
+    cc.id, cc.name, cc.contestants
+FROM
+    (SELECT 
+        c.id, c.name, COUNT(uc.user_id) AS 'contestants'
+    FROM
+        `contests` AS c
+    LEFT JOIN `users_contests` AS uc ON uc.contest_id = c.id
+    GROUP BY c.id , c.name
+    ORDER BY contestants DESC , c.id ASC
+    LIMIT 5) AS cc
+ORDER BY cc.contestants ASC , cc.id ASC;
 
+-- 12.Most Valuable Person ----------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+SELECT 
+    s.id,
+    u.username,
+    p.name,
+    CONCAT_WS(' / ', s.passed_tests, p.tests) AS result
+FROM
+	( SELECT 
+    user_id AS 'mvp', 
+    COUNT(contest_id) AS 'count' 
+    FROM `users_contests`
+    GROUP BY `mvp`
+    ORDER BY `count` DESC
+    LIMIT 1
+    ) AS `mvp_table`
+		JOIN
+    `users` AS u ON u.id = mvp_table.mvp
+		JOIN 
+	`submissions` AS s ON s.user_id = mvp_table.mvp
+        JOIN
+    `problems` AS p ON p.id = s.problem_id
+ORDER BY s.id DESC;
 
+-- 13.Contests Maximum Points -------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+SELECT 
+    c.id, c.name, SUM(p.points) AS 'maximum_points'
+FROM
+    `contests` AS c
+        JOIN
+    `problems` AS p ON p.contest_id = c.id
+GROUP BY c.id , c.name
+ORDER BY maximum_points DESC , c.id ASC;
+
+-- 14.Contestants’ Submissions ------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+SELECT 
+    c.id, c.name, COUNT(s.id) AS 'submissions'
+FROM
+    `submissions` AS s
+        JOIN
+    `problems` AS p ON p.id = s.problem_id
+        JOIN
+    `contests` AS c ON c.id = p.contest_id
+WHERE
+    s.user_id IN (SELECT 
+					usc.user_id
+				FROM
+					`users_contests` AS usc
+				WHERE
+					c.id = usc.contest_id)
+GROUP BY c.id , c.name
+ORDER BY submissions DESC , c.id ASC;
+
+-- Section 4: Programmability – 30 pts ----------------------------------------
+
+CREATE TABLE logged_in_users (
+	id INT,
+    username VARCHAR(30) NOT NULL UNIQUE,
+    password VARCHAR(30) NOT NULL,
+    email VARCHAR(50),
+    CONSTRAINT pk_logged_in_users PRIMARY KEY (id)
+);
+
+CREATE TABLE evaluated_submissions (
+	id INT AUTO_INCREMENT,
+    problem VARCHAR(100) NOT NULL,
+    user VARCHAR(30) NOT NULL,
+    result INT NOT NULL,
+    CONSTRAINT pk_evaluated_submissions PRIMARY KEY (id)
+);
+
+-- 15.Login -------------------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE PROCEDURE udp_login(`username` VARCHAR(30), `password` VARCHAR(30))
+BEGIN
+	IF `username` NOT IN (SELECT u.username FROM `users` AS u)
+		THEN 
+			SIGNAL SQLSTATE '45000' 
+            SET MESSAGE_TEXT = 'Username does not exist!';
+	ELSEIF `password` <> (SELECT u.password FROM `users` AS u 
+							WHERE u.username = `username`)
+		THEN 
+			SIGNAL SQLSTATE '45000' 
+            SET MESSAGE_TEXT = 'Password is incorrect!';
+	ELSEIF `username` IN (SELECT lu.username FROM `logged_in_users` AS lu)
+		THEN 
+			SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'User is already logged in!';
+	ELSE 
+		INSERT INTO `logged_in_users`(`id`, `username`, `password`, `email`)
+        SELECT 
+			`id`, `username`, `password`, `email`
+		FROM `users` AS u 
+        WHERE u.username = `username`;
+	END IF;
+END $$
+DELIMITER ;
+
+-- 16.Evaluate Submission -----------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE PROCEDURE udp_evaluate(`id` INT(11))
+BEGIN
+	IF `id` NOT IN (SELECT`id` FROM `submissions`)
+		THEN
+			SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Submission does not exist!';
+	ELSE 
+		INSERT INTO `evaluated_submissions`
+        SELECT 
+			s.id,
+			p.name, 
+            u.username,
+            CEIL(p.points / p.tests * s.passed_tests) AS 'result'
+        FROM `submissions` AS s
+        JOIN `problems` AS p ON s.problem_id = p.id
+        JOIN `users` AS u ON s.user_id = u.id
+        WHERE s.id = `id`;
+    END IF;
+END $$
+DELIMITER ;
+
+-- Section 5: Bonus – 20 pts --------------------------------------------------
+-- 17.	Check Constraint ------------------------------------------------------
+-- ----------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE TRIGGER tr_check_constraint
+BEFORE INSERT
+ON `problems` 
+FOR EACH ROW
+BEGIN
+	IF NEW.name NOT LIKE '% %'
+		THEN 
+			SIGNAL SQLSTATE '45000'
+			SET MESSAGE_TEXT = 'The given name is invalid!';
+	ELSEIF NEW.points <= 0
+		THEN 
+			SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'The problem’s points cannot be less or equal to 0!';
+	ELSEIF NEW.tests <= 0
+		THEN
+			SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'The problem’s tests cannot be less or equal to 0!';
+	END IF;
+END $$
+DELIMITER ;
+
+-- ----------------------------------------------------------------------------
 
 
 
