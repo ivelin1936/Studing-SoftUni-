@@ -275,32 +275,79 @@ WHERE
 -- 05.Users -------------------------------------------------------------------
 -- ----------------------------------------------------------------------------
 
+SELECT 
+    u.id, u.username, u.email
+FROM
+    `users` AS u
+ORDER BY u.id ASC;
 
+-- 06.Root Categories ---------------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+SELECT 
+    c.id, c.name
+FROM
+    `categories` AS c
+WHERE
+    c.parent_id IS NULL
+ORDER BY c.id ASC;
 
+-- 07.Well Tested Problems ----------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+SELECT 
+    p.id, p.name, p.tests
+FROM
+    `problems` AS p
+WHERE
+    p.tests > p.points AND p.name LIKE '% %'
+ORDER BY p.id DESC;
 
+-- 08.Full Path Problems ------------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+SELECT 
+    p.id,
+    CONCAT_WS(' - ', c.name, co.name, p.name) AS 'full_path'
+FROM
+    `categories` AS c
+        JOIN
+    `contests` AS co ON co.category_id = c.id
+        JOIN
+    `problems` AS p ON p.contest_id = co.id
+ORDER BY p.id ASC;
 
+-- 09.Leaf Categories ---------------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+SELECT 
+    c.id, c.name
+FROM
+    `categories` AS c
+        LEFT JOIN
+    `categories` AS ca ON ca.parent_id = c.id
+WHERE
+    ca.id IS NULL
+ORDER BY c.name ASC , c.id ASC; 
 
+-- 10.Mainstream Passwords ----------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+SELECT 
+    u.id, u.username, u.password
+FROM
+    `users` AS u
+WHERE
+    u.password IN (SELECT 
+            `password`
+        FROM
+            `users`
+        WHERE
+            id <> u.id)
+ORDER BY u.username ASC , u.id ASC;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- 11.Most Participated Contests ----------------------------------------------
+-- ----------------------------------------------------------------------------
 
 
 
