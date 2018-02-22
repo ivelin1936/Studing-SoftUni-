@@ -245,16 +245,44 @@ LIMIT 3;
 -- 13.Last Departing Flights --------------------------------------------------
 -- ----------------------------------------------------------------------------
 
+SELECT 
+    *
+FROM
+    (SELECT 
+        f.flight_id,
+            f.departure_time,
+            f.arrival_time,
+            a.airport_name AS 'origin',
+            air.airport_name AS 'destination'
+    FROM
+        `flights` AS f
+    JOIN `airports` AS a ON a.airport_id = f.origin_airport_id
+    JOIN `airports` AS air ON air.airport_id = f.destination_airport_id
+    WHERE
+        f.status LIKE 'Departing'
+    ORDER BY f.departure_time DESC
+    LIMIT 5) AS `last_df_table`
+ORDER BY last_df_table.departure_time ASC , last_df_table.flight_id ASC;
 
+-- 14.Flying Children ---------------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+SELECT DISTINCT
+    c.customer_id,
+    CONCAT_WS(' ', c.first_name, c.last_name) AS 'full_name',
+    (2016 - YEAR(c.date_of_birth)) AS 'age'
+FROM
+    `customers` AS c
+        JOIN
+    `tickets` AS t ON t.customer_id = c.customer_id
+        JOIN
+    `flights` AS f ON f.flight_id = t.flight_id
+WHERE
+    (2016 - YEAR(c.date_of_birth)) < 21 AND f.status LIKE 'Arrived'
+ORDER BY age DESC , c.customer_id ASC;
 
-
-
-
-
-
-
-
+-- 15.Airports and Passengers -------------------------------------------------
+-- ----------------------------------------------------------------------------
 
 
 
