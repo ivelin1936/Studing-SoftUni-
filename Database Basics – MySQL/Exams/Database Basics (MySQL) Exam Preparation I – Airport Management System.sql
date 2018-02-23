@@ -325,19 +325,110 @@ CREATE TABLE customer_bank_accounts(
 -- 16.Submit Review -----------------------------------------------------------
 -- ----------------------------------------------------------------------------
 
+DELIMITER $$
+CREATE PROCEDURE udp_submit_review(customer_id INT,
+								  review_content VARCHAR(255),
+                                  review_grade INT,
+								  airline_name VARCHAR(255))
+BEGIN
+DECLARE airlineID INT;
+START TRANSACTION;
+    SET airlineID := (SELECT ai.airline_id FROM `airlines` AS ai WHERE ai.airline_name = airline_name);
+    
+    INSERT INTO `customer_reviews`(`review_content`, `review_grade`, `customer_id`, `airline_id`)
+    VALUES (review_content, review_grade, customer_id, airlineID);
+    
+    IF airline_name NOT IN (SELECT a.airline_name FROM `airlines` AS a)
+		THEN
+			ROLLBACK;
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Airline does not exist.';
+	ELSE COMMIT;
+    END IF;
+END $$
+DELIMITER ;
 
+-- 17.Purchase Ticket ---------------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+DELIMITER $$
+CREATE PROCEDURE udp_purchase_ticket(customer_id INT,
+									flight_id INT,
+                                    ticket_price DECIMAL(8,2),
+                                    class VARCHAR(6),
+                                    seat VARCHAR(5))
+BEGIN
+START TRANSACTION;
+	INSERT INTO `tickets`(`price`, `class`, `seat`, `customer_id`, `flight_id`)
+    VALUES (ticket_price, class, seat, customer_id, flight_id);
+    
+    UPDATE `customer_bank_accounts` AS cb
+    SET cb.balance = cb.balance - ticket_price
+    WHERE cb.customer_id = customer_id;
+    
+    IF ticket_price > (SELECT  cba.balance
+					  FROM `customer_bank_accounts` AS cba
+					  WHERE cba.customer_id = customer_id)
+		THEN 
+			ROLLBACK;
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT ='Insufficient bank account balance for ticket purchase.';
+	ELSE COMMIT;
+    END IF;
+END $$
+DELIMITER ;
 
+-- Section 5: Bonus -----------------------------------------------------------
+-- 18.Update Trigger ----------------------------------------------------------
+-- ----------------------------------------------------------------------------
 
+CREATE TABLE arrived_flights(
+	flight_id INT,
+	arrival_time DATETIME,
+	origin VARCHAR(50),
+	destination VARCHAR(50),
+	passengers INT,
+	CONSTRAINT PK_arrived_flights PRIMARY KEY(flight_id)
+);
 
+DELIMITER $$
+CREATE TRIGGER tr_arrived_flights
+BEFORE UPDATE ON `flights`
+FOR EACH ROW
+BEGIN
+DECLARE origin_name VARCHAR(50);
+DECLARE destination_name VARCHAR(50);
+DECLARE passengers_count VARCHAR(50);
 
+SET origin_name := (SELECT a.airport_name 
+					FROM `airports` AS a 
+					WHERE a.airport_id = OLD.origin_airport_id);
+SET destination_name := (SELECT a.airport_name 
+						FROM `airports` AS a 
+						WHERE a.airport_id = OLD.destination_airport_id);
+SET passengers_count := (SELECT COUNT(t.customer_id)
+						FROM `flights` AS f
+						JOIN `tickets` AS t ON t.flight_id = f.flight_id
+						WHERE f.flight_id = OLD.flight_id);
 
+IF ((OLD.`status` NOT IN ('Cancelled', 'Arrived')) AND NEW.`status` = 'Arrived')
+	THEN 
+		INSERT INTO `arrived_flights`(flight_id,
+									arrival_time,
+									origin,
+									destination,
+									passengers)
+		VALUES 
+			(OLD.flight_id, 
+			OLD.arrival_time, 
+			origin_name, 
+			destination_name, 
+			passengers_count);
+END IF;
+END $$
+DELIMITER ;
 
-
-
-
-
-
+-- ----------------------------------------------------------------------------
 
 
 
