@@ -12,22 +12,25 @@ public class PhonebookUpgrade {
 
         String input = reader.readLine();
         while (!input.equals("END")) {
-            String[] tokens = input.split("\\s+");
-            String command = tokens[0];
-
-            switch (command) {
-                case "A":
-                    addEntryToThePhonebook(phonebook, tokens);
-                    break;
-                case "S":
-                    searcheForContact(phonebook, tokens);
-                    break;
-                case "ListAll":
-                    printAllContactsOrderedLexicographically(phonebook);
-                    break;
-            }
-
+            executeCommand(phonebook, input);
             input = reader.readLine();
+        }
+    }
+
+    private static void executeCommand(TreeMap<String, String> phonebook, String input) {
+        String[] tokens = input.split("\\s+");
+        String command = tokens[0];
+
+        switch (command) {
+            case "A":
+                addEntryToThePhonebook(phonebook, tokens);
+                break;
+            case "S":
+                searchesForContact(phonebook, tokens);
+                break;
+            case "ListAll":
+                printAllContactsOrderedLexicographically(phonebook);
+                break;
         }
     }
 
@@ -37,7 +40,7 @@ public class PhonebookUpgrade {
         }
     }
 
-    private static void searcheForContact(TreeMap<String, String> phonebook, String[] tokens) {
+    private static void searchesForContact(TreeMap<String, String> phonebook, String[] tokens) {
         String name = tokens[1];
 
         if (phonebook.containsKey(name)) {
