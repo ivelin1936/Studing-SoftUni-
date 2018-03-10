@@ -2,10 +2,10 @@ package com.company.onlineRadioDatabase.exceptions;
 
 public class InvalidSongSecondsException extends InvalidSongLengthException {
 
-    private static final String DEFFAULT_MESSAGE = "Song seconds should be between 0 and 59.";
+    private static final String DEFAULT_MESSAGE = "Song seconds should be between 0 and 59.";
 
     public InvalidSongSecondsException() {
-        super(DEFFAULT_MESSAGE);
+        super(DEFAULT_MESSAGE);
     }
 
     public InvalidSongSecondsException(String message) {

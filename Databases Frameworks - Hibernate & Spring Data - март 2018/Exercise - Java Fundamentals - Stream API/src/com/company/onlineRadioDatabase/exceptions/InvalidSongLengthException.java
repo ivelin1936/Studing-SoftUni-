@@ -2,10 +2,10 @@ package com.company.onlineRadioDatabase.exceptions;
 
 public class InvalidSongLengthException extends InvalidSongException {
 
-    private static final String DEFFAULT_MESSAGE = "Invalid song length.";
+    private static final String DEFAULT_MESSAGE = "Invalid song length.";
 
     public InvalidSongLengthException() {
-        super(DEFFAULT_MESSAGE);
+        super(DEFAULT_MESSAGE);
     }
 
     public InvalidSongLengthException(String message) {
