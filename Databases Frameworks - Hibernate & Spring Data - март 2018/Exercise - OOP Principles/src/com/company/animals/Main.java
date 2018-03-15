@@ -52,10 +52,10 @@ public class Main {
                 animals = new Frog(animalName, age, gender);
                 break;
             case "Kitten":
-                animals = new Kitten(animalName, age, gender);
+                animals = new Kitten(animalName, age, "Female");
                 break;
             case "Tomcat":
-                animals = new Tomcat(animalName, age, gender);
+                animals = new Tomcat(animalName, age, "Male");
                 break;
             default:
                 throw new IllegalArgumentException("Invalid input!");
