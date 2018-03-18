@@ -20,7 +20,7 @@ public class InitialSetup {
         String pass = reader.readLine();
 
         try(Connection conn = DriverManager.getConnection(URL, USER, pass)) {
-            System.out.println("Connection success!");
+            System.out.println("Connection successfully!");
 
             createTableTowns(conn);
             createTableMinions(conn);

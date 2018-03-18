@@ -17,7 +17,7 @@ public class MinionNames {
         String pass = reader.readLine();
 
         try(Connection conn = DriverManager.getConnection(URL, USER, pass)) {
-            System.out.println("... Connection successfully! ...");
+            System.out.println("Connection successfully!...");
             System.out.println("Please enter villain id: ");
             int villainID = Integer.parseInt(reader.readLine());
 

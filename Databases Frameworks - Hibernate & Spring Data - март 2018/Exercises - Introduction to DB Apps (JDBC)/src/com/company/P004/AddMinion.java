@@ -17,7 +17,7 @@ public class AddMinion {
         System.out.println("Password: ");
         String pass = reader.readLine();
         try(Connection conn = DriverManager.getConnection(URL, USER, pass)) {
-            System.out.println("... Connection successfully! ...");
+            System.out.println("Connection successfully!...");
             readAndAddInfoToTheDatabase(conn, reader);
         }
     }

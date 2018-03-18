@@ -19,6 +19,7 @@ public class ChangeTownName {
         String pass = reader.readLine();
 
         try(Connection conn = DriverManager.getConnection(URL, USER, pass)) {
+            System.out.println("Connection successfully!...");
             String country = reader.readLine();
             changeTownsNamesToUppercase(conn, country);
             printResult(conn, country);

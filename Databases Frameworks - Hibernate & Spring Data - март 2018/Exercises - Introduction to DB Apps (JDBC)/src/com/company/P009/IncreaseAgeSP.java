@@ -16,6 +16,7 @@ public class IncreaseAgeSP {
         System.out.println("Password: ");
         String pass = reader.readLine();
         try(Connection conn = DriverManager.getConnection(URL, USER, pass)) {
+            System.out.println("Connection successfully!...");
             System.out.println("Enter minionID: ");
             int minionID = Integer.parseInt(reader.readLine());
             useStoredProcedure(conn, minionID);

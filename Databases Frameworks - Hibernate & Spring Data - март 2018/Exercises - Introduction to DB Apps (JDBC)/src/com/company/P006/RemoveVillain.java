@@ -16,6 +16,8 @@ public class RemoveVillain {
         System.out.println("Password: ");
         String pass = reader.readLine();
         try(Connection conn = DriverManager.getConnection(URL, USER, pass)) {
+            System.out.println("Connection successfully!...");
+            System.out.println("Enter VillainID: ");
             int villainID = Integer.parseInt(reader.readLine());
             findVillainAndDeleteIt(conn, villainID);
         }
