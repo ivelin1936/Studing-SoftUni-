@@ -96,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChangeTownName.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChangeTownName.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/P005/ChangeTownName.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
+            <state relative-caret-position="-930">
               <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -107,6 +107,26 @@
                 <marker date="1521307426125" expanded="true" signature="2017:2065" ph="SELECT * FRO... towns" />
                 <marker date="1521307426125" expanded="true" signature="2017:2081" ph="SELECT * FRO... towns" />
                 <marker date="1521307426125" expanded="true" signature="2640:2757" ph="UPDATE `town... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IncreaseMinionsAge.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/P008/IncreaseMinionsAge.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1782">
+              <caret line="66" column="24" lean-forward="false" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1521378037298" expanded="true" signature="965:988" ph="SELECT * FRO... minions" />
+                <marker date="1521378037298" expanded="true" signature="1685:1719" ph="SELECT `name... minions" />
+                <marker date="1521378037298" expanded="true" signature="1685:1726" ph="SELECT `name... minions" />
+                <marker date="1521378037298" expanded="true" signature="2906:2993" ph="UPDATE `mini... " />
+                <marker date="1521378037298" expanded="true" signature="3313:3329" ph="UPDATE `mini... " />
+                <marker date="1521378037298" expanded="true" signature="3313:3353" ph="UPDATE `mini... " />
+                <marker date="1521378037298" expanded="true" signature="3313:3371" ph="UPDATE `mini... " />
+                <marker date="1521378037298" expanded="true" signature="3313:3407" ph="UPDATE `mini... " />
               </folding>
             </state>
           </provider>
@@ -136,6 +156,8 @@
         <option value="$PROJECT_DIR$/src/com/company/changeTownNamesCasingP005/ChangeTownNamesCasing.java" />
         <option value="$PROJECT_DIR$/src/com/company/P005/ChangeTownNamesCasing.java" />
         <option value="$PROJECT_DIR$/src/com/company/P005/ChangeTownName.java" />
+        <option value="$PROJECT_DIR$/src/com/company/test.java" />
+        <option value="$PROJECT_DIR$/src/com/company/P008/IncreaseMinionsAge.java" />
       </list>
     </option>
   </component>
@@ -190,35 +212,7 @@
               <item name="Exercises - Introduction to DB Apps (JDBC)" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="P001" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="P002" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="P003" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="P004" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="P005" type="462c0819:PsiDirectoryNode" />
+              <item name="P008" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Exercises - Introduction to DB Apps (JDBC)" type="b2602c69:ProjectViewProjectNode" />
@@ -253,7 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChangeTownNamesCasing">
+  <component name="RunManager" selected="Application.IncreaseMinionsAge">
     <configuration name="AddMinion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -292,14 +286,14 @@
       <module name="Exercises - Introduction to DB Apps (JDBC)" />
       <envs />
     </configuration>
-    <configuration name="InitialSetup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="IncreaseMinionsAge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.company.P001.*" />
+          <option name="PATTERN" value="com.company.P008.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.company.P001.InitialSetup" />
+      <option name="MAIN_CLASS_NAME" value="com.company.P008.IncreaseMinionsAge" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -330,25 +324,6 @@
       <module name="Exercises - Introduction to DB Apps (JDBC)" />
       <envs />
     </configuration>
-    <configuration name="VillainsNames" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.company.P002.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.company.P002.VillainsNames" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Exercises - Introduction to DB Apps (JDBC)" />
-      <envs />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -364,20 +339,39 @@
       <envs />
       <method />
     </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.company.test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Exercises - Introduction to DB Apps (JDBC)" />
+      <envs />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.GetVillainsNames" />
-      <item index="1" class="java.lang.String" itemvalue="Application.InitialSetup" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GetMinionNames" />
-      <item index="3" class="java.lang.String" itemvalue="Application.AddMinion" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ChangeTownNamesCasing" />
+      <item index="0" class="java.lang.String" itemvalue="Application.GetMinionNames" />
+      <item index="1" class="java.lang.String" itemvalue="Application.AddMinion" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ChangeTownNamesCasing" />
+      <item index="3" class="java.lang.String" itemvalue="Application.test" />
+      <item index="4" class="java.lang.String" itemvalue="Application.IncreaseMinionsAge" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ChangeTownNamesCasing" />
-        <item index="1" class="java.lang.String" itemvalue="Application.AddMinion" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GetMinionNames" />
-        <item index="3" class="java.lang.String" itemvalue="Application.InitialSetup" />
-        <item index="4" class="java.lang.String" itemvalue="Application.GetVillainsNames" />
+        <item index="0" class="java.lang.String" itemvalue="Application.IncreaseMinionsAge" />
+        <item index="1" class="java.lang.String" itemvalue="Application.test" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ChangeTownNamesCasing" />
+        <item index="3" class="java.lang.String" itemvalue="Application.AddMinion" />
+        <item index="4" class="java.lang.String" itemvalue="Application.GetMinionNames" />
       </list>
     </recent_temporary>
   </component>
@@ -391,12 +385,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521226051299</updated>
-      <workItem from="1521226054489" duration="22109000" />
+      <workItem from="1521226054489" duration="26247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22109000" />
+    <option name="totallyTimeSpent" value="26247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -570,7 +564,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/P005/ChangeTownName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
+        <state relative-caret-position="-930">
           <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -578,6 +572,32 @@
             <marker date="1521307426125" expanded="true" signature="2017:2065" ph="SELECT * FRO... towns" />
             <marker date="1521307426125" expanded="true" signature="2017:2081" ph="SELECT * FRO... towns" />
             <marker date="1521307426125" expanded="true" signature="2640:2757" ph="UPDATE `town... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/P008/IncreaseMinionsAge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="66" column="24" lean-forward="false" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1521378037298" expanded="true" signature="965:988" ph="SELECT * FRO... minions" />
+            <marker date="1521378037298" expanded="true" signature="1685:1719" ph="SELECT `name... minions" />
+            <marker date="1521378037298" expanded="true" signature="1685:1726" ph="SELECT `name... minions" />
+            <marker date="1521378037298" expanded="true" signature="2906:2993" ph="UPDATE `mini... " />
+            <marker date="1521378037298" expanded="true" signature="3313:3329" ph="UPDATE `mini... " />
+            <marker date="1521378037298" expanded="true" signature="3313:3353" ph="UPDATE `mini... " />
+            <marker date="1521378037298" expanded="true" signature="3313:3371" ph="UPDATE `mini... " />
+            <marker date="1521378037298" expanded="true" signature="3313:3407" ph="UPDATE `mini... " />
           </folding>
         </state>
       </provider>
