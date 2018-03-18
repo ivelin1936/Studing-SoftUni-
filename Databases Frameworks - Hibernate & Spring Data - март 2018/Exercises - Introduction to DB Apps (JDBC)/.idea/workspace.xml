@@ -132,7 +132,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IncreaseAgeSP.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IncreaseAgeSP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/P009/IncreaseAgeSP.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1218">
@@ -140,6 +140,36 @@
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1521394165769" expanded="true" signature="1272:1310" ph="SELECT * FRO... minions" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrintAllMinion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/P007/PrintAllMinion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1521398538195" expanded="true" signature="895:918" ph="SELECT * FRO... minions" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RemoveVillain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/P006/RemoveVillain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1620">
+              <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1521412034754" expanded="true" signature="899:938" ph="SELECT * FRO... villains" />
+                <marker date="1521412034754" expanded="true" signature="1516:1546" ph="DELETE FROM " />
+                <marker date="1521412034754" expanded="true" signature="1516:1569" ph="DELETE FROM " />
+                <marker date="1521412034754" expanded="true" signature="1516:1570" ph="DELETE FROM " />
+                <marker date="1521412034754" expanded="true" signature="1993:2030" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -153,6 +183,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>metadata</find>
+    </findStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -172,6 +207,8 @@
         <option value="$PROJECT_DIR$/src/com/company/test.java" />
         <option value="$PROJECT_DIR$/src/com/company/P008/IncreaseMinionsAge.java" />
         <option value="$PROJECT_DIR$/src/com/company/P009/IncreaseAgeSP.java" />
+        <option value="$PROJECT_DIR$/src/com/company/P007/PrintAllMinion.java" />
+        <option value="$PROJECT_DIR$/src/com/company/P006/RemoveVillain.java" />
       </list>
     </option>
   </component>
@@ -222,20 +259,6 @@
             </path>
             <path>
               <item name="Exercises - Introduction to DB Apps (JDBC)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="P008" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="P009" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises - Introduction to DB Apps (JDBC)" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -268,26 +291,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IncreaseAgeSP">
-    <configuration name="AddMinion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.company.P004.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.company.P004.AddMinion" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Exercises - Introduction to DB Apps (JDBC)" />
-      <envs />
-    </configuration>
+  <component name="RunManager" selected="Application.RemoveVillain">
     <configuration name="IncreaseAgeSP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -326,14 +330,33 @@
       <module name="Exercises - Introduction to DB Apps (JDBC)" />
       <envs />
     </configuration>
-    <configuration name="MinionNames" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="PrintAllMinion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.company.P003.*" />
+          <option name="PATTERN" value="com.company.P007.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.company.P003.MinionNames" />
+      <option name="MAIN_CLASS_NAME" value="com.company.P007.PrintAllMinion" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Exercises - Introduction to DB Apps (JDBC)" />
+      <envs />
+    </configuration>
+    <configuration name="RemoveVillain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.company.P006.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.company.P006.RemoveVillain" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -380,18 +403,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.MinionNames" />
-      <item index="1" class="java.lang.String" itemvalue="Application.AddMinion" />
-      <item index="2" class="java.lang.String" itemvalue="Application.test" />
-      <item index="3" class="java.lang.String" itemvalue="Application.IncreaseMinionsAge" />
-      <item index="4" class="java.lang.String" itemvalue="Application.IncreaseAgeSP" />
+      <item index="0" class="java.lang.String" itemvalue="Application.test" />
+      <item index="1" class="java.lang.String" itemvalue="Application.IncreaseMinionsAge" />
+      <item index="2" class="java.lang.String" itemvalue="Application.IncreaseAgeSP" />
+      <item index="3" class="java.lang.String" itemvalue="Application.PrintAllMinion" />
+      <item index="4" class="java.lang.String" itemvalue="Application.RemoveVillain" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.IncreaseAgeSP" />
-        <item index="1" class="java.lang.String" itemvalue="Application.IncreaseMinionsAge" />
-        <item index="2" class="java.lang.String" itemvalue="Application.test" />
-        <item index="3" class="java.lang.String" itemvalue="Application.AddMinion" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.RemoveVillain" />
+        <item index="1" class="java.lang.String" itemvalue="Application.PrintAllMinion" />
+        <item index="2" class="java.lang.String" itemvalue="Application.IncreaseAgeSP" />
+        <item index="3" class="java.lang.String" itemvalue="Application.IncreaseMinionsAge" />
+        <item index="4" class="java.lang.String" itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -406,16 +430,15 @@
       <option name="presentableId" value="Default" />
       <updated>1521226051299</updated>
       <workItem from="1521226054489" duration="27879000" />
-      <workItem from="1521393195625" duration="1039000" />
+      <workItem from="1521393195625" duration="11510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28918000" />
+    <option name="totallyTimeSpent" value="39389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -430,7 +453,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -725,6 +748,64 @@
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1521394165769" expanded="true" signature="1272:1310" ph="SELECT * FRO... minions" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/sql/Wrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/sql/ResultSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="188" column="75" lean-forward="false" selection-start-line="188" selection-start-column="58" selection-end-line="188" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/sql/ResultSetMetaData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="153" column="57" lean-forward="true" selection-start-line="153" selection-start-column="14" selection-end-line="153" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/P007/PrintAllMinion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1521398538195" expanded="true" signature="895:918" ph="SELECT * FRO... minions" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/sql/PreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="85" column="62" lean-forward="true" selection-start-line="84" selection-start-column="15" selection-end-line="85" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/P006/RemoveVillain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1521412034754" expanded="true" signature="899:938" ph="SELECT * FRO... villains" />
+            <marker date="1521412034754" expanded="true" signature="1516:1546" ph="DELETE FROM " />
+            <marker date="1521412034754" expanded="true" signature="1516:1569" ph="DELETE FROM " />
+            <marker date="1521412034754" expanded="true" signature="1516:1570" ph="DELETE FROM " />
+            <marker date="1521412034754" expanded="true" signature="1993:2030" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
