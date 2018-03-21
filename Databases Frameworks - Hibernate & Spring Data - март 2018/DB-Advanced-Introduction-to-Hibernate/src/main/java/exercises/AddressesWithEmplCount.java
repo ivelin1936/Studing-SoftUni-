@@ -25,5 +25,8 @@ public class AddressesWithEmplCount {
             System.out.println(String.format("%s, %s - %d employees",
                     a.getText(), a.getTown().getName(), a.getEmployees().size()));
         });
+
+        entityManager.close();
+        factory.close();
     }
 }
