@@ -4,11 +4,11 @@ import entities.Employee;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.List;
 
 public class ContainsEmployee {
     public static void main(String[] args) throws IOException {
@@ -17,38 +17,24 @@ public class ContainsEmployee {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PersistenceUnit");
         EntityManager em = factory.createEntityManager();
 
+        System.out.println("Enter Employee full name (first and last name): ");
         String[] fullName = reader.readLine().split(" ");
+        String firstName = fullName[0];
+        String lastName = fullName[1];
 
-        List<Employee> employees = em.createQuery("SELECT e FROM Employee AS e").getResultList();
+        String hqlQuery = "SELECT e FROM Employee e WHERE e.firstName =:fName AND e.lastName =:lName";
+        try {
+            Employee employee = (Employee) em.createQuery(hqlQuery)
+                    .setParameter("fName", firstName)
+                    .setParameter("lName", lastName)
+                    .getSingleResult();
 
-//        Employee inputEmployee = new Employee();
-//        inputEmployee.setFirstName(fullName[0]);
-//        inputEmployee.setLastName(fullName[1]);
-//        if (em.contains(inputEmployee)) {
-//            System.out.println("Yes");
-//        } else {
-//            System.out.println("No");
-//        }
-
-        if (isContained(fullName, employees)) {
             System.out.println("Yes");
-        } else {
+        } catch (NoResultException e) {
             System.out.println("No");
         }
 
         em.close();
         factory.close();
-    }
-
-    private static boolean isContained(String[] fullName, List<Employee> employees) {
-        String firstName = fullName[0];
-        String lastName = fullName[1];
-
-        for (Employee employee : employees) {
-            if (employee.getFirstName().equals(firstName) && employee.getLastName().equals(lastName)) {
-                return true;
-            }
-        }
-        return false;
     }
 }

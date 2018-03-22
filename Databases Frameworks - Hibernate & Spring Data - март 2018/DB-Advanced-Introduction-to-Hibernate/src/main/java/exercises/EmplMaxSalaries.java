@@ -1,6 +1,5 @@
 package exercises;
 
-import entities.Department;
 import entities.Employee;
 
 import javax.persistence.EntityManager;
@@ -9,7 +8,6 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.math.BigDecimal;
 import java.util.List;
 
 public class EmplMaxSalaries {

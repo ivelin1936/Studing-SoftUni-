@@ -39,8 +39,8 @@ public class RemoveTowns {
     private static void deleteTownWithTheGivenName(EntityManager entityManager, String townForDelete) {
         String hqlDeleteTownQuery = "SELECT t FROM Town AS t WHERE t.name = '" + townForDelete + "'";
         Query queryTown = entityManager.createQuery(hqlDeleteTownQuery);
-        List<Town> towns = queryTown.getResultList();
-        entityManager.remove(towns.get(0));
+        Town town = (Town) queryTown.getSingleResult();
+        entityManager.remove(town);
     }
 
     private static List<Address> deleteAddressesFromTheGivenTown(EntityManager entityManager, String townForDelete) {

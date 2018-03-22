@@ -47,7 +47,7 @@ public class AddAddressUpdatingEmpl {
     }
 
     private static void setTheAddressToEmployee(EntityManager entityManager, Address newAddress, BufferedReader reader) throws IOException {
-        System.out.println("Please enter user Last Name: ");
+        System.out.println("Please enter user(Last Name): ");
         String uLastNamse = reader.readLine();
 
         String hqlQuery = "SELECT e FROM Employee AS e WHERE e.lastName = '" + uLastNamse + "'";
@@ -58,9 +58,9 @@ public class AddAddressUpdatingEmpl {
             employees.get(0).setAddress(newAddress);
             entityManager.getTransaction().commit();
         } else if (employees.size() > 1) {
-            throw new IllegalArgumentException("Have more than one employees with this last name.");
+            throw new IllegalArgumentException("Have more than one employees with the given last name.");
         } else {
-            throw new IllegalArgumentException("Don't have employee with this last name in Database.");
+            throw new IllegalArgumentException("Don't have employee with the given last name in Database.");
         }
     }
 }
