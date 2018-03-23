@@ -1,2 +1,0 @@
-DISADVANTAGES:
-	- Multiple JOINS - for deep hierarchies it may give poor performance
