@@ -6,7 +6,6 @@ import java.util.Set;
 
 @Entity
 @Table(name = "products")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class Product {
 
     private Integer id;

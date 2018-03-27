@@ -2,12 +2,10 @@ package entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.Set;
 
 @Entity
 @Table(name = "patients")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class Patient {
 
     private Long id;

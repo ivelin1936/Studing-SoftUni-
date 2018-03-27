@@ -5,7 +5,6 @@ import java.util.Set;
 
 @Entity
 @Table(name = "customers")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class Customer {
 
     private Integer id;

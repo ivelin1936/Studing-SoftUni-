@@ -4,7 +4,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "medicaments")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class Medicament {
 
     private Long id;

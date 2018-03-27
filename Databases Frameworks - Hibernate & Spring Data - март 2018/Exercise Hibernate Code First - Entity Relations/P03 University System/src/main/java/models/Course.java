@@ -8,7 +8,6 @@ import java.util.Set;
 
 @Entity
 @Table(name = "courses")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class Course implements ICourse {
 
     private Integer id;
@@ -88,7 +87,9 @@ public class Course implements ICourse {
     @ManyToMany
     @JoinTable(name = "courses_students",
     joinColumns = @JoinColumn(name = "course_id", referencedColumnName = "id" ),
-    inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id"))
+    inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id"),
+            foreignKey = @ForeignKey(name = "FK_cs_course"),
+            inverseForeignKey = @ForeignKey(name = "FK_cs_student"))
     public Set<Student> getStudents() {
         return students;
     }
@@ -98,7 +99,8 @@ public class Course implements ICourse {
     }
 
     @ManyToOne(targetEntity = Teacher.class)
-    @JoinColumn(name = "teacher_id", referencedColumnName = "id")
+    @JoinColumn(name = "teacher_id", referencedColumnName = "id",
+            foreignKey = @ForeignKey(name = "FK_course_teacher"))
     public Teacher getTeacher() {
         return teacher;
     }
