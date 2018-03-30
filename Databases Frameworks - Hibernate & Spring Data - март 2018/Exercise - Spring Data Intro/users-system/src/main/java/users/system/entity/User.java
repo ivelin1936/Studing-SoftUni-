@@ -1,12 +1,17 @@
 package users.system.entity;
 
-import users.system.validators.Password;
+//import users.system.validators.Age;
+//import users.system.validators.Email;
+//import users.system.validators.Password;
+//import users.system.validators.Picture;
+
+import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
+//import javax.validation.constraints.Size;
 import java.util.Date;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -17,19 +22,20 @@ public class User {
     private String password;
     private String email;
     private byte[] picture;
+    private Set<Album> albums;
     private Date registeredOn;
     private Date lastTimeLoggedIn;
     private Integer age;
-    private Boolean isDeleted;
+    private boolean isDeleted;
+    private Town bornTown;
+    private Town currentlyLivingTown;
+    private String firstName;
+    private String lastName;
+    private Set<User> friends;
+    private String fullName;
 
     public User() {
-    }
-
-    public User(String username, String password, String email, Integer age) {
-        this.setUsername(username);
-        this.setPassword(password);
-        this.setEmail(email);
-        this.setAge(age);
+        this.friends = new HashSet<>();
     }
 
     @Id
@@ -43,7 +49,7 @@ public class User {
     }
 
     @Column(name = "username", nullable = false)
-    @Size(min = 4, max = 30)
+//    @Size(min = 4, max = 30)
     public String getUsername() {
         return username;
     }
@@ -53,10 +59,10 @@ public class User {
     }
 
     @Column(name = "password", nullable = false)
-    @Password(containsDigit = true,
-            containsLowercase = true,
-            containsUppercase = true,
-            containsSpecialSymbols = true)
+//    @Password(containsDigit = true,
+//            containsLowercase = true,
+//            containsUppercase = true,
+//            containsSpecialSymbols = true)
     public String getPassword() {
         return password;
     }
@@ -66,22 +72,22 @@ public class User {
     }
 
     @Column(name = "email", nullable = false)
+//    @Email
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
-        validationEmail(email);
         this.email = email;
     }
 
     @Column(name = "profile_picture", columnDefinition = "LONGBLOB")
+//    @Picture
     public byte[] getPicture() {
         return picture;
     }
 
     public void setPicture(byte[] picture) {
-        validationPicture(picture);
         this.picture = picture;
     }
 
@@ -104,7 +110,7 @@ public class User {
     }
 
     @Column(name = "age")
-//    @Size(min = 1, max = 120) -> think its to check the size on String, maybe dont work for int so need check it!!!
+//    @Age(message = "Invalid age! Age should be between 1 and 120.")
     public Integer getAge() {
         return age;
     }
@@ -122,15 +128,71 @@ public class User {
         isDeleted = deleted;
     }
 
-    private void validationPicture(byte[] picture) {
-        if (picture.length > (1024 * 1024)) {
-            throw new IllegalArgumentException("Picture is too big!");
-        }
+    @ManyToOne(targetEntity = Town.class)
+    @JoinColumn(name = "born_town_id", referencedColumnName = "id")
+    public Town getBornTown() {
+        return bornTown;
     }
 
-    private void validationEmail(String email) {
-        if (!email.matches("^[a-zA-Z0-9]+[\\w.-]+[a-zA-Z0-9]+@[a-zA-Z]+[a-zA-Z.]+[a-zA-Z]+$")) {
-            throw new IllegalArgumentException("Invalid email.");
-        }
+    public void setBornTown(Town bornTown) {
+        this.bornTown = bornTown;
+    }
+
+    @ManyToOne(targetEntity = Town.class)
+    @JoinColumn(name = "living_town_id", referencedColumnName = "id")
+    public Town getCurrentlyLivingTown() {
+        return currentlyLivingTown;
+    }
+
+    public void setCurrentlyLivingTown(Town currentlyLivingTown) {
+        this.currentlyLivingTown = currentlyLivingTown;
+    }
+
+    @Column(name = "first_name", nullable = false)
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    @Column(name = "last_name", nullable = false)
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    @ManyToMany(targetEntity = User.class)
+    @JoinTable(name = "user_friends",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "friend_id", referencedColumnName = "id"))
+    public Set<User> getFriends() {
+        return friends;
+    }
+
+    public void setFriends(Set<User> friends) {
+        this.friends = friends;
+    }
+
+    @Transient
+    public String getFullName() {
+        return String.format("%s %s", this.firstName, this.lastName);
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    @OneToMany(mappedBy = "user", targetEntity = Album.class)
+    public Set<Album> getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(Set<Album> albums) {
+        this.albums = albums;
     }
 }
