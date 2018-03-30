@@ -49,7 +49,11 @@ public class RunnerTerminal implements CommandLineRunner {
         List<User> userList = this.userService.usersLastTimeLoggedInAfter(date);
         this.userService.removeAllUnActiveUsersAfterDate(date);
 
-        System.out.println(userList.size());
+        if (userList.size() > 0) {
+            System.out.println(userList.size() + "users has been deleted");
+        } else {
+            System.out.println("No users has been deleted");
+        }
 
         this.userService.deleteAllByIsDeletedTrue();
     }
