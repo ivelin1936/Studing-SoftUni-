@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import users.system.entity.User;
-import users.system.service.UserService;
+import users.system.service.interfaces.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,17 +18,25 @@ import java.util.List;
 public class RunnerTerminal implements CommandLineRunner {
 
     private UserService userService;
+    private TownService townService;
+    private PictureService pictureService;
+    private CountryService countryService;
+    private AlbumService albumService;
 
     @Autowired
-    public RunnerTerminal(UserService userService) {
+    public RunnerTerminal(UserService userService, TownService townService, PictureService pictureService, CountryService countryService, AlbumService albumService) {
         this.userService = userService;
+        this.townService = townService;
+        this.pictureService = pictureService;
+        this.countryService = countryService;
+        this.albumService = albumService;
     }
 
     @Override
     public void run(String... strings) throws Exception {
-//        initUserData();
+        initUserData();
 //        findAllByEmileProvider();
-        removeInactiveUsers();
+//        removeInactiveUsers();
     }
 
     private void removeInactiveUsers() throws IOException, ParseException {
@@ -37,7 +45,13 @@ public class RunnerTerminal implements CommandLineRunner {
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date date = format.parse(reader.readLine());
+
+        List<User> userList = this.userService.usersLastTimeLoggedInAfter(date);
         this.userService.removeAllUnActiveUsersAfterDate(date);
+
+        System.out.println(userList.size());
+
+        this.userService.deleteAllByIsDeletedTrue();
     }
 
     private void findAllByEmileProvider() throws IOException {
@@ -52,12 +66,12 @@ public class RunnerTerminal implements CommandLineRunner {
 
     private void initUserData() {
         User user = new User();
-        user.setUsername("gosho");
-        user.setPassword("gsaA413?");
-        user.setEmail("ggoev@cam.bg");
+        user.setUsername("Someone");
+        user.setPassword("RssRTs413?");
+        user.setEmail("toi@abv.bg");
         user.setAge(18);
-        user.setFirstName("Georgi");
-        user.setLastName("Georgiev");
+        user.setFirstName("Someoncho");
+        user.setLastName("Toshevski");
 
         this.userService.persist(user);
     }

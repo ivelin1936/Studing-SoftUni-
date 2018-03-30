@@ -17,8 +17,11 @@ public interface UserRepo extends JpaRepository<User, Long> {
 
     List<User> findAllByLastTimeLoggedInAfter(Date date);
 
-
     @Modifying
     @Query(value = "UPDATE User u SET u.deleted = true WHERE u.lastTimeLoggedIn > :date")
     void removeAllUnActiveUsersAfterDate(@Param("date") Date date);
+
+    @Modifying
+    @Query(value = "DELETE FROM User u WHERE u.deleted = true")
+    void deleteAllByIsDeletedTrue();
 }

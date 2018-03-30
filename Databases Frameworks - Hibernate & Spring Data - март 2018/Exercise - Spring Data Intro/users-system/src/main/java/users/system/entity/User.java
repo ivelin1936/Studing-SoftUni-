@@ -1,14 +1,14 @@
 package users.system.entity;
 
-//import users.system.validators.Age;
-//import users.system.validators.Email;
-//import users.system.validators.Password;
-//import users.system.validators.Picture;
+import users.system.validators.Age;
+import users.system.validators.Email;
+import users.system.validators.Password;
+import users.system.validators.Picture;
 
 import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import javax.persistence.*;
-//import javax.validation.constraints.Size;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -49,7 +49,7 @@ public class User {
     }
 
     @Column(name = "username", nullable = false)
-//    @Size(min = 4, max = 30)
+    @Size(min = 4, max = 30)
     public String getUsername() {
         return username;
     }
@@ -59,10 +59,10 @@ public class User {
     }
 
     @Column(name = "password", nullable = false)
-//    @Password(containsDigit = true,
-//            containsLowercase = true,
-//            containsUppercase = true,
-//            containsSpecialSymbols = true)
+    @Password(containsDigit = true,
+            containsLowercase = true,
+            containsUppercase = true,
+            containsSpecialSymbols = true)
     public String getPassword() {
         return password;
     }
@@ -72,7 +72,7 @@ public class User {
     }
 
     @Column(name = "email", nullable = false)
-//    @Email
+    @Email
     public String getEmail() {
         return email;
     }
@@ -82,7 +82,7 @@ public class User {
     }
 
     @Column(name = "profile_picture", columnDefinition = "LONGBLOB")
-//    @Picture
+    @Picture
     public byte[] getPicture() {
         return picture;
     }
@@ -110,7 +110,7 @@ public class User {
     }
 
     @Column(name = "age")
-//    @Age(message = "Invalid age! Age should be between 1 and 120.")
+    @Age(message = "Invalid age! Age should be between 1 and 120.")
     public Integer getAge() {
         return age;
     }
