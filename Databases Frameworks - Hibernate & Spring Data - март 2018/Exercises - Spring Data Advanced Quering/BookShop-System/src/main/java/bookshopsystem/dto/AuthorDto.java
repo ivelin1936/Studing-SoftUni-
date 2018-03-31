@@ -4,6 +4,7 @@ public class AuthorDto {
 
     private String firstName;
     private String lastName;
+    private Long sumCopies;
 
     public AuthorDto() {
     }
@@ -11,6 +12,12 @@ public class AuthorDto {
     public AuthorDto(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public AuthorDto(String firstName, String lastName, Long sumCopies) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sumCopies = sumCopies;
     }
 
     public String getFirstName() {
@@ -31,5 +38,13 @@ public class AuthorDto {
 
     public String getFullName() {
         return String.format("%s %s", this.firstName, this.lastName);
+    }
+
+    public Long getSumCopies() {
+        return sumCopies;
+    }
+
+    public void setSumCopies(Long sumCopies) {
+        this.sumCopies = sumCopies;
     }
 }

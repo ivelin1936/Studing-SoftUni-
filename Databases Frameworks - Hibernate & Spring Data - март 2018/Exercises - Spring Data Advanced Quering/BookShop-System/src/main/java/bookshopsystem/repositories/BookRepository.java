@@ -1,11 +1,14 @@
 package bookshopsystem.repositories;
 
+import bookshopsystem.dto.AuthorDto;
 import bookshopsystem.dto.BookDto;
+import bookshopsystem.dto.ReducedBook;
 import bookshopsystem.enums.AgeRestriction;
 import bookshopsystem.enums.EditionType;
 import bookshopsystem.models.entity.Author;
 import bookshopsystem.models.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -45,5 +48,15 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
     @Query("SELECT count(b.title) FROM Book b WHERE length(b.title) > :number")
     int countBookByTitleGreaterThan(@Param("number") Integer number);
 
+    @Query("SELECT " +
+            "new bookshopsystem.dto.AuthorDto(b.author.firstName, b.author.lastName, sum(b.copies))" +
+            "FROM Book b " +
+            "GROUP BY b.author.firstName, b.author.lastName")
+    List<AuthorDto> totalBookCopiesByAuthors();
 
+    ReducedBook findBookByTitle(String title);
+
+    @Modifying
+    @Query("UPDATE Book b SET b.copies = b.copies + :newCopies WHERE b.releaseDate > :date")
+    int increaseBookCopies(@Param("date") Date date, @Param("newCopies") int newCopies);
 }

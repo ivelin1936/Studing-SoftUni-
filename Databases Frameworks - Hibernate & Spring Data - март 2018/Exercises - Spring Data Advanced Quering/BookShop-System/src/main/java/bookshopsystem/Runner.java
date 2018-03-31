@@ -1,18 +1,19 @@
 package bookshopsystem;
 
+import bookshopsystem.dto.ReducedBook;
 import bookshopsystem.enums.AgeRestriction;
 import bookshopsystem.enums.EditionType;
 import bookshopsystem.models.entity.Author;
 import bookshopsystem.models.entity.Book;
 import bookshopsystem.models.entity.Category;
-import bookshopsystem.services.interfaces.AuthorService;
-import bookshopsystem.services.interfaces.BookService;
-import bookshopsystem.services.interfaces.CategoryService;
-import org.aspectj.lang.annotation.Before;
+import bookshopsystem.services.authorService.AuthorService;
+import bookshopsystem.services.bookService.BookService;
+import bookshopsystem.services.categoryService.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import javax.print.attribute.standard.Copies;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -68,11 +69,42 @@ public class Runner implements CommandLineRunner {
 //        bookSearch(reader.readLine());
 //        bookTitleSearch(reader.readLine());
 //        countBooksByLongerTitle(Integer.parseInt(reader.readLine()));
-        totalBookCopiesByAuthor();
+//        totalBookCopiesByAuthor();
+//        reducedBook(reader.readLine());
+//        increaseBookCopies(reader);
+         removeBooks(reader.readLine());
+    }
+
+    private void removeBooks(String copies) {
+
+    }
+
+    private void increaseBookCopies(BufferedReader reader) throws IOException, ParseException {
+        String dateStr = reader.readLine();
+        SimpleDateFormat format = new SimpleDateFormat("dd MM yyyy"); //Don't work with patter "dd MMM yyyy"
+        Date date = format.parse(dateStr);
+//        String debug = "";
+        int newCopies = Integer.parseInt(reader.readLine());
+
+        int affectedBooks = this.bookService.increaseBookCopies(date, newCopies);
+//        String debug ="";
+        long addedCopies = newCopies * affectedBooks;
+        System.out.println(
+                String.format("%d books are released after %s so total of %d book copies were added",
+                        affectedBooks, dateStr, addedCopies));
+    }
+
+    private void reducedBook(String title) {
+        ReducedBook book = this.bookService.findBookByTitle(title);
+        System.out.println(String.format("Title: %s | EditionType: %s | AgeRestriction: %s | Price: %.2f",
+                book.getTitle(), book.getEditionType(), book.getAgeRestriction(), book.getPrice()));
     }
 
     private void totalBookCopiesByAuthor() {
-
+        this.bookService.totalBookCopiesByAuthors().forEach(a -> {
+            System.out.println(String.format("%s - %d",
+                    a.getFullName(), a.getSumCopies()));
+        });
     }
 
     private void countBooksByLongerTitle(int number) {
