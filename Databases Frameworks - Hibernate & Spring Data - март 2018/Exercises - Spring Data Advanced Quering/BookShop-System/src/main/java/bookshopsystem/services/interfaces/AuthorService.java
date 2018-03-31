@@ -18,4 +18,6 @@ public interface AuthorService {
     List<Author> authorsOrderByBooksCount();
 
     Author authorByFirstAndLastName(String fName, String lName);
+
+    List<Author> findAllByFirstNameEndingWith(String str);
 }

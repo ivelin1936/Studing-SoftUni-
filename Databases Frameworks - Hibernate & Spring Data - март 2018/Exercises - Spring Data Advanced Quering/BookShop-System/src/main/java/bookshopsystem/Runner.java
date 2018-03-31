@@ -8,6 +8,7 @@ import bookshopsystem.models.entity.Category;
 import bookshopsystem.services.interfaces.AuthorService;
 import bookshopsystem.services.interfaces.BookService;
 import bookshopsystem.services.interfaces.CategoryService;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -61,8 +62,49 @@ public class Runner implements CommandLineRunner {
 //        bookTitleByAgeRestriction(reader.readLine().toUpperCase());
 //        goldenBooks();
 //        booksByPrice();
-        notReleasedBooks(reader.readLine());
+//        notReleasedBooks(reader.readLine());
+//        booksReleasedBeforeDate(reader.readLine());
+//        authorsSearch(reader.readLine());
+//        bookSearch(reader.readLine());
+//        bookTitleSearch(reader.readLine());
+//        countBooksByLongerTitle(Integer.parseInt(reader.readLine()));
+        totalBookCopiesByAuthor();
+    }
 
+    private void totalBookCopiesByAuthor() {
+
+    }
+
+    private void countBooksByLongerTitle(int number) {
+        int booksCount = this.bookService.countBookByTitleGreaterThan(number);
+        System.out.println(String.format(
+                "There are %d books with longer title than %d symbols",
+                booksCount, number));
+    }
+
+    private void bookTitleSearch(String str) {
+        this.bookService.bookTitleSearchByAuthorLastNameStartingWith(str).forEach(b -> {
+            System.out.println(String.format("%s ( %s )", b.getTitle(), b.getAuthor().getFullName()));
+        });
+    }
+
+    private void bookSearch(String str) {
+        this.bookService.findAllByTitleContains(str).forEach(b -> {
+            System.out.println(b.getTitle());
+        });
+    }
+
+    private void authorsSearch(String str) {
+        this.authorService.findAllByFirstNameEndingWith(str).forEach(a -> {
+            System.out.println(String.format("%s %s", a.getFirstName(), a.getLastName()));
+        });
+    }
+
+    private void booksReleasedBeforeDate(String dataString) throws ParseException {
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = format.parse(dataString);
+
+        this.bookService.booksReleasedBeforeDate(date).forEach(System.out::println);
     }
 
     private void notReleasedBooks(String dataString) throws ParseException {

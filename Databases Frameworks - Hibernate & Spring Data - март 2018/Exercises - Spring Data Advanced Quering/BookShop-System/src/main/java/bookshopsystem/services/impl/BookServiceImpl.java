@@ -1,6 +1,6 @@
 package bookshopsystem.services.impl;
 
-import bookshopsystem.dto.BookP03Dto;
+import bookshopsystem.dto.BookDto;
 import bookshopsystem.enums.AgeRestriction;
 import bookshopsystem.enums.EditionType;
 import bookshopsystem.models.entity.Author;
@@ -60,12 +60,33 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<BookP03Dto> allBooksByPrice() {
+    public List<BookDto> allBooksByPrice() {
         return this.bookRepository.allBooksByPrice();
     }
 
     @Override
     public List<String> notReleasedBooksOnGivenYear(Date date) {
         return this.bookRepository.notReleasedBooksOnGivenYear(date);
+    }
+
+    @Override
+    public List<BookDto> booksReleasedBeforeDate(Date date) {
+        return this.bookRepository.booksReleasedBeforeDate(date);
+    }
+
+    @Override
+    public List<Book> findAllByTitleContains(String str) {
+        return this.bookRepository.findAllByTitleContains(str);
+    }
+
+    @Override
+    public List<Book> bookTitleSearchByAuthorLastNameStartingWith(String str) {
+        String likeExpression = str + "%";
+        return this.bookRepository.bookTitleSearchByAuthorLastNameStartingWith(likeExpression);
+    }
+
+    @Override
+    public int countBookByTitleGreaterThan(Integer number) {
+        return this.bookRepository.countBookByTitleGreaterThan(number);
     }
 }

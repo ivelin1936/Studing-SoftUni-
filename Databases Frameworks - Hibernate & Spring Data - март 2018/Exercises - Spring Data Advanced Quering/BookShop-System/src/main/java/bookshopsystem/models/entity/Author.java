@@ -12,6 +12,7 @@ public class Author {
     private String firstName;
     private String lastName;
     private Set<Book> books;
+    private String fullName;
 
     public Author() {
         this.books = new HashSet<>();
@@ -57,5 +58,10 @@ public class Author {
 
     public void setBooks(Set<Book> books) {
         this.books = books;
+    }
+
+    @Transient
+    public String getFullName() {
+        return String.format("%s %s", this.firstName, this.lastName);
     }
 }

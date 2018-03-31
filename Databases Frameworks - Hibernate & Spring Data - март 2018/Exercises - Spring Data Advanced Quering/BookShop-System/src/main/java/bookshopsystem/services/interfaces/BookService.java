@@ -1,11 +1,10 @@
 package bookshopsystem.services.interfaces;
 
-import bookshopsystem.dto.BookP03Dto;
+import bookshopsystem.dto.BookDto;
 import bookshopsystem.enums.AgeRestriction;
 import bookshopsystem.enums.EditionType;
 import bookshopsystem.models.entity.Author;
 import bookshopsystem.models.entity.Book;
-import org.springframework.data.repository.query.Param;
 
 import java.util.Date;
 import java.util.List;
@@ -26,7 +25,15 @@ public interface BookService {
 
     List<String> allGoldenEditionBooksWithLessThan5000Copies(EditionType editionType);
 
-    List<BookP03Dto> allBooksByPrice();
+    List<BookDto> allBooksByPrice();
 
     List<String> notReleasedBooksOnGivenYear(Date date);
+
+    List<BookDto> booksReleasedBeforeDate(Date date);
+
+    List<Book> findAllByTitleContains(String str);
+
+    List<Book> bookTitleSearchByAuthorLastNameStartingWith(String str);
+
+    int countBookByTitleGreaterThan(Integer number);
 }
