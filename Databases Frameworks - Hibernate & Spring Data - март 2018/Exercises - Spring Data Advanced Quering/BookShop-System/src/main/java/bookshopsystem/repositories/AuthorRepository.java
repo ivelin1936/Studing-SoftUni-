@@ -1,10 +1,15 @@
 package bookshopsystem.repositories;
 
 import bookshopsystem.dto.AuthorDto;
+import bookshopsystem.dto.AuthorSP;
 import bookshopsystem.models.entity.Author;
+import org.hibernate.annotations.NamedNativeQuery;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedStoredProcedureQueries;
+import javax.persistence.QueryHint;
 import java.util.Date;
 import java.util.List;
 

@@ -1,6 +1,7 @@
 package bookshopsystem.services.authorService;
 
 import bookshopsystem.dto.AuthorDto;
+import bookshopsystem.dto.BookDto;
 import bookshopsystem.models.entity.Author;
 
 import java.util.Date;
@@ -21,4 +22,7 @@ public interface AuthorService {
     Author authorByFirstAndLastName(String fName, String lName);
 
     List<Author> findAllByFirstNameEndingWith(String str);
+
+    AuthorDto callStoredProcedure(String fName, String lName);
+
 }

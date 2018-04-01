@@ -11,6 +11,9 @@ public class BookDto {
     private BigDecimal price;
     private EditionType editionType;
     private Author author;
+    private String aFirstName;
+    private String aLastName;
+    private Integer booksCount;
 
     public BookDto() {
     }
@@ -29,6 +32,12 @@ public class BookDto {
     public BookDto(String title, Author author) {
         this.title = title;
         this.author = author;
+    }
+
+    public BookDto(String aFirstName, String aLastName, Integer booksCount) {
+        this.aFirstName = aFirstName;
+        this.aLastName = aLastName;
+        this.booksCount = booksCount;
     }
 
     public String getTitle() {
@@ -67,5 +76,29 @@ public class BookDto {
     public String toString() {
         return String.format("TITLE: %s  EDITION TYPE: %s  PRICE: $%.2f",
                 this.getTitle(), this.getEditionType(), this.getPrice());
+    }
+
+    public String getaFirstName() {
+        return aFirstName;
+    }
+
+    public void setaFirstName(String aFirstName) {
+        this.aFirstName = aFirstName;
+    }
+
+    public String getaLastName() {
+        return aLastName;
+    }
+
+    public void setaLastName(String aLastName) {
+        this.aLastName = aLastName;
+    }
+
+    public Integer getBooksCount() {
+        return booksCount;
+    }
+
+    public void setBooksCount(Integer booksCount) {
+        this.booksCount = booksCount;
     }
 }

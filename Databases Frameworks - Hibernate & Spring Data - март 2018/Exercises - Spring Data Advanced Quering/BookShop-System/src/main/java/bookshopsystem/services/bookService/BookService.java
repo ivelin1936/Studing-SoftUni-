@@ -44,4 +44,6 @@ public interface BookService {
     ReducedBook findBookByTitle(String title);
 
     int increaseBookCopies( Date date, int newCopies);
+
+    int removeBooksByCopiesLessThan(int number);
 }

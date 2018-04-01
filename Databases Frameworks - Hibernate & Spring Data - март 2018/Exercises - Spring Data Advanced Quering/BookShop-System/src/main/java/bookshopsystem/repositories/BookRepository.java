@@ -59,4 +59,7 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
     @Modifying
     @Query("UPDATE Book b SET b.copies = b.copies + :newCopies WHERE b.releaseDate > :date")
     int increaseBookCopies(@Param("date") Date date, @Param("newCopies") int newCopies);
+
+    @Modifying
+    int removeBooksByCopiesLessThan(int number);
 }

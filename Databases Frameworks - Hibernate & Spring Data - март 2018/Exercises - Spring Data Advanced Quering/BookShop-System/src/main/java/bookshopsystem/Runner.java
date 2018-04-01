@@ -1,5 +1,6 @@
 package bookshopsystem;
 
+import bookshopsystem.dto.AuthorDto;
 import bookshopsystem.dto.ReducedBook;
 import bookshopsystem.enums.AgeRestriction;
 import bookshopsystem.enums.EditionType;
@@ -13,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import javax.print.attribute.standard.Copies;
+import javax.transaction.Transactional;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -27,6 +28,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Component
+@Transactional
 public class Runner implements CommandLineRunner {
 
     private static final String AUTHORS_RESOURCE_FILE = "C:\\Users\\Admin\\Desktop\\IntroToHibernateResources\\BookShop-System\\src\\main\\resources\\authors.txt";
@@ -72,18 +74,27 @@ public class Runner implements CommandLineRunner {
 //        totalBookCopiesByAuthor();
 //        reducedBook(reader.readLine());
 //        increaseBookCopies(reader);
-         removeBooks(reader.readLine());
+//         removeBooks(Integer.parseInt(reader.readLine()));
+        storedProcedure(reader.readLine());
     }
 
-    private void removeBooks(String copies) {
+    private void storedProcedure(String authorFullName) {
+        String[] name = authorFullName.split("\\s+");
+        AuthorDto author = this.authorService.callStoredProcedure("Amanda", "Rice");
+        String debug = "";
 
+    }
+
+    private void removeBooks(int copies) {
+        int affectedBooks = this.bookService.removeBooksByCopiesLessThan(copies);
+
+        System.out.println(String.format("%d books were deleted", affectedBooks));
     }
 
     private void increaseBookCopies(BufferedReader reader) throws IOException, ParseException {
         String dateStr = reader.readLine();
         SimpleDateFormat format = new SimpleDateFormat("dd MM yyyy"); //Don't work with patter "dd MMM yyyy"
         Date date = format.parse(dateStr);
-//        String debug = "";
         int newCopies = Integer.parseInt(reader.readLine());
 
         int affectedBooks = this.bookService.increaseBookCopies(date, newCopies);
