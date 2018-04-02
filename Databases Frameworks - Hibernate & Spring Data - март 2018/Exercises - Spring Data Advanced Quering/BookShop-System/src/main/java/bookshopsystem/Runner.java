@@ -79,16 +79,17 @@ public class Runner implements CommandLineRunner {
     }
 
     private void storedProcedure(String authorFullName) {
-        String[] name = authorFullName.split("\\s+");
-//        int authorBooksCount = this.authorService.getAuthorBookCountProcedure("Amanda", "Rice");
-        AuthorDto author = this.authorService.callStoredProcedure("Amanda", "Rice");
+        String[] name = authorFullName.trim().split("\\s+");
+        int authorBooksCount = this.authorService.getAuthorBookCountProcedure("Amanda", "Rice");
 
-        if (author.getSumCopies() > 1) {
-            System.out.println(author.getFullName() + " has written " + author.getSumCopies() + " books");
-        } else if (author.getSumCopies() == 1) {
-            System.out.println(author.getFullName() + " has written " + author.getSumCopies() + " book");
+//        AuthorDto author = this.authorService.callStoredProcedure(name[0], name[1]);
+
+        if (authorBooksCount > 1) {
+            System.out.println(authorFullName + " has written " + authorBooksCount + " books");
+        } else if (authorBooksCount == 1) {
+            System.out.println(authorFullName + " has written " + authorBooksCount + " book");
         } else {
-            System.out.println(author.getFullName() + " has not written any books yet");
+            System.out.println(authorFullName + " has not written any books yet");
         }
 
     }
