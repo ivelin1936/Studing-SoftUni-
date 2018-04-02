@@ -63,26 +63,27 @@ public class AuthorServiceImpl implements AuthorService {
         return this.authorRepository.findAllByFirstNameEndingWith(str);
     }
 
+    @Override
+    public int getAuthorBookCountProcedure(String firstName, String lastName) {
+        return this.getAuthorBookCountProcedure(firstName, lastName);
+    }
+
     public AuthorDto callStoredProcedure(String fName, String lName){
-        StoredProcedureQuery query = this.entityManager.createStoredProcedureQuery("usp_get_author_books");
+        StoredProcedureQuery storedProcedure = this.entityManager.createStoredProcedureQuery("usp_get_author_books");
 
         //Define the stored procedure
-        query.registerStoredProcedureParameter("f_name", String.class, ParameterMode.IN);
-        query.registerStoredProcedureParameter("l_name", String.class, ParameterMode.IN);
-        query.registerStoredProcedureParameter("first_name", String.class, ParameterMode.OUT);
-        query.registerStoredProcedureParameter("last_name", String.class, ParameterMode.OUT);
-        query.registerStoredProcedureParameter("books_count", Long.class, ParameterMode.OUT);
+        storedProcedure.registerStoredProcedureParameter("f_name", String.class, ParameterMode.IN);
+        storedProcedure.registerStoredProcedureParameter("l_name", String.class, ParameterMode.IN);
+        storedProcedure.registerStoredProcedureParameter("books_count", Long.class, ParameterMode.OUT);
 
         //Set input params
-        query.setParameter("f_name", fName);
-        query.setParameter("l_name", lName);
+        storedProcedure.setParameter("f_name", fName);
+        storedProcedure.setParameter("l_name", lName);
 
         //Call the stored procedure and get the result
-        query.execute();
-        String aFirstName = (String)query.getOutputParameterValue("first_name");
-        String aLastName = (String)query.getOutputParameterValue("last_name");
-        Long booksCount = (Long) query.getOutputParameterValue("books_count");
+        storedProcedure.execute();
+        Long booksCount = (Long)storedProcedure.getOutputParameterValue("books_count");
 
-        return new AuthorDto(aFirstName, aLastName, booksCount);
+        return new AuthorDto(fName, lName, booksCount);
     }
 }

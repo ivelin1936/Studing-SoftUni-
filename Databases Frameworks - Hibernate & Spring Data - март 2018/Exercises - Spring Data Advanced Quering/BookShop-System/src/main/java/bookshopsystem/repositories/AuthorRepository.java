@@ -1,15 +1,11 @@
 package bookshopsystem.repositories;
 
-import bookshopsystem.dto.AuthorDto;
-import bookshopsystem.dto.AuthorSP;
 import bookshopsystem.models.entity.Author;
-import org.hibernate.annotations.NamedNativeQuery;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
 
-import javax.persistence.NamedNativeQueries;
-import javax.persistence.NamedStoredProcedureQueries;
-import javax.persistence.QueryHint;
 import java.util.Date;
 import java.util.List;
 
@@ -25,4 +21,6 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
 
     List<Author> findAllByFirstNameEndingWith(String str);
 
+    @Procedure(value = "usp_get_author_books", outputParameterName = "books_count")
+    int getAuthorBookCountProcedure(@Param("f_name") String firstName, @Param("l_name") String lastName);
 }

@@ -25,4 +25,6 @@ public interface AuthorService {
 
     AuthorDto callStoredProcedure(String fName, String lName);
 
+    int getAuthorBookCountProcedure(String firstName, String lastName);
+
 }

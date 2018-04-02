@@ -80,8 +80,16 @@ public class Runner implements CommandLineRunner {
 
     private void storedProcedure(String authorFullName) {
         String[] name = authorFullName.split("\\s+");
+//        int authorBooksCount = this.authorService.getAuthorBookCountProcedure("Amanda", "Rice");
         AuthorDto author = this.authorService.callStoredProcedure("Amanda", "Rice");
-        String debug = "";
+
+        if (author.getSumCopies() > 1) {
+            System.out.println(author.getFullName() + " has written " + author.getSumCopies() + " books");
+        } else if (author.getSumCopies() == 1) {
+            System.out.println(author.getFullName() + " has written " + author.getSumCopies() + " book");
+        } else {
+            System.out.println(author.getFullName() + " has not written any books yet");
+        }
 
     }
 
@@ -93,7 +101,7 @@ public class Runner implements CommandLineRunner {
 
     private void increaseBookCopies(BufferedReader reader) throws IOException, ParseException {
         String dateStr = reader.readLine();
-        SimpleDateFormat format = new SimpleDateFormat("dd MM yyyy"); //Don't work with patter "dd MMM yyyy"
+        SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy"); //Don't work with patter "dd MMM yyyy"
         Date date = format.parse(dateStr);
         int newCopies = Integer.parseInt(reader.readLine());
 
