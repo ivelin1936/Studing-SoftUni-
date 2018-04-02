@@ -46,4 +46,5 @@ public interface BookService {
     int increaseBookCopies( Date date, int newCopies);
 
     int removeBooksByCopiesLessThan(int number);
+
 }

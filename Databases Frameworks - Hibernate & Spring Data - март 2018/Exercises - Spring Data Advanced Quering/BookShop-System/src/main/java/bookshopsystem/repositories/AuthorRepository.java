@@ -21,6 +21,6 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
 
     List<Author> findAllByFirstNameEndingWith(String str);
 
-    @Procedure(value = "usp_get_author_books", outputParameterName = "books_count")
+    @Procedure(name = "usp_get_author_books", outputParameterName = "books_count")
     int getAuthorBookCountProcedure(@Param("f_name") String firstName, @Param("l_name") String lastName);
 }

@@ -4,6 +4,7 @@ import bookshopsystem.enums.AgeRestriction;
 import bookshopsystem.enums.EditionType;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.HashSet;
@@ -11,7 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "books")
-public class Book {
+public class Book implements Serializable {
 
     private Integer id;
     private AgeRestriction ageRestriction;

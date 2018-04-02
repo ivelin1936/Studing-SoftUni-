@@ -65,7 +65,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public int getAuthorBookCountProcedure(String firstName, String lastName) {
-        return this.getAuthorBookCountProcedure(firstName, lastName);
+        return this.authorRepository.getAuthorBookCountProcedure(firstName, lastName);
     }
 
     public AuthorDto callStoredProcedure(String fName, String lName){

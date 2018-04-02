@@ -50,7 +50,6 @@ public class Runner implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         //Exercises: Spring Data Intro -->
-
 //        initAuthors();
 //        initCategories();
 //        initBooks();
@@ -61,7 +60,6 @@ public class Runner implements CommandLineRunner {
 //        getAllBooksFromAuthorOrdered("George Powell");
 
         //Exercises: Spring Data Advanced Quering -->
-
 //        bookTitleByAgeRestriction(reader.readLine().toUpperCase());
 //        goldenBooks();
 //        booksByPrice();
@@ -80,9 +78,10 @@ public class Runner implements CommandLineRunner {
 
     private void storedProcedure(String authorFullName) {
         String[] name = authorFullName.trim().split("\\s+");
-        int authorBooksCount = this.authorService.getAuthorBookCountProcedure("Amanda", "Rice");
+        int authorBooksCount = this.authorService.getAuthorBookCountProcedure(name[0], name[1]);
 
-//        AuthorDto author = this.authorService.callStoredProcedure(name[0], name[1]);
+//        AuthorDto authorDto = this.authorService.callStoredProcedure("Amanda", "Rice");
+//        String debug = "";
 
         if (authorBooksCount > 1) {
             System.out.println(authorFullName + " has written " + authorBooksCount + " books");
