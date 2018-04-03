@@ -1,4 +1,4 @@
-package com.example.automapping.service;
+package com.example.automapping.service.employeeService;
 
 import com.example.automapping.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
