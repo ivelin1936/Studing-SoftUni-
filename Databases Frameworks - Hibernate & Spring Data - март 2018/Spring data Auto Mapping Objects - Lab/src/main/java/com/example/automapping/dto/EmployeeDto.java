@@ -7,6 +7,7 @@ public class EmployeeDto {
     private String firstName;
     private String lastName;
     private BigDecimal salary;
+    private String managerLastName;
 
     public EmployeeDto() {
     }
@@ -35,12 +36,21 @@ public class EmployeeDto {
         this.salary = salary;
     }
 
+    public String getManagerLastName() {
+        return managerLastName;
+    }
+
+    public void setManagerLastName(String managerLastName) {
+        this.managerLastName = managerLastName;
+    }
+
     @Override
     public String toString() {
         return "EmployeeDto{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", salary=" + salary +
+                ", managerLastName='" + managerLastName + '\'' +
                 '}';
     }
 }

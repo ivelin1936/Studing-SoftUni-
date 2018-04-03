@@ -16,6 +16,10 @@ public class City {
         addresses = new HashSet<>();
     }
 
+    public City(String name) {
+        this.name = name;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {

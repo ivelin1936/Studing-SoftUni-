@@ -17,6 +17,11 @@ public class Address {
         employees = new HashSet<>();
     }
 
+    public Address(String street, City city) {
+        this.street = street;
+        this.city = city;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {

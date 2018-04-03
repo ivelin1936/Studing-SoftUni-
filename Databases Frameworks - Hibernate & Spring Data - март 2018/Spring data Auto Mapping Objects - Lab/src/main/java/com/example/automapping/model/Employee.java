@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.util.*;
 
 @Entity
-@Table(name = "managedEmployees")
+@Table(name = "employees")
 public class Employee {
 
     private Long id;
@@ -26,6 +26,16 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
+        this.managedEmployees = new HashSet<>();
+    }
+
+    public Employee(String firstName, String lastName, BigDecimal salary, Date birthday, Boolean isOnHoliday, Address address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+        this.birthday = birthday;
+        this.isOnHoliday = isOnHoliday;
+        this.address = address;
         this.managedEmployees = new HashSet<>();
     }
 
