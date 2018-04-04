@@ -32,7 +32,7 @@ public class User {
     }
 
     @Column(nullable = false, unique = true)
-    @Email(message = "Incorrect email.")
+    @Email(message = "Incorrect email.") //TODO create my own validation
     public String getEmail() {
         return email;
     }
