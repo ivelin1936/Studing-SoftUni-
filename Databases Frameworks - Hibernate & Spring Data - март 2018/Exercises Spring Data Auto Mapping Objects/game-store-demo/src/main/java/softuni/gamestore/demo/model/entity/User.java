@@ -61,7 +61,7 @@ public class User {
         this.fullName = fullName;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     public Set<Game> getGames() {
         return games;
     }

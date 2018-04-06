@@ -1,20 +1,10 @@
-package softuni.gamestore.demo.model.entity;
+package softuni.gamestore.demo.model.dto.binding;
 
-import softuni.gamestore.demo.validators.ImageUrl;
-
-import javax.persistence.*;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
-@Entity
-@Table(name = "games")
-public class Game {
+public class AddGameBindingModel {
 
-    private Long id;
     private String title;
     private BigDecimal price;
     private Double size;
@@ -22,23 +12,20 @@ public class Game {
     private String imageUrl;
     private String description;
     private Date releaseDate;
-    private Set<User> users;
 
-    public Game() {
-        this.users = new HashSet<>();
+    public AddGameBindingModel() {
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
-        return id;
+    public AddGameBindingModel(String title, BigDecimal price, Double size, String youtobeId, String imageUrl, String description, Date releaseDate) {
+        this.title = title;
+        this.price = price;
+        this.size = size;
+        this.youtobeId = youtobeId;
+        this.imageUrl = imageUrl;
+        this.description = description;
+        this.releaseDate = releaseDate;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Pattern(regexp = "^[A-Z][a-zA-Z0-9 ]{2,100}$")
     public String getTitle() {
         return title;
     }
@@ -47,8 +34,6 @@ public class Game {
         this.title = title;
     }
 
-    @Column(name = "youtobe_id")
-    @Pattern(regexp = "^https://www\\.youtube\\.com/watch\\?v=[a-zA-Z]{11}$")
     public String getYoutobeId() {
         return youtobeId;
     }
@@ -57,8 +42,6 @@ public class Game {
         this.youtobeId = youtobeId;
     }
 
-    @Column(name = "image_url")
-    @ImageUrl
     public String getImageUrl() {
         return imageUrl;
     }
@@ -67,7 +50,6 @@ public class Game {
         this.imageUrl = imageUrl;
     }
 
-    @Column(columnDefinition = "DOUBLE(10,1) DEFAULT 0.0")
     public Double getSize() {
         return size;
     }
@@ -76,7 +58,6 @@ public class Game {
         this.size = size;
     }
 
-    @Column(precision = 20, scale = 2)
     public BigDecimal getPrice() {
         return price;
     }
@@ -85,8 +66,6 @@ public class Game {
         this.price = price;
     }
 
-    @Column(columnDefinition = "TEXT")
-    @Size(min = 20)
     public String getDescription() {
         return description;
     }
@@ -95,7 +74,6 @@ public class Game {
         this.description = description;
     }
 
-    @Column(name = "release_date")
     public Date getReleaseDate() {
         return releaseDate;
     }
@@ -103,14 +81,4 @@ public class Game {
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
     }
-
-    @ManyToMany(mappedBy = "games", cascade = CascadeType.ALL)
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
-
 }

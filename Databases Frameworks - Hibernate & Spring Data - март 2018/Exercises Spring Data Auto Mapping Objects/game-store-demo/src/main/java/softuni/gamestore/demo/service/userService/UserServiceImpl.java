@@ -8,9 +8,12 @@ import softuni.gamestore.demo.model.dto.binding.UserLogoutBindingModel;
 import softuni.gamestore.demo.model.dto.binding.UserRegisterBindingModel;
 import softuni.gamestore.demo.model.dto.view.SuccessLoginUserViewModel;
 import softuni.gamestore.demo.model.dto.view.SuccessLogoutUserViewModel;
+import softuni.gamestore.demo.model.dto.view.UserGamesViewModel;
+import softuni.gamestore.demo.model.entity.Role;
 import softuni.gamestore.demo.model.entity.User;
 import softuni.gamestore.demo.repository.UserRepository;
 import softuni.gamestore.demo.service.roleService.RoleService;
+import softuni.gamestore.demo.util.ObjectMapperUtils;
 
 import javax.transaction.Transactional;
 
@@ -61,6 +64,25 @@ public class UserServiceImpl implements UserService {
             return this.modelMapper.map(user, SuccessLogoutUserViewModel.class);
         }
         return null;
+    }
+
+    @Override
+    public Boolean isADMIN(String email) {
+        Role role = this.userRepository.findUserRoleByEmail(email);
+        return role.getName().equalsIgnoreCase("ADMIN");
+    }
+
+    @Override
+    public UserLogoutBindingModel loginUser(String email) {
+        User user = this.userRepository.findOneByEmail(email);
+        return this.modelMapper.map(user, UserLogoutBindingModel.class);
+    }
+
+    @Override
+    public UserGamesViewModel getUserGamesViewModel(String email) {
+        User user = this.userRepository.findOneByEmail(email);
+        UserGamesViewModel viewModel = ObjectMapperUtils.map(user, UserGamesViewModel.class);
+        return viewModel;
     }
 
     private void setUserRole(User user) {
