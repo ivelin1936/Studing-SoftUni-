@@ -4,8 +4,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import softuni.gamestore.demo.model.dto.binding.UserLoginBindingModel;
+import softuni.gamestore.demo.model.dto.binding.UserLogoutBindingModel;
 import softuni.gamestore.demo.model.dto.binding.UserRegisterBindingModel;
 import softuni.gamestore.demo.model.dto.view.SuccessLoginUserViewModel;
+import softuni.gamestore.demo.model.dto.view.SuccessLogoutUserViewModel;
 import softuni.gamestore.demo.model.entity.User;
 import softuni.gamestore.demo.repository.UserRepository;
 import softuni.gamestore.demo.service.roleService.RoleService;
@@ -44,8 +46,19 @@ public class UserServiceImpl implements UserService {
         User user = this.userRepository.findOneByEmail(model.getEmail());
         if (user != null) {
             if (user.getPassword().equals(model.getPassword())) {
+                user.setLogged(true);
                 return this.modelMapper.map(user, SuccessLoginUserViewModel.class);
             }
+        }
+        return null;
+    }
+
+    @Override
+    public SuccessLogoutUserViewModel logout(UserLogoutBindingModel logoutModel) {
+        User user = this.userRepository.findOneByEmail(logoutModel.getEmail());
+        if (user.isLogged()) {
+            user.setLogged(false);
+            return this.modelMapper.map(user, SuccessLogoutUserViewModel.class);
         }
         return null;
     }

@@ -6,6 +6,7 @@ import softuni.gamestore.demo.model.entity.Role;
 import softuni.gamestore.demo.repository.RoleRepository;
 
 import javax.annotation.PostConstruct;
+import java.util.Arrays;
 
 @Component
 public class RoleSeedExecutor {
@@ -27,8 +28,7 @@ public class RoleSeedExecutor {
             Role userRole = new Role();
             userRole.setName("USER");
 
-            this.roleRepository.save(adminRole);
-            this.roleRepository.save(userRole);
+            this.roleRepository.saveAll(Arrays.asList(adminRole, userRole));
         }
     }
 }

@@ -1,7 +1,8 @@
 package softuni.gamestore.demo.model.entity;
 
+import softuni.gamestore.demo.validators.EmailValidator;
+
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,6 +16,7 @@ public class User {
     private String fullName;
     private Set<Game> games;
     private Set<Role> role;
+    private boolean logged;
 
     public User() {
         this.games = new HashSet<>();
@@ -32,7 +34,7 @@ public class User {
     }
 
     @Column(nullable = false, unique = true)
-    @Email(message = "Incorrect email.") //TODO create my own validation
+    @EmailValidator
     public String getEmail() {
         return email;
     }
@@ -75,5 +77,13 @@ public class User {
 
     public void setRole(Set<Role> role) {
         this.role = role;
+    }
+
+    public boolean isLogged() {
+        return logged;
+    }
+
+    public void setLogged(boolean logged) {
+        this.logged = logged;
     }
 }

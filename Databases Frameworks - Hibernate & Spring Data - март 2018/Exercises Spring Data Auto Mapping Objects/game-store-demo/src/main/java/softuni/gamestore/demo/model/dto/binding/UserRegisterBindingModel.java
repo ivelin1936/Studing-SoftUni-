@@ -1,5 +1,7 @@
 package softuni.gamestore.demo.model.dto.binding;
 
+import softuni.gamestore.demo.validators.EmailValidator;
+
 public class UserRegisterBindingModel {
 
     private String email;
@@ -16,7 +18,7 @@ public class UserRegisterBindingModel {
         this.confirmPassword = confirmPassword;
         this.fullName = fullName;
     }
-
+    @EmailValidator
     public String getEmail() {
         return email;
     }
