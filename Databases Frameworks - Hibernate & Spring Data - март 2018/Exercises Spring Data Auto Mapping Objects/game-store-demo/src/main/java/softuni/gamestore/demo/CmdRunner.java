@@ -42,6 +42,13 @@ public class CmdRunner implements org.springframework.boot.CommandLineRunner {
         final CommandFactory cf = CommandFactory.init(gameService, userService, roleService);
 
         cf.listCommands();
-        cf.executeCommand(reader.readLine().split("\\|"));
+        String[] commandTokens = reader.readLine().split("\\|");
+
+        while (!commandTokens[0].equalsIgnoreCase("Exit")) {
+            cf.listCommands();
+            cf.executeCommand(commandTokens);
+
+            commandTokens = reader.readLine().split("\\|");
+        }
     }
 }

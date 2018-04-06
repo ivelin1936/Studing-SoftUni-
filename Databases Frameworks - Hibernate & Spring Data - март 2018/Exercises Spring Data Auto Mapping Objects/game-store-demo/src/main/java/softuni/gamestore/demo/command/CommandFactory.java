@@ -35,8 +35,11 @@ public final class CommandFactory {
 
     public void listCommands(){
         System.out.println(
-                "Enable commands: "
+                "Enable commands: Exit, "
                         + commands.keySet().stream().collect(Collectors.joining(", ")));
+        System.out.println("RegisterUser - (command|email|pass|confirmPass|name)");
+        System.out.println("LoginUser - (command|email|pass)");
+        System.out.println("LogoutUser - (command|email");
     }
 
     public static CommandFactory init(GameService gameService, UserService userService, RoleService roleService){
