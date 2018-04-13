@@ -1,11 +1,14 @@
 package json.processing.model.entity;
 
+import json.processing.model.dto.jsonAndXmlDto.PhoneNumberDto;
+import json.processing.validation.ValidatorUtils;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 @Entity
@@ -67,6 +70,16 @@ public class Person implements Serializable {
     }
 
     public void setPhoneNumbers(Set<PhoneNumber> phoneNumbers) {
+//        ValidatorUtils validatorUtils = new ValidatorUtils();
+        for (Iterator<PhoneNumber> i = phoneNumbers.iterator(); i.hasNext();) {
+            PhoneNumber phoneNumber = i.next();
+            if (!phoneNumber.getNumber().matches("[0-9]{8,10}")) {
+                i.remove();
+            }
+//            if (!validatorUtils.isValid(phoneNumber)) {
+//                i.remove();
+//            }
+        }
         this.phoneNumbers = phoneNumbers;
     }
 }

@@ -2,6 +2,7 @@ package json.processing.model.dto.jsonAndXmlDto;
 
 import com.google.gson.annotations.Expose;
 
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;

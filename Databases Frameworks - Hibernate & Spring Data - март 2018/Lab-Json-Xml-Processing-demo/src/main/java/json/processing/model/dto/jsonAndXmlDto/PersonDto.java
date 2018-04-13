@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 @XmlRootElement(name = "person") // class who will be inport/export need to hava anotation Root
