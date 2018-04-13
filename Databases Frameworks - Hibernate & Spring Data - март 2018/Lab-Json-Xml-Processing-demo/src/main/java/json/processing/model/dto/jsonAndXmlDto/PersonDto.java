@@ -1,26 +1,37 @@
-package json.processing.model.dto.json;
+package json.processing.model.dto.jsonAndXmlDto;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
+import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ExportPersonDto implements Serializable {
+@XmlRootElement(name = "person") // class who will be inport/export need to hava anotation Root
+@XmlAccessorType(XmlAccessType.FIELD)
+public class PersonDto implements Serializable {
 
-    @Expose
+    @Expose // Annotation for json!!!
+    @XmlElement(name = "first_name")
     private String firstName;
 
     @Expose
+    @XmlElement(name = "last_name")
     private String lastName;
 
     @Expose
+    @SerializedName(value = "addressImportDto")
+    @XmlElement
     private AddressDto address;
 
     @Expose
+    @SerializedName(value = "phoneJsonDtos")
+    @XmlElementWrapper(name = "phone_numbers") // Collection tag to be "phone_numbers"
+    @XmlElement(name = "phone_number") // Every element in the collection to be with tag "phone_number"
     private Set<PhoneNumberDto> phoneNumbers;
 
-    public ExportPersonDto() {
+    public PersonDto() {
         phoneNumbers = new HashSet<>();
     }
 

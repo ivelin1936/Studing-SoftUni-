@@ -1,5 +1,8 @@
 package json.processing.model.entity;
 
+import json.processing.validation.Phone;
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
 
 @Entity
@@ -23,6 +26,7 @@ public class PhoneNumber {
         this.id = id;
     }
 
+    @Phone
     public String getNumber() {
         return number;
     }
