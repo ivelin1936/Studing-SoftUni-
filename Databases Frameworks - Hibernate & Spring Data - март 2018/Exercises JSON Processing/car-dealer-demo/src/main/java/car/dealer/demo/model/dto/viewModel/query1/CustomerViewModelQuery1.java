@@ -1,23 +1,33 @@
 package car.dealer.demo.model.dto.viewModel.query1;
 
 import car.dealer.demo.model.dto.bindingModel.query1Dtos.SaleDto;
-import car.dealer.demo.model.entity.Sale;
 import com.google.gson.annotations.Expose;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 
+import javax.persistence.Transient;
+import javax.xml.bind.annotation.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
-public class CustomerViewModelQuery1 {
+@XmlRootElement(name = "customer")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class CustomerViewModelQuery1 implements Serializable {
 
     @Expose
+    @XmlElement
     private Long id;
     @Expose
+    @XmlElement
     private String name;
     @Expose
+    @XmlElement(name = "birth-date")
     private Date birthDate;
     @Expose
+    @XmlElement(name = "is-young-driver")
     private boolean isYoungDriver;
     @Expose
+    @XmlTransient
     private Set<SaleDto> sales;
 
     public CustomerViewModelQuery1() {

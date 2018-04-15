@@ -1,11 +1,17 @@
 package car.dealer.demo;
 
+import car.dealer.demo.model.dto.viewModel.query1.CustomerWrapper;
 import car.dealer.demo.model.dto.viewModel.query2Dtos.CarDto;
 import car.dealer.demo.model.dto.bindingModel.seedDataDtos.*;
 import car.dealer.demo.model.dto.viewModel.query1.CustomerViewModelQuery1;
+import car.dealer.demo.model.dto.viewModel.query2Dtos.CarWrapper;
 import car.dealer.demo.model.dto.viewModel.query3.LocalSupplierDto;
+import car.dealer.demo.model.dto.viewModel.query3.LocalSupplierWrapper;
 import car.dealer.demo.model.dto.viewModel.query4.CarViewModel;
+import car.dealer.demo.model.dto.viewModel.query4.CarViewModelWrapper;
+import car.dealer.demo.model.dto.viewModel.query5.CustomerQuery5Wrapper;
 import car.dealer.demo.model.dto.viewModel.query5.CustomerViewModelQuery5;
+import car.dealer.demo.model.dto.viewModel.query6.SaleQuery6Wrapper;
 import car.dealer.demo.model.dto.viewModel.query6.SaleViewModelQuery6;
 import car.dealer.demo.service.carService.CarService;
 import car.dealer.demo.service.customerService.CustomerService;
@@ -29,6 +35,7 @@ public class CmdRunner implements CommandLineRunner {
     private final static String PARTS_INPUT_JSON = "/files/input/parts.json";
     private final static String SUPPLIERS_INPUT_JSON = "/files/input/suppliers.json";
     private static final String OUTPUT_JSON_DIRECTORY_PATH = "src/main/resources/files/output/";
+    private static final String OUTPUT_XML_DIRECTORY_PATH = "src/main/resources/files/outputXml/";
 
     private final Serializer serializerJson;
     private final Serializer serializerXml;
@@ -72,32 +79,49 @@ public class CmdRunner implements CommandLineRunner {
         List<SaleViewModelQuery6> saleViewModel = this.saleService.salesWithAppliedDiscount();
         serializerJson.serialize(saleViewModel, OUTPUT_JSON_DIRECTORY_PATH + "sales-discounts.json");
 
+        SaleQuery6Wrapper wrapper = new SaleQuery6Wrapper(saleViewModel);
+        serializerXml.serialize(wrapper, OUTPUT_XML_DIRECTORY_PATH + "sales-discounts.xml");
     }
 
     private void totalSalesByCustomer() {
         List<CustomerViewModelQuery5> allWithMinOneBoughtCar = this.customerService.getAllWithMinOneBoughtCar();
         serializerJson.serialize(allWithMinOneBoughtCar, OUTPUT_JSON_DIRECTORY_PATH + "customers-total-sales.json");
+
+        CustomerQuery5Wrapper customerWrapper = new CustomerQuery5Wrapper(allWithMinOneBoughtCar);
+        serializerXml.serialize(customerWrapper, OUTPUT_XML_DIRECTORY_PATH + "customers-total-sales.xml");
     }
 
     private void carsWithTheirListOfParts() {
         List<CarViewModel> cars = this.carService.getAllCarsWithListOfParts();
         serializerJson.serialize(cars, OUTPUT_JSON_DIRECTORY_PATH + "cars-and-parts.json");
+
+        CarViewModelWrapper modelWrapper = new CarViewModelWrapper(cars);
+        serializerXml.serialize(modelWrapper, OUTPUT_XML_DIRECTORY_PATH + "cars-and-parts.xml");
     }
 
     private void localSuppliers() {
         List<LocalSupplierDto> allLocalSuppliers = this.supplierService.getAllLocalSuppliers();
         serializerJson.serialize(allLocalSuppliers, OUTPUT_JSON_DIRECTORY_PATH + "local-suppliers.json");
+
+        LocalSupplierWrapper wrapper = new LocalSupplierWrapper(allLocalSuppliers);
+        serializerXml.serialize(wrapper, OUTPUT_XML_DIRECTORY_PATH + "local-suppliers.xml");
     }
 
     private void carsFromMakeToyota() {
         List<CarDto> carDtos = this.carService.getAllByMake("Toyota");
         serializerJson.serialize(carDtos, OUTPUT_JSON_DIRECTORY_PATH + "toyota-cars.json");
+
+        CarWrapper carWrapper = new CarWrapper(carDtos);
+        serializerXml.serialize(carWrapper, OUTPUT_XML_DIRECTORY_PATH + "toyota-cars.xml");
     }
 
     private void orderedCustomers() {
         List<CustomerViewModelQuery1> customerViewModel =
                 this.customerService.allOrderedByBirthDate();
         serializerJson.serialize(customerViewModel, OUTPUT_JSON_DIRECTORY_PATH + "ordered-customers.json");
+
+        CustomerWrapper customerWrapper = new CustomerWrapper(customerViewModel);
+        serializerXml.serialize(customerWrapper, OUTPUT_XML_DIRECTORY_PATH + "ordered-customers.xml");
     }
 
     private void seedDataIntoDB() {

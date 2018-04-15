@@ -3,24 +3,31 @@ package car.dealer.demo.model.dto.viewModel.query6;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.math.BigDecimal;
 
+@XmlRootElement(name = "sale")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SaleViewModelQuery6 {
 
     @Expose
+    @XmlElement
     private CarViewModelQuery6 car;
-
     @Expose
+    @XmlElement(name = "customer-name")
     private String customerName;
-
     @Expose
     @SerializedName("Discount")
+    @XmlElement
     private Double discount;
-
     @Expose
+    @XmlElement
     private BigDecimal price;
-
     @Expose
+    @XmlElement(name = "price-with-discount")
     private BigDecimal priceWithDiscount;
 
     public SaleViewModelQuery6() {

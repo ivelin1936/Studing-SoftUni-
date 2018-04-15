@@ -2,15 +2,23 @@ package car.dealer.demo.model.dto.viewModel.query2Dtos;
 
 import com.google.gson.annotations.Expose;
 
+import javax.xml.bind.annotation.*;
+
+@XmlRootElement(name = "car")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CarDto {
 
     @Expose
+    @XmlAttribute
     private Long id;
     @Expose
+    @XmlAttribute
     private String make;
     @Expose
+    @XmlAttribute
     private String model;
     @Expose
+    @XmlAttribute(name = "travelled-distance")
     private Long travelledDistance;
 
     public CarDto() {

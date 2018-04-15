@@ -3,24 +3,31 @@ package car.dealer.demo.model.dto.viewModel.query4;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlRootElement(name = "car")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CarViewModel {
 
     @Expose
     @SerializedName(value = "Make")
+    @XmlAttribute
     private String make;
 
     @Expose
     @SerializedName(value = "Model")
+    @XmlAttribute
     private String model;
 
     @Expose
     @SerializedName(value = "TravelledDistance")
+    @XmlAttribute(name = "travelled-distance")
     private Long travelledDistance;
 
     @Expose
+    @XmlElementWrapper(name = "parts")
     private List<PartViewModel> parts;
 
     public CarViewModel() {

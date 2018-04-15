@@ -3,17 +3,27 @@ package car.dealer.demo.model.dto.viewModel.query3;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "supplier")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LocalSupplierDto {
 
     @Expose
     @SerializedName(value = "Id")
+    @XmlAttribute
     private Long id;
 
     @Expose
     @SerializedName(value = "Name")
+    @XmlAttribute
     private String name;
 
     @Expose
+    @XmlAttribute(name = "parts-count")
     private Long partsCount;
 
     public LocalSupplierDto() {
