@@ -3,9 +3,7 @@ package car.dealer.demo.model.entity;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "cars")
@@ -21,6 +19,7 @@ public class Car {
 
     public Car() {
         this.parts = new ArrayList<>();
+        this.price = BigDecimal.ZERO;
     }
 
     @Id
@@ -58,7 +57,7 @@ public class Car {
         this.travelledDistance = travelledDistance;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     public List<Part> getParts() {
         return parts;
     }
@@ -67,7 +66,7 @@ public class Car {
         this.parts = parts;
     }
 
-    @OneToOne(mappedBy = "car")
+    @OneToOne(mappedBy = "car", fetch = FetchType.LAZY)
     public Sale getSale() {
         return sale;
     }
@@ -78,7 +77,8 @@ public class Car {
 
     @Transient
     public BigDecimal getPrice() {
-        this.parts.forEach(p -> this.price.add(p.getPrice()));
+        this.price = BigDecimal.ZERO;
+        this.parts.forEach(p -> this.price = this.price.add(p.getPrice()));
         return price;
     }
 

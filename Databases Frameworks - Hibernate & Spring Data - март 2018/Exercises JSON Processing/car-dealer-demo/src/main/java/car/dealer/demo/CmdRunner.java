@@ -1,7 +1,12 @@
 package car.dealer.demo;
 
+import car.dealer.demo.model.dto.viewModel.query2Dtos.CarDto;
 import car.dealer.demo.model.dto.bindingModel.seedDataDtos.*;
-import car.dealer.demo.model.entity.Sale;
+import car.dealer.demo.model.dto.viewModel.query1.CustomerViewModelQuery1;
+import car.dealer.demo.model.dto.viewModel.query3.LocalSupplierDto;
+import car.dealer.demo.model.dto.viewModel.query4.CarViewModel;
+import car.dealer.demo.model.dto.viewModel.query5.CustomerViewModelQuery5;
+import car.dealer.demo.model.dto.viewModel.query6.SaleViewModelQuery6;
 import car.dealer.demo.service.carService.CarService;
 import car.dealer.demo.service.customerService.CustomerService;
 import car.dealer.demo.service.partService.PartService;
@@ -13,9 +18,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 @Component
 @Transactional
@@ -25,6 +28,7 @@ public class CmdRunner implements CommandLineRunner {
     private final static String CUSTOMERS_INPUT_JSON = "/files/input/customers.json";
     private final static String PARTS_INPUT_JSON = "/files/input/parts.json";
     private final static String SUPPLIERS_INPUT_JSON = "/files/input/suppliers.json";
+    private static final String OUTPUT_JSON_DIRECTORY_PATH = "src/main/resources/files/output/";
 
     private final Serializer serializerJson;
     private final Serializer serializerXml;
@@ -54,7 +58,46 @@ public class CmdRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        seedDataIntoDB();
+//        seedDataIntoDB();
+
+        orderedCustomers();
+        carsFromMakeToyota();
+        localSuppliers();
+        carsWithTheirListOfParts();
+        totalSalesByCustomer();
+        salesWithAppliedDiscount();
+    }
+
+    private void salesWithAppliedDiscount() {
+        List<SaleViewModelQuery6> saleViewModel = this.saleService.salesWithAppliedDiscount();
+        serializerJson.serialize(saleViewModel, OUTPUT_JSON_DIRECTORY_PATH + "sales-discounts.json");
+
+    }
+
+    private void totalSalesByCustomer() {
+        List<CustomerViewModelQuery5> allWithMinOneBoughtCar = this.customerService.getAllWithMinOneBoughtCar();
+        serializerJson.serialize(allWithMinOneBoughtCar, OUTPUT_JSON_DIRECTORY_PATH + "customers-total-sales.json");
+    }
+
+    private void carsWithTheirListOfParts() {
+        List<CarViewModel> cars = this.carService.getAllCarsWithListOfParts();
+        serializerJson.serialize(cars, OUTPUT_JSON_DIRECTORY_PATH + "cars-and-parts.json");
+    }
+
+    private void localSuppliers() {
+        List<LocalSupplierDto> allLocalSuppliers = this.supplierService.getAllLocalSuppliers();
+        serializerJson.serialize(allLocalSuppliers, OUTPUT_JSON_DIRECTORY_PATH + "local-suppliers.json");
+    }
+
+    private void carsFromMakeToyota() {
+        List<CarDto> carDtos = this.carService.getAllByMake("Toyota");
+        serializerJson.serialize(carDtos, OUTPUT_JSON_DIRECTORY_PATH + "toyota-cars.json");
+    }
+
+    private void orderedCustomers() {
+        List<CustomerViewModelQuery1> customerViewModel =
+                this.customerService.allOrderedByBirthDate();
+        serializerJson.serialize(customerViewModel, OUTPUT_JSON_DIRECTORY_PATH + "ordered-customers.json");
     }
 
     private void seedDataIntoDB() {
@@ -85,9 +128,14 @@ public class CmdRunner implements CommandLineRunner {
             add(50.0);
         }};
 
+        Set<Long> carsIds = new HashSet<>();
         int index = random.nextInt(600);
         for (int i = 0; i < index; i++) {
-            long carId = randomNumber(random, 358);
+            long carId;
+            do {
+                carId = randomNumber(random, 358);
+            } while (carsIds.contains(carId));
+            carsIds.add(carId);
             long customerID = randomNumber(random, 30);
             double discount = discountList.get(randomNumber(random, 8));
             SaleSeedBindingModel saleModel = new SaleSeedBindingModel(carId, customerID, discount);

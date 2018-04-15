@@ -1,6 +1,8 @@
 package car.dealer.demo.service.carService;
 
 import car.dealer.demo.model.dto.bindingModel.seedDataDtos.CarSeedDataBindingModel;
+import car.dealer.demo.model.dto.viewModel.query2Dtos.CarDto;
+import car.dealer.demo.model.dto.viewModel.query4.CarViewModel;
 import car.dealer.demo.model.entity.Car;
 import car.dealer.demo.model.entity.Part;
 import car.dealer.demo.repository.CarRepository;
@@ -38,6 +40,19 @@ public class CarServiceImpl implements CarService {
     @Override
     public Car oneById(Long carID) {
         return this.carRepository.getOne(carID);
+    }
+
+    @Override
+    public List<CarDto> getAllByMake(String make) {
+        List<CarDto> cars = this.carRepository.findAllByMakeOrderByModel(make);
+        return cars;
+    }
+
+    @Override
+    public List<CarViewModel> getAllCarsWithListOfParts() {
+        List<Car> carList = this.carRepository.findAll();
+        List<CarViewModel> viewModels = DtoConvertUtil.convert(carList, CarViewModel.class);
+        return viewModels;
     }
 
     private void seedRandomParts(Car car) {

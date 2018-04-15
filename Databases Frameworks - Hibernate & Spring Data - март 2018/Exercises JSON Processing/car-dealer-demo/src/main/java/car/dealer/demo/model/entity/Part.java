@@ -54,7 +54,7 @@ public class Part {
         this.quantity = quantity;
     }
 
-    @ManyToMany(mappedBy = "parts")
+    @ManyToMany(mappedBy = "parts", fetch = FetchType.LAZY)
     public Set<Car> getCars() {
         return cars;
     }
@@ -63,7 +63,7 @@ public class Part {
         this.cars = cars;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     public Supplier getSupplier() {
         return supplier;
     }

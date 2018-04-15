@@ -1,26 +1,28 @@
-package car.dealer.demo.model.entity;
+package car.dealer.demo.model.dto.viewModel.query1;
 
-import javax.persistence.*;
+import car.dealer.demo.model.dto.bindingModel.query1Dtos.SaleDto;
+import car.dealer.demo.model.entity.Sale;
+import com.google.gson.annotations.Expose;
+
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Set;
 
-@Entity
-@Table(name = "customers")
-public class Customer {
+public class CustomerViewModelQuery1 {
 
+    @Expose
     private Long id;
+    @Expose
     private String name;
+    @Expose
     private Date birthDate;
+    @Expose
     private boolean isYoungDriver;
-    private Set<Sale> sales;
+    @Expose
+    private Set<SaleDto> sales;
 
-    public Customer() {
-        this.sales = new HashSet<>();
+    public CustomerViewModelQuery1() {
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
     }
@@ -53,12 +55,11 @@ public class Customer {
         isYoungDriver = youngDriver;
     }
 
-    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
-    public Set<Sale> getSales() {
+    public Set<SaleDto> getSales() {
         return sales;
     }
 
-    public void setSales(Set<Sale> sales) {
+    public void setSales(Set<SaleDto> sales) {
         this.sales = sales;
     }
 }

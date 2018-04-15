@@ -1,14 +1,20 @@
 package car.dealer.demo.model.entity;
 
+import com.google.gson.annotations.Expose;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "sales")
 public class Sale {
 
+    @Expose
     private Long id;
+    @Expose
     private Car car;
+    @Expose
     private Customer customer;
+    @Expose
     private double discount;
 
     public Sale() {
@@ -30,7 +36,7 @@ public class Sale {
         this.id = id;
     }
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     public Car getCar() {
         return car;
     }
@@ -39,7 +45,7 @@ public class Sale {
         this.car = car;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     public Customer getCustomer() {
         return customer;
     }
