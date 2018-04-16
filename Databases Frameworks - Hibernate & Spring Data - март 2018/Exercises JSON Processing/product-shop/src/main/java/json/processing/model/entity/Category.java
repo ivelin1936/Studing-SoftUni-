@@ -1,5 +1,6 @@
 package json.processing.model.entity;
 
+import com.google.gson.annotations.Expose;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -10,8 +11,11 @@ import java.util.Set;
 @Table(name = "categories")
 public class Category {
 
+    @Expose
     private Long id;
+    @Expose
     private String name;
+    @Expose
     private Set<Product> products;
 
     public Category() {
@@ -37,7 +41,7 @@ public class Category {
         this.name = name;
     }
 
-    @ManyToMany(mappedBy = "categories", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "categories")
     public Set<Product> getProducts() {
         return products;
     }

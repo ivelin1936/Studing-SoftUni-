@@ -49,7 +49,7 @@ public class Product {
         this.price = price;
     }
 
-    @ManyToOne(targetEntity = User.class)
+    @ManyToOne(targetEntity = User.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "seller_id", referencedColumnName = "id")
     public User getSeller() {
         return seller;
@@ -59,7 +59,7 @@ public class Product {
         this.seller = seller;
     }
 
-    @ManyToOne(optional = true, targetEntity = User.class)
+    @ManyToOne(optional = true, targetEntity = User.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "buyer_id", referencedColumnName = "id")
     public User getBuyer() {
         return buyer;
@@ -69,7 +69,7 @@ public class Product {
         this.buyer = buyer;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     public Set<Category> getCategories() {
         return categories;
     }

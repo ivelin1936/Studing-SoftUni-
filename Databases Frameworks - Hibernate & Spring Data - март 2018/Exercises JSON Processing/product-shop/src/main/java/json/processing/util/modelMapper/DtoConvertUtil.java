@@ -1,11 +1,19 @@
 package json.processing.util.modelMapper;
 
+import json.processing.model.dto.binding.ProductCreateBindingModel;
+import json.processing.model.dto.view.CategoryByProductsCountViewModel;
+import json.processing.model.entity.Category;
+import json.processing.model.entity.Product;
+import json.processing.model.entity.User;
+import json.processing.repository.UserRepository;
+import org.modelmapper.AbstractConverter;
+import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.PropertyMap;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import javax.print.attribute.standard.Destination;
+import java.util.*;
 
 public class DtoConvertUtil {
 
@@ -37,4 +45,23 @@ public class DtoConvertUtil {
         return resultSet;
     }
 
+    public static List<CategoryByProductsCountViewModel> convertTest(Iterable<Category> source, Class<CategoryByProductsCountViewModel> destinationClass) {
+        List<CategoryByProductsCountViewModel> resultList = new ArrayList<>();
+
+        mapper.addMappings(new PropertyMap<Category, CategoryByProductsCountViewModel>() {
+            @Override
+            protected void configure() {
+                map().setId(source.getId());
+                map().setName(source.getName());
+                map().setProductsCount(source.getProducts().size());
+            }
+        });
+
+        for (Category category : source) {
+            CategoryByProductsCountViewModel viewModel = convert(category, destinationClass);
+            resultList.add(viewModel);
+        }
+
+        return resultList;
+    }
 }
