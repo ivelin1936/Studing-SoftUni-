@@ -1,22 +1,13 @@
 package json.processing.util.modelMapper;
 
-import json.processing.model.dto.binding.ProductCreateBindingModel;
-import json.processing.model.dto.view.CategoryByProductsCountViewModel;
-import json.processing.model.dto.view.SoldProductsViewModel;
-import json.processing.model.dto.view.UserWithSoldItemViewModel;
-import json.processing.model.entity.Category;
+import json.processing.model.dto.binding.jsonBindingModels.ProductCreateBindingModel;
+import json.processing.model.dto.binding.xmlBindingModels.seedProductsBindingModels.ProductSeedDataDto;
 import json.processing.model.entity.Product;
-import json.processing.model.entity.User;
 import json.processing.repository.UserRepository;
 import org.modelmapper.AbstractConverter;
 import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.HashSet;
-import java.util.Set;
 
 @Component
 public class ModelMapperConfig {
@@ -34,6 +25,7 @@ public class ModelMapperConfig {
 
     private void init() {
         this.productCreateBindingConfiguration();
+        this.productXmlCreateBindingConfiguration();
 //        this.userSoldItemViewConfiguration();
 //        this.categoryByProductsViewConfiguration();
     }
@@ -42,6 +34,25 @@ public class ModelMapperConfig {
         Converter<ProductCreateBindingModel, Product> con = new AbstractConverter<ProductCreateBindingModel, Product>() {
             @Override
             protected Product convert(ProductCreateBindingModel src) {
+                Product p = new Product();
+                Integer buyer = src.getBuyer();
+                if (buyer != null) {
+                    p.setBuyer(userRepository.getOne((long)buyer));
+                }
+                p.setSeller(userRepository.getOne((long)src.getSeller()));
+                p.setName(src.getName());
+                p.setPrice(src.getPrice());
+                return p;
+            }
+        };
+        this.mapper.addConverter(con);
+    }
+
+    private void productXmlCreateBindingConfiguration() {
+        Converter<ProductSeedDataDto, Product> con = new AbstractConverter<ProductSeedDataDto, Product>() {
+
+            @Override
+            protected Product convert(ProductSeedDataDto src) {
                 Product p = new Product();
                 Integer buyer = src.getBuyer();
                 if (buyer != null) {

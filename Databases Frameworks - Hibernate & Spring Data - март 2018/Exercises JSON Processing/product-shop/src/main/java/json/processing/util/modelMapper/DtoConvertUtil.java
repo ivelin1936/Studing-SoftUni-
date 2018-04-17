@@ -1,18 +1,10 @@
 package json.processing.util.modelMapper;
 
-import json.processing.model.dto.binding.ProductCreateBindingModel;
-import json.processing.model.dto.view.CategoryByProductsCountViewModel;
+import json.processing.model.dto.view.jsonViewModels.CategoryByProductsCountViewModel;
 import json.processing.model.entity.Category;
-import json.processing.model.entity.Product;
-import json.processing.model.entity.User;
-import json.processing.repository.UserRepository;
-import org.modelmapper.AbstractConverter;
-import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.print.attribute.standard.Destination;
 import java.util.*;
 
 public class DtoConvertUtil {

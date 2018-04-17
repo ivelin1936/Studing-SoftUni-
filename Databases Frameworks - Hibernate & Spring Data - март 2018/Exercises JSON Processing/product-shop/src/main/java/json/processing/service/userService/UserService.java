@@ -1,12 +1,10 @@
 package json.processing.service.userService;
 
-import json.processing.model.dto.binding.UsersBindingModel;
-import json.processing.model.dto.view.UserViewModel;
-import json.processing.model.dto.view.UserWithSoldItemViewModel;
-import json.processing.model.dto.view.usersAndProductsQuery4.UsersViewModelWrapper;
+import json.processing.model.dto.binding.jsonBindingModels.UsersBindingModel;
+import json.processing.model.dto.binding.xmlBindingModels.seedUsersBindingModels.UsersSeedDataWrapper;
+import json.processing.model.dto.view.jsonViewModels.UserViewModel;
+import json.processing.model.dto.view.jsonViewModels.usersAndProductsQuery4.UsersViewModelWrapper;
 import json.processing.model.entity.User;
-
-import java.util.List;
 
 
 public interface UserService {
@@ -16,4 +14,8 @@ public interface UserService {
     UserViewModel getUserById(Long sellerID);
 
     UsersViewModelWrapper getAllUsersWithSoldProduct();
+
+    void persistAllUsers(UsersSeedDataWrapper userWrapper);
+
+    User userById(long buyer);
 }

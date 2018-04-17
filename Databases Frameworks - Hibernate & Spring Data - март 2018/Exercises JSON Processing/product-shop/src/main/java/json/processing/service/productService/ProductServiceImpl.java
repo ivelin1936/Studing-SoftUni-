@@ -1,13 +1,15 @@
 package json.processing.service.productService;
 
-import json.processing.model.dto.binding.ProductCreateBindingModel;
-import json.processing.model.dto.view.ProductInRangeViewModel;
-import json.processing.model.dto.view.UserWithSoldItemViewModel;
+import json.processing.model.dto.binding.jsonBindingModels.ProductCreateBindingModel;
+import json.processing.model.dto.binding.xmlBindingModels.seedProductsBindingModels.ProductsSeedDataWrapper;
+import json.processing.model.dto.view.jsonViewModels.ProductInRangeViewModel;
+import json.processing.model.dto.view.jsonViewModels.UserWithSoldItemViewModel;
 import json.processing.model.entity.Category;
 import json.processing.model.entity.Product;
 import json.processing.model.entity.User;
 import json.processing.repository.ProductRepository;
 import json.processing.service.categoryService.CategoryService;
+import json.processing.service.userService.UserService;
 import json.processing.util.modelMapper.DtoConvertUtil;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +26,17 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
     private final CategoryService categoryService;
+    private final UserService userService;
     private final ModelMapper modelMapper;
 
     @Autowired
     public ProductServiceImpl(ProductRepository productRepository,
                               CategoryService categoryService,
+                              UserService userService,
                               ModelMapper modelMapper) {
         this.productRepository = productRepository;
         this.categoryService = categoryService;
+        this.userService = userService;
         this.modelMapper = modelMapper;
     }
 
@@ -69,5 +74,15 @@ public class ProductServiceImpl implements ProductService {
                 userList.stream().map(u -> DtoConvertUtil.convert(u, UserWithSoldItemViewModel.class))
                 .collect(Collectors.toList());
         return viewModels;
+    }
+
+    @Override
+    public void persistAllProducts(ProductsSeedDataWrapper productWrapper) {
+        List<Product> products =
+                productWrapper.getProductDtos().stream()
+                        .map(p -> modelMapper.map(p, Product.class))
+                .collect(Collectors.toList());
+        products.forEach(this::setRandomCategory);
+        this.productRepository.saveAll(products);
     }
 }

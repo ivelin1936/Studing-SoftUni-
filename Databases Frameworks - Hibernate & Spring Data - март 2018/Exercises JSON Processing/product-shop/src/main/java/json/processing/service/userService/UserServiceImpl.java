@@ -1,12 +1,12 @@
 package json.processing.service.userService;
 
-import json.processing.model.dto.binding.UsersBindingModel;
-import json.processing.model.dto.view.UserViewModel;
-import json.processing.model.dto.view.UserWithSoldItemViewModel;
-import json.processing.model.dto.view.usersAndProductsQuery4.ProductModels;
-import json.processing.model.dto.view.usersAndProductsQuery4.SoldProducts;
-import json.processing.model.dto.view.usersAndProductsQuery4.UserViewModelQuery4;
-import json.processing.model.dto.view.usersAndProductsQuery4.UsersViewModelWrapper;
+import json.processing.model.dto.binding.jsonBindingModels.UsersBindingModel;
+import json.processing.model.dto.binding.xmlBindingModels.seedUsersBindingModels.UsersSeedDataWrapper;
+import json.processing.model.dto.view.jsonViewModels.UserViewModel;
+import json.processing.model.dto.view.jsonViewModels.usersAndProductsQuery4.ProductModels;
+import json.processing.model.dto.view.jsonViewModels.usersAndProductsQuery4.SoldProducts;
+import json.processing.model.dto.view.jsonViewModels.usersAndProductsQuery4.UserViewModelQuery4;
+import json.processing.model.dto.view.jsonViewModels.usersAndProductsQuery4.UsersViewModelWrapper;
 import json.processing.model.entity.User;
 import json.processing.repository.UserRepository;
 import json.processing.util.modelMapper.DtoConvertUtil;
@@ -56,6 +56,21 @@ public class UserServiceImpl implements UserService {
         uvw.setUsers(userViewModel);
 
         return uvw;
+    }
+
+    @Override
+    public void persistAllUsers(UsersSeedDataWrapper userWrapper) {
+        List<User> users =
+                userWrapper.getUserDtos()
+                        .stream()
+                        .map(u -> DtoConvertUtil.convert(u, User.class))
+                .collect(Collectors.toList());
+        this.userRepository.saveAll(users);
+    }
+
+    @Override
+    public User userById(long id) {
+        return this.userRepository.getOne(id);
     }
 
     private void setUserViewModels(User u, List<UserViewModelQuery4> userViewModel) {

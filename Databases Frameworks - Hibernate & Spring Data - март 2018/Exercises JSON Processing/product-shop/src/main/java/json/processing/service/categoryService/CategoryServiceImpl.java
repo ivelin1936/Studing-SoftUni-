@@ -1,7 +1,8 @@
 package json.processing.service.categoryService;
 
-import json.processing.model.dto.binding.CategoryBindingModel;
-import json.processing.model.dto.view.CategoryByProductsCountViewModel;
+import json.processing.model.dto.binding.jsonBindingModels.CategoryBindingModel;
+import json.processing.model.dto.binding.xmlBindingModels.seedCategoriesBindingModels.CategorySeedDataWrapper;
+import json.processing.model.dto.view.jsonViewModels.CategoryByProductsCountViewModel;
 import json.processing.model.entity.Category;
 import json.processing.model.entity.Product;
 import json.processing.repository.CategoryRepository;
@@ -12,9 +13,6 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -54,6 +52,16 @@ public class CategoryServiceImpl implements CategoryService {
                         .collect(Collectors.toList());
 
         return viewModels;
+    }
+
+    @Override
+    public void persisAllCategories(CategorySeedDataWrapper categoryWrapper) {
+        List<Category> categories =
+                categoryWrapper.getCategories()
+                        .stream()
+                .map(c -> DtoConvertUtil.convert(c, Category.class))
+                .collect(Collectors.toList());
+        this.categoryRepository.saveAll(categories);
     }
 
     private CategoryByProductsCountViewModel mappModel(Category c) {
