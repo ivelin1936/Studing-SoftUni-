@@ -45,6 +45,6 @@ public class ProcedureController {
     }
 
     public String exportProcedures() throws IOException, JAXBException {
-        return null;
+        return this.xmlParser.write(this.procedureService.exportProcedures());
     }
 }

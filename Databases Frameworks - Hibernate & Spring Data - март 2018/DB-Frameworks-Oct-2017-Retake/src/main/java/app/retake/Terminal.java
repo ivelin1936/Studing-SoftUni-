@@ -63,7 +63,11 @@ public class Terminal implements CommandLineRunner {
                                 .read(Config.PROCEDURES_IMPORT_XML)));
 
         //JSON Export
-        String fileContent = this.animalController.exportAnimalsByOwnerPhoneNumber("0887446123");
-        this.fileIO.write(fileContent, "exportAnimalsByOwnerPhoneNumber.json");
+        String fileContentJson = this.animalController.exportAnimalsByOwnerPhoneNumber("0887446123");
+        this.fileIO.write(fileContentJson, "exportAnimalsByOwnerPhoneNumber.json");
+
+        //XML Export
+        String fileContentXml = this.procedureController.exportProcedures();
+        this.fileIO.write(fileContentXml, "exportProcedures.xml");
     }
 }
