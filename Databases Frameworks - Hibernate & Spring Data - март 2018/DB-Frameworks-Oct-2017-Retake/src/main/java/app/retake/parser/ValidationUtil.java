@@ -11,11 +11,13 @@ import java.util.Set;
 public final class ValidationUtil {
 
     public static <T> boolean isValid(T t) {
-        Set<ConstraintViolation<T>> errors = Validation
+        /** Set<> with errors */
+        Set<ConstraintViolation<T>> errorsSet = Validation
                         .buildDefaultValidatorFactory()
                         .getValidator()
                         .validate(t);
 
-        return errors.size() == 0;
+        /** Return True id don't have errors and false if have */
+        return errorsSet.size() == 0;
     }
 }

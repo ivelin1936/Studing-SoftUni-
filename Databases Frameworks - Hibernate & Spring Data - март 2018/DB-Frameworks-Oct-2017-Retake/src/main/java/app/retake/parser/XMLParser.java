@@ -24,7 +24,12 @@ public class XMLParser implements Parser {
         JAXBContext jaxbContext = JAXBContext.newInstance(objectClass);
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
-        // Its for parsing date and with the adapter class which we create down
+        /** Adapter Is for parsing date and with the adapter.class which we create down
+         * After create this Adapter.class, we need to setAdapter(new adapter.class) on the unmarshaller.
+         * And DON'T FORGOT - Then you use the
+         * @XmlJavaTypeAdapter(XMLParser.DateTimeAdapter.class)
+         * annotation in our models  to specify that the XmlAdapter should be used for a specific field/property.
+         * - on the field where we want the Date to be parse */
         unmarshaller.setAdapter(new DateTimeAdapter());
 
         T t = (T)unmarshaller.unmarshal(new StringReader(fileContent));
@@ -43,6 +48,7 @@ public class XMLParser implements Parser {
 
 
     //Do not watching here :))
+    /** Creating the Adapter.class with our DateFormat */
     public class DateTimeAdapter extends XmlAdapter<String, Date> {
         private final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 

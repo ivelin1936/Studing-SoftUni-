@@ -26,7 +26,6 @@ public class FIleIOImpl implements FileIO {
                 //Log here..
             }
         }
-
         return builder.toString();
     }
 
