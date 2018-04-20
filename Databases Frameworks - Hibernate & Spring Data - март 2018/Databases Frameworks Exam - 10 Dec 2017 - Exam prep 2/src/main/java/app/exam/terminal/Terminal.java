@@ -59,5 +59,12 @@ public class Terminal implements CommandLineRunner {
                         this.fileIO.read(Config.ORDERS_IMPORT_XML)
                 )
         );
+
+        //Json Export - All Orders by Employee
+        String exportJsonContent =
+                this.ordersController
+                        .exportOrdersByEmployeeAndOrderType(
+                                "Avery Rush", "ToGo");
+        this.fileIO.write(exportJsonContent, "exportOrdersByEmployeeAndOrderType.json");
     }
 }

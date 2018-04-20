@@ -75,9 +75,11 @@ public class Order {
     }
 
     public BigDecimal getTotalPrice() {
+        this.totalPrice = BigDecimal.ZERO;
         for (OrderItem orderItem : this.orderItems) {
+            BigDecimal quantity = BigDecimal.valueOf(orderItem.getQuantity());
             BigDecimal itemPrice = orderItem.getItem().getPrice();
-            this.totalPrice = this.totalPrice.add(itemPrice);
+            this.totalPrice = this.totalPrice.add(itemPrice.multiply(quantity));
         }
         return this.totalPrice;
     }
