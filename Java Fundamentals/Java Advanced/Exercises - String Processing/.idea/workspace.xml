@@ -12,18 +12,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Palindromes.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Palindromes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MagicExchangeableWords.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/MagicExchangeableWords.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,11 +96,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SentenceExtractor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SentenceExtractor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/SentenceExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="466">
               <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SumOfAllValues.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/SumOfAllValues.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -159,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/com/company/ExtractEmails.java" />
         <option value="$PROJECT_DIR$/src/com/company/ValidUsernames.java" />
         <option value="$PROJECT_DIR$/src/com/company/SentenceExtractor.java" />
+        <option value="$PROJECT_DIR$/src/com/company/SumOfAllValues.java" />
       </list>
     </option>
   </component>
@@ -227,19 +228,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SentenceExtractor">
+  <component name="RunManager" selected="Application.SumOfAllValues">
     <configuration name="ExtractEmails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.ExtractEmails" />
-      <module name="Exercises - String Processing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="MatchFullName" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.MatchFullName" />
       <module name="Exercises - String Processing" />
       <extension name="coverage">
         <pattern>
@@ -278,20 +269,30 @@
         </pattern>
       </extension>
     </configuration>
+    <configuration name="SumOfAllValues" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.SumOfAllValues" />
+      <module name="Exercises - String Processing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <list>
-      <item itemvalue="Application.MatchFullName" />
       <item itemvalue="Application.MatchPhoneNumber" />
       <item itemvalue="Application.ReplaceTag" />
       <item itemvalue="Application.ExtractEmails" />
       <item itemvalue="Application.SentenceExtractor" />
+      <item itemvalue="Application.SumOfAllValues" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SumOfAllValues" />
         <item itemvalue="Application.SentenceExtractor" />
         <item itemvalue="Application.ExtractEmails" />
         <item itemvalue="Application.ReplaceTag" />
         <item itemvalue="Application.MatchPhoneNumber" />
-        <item itemvalue="Application.MatchFullName" />
       </list>
     </recent_temporary>
   </component>
@@ -307,15 +308,16 @@
       <updated>1527687181740</updated>
       <workItem from="1527687185701" duration="9451000" />
       <workItem from="1527853266694" duration="207000" />
-      <workItem from="1527853504405" duration="19423000" />
+      <workItem from="1527853504405" duration="24429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29081000" />
+    <option name="totallyTimeSpent" value="34087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -327,11 +329,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25244832" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25244832" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1484375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1484375" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -355,7 +357,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -562,8 +564,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/SentenceExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
+        <state relative-caret-position="466">
           <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/SumOfAllValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
