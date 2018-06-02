@@ -1,5 +1,5 @@
 package com.company;
-// 20/100 in judge
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,13 +13,17 @@ public class SentenceExtractor {
         String keyWord = reader.readLine();
         String text = reader.readLine();
 
-        Pattern pattern = Pattern.compile("[A-Za-z,;'’\\\\\"\\s]+[.?!]");
-        Matcher matcher = pattern.matcher(text);
+        Pattern sentencePattern = Pattern.compile("[A-Z][\\w+\\s’–,]+[.?!]");
+        Pattern keyWordPattern = Pattern.compile("\\b(" + keyWord + ")\\b");
 
-        while (matcher.find()) {
-            String sentence = matcher.group();
-            if (sentence.contains(" is ") || sentence.contains("Is ")) {
-                System.out.println(sentence.trim());
+        Matcher sentenceMatcher = sentencePattern.matcher(text);
+
+        while (sentenceMatcher.find()) {
+            String sentence = sentenceMatcher.group();
+
+            Matcher keyWordMatcher = keyWordPattern.matcher(sentence);
+            if (keyWordMatcher.find()) {
+                System.out.println(sentence);
             }
         }
     }
