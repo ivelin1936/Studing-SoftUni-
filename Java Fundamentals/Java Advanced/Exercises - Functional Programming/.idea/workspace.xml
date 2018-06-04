@@ -12,42 +12,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ConsumerPrint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ConsumerPrint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KnightsOfHonor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/KnightsOfHonor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomMinFunction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CustomMinFunction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FindEvensOROdds.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FindEvensOROdds.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,11 +84,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomComparator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomComparator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CustomComparator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1089">
               <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListOfPredicates.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ListOfPredicates.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredicateParty.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PredicateParty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1156">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredicateParty2.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PredicateParty2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,6 +154,9 @@
         <option value="$PROJECT_DIR$/src/PredicateForNames.java" />
         <option value="$PROJECT_DIR$/src/FindTheSmallestElement.java" />
         <option value="$PROJECT_DIR$/src/CustomComparator.java" />
+        <option value="$PROJECT_DIR$/src/ListOfPredicates.java" />
+        <option value="$PROJECT_DIR$/src/PredicateParty.java" />
+        <option value="$PROJECT_DIR$/src/PredicateParty2.java" />
       </list>
     </option>
   </component>
@@ -218,12 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CustomComparator">
-    <configuration name="AppliedArithmetic2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AppliedArithmetic2" />
-      <module name="Exercises - Functional Programming" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
+  <component name="RunManager" selected="Application.PredicateParty">
     <configuration name="CustomComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CustomComparator" />
       <module name="Exercises - Functional Programming" />
@@ -234,13 +232,18 @@
       <module name="Exercises - Functional Programming" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
+    <configuration name="ListOfPredicates" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ListOfPredicates" />
+      <module name="Exercises - Functional Programming" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
     <configuration name="PredicateForNames" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PredicateForNames" />
       <module name="Exercises - Functional Programming" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="ReverseAndExclude" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ReverseAndExclude" />
+    <configuration name="PredicateParty" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PredicateParty" />
       <module name="Exercises - Functional Programming" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -286,19 +289,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.AppliedArithmetic2" />
-      <item itemvalue="Application.ReverseAndExclude" />
       <item itemvalue="Application.PredicateForNames" />
       <item itemvalue="Application.FindTheSmallestElement" />
       <item itemvalue="Application.CustomComparator" />
+      <item itemvalue="Application.ListOfPredicates" />
+      <item itemvalue="Application.PredicateParty" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PredicateParty" />
+        <item itemvalue="Application.ListOfPredicates" />
         <item itemvalue="Application.CustomComparator" />
         <item itemvalue="Application.FindTheSmallestElement" />
         <item itemvalue="Application.PredicateForNames" />
-        <item itemvalue="Application.ReverseAndExclude" />
-        <item itemvalue="Application.AppliedArithmetic2" />
       </list>
     </recent_temporary>
   </component>
@@ -312,12 +315,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528032195061</updated>
-      <workItem from="1528032197474" duration="19508000" />
+      <workItem from="1528032197474" duration="25378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19508000" />
+    <option name="totallyTimeSpent" value="25378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -333,7 +336,7 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3297062" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297062" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
@@ -362,7 +365,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -467,6 +470,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1089">
           <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ListOfPredicates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PredicateParty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PredicateParty2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
