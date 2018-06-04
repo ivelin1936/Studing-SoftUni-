@@ -84,11 +84,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReverseAndExclude.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReverseAndExclude.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ReverseAndExclude.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="914">
-              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+            <state relative-caret-position="186">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredicateForNames.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PredicateForNames.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FindTheSmallestElement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FindTheSmallestElement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomComparator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CustomComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1089">
+              <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,6 +151,9 @@
         <option value="$PROJECT_DIR$/src/AppliedArithmetic.java" />
         <option value="$PROJECT_DIR$/src/AppliedArithmetic2.java" />
         <option value="$PROJECT_DIR$/src/ReverseAndExclude.java" />
+        <option value="$PROJECT_DIR$/src/PredicateForNames.java" />
+        <option value="$PROJECT_DIR$/src/FindTheSmallestElement.java" />
+        <option value="$PROJECT_DIR$/src/CustomComparator.java" />
       </list>
     </option>
   </component>
@@ -165,6 +204,7 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -178,24 +218,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReverseAndExclude">
-    <configuration name="AppliedArithmetic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AppliedArithmetic" />
-      <module name="Exercises - Functional Programming" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
+  <component name="RunManager" selected="Application.CustomComparator">
     <configuration name="AppliedArithmetic2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AppliedArithmetic2" />
       <module name="Exercises - Functional Programming" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="CustomMinFunction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CustomMinFunction" />
+    <configuration name="CustomComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CustomComparator" />
       <module name="Exercises - Functional Programming" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="FindEvensOROdds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FindEvensOROdds" />
+    <configuration name="FindTheSmallestElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FindTheSmallestElement" />
+      <module name="Exercises - Functional Programming" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="PredicateForNames" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PredicateForNames" />
       <module name="Exercises - Functional Programming" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -246,19 +286,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.CustomMinFunction" />
-      <item itemvalue="Application.FindEvensOROdds" />
-      <item itemvalue="Application.AppliedArithmetic" />
       <item itemvalue="Application.AppliedArithmetic2" />
       <item itemvalue="Application.ReverseAndExclude" />
+      <item itemvalue="Application.PredicateForNames" />
+      <item itemvalue="Application.FindTheSmallestElement" />
+      <item itemvalue="Application.CustomComparator" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CustomComparator" />
+        <item itemvalue="Application.FindTheSmallestElement" />
+        <item itemvalue="Application.PredicateForNames" />
         <item itemvalue="Application.ReverseAndExclude" />
         <item itemvalue="Application.AppliedArithmetic2" />
-        <item itemvalue="Application.AppliedArithmetic" />
-        <item itemvalue="Application.FindEvensOROdds" />
-        <item itemvalue="Application.CustomMinFunction" />
       </list>
     </recent_temporary>
   </component>
@@ -272,12 +312,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528032195061</updated>
-      <workItem from="1528032197474" duration="13453000" />
+      <workItem from="1528032197474" duration="19508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13453000" />
+    <option name="totallyTimeSpent" value="19508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -293,7 +333,7 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297062" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3297062" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
@@ -311,6 +351,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" side_tool="true" weight="0.3296875" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,8 +435,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ReverseAndExclude.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="914">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+        <state relative-caret-position="186">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PredicateForNames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FindTheSmallestElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
