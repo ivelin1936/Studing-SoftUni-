@@ -56,8 +56,8 @@ public class Genome {
         Pattern pattern = Pattern.compile(organismRegex);
         Matcher matcher = pattern.matcher(line);
         matcher.find();
-        return matcher.group(1);
 
+        return matcher.group(1);
     }
 
     private static int getValue(String line, String regex) {
@@ -74,6 +74,7 @@ public class Genome {
     private static int getName(String line) {
         StringBuilder nameBuilder = new StringBuilder();
         String firstPart = line.split("=")[0];
+
         Pattern pattern = Pattern.compile(NAME_REGEX);
         Matcher matcher = pattern.matcher(firstPart);
         while (matcher.find()) {
