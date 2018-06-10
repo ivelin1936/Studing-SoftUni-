@@ -14,28 +14,25 @@ public class Internships {
         int numberOfProblems = Integer.parseInt(reader.readLine());
         int numberOfCandidates = Integer.parseInt(reader.readLine());
 
+        /**Keep the problems data in to Stack*/
         Deque<String> problems = new ArrayDeque<>();
-        for (int i = 0; i < numberOfProblems; i++) {
-            String problem = reader.readLine();
-            problems.push(problem);
-        }
+        fillProblemsStack(reader, numberOfProblems, problems);
 
+        /**Keep the candidates in to Queue*/
         Deque<String> candidates = new ArrayDeque<>();
-        for (int i = 0; i < numberOfCandidates; i++) {
-            String candidat = reader.readLine();
-            if (candidat.matches(VALID_NAME_REGEX)) {
-                candidates.offer(candidat);
-            }
-        }
+        fillCandidatesQueue(reader, numberOfCandidates, candidates);
 
         while (problems.size() != 0) {
 
             if (candidates.size() == 1) {
+                /**If there is only one candidate left, the program ends and
+                   you should write on the console: "{candidate} gets the job!"*/
                 System.out.println(candidates.poll() + " gets the job!");
                 return;
             }
-
+            /**Get the most hard problem - the last one (Last In -> First Out)*/
             String problem = problems.pop();
+            /**Start with the first candidate - the first one (First In -> First Out)*/
             String ppl = candidates.poll();
 
             if (checkIfTheCandidateSolvedIt(problem, ppl)) {
@@ -58,11 +55,37 @@ public class Internships {
         }
 
         if (problems.size() == 0) {
+            /**In case there are no more tasks to solve you should print
+             on the console the names of the candidates, separate by comma*/
             System.out.println(String.join(", ", candidates));
         }
     }
 
+    private static void fillCandidatesQueue(BufferedReader reader, int numberOfCandidates, Deque<String> candidates) throws IOException {
+        /**The Candidates are solving the problems in a queue one by one,
+         but only if their name is valid. A valid Candidate name
+         consists of First and Last name in proper casing
+         (e.g. Ivan Ivanov - is valid name; invalid names - ivan IVanov, Ivan ivanov...)*/
+        for (int i = 0; i < numberOfCandidates; i++) {
+            String candidate = reader.readLine();
+            if (candidate.matches(VALID_NAME_REGEX)) {
+                candidates.offer(candidate);
+            }
+        }
+    }
+
+    private static void fillProblemsStack(BufferedReader reader, int numberOfProblems, Deque<String> problems) throws IOException {
+        /**Problems, ordered in a stack, one after another, reading them from the console.*/
+        for (int i = 0; i < numberOfProblems; i++) {
+            String problem = reader.readLine();
+            problems.push(problem);
+        }
+    }
+
     private static boolean checkIfTheCandidateSolvedIt(String problem, String ppl) {
+        /**If the sum of Candidate`s name letters (ASCII value) is greater
+         from the sum of the Problem`s letters (ASCII value) => the Problem is solved.
+         Otherwise, the Problem is unsolved.*/
         long candidateNameLettersSum = ppl.chars().mapToLong(ch -> ch).sum();
         long problemLettersSum = problem.chars().mapToLong(ch -> ch).sum();
 
