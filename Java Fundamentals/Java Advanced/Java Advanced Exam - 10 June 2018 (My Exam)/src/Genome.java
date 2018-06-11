@@ -24,7 +24,7 @@ public class Genome {
         String line;
         while (!STOPER.equals(line = reader.readLine())) {
             if (line.matches(FULL_MATCH_REGEX)) {
-                int nameLength = getName(line);
+                int nameLength = getNameLength(line);
                 int searchingLength = getValue(line, LENGTH_OF_THE_NAME_REGEX);
 
                 if (nameLength != searchingLength) {
@@ -54,8 +54,8 @@ public class Genome {
     }
 
     private static String getOrganismName(String line) {
-        Pattern pattern = Pattern.compile(Genome.ORGANISM_REGEX);
-        Matcher matcher = pattern.matcher(line);
+//        Pattern pattern = Pattern.compile(ORGANISM_REGEX);
+        Matcher matcher = Pattern.compile(ORGANISM_REGEX).matcher(line);
         matcher.find();
 
         return matcher.group(1);
@@ -63,8 +63,8 @@ public class Genome {
 
     private static int getValue(String line, String regex) {
         int number = 0;
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(line);
+//        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = Pattern.compile(regex).matcher(line);
         if (matcher.find()) {
             number += Integer.parseInt(matcher.group(1));
         }
@@ -72,12 +72,12 @@ public class Genome {
         return number;
     }
 
-    private static int getName(String line) {
+    private static int getNameLength(String line) {
         StringBuilder nameBuilder = new StringBuilder();
-        String firstPart = line.split("=")[0];
+        String leftPart = line.split("=")[0];
 
-        Pattern pattern = Pattern.compile(NAME_REGEX);
-        Matcher matcher = pattern.matcher(firstPart);
+//        Pattern pattern = Pattern.compile(NAME_REGEX);
+        Matcher matcher = Pattern.compile(NAME_REGEX).matcher(leftPart);
         while (matcher.find()) {
             nameBuilder.append(matcher.group());
         }

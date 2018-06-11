@@ -31,12 +31,12 @@ public class Snake {
 
             switch (command.trim()) {
                 case "left":
-//                    currentCol = --currentCol >= 0 ? currentCol : (screenMatrix[0].length - 1);
-                    if ((currentCol - 1) >= 0) {
-                        currentCol--;
-                    } else {
-                        currentCol = screenMatrix[0].length - 1;
-                    }
+                    currentCol = --currentCol >= 0 ? currentCol : (screenMatrix[0].length - 1);
+//                    if ((currentCol - 1) >= 0) {
+//                        currentCol--;
+//                    } else {
+//                        currentCol = screenMatrix[0].length - 1;
+//                    }
                     break;
                 case "right":
                     if ((currentCol + 1) <= (screenMatrix[0].length - 1)) {
@@ -46,12 +46,12 @@ public class Snake {
                     }
                     break;
                 case "up":
-//                    currentRow = --currentRow >= 0 ? currentRow : (screenMatrix.length - 1);
-                    if ((currentRow - 1) >= 0) {
-                        currentRow--;
-                    } else {
-                        currentRow = screenMatrix.length - 1;
-                    }
+                    currentRow = --currentRow >= 0 ? currentRow : (screenMatrix.length - 1);
+//                    if ((currentRow - 1) >= 0) {
+//                        currentRow--;
+//                    } else {
+//                        currentRow = screenMatrix.length - 1;
+//                    }
                     break;
                 case "down":
                     if ((currentRow + 1) <= (screenMatrix.length - 1)) {
