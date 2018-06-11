@@ -80,17 +80,29 @@ public class Ranking {
 
     private static void printRanking(Map<String,Map<String,Integer>> studentsDB) {
         System.out.println("Ranking:");
-        for (String student : studentsDB.keySet()) {
-            System.out.println(student);
 
-            studentsDB.get(student)
-                    .entrySet()
+        studentsDB.forEach((key, value) -> {
+            System.out.println(key);
+
+            value.entrySet()
                     .stream()
                     .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
                     .forEach(exam -> {
                         System.out.println(String.format("#  %s -> %d", exam.getKey(), exam.getValue()));
                     });
-        }
+        });
+
+//        for (String student : studentsDB.keySet()) {
+////            System.out.println(student);
+////
+////            studentsDB.get(student)
+////                    .entrySet()
+////                    .stream()
+////                    .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
+////                    .forEach(exam -> {
+////                        System.out.println(String.format("#  %s -> %d", exam.getKey(), exam.getValue()));
+////                    });
+////        }
     }
 
     private static void printBestCandidate(Map<String,Map<String,Integer>> studentsDB) {
