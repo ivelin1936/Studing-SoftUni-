@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -31,7 +32,7 @@ public class Genome {
                 }
 
                 int countOfGenes = getValue(line, COUNT_OF_GENES_REGEX);
-                String orgamismName = getOrganismName(line, ORGANISM_REGEX);
+                String orgamismName = getOrganismName(line);
 
                 if (mapDB.containsKey(orgamismName)) {
                     int newValue = mapDB.get(orgamismName) + countOfGenes;
@@ -52,8 +53,8 @@ public class Genome {
                 });
     }
 
-    private static String getOrganismName(String line, String organismRegex) {
-        Pattern pattern = Pattern.compile(organismRegex);
+    private static String getOrganismName(String line) {
+        Pattern pattern = Pattern.compile(Genome.ORGANISM_REGEX);
         Matcher matcher = pattern.matcher(line);
         matcher.find();
 
