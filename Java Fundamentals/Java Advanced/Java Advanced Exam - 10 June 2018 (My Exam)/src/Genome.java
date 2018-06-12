@@ -31,18 +31,21 @@ public class Genome {
                     continue;
                 }
 
-                int countOfGenes = getValue(line, COUNT_OF_GENES_REGEX);
-                String orgamismName = getOrganismName(line);
-
-                if (mapDB.containsKey(orgamismName)) {
-                    int newValue = mapDB.get(orgamismName) + countOfGenes;
-                    mapDB.replace(orgamismName, newValue);
-                }
-                mapDB.putIfAbsent(orgamismName, countOfGenes);
+                fillOrganismDatabase(mapDB, line);
             }
         }
-
         printResult(mapDB);
+    }
+
+    private static void fillOrganismDatabase(Map<String, Integer> mapDB, String line) {
+        int countOfGenes = getValue(line, COUNT_OF_GENES_REGEX);
+        String orgamismName = getOrganismName(line);
+
+        if (mapDB.containsKey(orgamismName)) {
+            int newValue = mapDB.get(orgamismName) + countOfGenes;
+            mapDB.replace(orgamismName, newValue);
+        }
+        mapDB.putIfAbsent(orgamismName, countOfGenes);
     }
 
     private static void printResult(Map<String,Integer> mapDB) {
@@ -51,32 +54,33 @@ public class Genome {
                 .forEach( org -> {
                     System.out.println(String.format("%s has genome size of %d", org.getKey(), org.getValue()));
                 });
+
+//        mapDB.entrySet().stream()
+//                .sorted(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()))
+//                .forEach( org -> {
+//                    System.out.println(String.format("%s has genome size of %d", org.getKey(), org.getValue()));
+//                });
     }
 
     private static String getOrganismName(String line) {
-//        Pattern pattern = Pattern.compile(ORGANISM_REGEX);
         Matcher matcher = Pattern.compile(ORGANISM_REGEX).matcher(line);
         matcher.find();
-
         return matcher.group(1);
     }
 
     private static int getValue(String line, String regex) {
-        int number = 0;
-//        Pattern pattern = Pattern.compile(regex);
+        int value = 0;
         Matcher matcher = Pattern.compile(regex).matcher(line);
         if (matcher.find()) {
-            number += Integer.parseInt(matcher.group(1));
+            value += Integer.parseInt(matcher.group(1));
         }
-
-        return number;
+        return value;
     }
 
     private static int getNameLength(String line) {
         StringBuilder nameBuilder = new StringBuilder();
         String leftPart = line.split("=")[0];
 
-//        Pattern pattern = Pattern.compile(NAME_REGEX);
         Matcher matcher = Pattern.compile(NAME_REGEX).matcher(leftPart);
         while (matcher.find()) {
             nameBuilder.append(matcher.group());

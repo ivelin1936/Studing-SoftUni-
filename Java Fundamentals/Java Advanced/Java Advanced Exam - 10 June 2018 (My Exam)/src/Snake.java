@@ -20,52 +20,32 @@ public class Snake {
                         .split(","))
                         .collect(Collectors.toCollection(ArrayDeque::new));
 
-        int[] startPosition = fillScreenMatrix(reader, sizeOfTheScreen, screenMatrix);
-        int currentRow = startPosition[0];
-        int currentCol = startPosition[1];
-        int totalFoodAmount = startPosition[2];
+        int[] tokens = fillScreenMatrix(reader, sizeOfTheScreen, screenMatrix);
+        int currentRow = tokens[0];
+        int currentCol = tokens[1];
+        int totalFoodAmount = tokens[2];
         int snakeLength = 1;
 
         while (commands.size() != 0) {
-            String command = commands.pop();
-
-            switch (command.trim()) {
+            switch (commands.pop().trim()) {
                 case "left":
                     currentCol = --currentCol >= 0 ? currentCol : (screenMatrix[0].length - 1);
-//                    if ((currentCol - 1) >= 0) {
-//                        currentCol--;
-//                    } else {
-//                        currentCol = screenMatrix[0].length - 1;
-//                    }
                     break;
                 case "right":
-                    if ((currentCol + 1) <= (screenMatrix[0].length - 1)) {
-                        currentCol++;
-                    } else {
-                        currentCol = 0;
-                    }
+                    currentCol = ++currentCol <= (screenMatrix[0].length - 1) ? currentCol : 0;
                     break;
                 case "up":
                     currentRow = --currentRow >= 0 ? currentRow : (screenMatrix.length - 1);
-//                    if ((currentRow - 1) >= 0) {
-//                        currentRow--;
-//                    } else {
-//                        currentRow = screenMatrix.length - 1;
-//                    }
                     break;
                 case "down":
-                    if ((currentRow + 1) <= (screenMatrix.length - 1)) {
-                        currentRow++;
-                    } else {
-                        currentRow = 0;
-                    }
+                    currentRow = ++currentRow <= (screenMatrix.length - 1) ? currentRow : 0;
                     break;
             }
 
             String cellType = screenMatrix[currentRow][currentCol];
             if (cellType.equals("f")) {
                 screenMatrix[currentRow][currentCol] = EMPTY_CELL;
-                snakeLength += 1;
+                snakeLength++;
                 totalFoodAmount--;
 
                 if (totalFoodAmount == 0) {
@@ -80,16 +60,17 @@ public class Snake {
             }
         }
 
-        if (totalFoodAmount > 0) {
-            System.out.println(String.format("You lose! There is still %d food to be eaten.", totalFoodAmount));
-        }
+        /**Game Over*/
+        System.out.println(String.format("You lose! There is still %d food to be eaten.", totalFoodAmount));
     }
 
     private static int[] fillScreenMatrix(BufferedReader reader, int sizeOfTheScreen, String[][] screenMatrix) throws IOException {
         int[] startEndPositionFoodCount = new int[3];
         int foodCounter = 0;
+
         for (int row = 0; row < sizeOfTheScreen; row++) {
             String[] tokens = reader.readLine().split("\\s+");
+
             for (int col = 0; col < sizeOfTheScreen; col++) {
                 screenMatrix[row][col] = tokens[col];
 

@@ -26,23 +26,23 @@ public class Internships {
 
             if (candidates.size() == 1) {
                 /**If there is only one candidate left, the program ends and
-                   you should write on the console: "{candidate} gets the job!"*/
+                 you should write on the console: "{candidate} gets the job!"*/
                 System.out.println(candidates.poll() + " gets the job!");
                 return;
             }
             /**Get the most hard problem - the last one (Last In -> First Out)*/
             String problem = problems.pop();
             /**Start with the first candidate - the first one (First In -> First Out)*/
-            String ppl = candidates.poll();
+            String currentCandidate = candidates.poll();
 
-            if (checkIfTheCandidateSolvedIt(problem, ppl)) {
+            if (problemIsSolved(problem, currentCandidate)) {
                 /**If a Problem is solved,
                  * it is removed from the stack with problems,
                  * and the Candidate who solved it goes to the
                  * end of the queue. You should write on the console:
                  * "{candidate} solved {problem}."*/
-                candidates.offer(ppl);
-                System.out.println(ppl + " solved " + problem + ".");
+                candidates.offer(currentCandidate);
+                System.out.println(currentCandidate + " solved " + problem + ".");
 
             } else {
                 /**If a Problem is unsolved, it goes to the bottom
@@ -50,15 +50,13 @@ public class Internships {
                  * so he leaves in tears. You should write on the console:
                  * "{candidate} failed {problem}."*/
                 problems.addLast(problem);
-                System.out.println(ppl + " failed " + problem + ".");
+                System.out.println(currentCandidate + " failed " + problem + ".");
             }
         }
 
-        if (problems.size() == 0) {
-            /**In case there are no more tasks to solve you should print
-             on the console the names of the candidates, separate by comma*/
-            System.out.println(String.join(", ", candidates));
-        }
+        /**In case there are no more tasks to solve you should print
+         on the console the names of the candidates, separate by comma*/
+        System.out.println(String.join(", ", candidates));
     }
 
     private static void fillCandidatesQueue(BufferedReader reader, int numberOfCandidates, Deque<String> candidates) throws IOException {
@@ -82,11 +80,11 @@ public class Internships {
         }
     }
 
-    private static boolean checkIfTheCandidateSolvedIt(String problem, String ppl) {
+    private static boolean problemIsSolved(String problem, String currentCandidate) {
         /**If the sum of Candidate`s name letters (ASCII value) is greater
          from the sum of the Problem`s letters (ASCII value) => the Problem is solved.
          Otherwise, the Problem is unsolved.*/
-        long candidateNameLettersSum = ppl.chars().mapToLong(ch -> ch).sum();
+        long candidateNameLettersSum = currentCandidate.chars().mapToLong(ch -> ch).sum();
         long problemLettersSum = problem.chars().mapToLong(ch -> ch).sum();
 
         return candidateNameLettersSum > problemLettersSum;

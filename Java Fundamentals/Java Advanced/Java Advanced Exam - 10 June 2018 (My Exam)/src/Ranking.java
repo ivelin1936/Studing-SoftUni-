@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -31,24 +32,17 @@ public class Ranking {
 
             if (!contestPassDB.containsKey(contest) || !contestPassDB.get(contest).equals(password)) {
                 /**If the contest don't exist OR the password is incorrect
-                  stop current loop and read new line*/
+                 stop current loop and read new line*/
                 continue;
             }
 
             fillStudentsDbWithData(studentsDB, contest, userName, points);
         }
 
-        /**•	On the first line print the best user in format
-           “Best candidate is {user} with total {total points} points.”*/
-        printBestCandidate(studentsDB);
-        /**•	Then print all students ordered as mentioned above in format:
-         {user1 name}
-         #  {contest1} -> {points}
-         #  {contest2} -> {points}
-         {user2 name}
-         …
-         */
-        printRanking(studentsDB);
+        /**•	On the first line print the best user*/
+        printBestUser(studentsDB);
+        /**•	Then print all students ordered as mentioned above..*/
+        printAllStudentsRanking(studentsDB);
     }
 
     private static void fillStudentsDbWithData(Map<String, Map<String, Integer>> studentsDB, String contest, String userName, int points) {
@@ -58,17 +52,15 @@ public class Ranking {
             studentsDB.get(userName).put(contest, points);
         } else {
             if (studentsDB.get(userName).containsKey(contest)) {
-                /**•	Check if the contest is valid (if you received it in the first type of input)
-                   •Check if the password is correct for the given contest
-                   If the contest is already in the Database for the current user,
-                   and have already mark/point from the given contest*/
+                /**If the contest is already in the Database for the current user,
+                 and have already mark/point from the given contest*/
 
-                /**Getting the user points from the current contest*/
                 int oldPt = studentsDB.get(userName).get(contest);
+                /**Getting the user points from the current contest*/
 
                 if (points > oldPt) {
                     /**If the current points are greater than old points
-                       replace the contest points with the current points (best points)*/
+                     replace the contest points with the current points (best points)*/
                     studentsDB.get(userName).replace(contest, points);
                 }
             } else {
@@ -78,37 +70,25 @@ public class Ranking {
         }
     }
 
-    private static void printRanking(Map<String,Map<String,Integer>> studentsDB) {
+    private static void printAllStudentsRanking(Map<String, Map<String, Integer>> studentsDB) {
         System.out.println("Ranking:");
 
-        studentsDB.forEach((key, value) -> {
-            System.out.println(key);
+        studentsDB.forEach((student, contests) -> {
+            System.out.println(student);
 
-            value.entrySet()
+            contests.entrySet()
                     .stream()
+//                  .sorted(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()))
                     .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
                     .forEach(exam -> {
                         System.out.println(String.format("#  %s -> %d", exam.getKey(), exam.getValue()));
                     });
         });
-
-//        for (String student : studentsDB.keySet()) {
-////            System.out.println(student);
-////
-////            studentsDB.get(student)
-////                    .entrySet()
-////                    .stream()
-////                    .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
-////                    .forEach(exam -> {
-////                        System.out.println(String.format("#  %s -> %d", exam.getKey(), exam.getValue()));
-////                    });
-////        }
     }
 
-    private static void printBestCandidate(Map<String,Map<String,Integer>> studentsDB) {
-        //--FIRST WAY--
+    private static void printBestUser(Map<String, Map<String, Integer>> studentsDB) {
         studentsDB.entrySet().stream()
-                .sorted((user1,user2) -> {
+                .sorted((user1, user2) -> {
                     int totalPointsUser1 = user1.getValue().values().stream().mapToInt(Integer::valueOf).sum();
                     int totalPointsUser2 = user2.getValue().values().stream().mapToInt(Integer::valueOf).sum();
 
@@ -120,18 +100,6 @@ public class Ranking {
                             String.format("Best candidate is %s with total %d points.",
                                     user.getKey(), userPt));
                 });
-
-        //--SECOND WAY--
-//        String bestCandidateName = "";
-//        int totalPoints = 0;
-//        for (String stud : studentsDB.keySet()) {
-//            int buffSum = studentsDB.get(stud).values().stream().mapToInt(Integer::valueOf).sum();
-//            if (buffSum > totalPoints) {
-//                totalPoints = buffSum;
-//                bestCandidateName = stud;
-//            }
-//        }
-//        System.out.println(String.format("Best candidate is %s with total %d points.", bestCandidateName, totalPoints));
     }
 
     private static void fillContestDB(BufferedReader reader, Map<String, String> contestPassDB) throws IOException {
