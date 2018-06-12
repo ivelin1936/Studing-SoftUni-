@@ -50,16 +50,11 @@ public class Genome {
 
     private static void printResult(Map<String,Integer> mapDB) {
         mapDB.entrySet().stream()
+//              .sorted(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()))
                 .sorted((o1, o2) -> o2.getValue().compareTo(o1.getValue()))
                 .forEach( org -> {
                     System.out.println(String.format("%s has genome size of %d", org.getKey(), org.getValue()));
                 });
-
-//        mapDB.entrySet().stream()
-//                .sorted(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()))
-//                .forEach( org -> {
-//                    System.out.println(String.format("%s has genome size of %d", org.getKey(), org.getValue()));
-//                });
     }
 
     private static String getOrganismName(String line) {
