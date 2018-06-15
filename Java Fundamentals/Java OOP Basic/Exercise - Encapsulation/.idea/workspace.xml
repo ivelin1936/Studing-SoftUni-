@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90ce76fe-fecc-452d-96ed-7f6f8d9ec0f1" name="Default" comment="" />
+    <list default="true" id="90ce76fe-fecc-452d-96ed-7f6f8d9ec0f1" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/p05_pizzaCalories/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p05_pizzaCalories/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p05_pizzaCalories/models/Dough.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p05_pizzaCalories/models/Dough.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p05_pizzaCalories/models/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p05_pizzaCalories/models/Topping.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,8 +19,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="328">
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,7 +31,7 @@
       <file leaf-file-name="ConfigModifiers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/models/util/ConfigModifiers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="348">
               <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -69,8 +73,8 @@
       <file leaf-file-name="Topping.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/models/Topping.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+            <state relative-caret-position="405">
+              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#777#778#0" expanded="true" />
@@ -87,8 +91,8 @@
       <file leaf-file-name="Dough.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/models/Dough.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="59" column="17" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="17" />
+            <state relative-caret-position="128">
+              <caret line="60" column="45" lean-forward="true" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#689#690#0" expanded="true" />
@@ -133,9 +137,9 @@
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/Pizza.java" />
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/util/ConfigExMsg.java" />
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/util/ConfigModifiers.java" />
-        <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/Topping.java" />
-        <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/Dough.java" />
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/Pizza.java" />
+        <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/Dough.java" />
+        <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/Topping.java" />
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/Main.java" />
       </list>
     </option>
@@ -335,7 +339,7 @@
       <option name="presentableId" value="Default" />
       <updated>1528997046521</updated>
       <workItem from="1528997050474" duration="11640000" />
-      <workItem from="1529067980013" duration="16665000" />
+      <workItem from="1529067980013" duration="17048000" />
     </task>
     <task id="LOCAL-00001" summary="update Exercise - Encapsulation (Test commit from InteliJ Idea)">
       <created>1529068314866</created>
@@ -362,10 +366,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28305000" />
+    <option name="totallyTimeSpent" value="28688000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -377,11 +382,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297062" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297062" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3297062" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16145833" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16145833" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -551,7 +556,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/models/util/ConfigModifiers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
+        <state relative-caret-position="348">
           <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -561,8 +566,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/models/Topping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+        <state relative-caret-position="405">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#777#778#0" expanded="true" />
@@ -577,8 +582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/models/Dough.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="17" />
+        <state relative-caret-position="128">
+          <caret line="60" column="45" lean-forward="true" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
@@ -623,8 +628,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="328">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

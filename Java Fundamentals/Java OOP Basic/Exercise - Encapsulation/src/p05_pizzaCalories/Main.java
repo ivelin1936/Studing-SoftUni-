@@ -34,6 +34,7 @@ public class Main {
         String[] pizzaTokens = reader.readLine().split(WHITE_SPACES_REGEX);
         String pizzaName = pizzaTokens[1];
         int numberOfToppings = Integer.parseInt(pizzaTokens[2]);
+        
         return new Pizza(pizzaName, numberOfToppings);
     }
 
@@ -54,6 +55,7 @@ public class Main {
         String flourType = doughTokens[1];
         String bakingTechnique = doughTokens[2];
         int doughWeightInGrams = Integer.parseInt(doughTokens[3]);
+
         return new Dough(flourType, bakingTechnique, doughWeightInGrams);
     }
 }

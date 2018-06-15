@@ -25,7 +25,7 @@ public class Dough {
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     private void setType(String type) {
@@ -36,7 +36,7 @@ public class Dough {
     }
 
     public String getBakingTechnique() {
-        return bakingTechnique;
+        return this.bakingTechnique;
     }
 
     private void setBakingTechnique(String bakingTechnique) {
@@ -47,7 +47,7 @@ public class Dough {
     }
 
     public int getWeightInGrams() {
-        return weightInGrams;
+        return this.weightInGrams;
     }
 
     private void setWeightInGrams(int weightInGrams) {
@@ -58,7 +58,7 @@ public class Dough {
     }
 
     public double getCalories() {
-        return calculateDoughCalories();
+        return this.calculateDoughCalories();
     }
 
     private double calculateDoughCalories() {

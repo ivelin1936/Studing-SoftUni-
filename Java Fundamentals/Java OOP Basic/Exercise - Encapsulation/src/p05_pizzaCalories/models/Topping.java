@@ -22,7 +22,7 @@ public class Topping {
     }
 
     public String getToppingType() {
-        return toppingType;
+        return this.toppingType;
     }
 
     private void setToppingType(String toppingType) {
@@ -33,7 +33,7 @@ public class Topping {
     }
 
     public int getWeightInGrams() {
-        return weightInGrams;
+        return this.weightInGrams;
     }
 
     private void setWeightInGrams(int weightInGrams) {
@@ -44,7 +44,7 @@ public class Topping {
     }
 
     public double getCalories() {
-        return calculateToppingTotalCalories();
+        return this.calculateToppingTotalCalories();
     }
 
     private double calculateToppingTotalCalories() {
