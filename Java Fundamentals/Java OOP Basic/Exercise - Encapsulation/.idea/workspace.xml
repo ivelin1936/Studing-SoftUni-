@@ -15,8 +15,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="299">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,10 +133,10 @@
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/Pizza.java" />
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/util/ConfigExMsg.java" />
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/util/ConfigModifiers.java" />
-        <option value="$PROJECT_DIR$/src/p05_pizzaCalories/Main.java" />
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/Topping.java" />
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/Dough.java" />
         <option value="$PROJECT_DIR$/src/p05_pizzaCalories/models/Pizza.java" />
+        <option value="$PROJECT_DIR$/src/p05_pizzaCalories/Main.java" />
       </list>
     </option>
   </component>
@@ -335,7 +335,7 @@
       <option name="presentableId" value="Default" />
       <updated>1528997046521</updated>
       <workItem from="1528997050474" duration="11640000" />
-      <workItem from="1529067980013" duration="15765000" />
+      <workItem from="1529067980013" duration="16665000" />
     </task>
     <task id="LOCAL-00001" summary="update Exercise - Encapsulation (Test commit from InteliJ Idea)">
       <created>1529068314866</created>
@@ -351,15 +351,21 @@
       <option name="project" value="LOCAL" />
       <updated>1529092515752</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update Exercise - Encapsulation p05_Pizza_Calories">
+      <created>1529093092001</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1529093092001</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27405000" />
+    <option name="totallyTimeSpent" value="28305000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -410,7 +416,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update Exercise - Encapsulation (Test commit from InteliJ Idea)" />
     <MESSAGE value="add Exercise - Encapsulation p05_Pizza_Calories" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Exercise - Encapsulation p05_Pizza_Calories" />
+    <MESSAGE value="update Exercise - Encapsulation p05_Pizza_Calories" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Exercise - Encapsulation p05_Pizza_Calories" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -616,8 +623,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p05_pizzaCalories/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="299">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -17,33 +17,43 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         try {
-            String[] pizzaTokens = reader.readLine().split(WHITE_SPACES_REGEX);
-            String pizzaName = pizzaTokens[1];
-            int numberOfToppings = Integer.parseInt(pizzaTokens[2]);
-            Pizza pizza = new Pizza(pizzaName, numberOfToppings);
+            Pizza pizza = createNewPizza(reader);
 
-            String[] doughTokens = reader.readLine().split(WHITE_SPACES_REGEX);
-            String flourType = doughTokens[1];
-            String bakingTechnique = doughTokens[2];
-            int doughWeightInGrams = Integer.parseInt(doughTokens[3]);
-            Dough dough = new Dough(flourType, bakingTechnique, doughWeightInGrams);
-
+            Dough dough = getDough(reader);
             pizza.setDough(dough);
 
-            String line;
-            while (!STOP_PROGRAM.equalsIgnoreCase(line = reader.readLine())) {
-                String[] toppingTokens = line.split(WHITE_SPACES_REGEX);
-                String toppingType = toppingTokens[1];
-                int toppingWeightInGrams = Integer.parseInt(toppingTokens[2]);
-
-                Topping topping = new Topping(toppingType, toppingWeightInGrams);
-                pizza.addTopping(topping);
-            }
+            addToppings(reader, pizza);
 
             System.out.println(pizza);
-
         } catch (IllegalArgumentException iae) {
             System.out.println(iae.getMessage());
         }
+    }
+
+    private static Pizza createNewPizza(BufferedReader reader) throws IOException {
+        String[] pizzaTokens = reader.readLine().split(WHITE_SPACES_REGEX);
+        String pizzaName = pizzaTokens[1];
+        int numberOfToppings = Integer.parseInt(pizzaTokens[2]);
+        return new Pizza(pizzaName, numberOfToppings);
+    }
+
+    private static void addToppings(BufferedReader reader, Pizza pizza) throws IOException {
+        String line;
+        while (!STOP_PROGRAM.equalsIgnoreCase(line = reader.readLine())) {
+            String[] toppingTokens = line.split(WHITE_SPACES_REGEX);
+            String toppingType = toppingTokens[1];
+            int toppingWeightInGrams = Integer.parseInt(toppingTokens[2]);
+
+            Topping topping = new Topping(toppingType, toppingWeightInGrams);
+            pizza.addTopping(topping);
+        }
+    }
+
+    private static Dough getDough(BufferedReader reader) throws IOException {
+        String[] doughTokens = reader.readLine().split(WHITE_SPACES_REGEX);
+        String flourType = doughTokens[1];
+        String bakingTechnique = doughTokens[2];
+        int doughWeightInGrams = Integer.parseInt(doughTokens[3]);
+        return new Dough(flourType, bakingTechnique, doughWeightInGrams);
     }
 }
