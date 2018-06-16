@@ -1,6 +1,6 @@
 package p06_footballTeamGenerator.models;
 
-import p06_footballTeamGenerator.models.util.ConfigExMessage;
+import p06_footballTeamGenerator.util.ConfigExMessage;
 
 import java.util.Objects;
 

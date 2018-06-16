@@ -1,4 +1,4 @@
-package p06_footballTeamGenerator.models.util;
+package p06_footballTeamGenerator.util;
 
 public final class ConfigExMessage {
 

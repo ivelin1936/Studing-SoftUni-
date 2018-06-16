@@ -3,8 +3,8 @@ package p06_footballTeamGenerator;
 import p06_footballTeamGenerator.models.Player;
 import p06_footballTeamGenerator.models.Stat;
 import p06_footballTeamGenerator.models.Team;
-import p06_footballTeamGenerator.models.util.Config;
-import p06_footballTeamGenerator.models.util.ConfigExMessage;
+import p06_footballTeamGenerator.util.Config;
+import p06_footballTeamGenerator.util.ConfigExMessage;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90ce76fe-fecc-452d-96ed-7f6f8d9ec0f1" name="Default" comment="" />
+    <list default="true" id="90ce76fe-fecc-452d-96ed-7f6f8d9ec0f1" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Stat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Stat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/util/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/util/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/util/ConfigExMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/util/ConfigExMessage.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +22,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="648">
               <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -25,7 +32,7 @@
         </entry>
       </file>
       <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/models/util/Config.java">
+        <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/util/Config.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
               <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
@@ -56,7 +63,7 @@
         </entry>
       </file>
       <file leaf-file-name="ConfigExMessage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/models/util/ConfigExMessage.java">
+        <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/util/ConfigExMessage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="8" column="98" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
@@ -180,21 +187,6 @@
               <item name="Exercise - Encapsulation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="p06_footballTeamGenerator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercise - Encapsulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercise - Encapsulation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="p06_footballTeamGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercise - Encapsulation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercise - Encapsulation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="p06_footballTeamGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -347,7 +339,7 @@
       <option name="presentableId" value="Default" />
       <updated>1528997046521</updated>
       <workItem from="1528997050474" duration="11640000" />
-      <workItem from="1529067980013" duration="28737000" />
+      <workItem from="1529067980013" duration="28957000" />
     </task>
     <task id="LOCAL-00001" summary="update Exercise - Encapsulation (Test commit from InteliJ Idea)">
       <created>1529068314866</created>
@@ -381,7 +373,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40377000" />
+    <option name="totallyTimeSpent" value="40597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -400,7 +392,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16145833" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16145833" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -680,7 +672,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/models/util/ConfigExMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/util/ConfigExMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="8" column="98" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
@@ -707,7 +699,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/models/util/Config.java">
+    <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/util/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
@@ -716,7 +708,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p06_footballTeamGenerator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="648">
           <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
