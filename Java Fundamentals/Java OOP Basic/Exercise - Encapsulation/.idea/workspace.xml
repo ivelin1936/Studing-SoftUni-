@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90ce76fe-fecc-452d-96ed-7f6f8d9ec0f1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Stat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Stat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/util/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/util/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p06_footballTeamGenerator/models/util/ConfigExMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_footballTeamGenerator/util/ConfigExMessage.java" afterDir="false" />
-    </list>
+    <list default="true" id="90ce76fe-fecc-452d-96ed-7f6f8d9ec0f1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -339,7 +332,7 @@
       <option name="presentableId" value="Default" />
       <updated>1528997046521</updated>
       <workItem from="1528997050474" duration="11640000" />
-      <workItem from="1529067980013" duration="28957000" />
+      <workItem from="1529067980013" duration="29557000" />
     </task>
     <task id="LOCAL-00001" summary="update Exercise - Encapsulation (Test commit from InteliJ Idea)">
       <created>1529068314866</created>
@@ -373,7 +366,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40597000" />
+    <option name="totallyTimeSpent" value="41197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
