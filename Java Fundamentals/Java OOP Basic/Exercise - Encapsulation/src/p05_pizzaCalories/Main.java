@@ -34,7 +34,7 @@ public class Main {
         String[] pizzaTokens = reader.readLine().split(WHITE_SPACES_REGEX);
         String pizzaName = pizzaTokens[1];
         int numberOfToppings = Integer.parseInt(pizzaTokens[2]);
-        
+
         return new Pizza(pizzaName, numberOfToppings);
     }
 
