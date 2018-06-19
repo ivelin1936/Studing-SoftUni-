@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a101de1-30af-46e3-bd5d-794b3b814bb7" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p01_person/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p01_person/models/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p01_person/models/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p02_bookShop/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p02_bookShop/models/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p02_bookShop/models/GoldenEditionBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p03_mankind/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p03_mankind/models/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p03_mankind/models/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p03_mankind/models/Worker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/Gandalf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/Happiness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/util/ConfigFood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/util/ConfigMood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidArtistNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongLengthException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongMinutesException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongSecondsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/models/OnlineRadioDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/models/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab - Inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab - Inheritance/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnlineRadioDatabase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/models/OnlineRadioDatabase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1015">
+              <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#171#172#0" expanded="true" />
+                <element signature="e#204#205#0" expanded="true" />
+                <element signature="e#284#285#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
+                <element signature="e#443#444#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Song.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/models/Song.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="48" column="58" lean-forward="true" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+              <folding>
+                <element signature="e#426#427#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#1025#1026#0" expanded="true" />
+                <element signature="e#1061#1062#0" expanded="true" />
+                <element signature="e#1613#1614#0" expanded="true" />
+                <element signature="e#1647#1648#0" expanded="true" />
+                <element signature="e#1809#1810#0" expanded="true" />
+                <element signature="e#1844#1845#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/Person.java" />
+        <option value="$PROJECT_DIR$/src/test/Product.java" />
+        <option value="$PROJECT_DIR$/src/p01_person/Main.java" />
+        <option value="$PROJECT_DIR$/src/p01_person/models/Child.java" />
+        <option value="$PROJECT_DIR$/src/p01_person/models/Person.java" />
+        <option value="$PROJECT_DIR$/src/p02_bookShop/Main.java" />
+        <option value="$PROJECT_DIR$/src/p02_bookShop/models/GoldenEditionBook.java" />
+        <option value="$PROJECT_DIR$/src/p02_bookShop/models/Book.java" />
+        <option value="$PROJECT_DIR$/src/p03_mankind/models/Human.java" />
+        <option value="$PROJECT_DIR$/src/p03_mankind/models/Worker.java" />
+        <option value="$PROJECT_DIR$/src/p03_mankind/models/Student.java" />
+        <option value="$PROJECT_DIR$/src/p03_mankind/Main.java" />
+        <option value="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/util/ConfigFoodPoints.java" />
+        <option value="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/util/ConfigMood.java" />
+        <option value="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/util/ConfigFood.java" />
+        <option value="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/Main.java" />
+        <option value="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/Happiness.java" />
+        <option value="$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/Gandalf.java" />
+        <option value="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongException.java" />
+        <option value="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidArtistNameException.java" />
+        <option value="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongNameException.java" />
+        <option value="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongLengthException.java" />
+        <option value="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongMinutesException.java" />
+        <option value="$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongSecondsException.java" />
+        <option value="$PROJECT_DIR$/src/p05_onlineRadioDatabase/models/OnlineRadioDatabase.java" />
+        <option value="$PROJECT_DIR$/src/p05_onlineRadioDatabase/models/Song.java" />
+        <option value="$PROJECT_DIR$/src/p05_onlineRadioDatabase/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="780" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Exercises - Inheritance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises - Inheritance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises - Inheritance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="p05_onlineRadioDatabase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises - Inheritance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="p05_onlineRadioDatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises - Inheritance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="p05_onlineRadioDatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main (3)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="p03_mankind.Main" />
+      <module name="Exercises - Inheritance" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="p03_mankind.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="p04_mordorsCrueltyPlan.Main" />
+      <module name="Exercises - Inheritance" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="p04_mordorsCrueltyPlan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="p05_onlineRadioDatabase.Main" />
+      <module name="Exercises - Inheritance" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="p05_onlineRadioDatabase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="p02_bookShop.Main" />
+      <module name="Exercises - Inheritance" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="p02_bookShop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Application.Main (3)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a101de1-30af-46e3-bd5d-794b3b814bb7" name="Default" comment="" />
+      <created>1529318692096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529318692096</updated>
+      <workItem from="1529318695369" duration="26908000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="26908000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Messages" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.3297062" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.16614583" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info id="UI Designer" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.39934713" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="48" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="86" selection-start-line="3" selection-start-column="86" selection-end-line="3" selection-end-column="86" />
+          <folding>
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/AbstractSequentialList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="72" column="57" selection-start-line="72" selection-start-column="57" selection-end-line="72" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="60" column="61" lean-forward="true" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="405" column="51" lean-forward="true" selection-start-line="405" selection-start-column="51" selection-end-line="405" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6741">
+          <caret line="137" column="19" lean-forward="true" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p01_person/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p01_person/models/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p01_person/models/Child.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#104#105#0" expanded="true" />
+            <element signature="e#131#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p02_bookShop/models/GoldenEditionBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#148#149#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p02_bookShop/models/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding>
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p02_bookShop/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="22" column="55" lean-forward="true" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p03_mankind/models/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+          <folding>
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p03_mankind/models/Worker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#1866#1867#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p03_mankind/models/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="31" column="86" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
+          <folding>
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p03_mankind/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/util/ConfigFood.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/util/ConfigMood.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/Happiness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="28" column="55" lean-forward="true" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+          <folding>
+            <element signature="e#134#135#0" expanded="true" />
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p04_mordorsCrueltyPlan/models/Gandalf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1302">
+          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidArtistNameException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="47" />
+          <folding>
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongNameException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongLengthException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongMinutesException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/exceptions/InvalidSongSecondsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/models/OnlineRadioDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1015">
+          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/models/Song.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="48" column="58" lean-forward="true" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+          <folding>
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1613#1614#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1844#1845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p05_onlineRadioDatabase/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
