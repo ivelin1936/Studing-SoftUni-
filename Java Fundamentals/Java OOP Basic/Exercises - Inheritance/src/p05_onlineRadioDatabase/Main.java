@@ -15,7 +15,7 @@ public class Main {
         OnlineRadioDatabase radioDatabase = new OnlineRadioDatabase();
 
         int songsAmount = Integer.parseInt(reader.readLine());
-        for (int i = 0; i < songsAmount; i++) {
+        while (songsAmount-- > 0) {
             String[] songTokens = reader.readLine().split(";");
 
             try {
