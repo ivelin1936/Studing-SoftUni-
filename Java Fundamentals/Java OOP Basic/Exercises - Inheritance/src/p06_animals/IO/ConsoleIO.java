@@ -6,19 +6,18 @@ import java.io.InputStreamReader;
 
 public class ConsoleIO {
 
-    private BufferedReader reader;
-
     public ConsoleIO() {
-        this.reader = new BufferedReader(new InputStreamReader(System.in));
     }
 
     public String readLine() {
         String line = null;
-        try {
+
+        try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             line = reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return line;
     }
 
