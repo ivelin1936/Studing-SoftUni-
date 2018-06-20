@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a101de1-30af-46e3-bd5d-794b3b814bb7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/p06_animals/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/p06_animals/models/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/p06_animals/models/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/p06_animals/models/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/p06_animals/models/Frog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/p06_animals/models/Kitten.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/p06_animals/models/Tomcat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/p06_animals/models/interfaces/SoundProducible.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/p06_animals/util/ConfigExMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p06_animals/IO/ConsoleIO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p06_animals/engine/Engine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p06_animals/factory/AnimalFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p06_animals/util/ConfigConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p05_onlineRadioDatabase/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/p06_animals/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/p06_animals/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,14 +19,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/p06_animals/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2176">
-              <caret line="64" column="94" lean-forward="true" selection-start-line="63" selection-start-column="11" selection-end-line="64" selection-end-column="94" />
+            <state relative-caret-position="272">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/p06_animals/engine/Engine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnimalFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p06_animals/factory/AnimalFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsoleIO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p06_animals/IO/ConsoleIO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#584#585#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p06_animals/util/ConfigConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -116,30 +155,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tomcat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p06_animals/models/Tomcat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-              <folding>
-                <element signature="e#213#214#0" expanded="true" />
-                <element signature="e#265#266#0" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#323#324#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SoundProducible.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p06_animals/models/interfaces/SoundProducible.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -200,7 +215,13 @@
         <option value="$PROJECT_DIR$/src/p06_animals/models/Cat.java" />
         <option value="$PROJECT_DIR$/src/p06_animals/models/Frog.java" />
         <option value="$PROJECT_DIR$/src/p06_animals/models/Dog.java" />
+        <option value="$PROJECT_DIR$/src/p06_animals/util/ConfigConstants.java" />
+        <option value="$PROJECT_DIR$/src/p06_animals/IO/ConsoleWriter.java" />
+        <option value="$PROJECT_DIR$/src/p06_animals/IO/ConsoleReader.java" />
+        <option value="$PROJECT_DIR$/src/p06_animals/IO/ConsoleIO.java" />
+        <option value="$PROJECT_DIR$/src/p06_animals/factory/AnimalFactory.java" />
         <option value="$PROJECT_DIR$/src/p06_animals/Main.java" />
+        <option value="$PROJECT_DIR$/src/p06_animals/engine/Engine.java" />
       </list>
     </option>
   </component>
@@ -250,6 +271,27 @@
               <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="p06_animals" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises - Inheritance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="p06_animals" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises - Inheritance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="p06_animals" type="462c0819:PsiDirectoryNode" />
+              <item name="IO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises - Inheritance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="p06_animals" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -259,6 +301,13 @@
               <item name="p06_animals" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
               <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises - Inheritance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Inheritance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="p06_animals" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -410,12 +459,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529318692096</updated>
-      <workItem from="1529318695369" duration="42665000" />
+      <workItem from="1529318695369" duration="45295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42665000" />
+    <option name="totallyTimeSpent" value="45295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -471,13 +520,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/AbstractSequentialList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/AbstractList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -966,10 +1008,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/p06_animals/util/ConfigConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p06_animals/IO/ConsoleWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/p06_animals/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="64" column="94" lean-forward="true" selection-start-line="63" selection-start-column="11" selection-end-line="64" selection-end-column="94" />
+        <state relative-caret-position="272">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p06_animals/IO/ConsoleIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p06_animals/factory/AnimalFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p06_animals/engine/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
