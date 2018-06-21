@@ -12,13 +12,17 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+    public final double getRadius() {
+        return this.radius;
+    }
+
     @Override
     public void calculatePerimeter() {
-        super.setPerimeter(2 * Math.PI * this.radius);
+        super.setPerimeter(2 * Math.PI * this.getRadius());
     }
 
     @Override
     public void calculateArea() {
-        super.setArea(Math.PI * Math.pow(this.radius, 2));
+        super.setArea(Math.PI * Math.pow(this.getRadius(), 2));
     }
 }

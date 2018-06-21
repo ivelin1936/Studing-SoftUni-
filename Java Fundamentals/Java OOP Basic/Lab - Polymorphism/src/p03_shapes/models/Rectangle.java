@@ -18,13 +18,21 @@ public class Rectangle extends Shape {
         this.width = width;
     }
 
+    public final double getHeight() {
+        return this.height;
+    }
+
+    public final double getWidth() {
+        return this.width;
+    }
+
     @Override
     public void calculatePerimeter() {
-        super.setPerimeter(2 * (this.height + this.width));
+        super.setPerimeter(2 * (this.getHeight() + this.getWidth()));
     }
 
     @Override
     public void calculateArea() {
-        super.setArea(this.width * this.height);
+        super.setArea(this.getWidth() * this.getHeight());
     }
 }
