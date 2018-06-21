@@ -6,14 +6,16 @@ import java.io.InputStreamReader;
 
 public final class ConsoleIO {
 
+    private final BufferedReader reader;
+
     public ConsoleIO() {
+         this.reader =  new BufferedReader(new InputStreamReader(System.in));
     }
 
-    public final String readLine() {
+    public String readLine() {
         String line = null;
-
-        try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            line = reader.readLine();
+        try {
+            line = this.reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -21,7 +23,15 @@ public final class ConsoleIO {
         return line;
     }
 
-    public final void writeLine(String line) {
+    public void writeLine(String line) {
         System.out.println(line);
+    }
+
+    public void close() {
+        try {
+            this.reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

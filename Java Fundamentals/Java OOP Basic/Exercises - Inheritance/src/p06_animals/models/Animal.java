@@ -1,8 +1,8 @@
 package p06_animals.models;
 
+import p06_animals.exceptions.InvalidInputArgumentException;
 import p06_animals.models.interfaces.SoundProducible;
 import p06_animals.util.ConfigDefaultSound;
-import p06_animals.util.ConfigExMessage;
 
 public class Animal implements SoundProducible {
 
@@ -23,28 +23,28 @@ public class Animal implements SoundProducible {
 
     private void setAnimalType(String animalType) {
         if (animalType == null || animalType.trim().isEmpty()) {
-            throw new IllegalArgumentException(ConfigExMessage.DEFAULT_EXCEPTION_MESSAGE);
+            throw new InvalidInputArgumentException();
         }
         this.animalType = animalType;
     }
 
     private void setName(String name) {
         if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException(ConfigExMessage.DEFAULT_EXCEPTION_MESSAGE);
+            throw new InvalidInputArgumentException();
         }
         this.name = name;
     }
 
     private void setAge(int age) {
         if (age <= 0) {
-            throw new IllegalArgumentException(ConfigExMessage.DEFAULT_EXCEPTION_MESSAGE);
+            throw new InvalidInputArgumentException();
         }
         this.age = age;
     }
 
     private void setGender(String gender) {
         if (gender == null || gender.trim().isEmpty()) {
-            throw new IllegalArgumentException(ConfigExMessage.DEFAULT_EXCEPTION_MESSAGE);
+            throw new InvalidInputArgumentException();
         }
         this.gender = gender;
     }

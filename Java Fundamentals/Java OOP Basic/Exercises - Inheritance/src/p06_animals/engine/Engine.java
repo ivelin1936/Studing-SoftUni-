@@ -1,6 +1,7 @@
 package p06_animals.engine;
 
 import p06_animals.IO.ConsoleIO;
+import p06_animals.exceptions.InvalidInputArgumentException;
 import p06_animals.factory.AnimalFactory;
 import p06_animals.models.Animal;
 import p06_animals.util.ConfigConstants;
@@ -19,6 +20,7 @@ public final class Engine {
         this.animalsDB = new LinkedList<>();
         this.consoleIO = new ConsoleIO();
         this.animalFactory = new AnimalFactory();
+
     }
 
     public void run() {
@@ -41,8 +43,8 @@ public final class Engine {
             Animal animal = null;
             try {
                 animal = this.animalFactory.produceAnimal(animalType, this.consoleIO);
-            } catch (IllegalArgumentException iae) {
-                System.out.println(iae.getMessage());
+            } catch (InvalidInputArgumentException iiae) {
+                System.out.println(iiae.getMessage());
             }
 
             if (animal != null) {

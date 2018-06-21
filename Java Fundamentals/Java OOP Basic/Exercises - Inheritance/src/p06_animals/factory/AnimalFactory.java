@@ -1,9 +1,9 @@
 package p06_animals.factory;
 
 import p06_animals.IO.ConsoleIO;
+import p06_animals.exceptions.InvalidInputArgumentException;
 import p06_animals.models.*;
 import p06_animals.util.ConfigConstants;
-import p06_animals.util.ConfigExMessage;
 
 public final class AnimalFactory {
 
@@ -11,7 +11,8 @@ public final class AnimalFactory {
     }
 
     public final Animal produceAnimal(String animalType, ConsoleIO reader) {
-        String[] animalTokens = reader.readLine().split("\\s+");
+        String[] animalTokens = reader.readLine().split(ConfigConstants.ANIMAL_TOKENS_SPLITTER);
+
         String name = animalTokens[ConfigConstants.NAME_INDEX];
         int age = Integer.parseInt(animalTokens[ConfigConstants.AGE_INDEX]);
         String gender = animalTokens[ConfigConstants.GENDER_INDEX];
@@ -28,7 +29,7 @@ public final class AnimalFactory {
             case ConfigConstants.ANIMAL_TOMCAT:
                 return new Tomcat(animalType, name, age, gender);
             default:
-                throw new IllegalArgumentException(ConfigExMessage.DEFAULT_EXCEPTION_MESSAGE);
+                throw new InvalidInputArgumentException();
         }
     }
 }
