@@ -1,8 +1,8 @@
 package p06_animals.models;
 
-public class Cat extends Animal {
+import p06_animals.util.ConfigDefaultSound;
 
-    private static final String DEFAULT_SOUND = "MiauMiau";
+public class Cat extends Animal {
 
     public Cat(String animalType, String name, int age, String gender) {
         super(animalType, name, age, gender);
@@ -10,6 +10,6 @@ public class Cat extends Animal {
 
     @Override
     public String produceSound() {
-        return DEFAULT_SOUND;
+        return ConfigDefaultSound.CAT_DEFAULT_SOUND;
     }
 }

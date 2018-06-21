@@ -5,12 +5,12 @@ import p06_animals.models.*;
 import p06_animals.util.ConfigConstants;
 import p06_animals.util.ConfigExMessage;
 
-public class AnimalFactory {
+public final class AnimalFactory {
 
     public AnimalFactory() {
     }
 
-    public Animal produceAnimal(String animalType, ConsoleIO reader) {
+    public final Animal produceAnimal(String animalType, ConsoleIO reader) {
         String[] animalTokens = reader.readLine().split("\\s+");
         String name = animalTokens[ConfigConstants.NAME_INDEX];
         int age = Integer.parseInt(animalTokens[ConfigConstants.AGE_INDEX]);

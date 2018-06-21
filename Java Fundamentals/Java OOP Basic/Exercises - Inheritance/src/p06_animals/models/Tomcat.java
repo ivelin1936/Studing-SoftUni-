@@ -1,15 +1,15 @@
 package p06_animals.models;
 
-public class Tomcat extends Cat {
+import p06_animals.util.ConfigDefaultSound;
 
-    private static final String DEFAULT_SOUND = "Give me one million b***h";
+public final class Tomcat extends Cat {
 
     public Tomcat(String animalType, String name, int age, String gender) {
         super(animalType, name, age, gender);
     }
 
     @Override
-    public String produceSound() {
-        return DEFAULT_SOUND;
+    public final String produceSound() {
+        return ConfigDefaultSound.TOMCAT_DEFAULT_SOUND;
     }
 }

@@ -1,6 +1,6 @@
 package p06_animals.util;
 
-public class ConfigConstants {
+public final class ConfigConstants {
 
     public static final String STOP_PROCESS = "Beast!";
     public static final String ANIMAL_CAT = "Cat";

@@ -1,11 +1,10 @@
 package p06_animals.models;
 
 import p06_animals.models.interfaces.SoundProducible;
+import p06_animals.util.ConfigDefaultSound;
 import p06_animals.util.ConfigExMessage;
 
 public class Animal implements SoundProducible {
-
-    private static final String DEFAULT_SOUND = "Not implemented!";
 
     private String animalType;
     private String name;
@@ -64,7 +63,7 @@ public class Animal implements SoundProducible {
 
     @Override
     public String produceSound() {
-        return DEFAULT_SOUND;
+        return ConfigDefaultSound.ANIMAL_DEFAULT_SOUND;
     }
 
     @Override

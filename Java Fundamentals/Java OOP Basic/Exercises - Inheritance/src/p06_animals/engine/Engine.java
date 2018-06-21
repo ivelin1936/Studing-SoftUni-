@@ -9,11 +9,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class Engine {
+public final class Engine {
 
     private List<Animal> animalsDB;
-    private ConsoleIO consoleIO;
-    private AnimalFactory animalFactory;
+    private final ConsoleIO consoleIO;
+    private final AnimalFactory animalFactory;
 
     public Engine() {
         this.animalsDB = new LinkedList<>();
