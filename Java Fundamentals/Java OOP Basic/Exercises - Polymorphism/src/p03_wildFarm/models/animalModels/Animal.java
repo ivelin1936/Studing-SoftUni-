@@ -1,20 +1,19 @@
 package p03_wildFarm.models.animalModels;
 
+import p03_wildFarm.models.animalModels.interfaces.IAnimal;
 import p03_wildFarm.models.foodModels.Food;
 import p03_wildFarm.util.ConfigExMessage;
 
-public abstract class Animal implements IAnimal{
+public abstract class Animal implements IAnimal {
 
     private static final int DEFAULT_EATEN_FOOD = 0;
 
     private String name;
-    private String type;
     private double weight;
     private int foodEaten;
 
-    public Animal(String name, String type, double weight) {
+    public Animal(String name, double weight) {
         this.setName(name);
-        this.setType(type);
         this.setWeight(weight);
         this.setFoodEaten(DEFAULT_EATEN_FOOD);
     }
@@ -30,13 +29,6 @@ public abstract class Animal implements IAnimal{
         this.foodEaten = foodAmount;
     }
 
-    private void setType(String type) {
-        if (type == null || type.trim().isEmpty()) {
-            throw new IllegalArgumentException(ConfigExMessage.EMPTY_ANIMAL_TYPE_EX_MESSAGE);
-        }
-        this.type = type;
-    }
-
     private void setWeight(double weight) {
         if (weight < 0) {
             throw new IllegalArgumentException(ConfigExMessage.NEGATIVE_WEIGHT_EX_MESSAGE);
@@ -46,10 +38,6 @@ public abstract class Animal implements IAnimal{
 
     public String getName() {
         return this.name;
-    }
-
-    public String getType() {
-        return this.type;
     }
 
     public double getWeight() {
@@ -62,5 +50,7 @@ public abstract class Animal implements IAnimal{
 
     public abstract String makeSound();
 
-    public abstract void eat(Food food);
+    public void eat(Food food) {
+        this.foodEaten += food.getQuantity();
+    }
 }

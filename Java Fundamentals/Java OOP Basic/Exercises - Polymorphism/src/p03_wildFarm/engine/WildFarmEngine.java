@@ -40,6 +40,7 @@ public final class WildFarmEngine {
                 continue;
 
             consoleIO.writeLine(animal.makeSound());
+
             feedTheAnimal(animal, food);
             animalsDB.add(animal);
         }

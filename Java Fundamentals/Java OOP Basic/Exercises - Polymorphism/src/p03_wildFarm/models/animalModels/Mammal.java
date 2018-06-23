@@ -9,8 +9,8 @@ public abstract class Mammal extends Animal {
 
     private String livingRegion;
 
-    public Mammal(String name, String type, double weight, String livingRegion) {
-        super(name, type, weight);
+    public Mammal(String name, double weight, String livingRegion) {
+        super(name, weight);
         this.setLivingRegion(livingRegion);
     }
 
@@ -29,7 +29,7 @@ public abstract class Mammal extends Animal {
     public String toString() {
 //        {AnimalType} [{AnimalName}, {AnimalWeight}, {AnimalLivingRegion}, {FoodEaten}]
         return String.format(ConfigConstants.MAMMAL_TO_STRING_PATTERN,
-                this.getType(),
+                this.getClass().getSimpleName(),
                 this.getName(),
                 new DecimalFormat(ConfigConstants.DECIMAL_FORMAT_PATTERN).format(this.getWeight()),
                 this.getLivingRegion(),

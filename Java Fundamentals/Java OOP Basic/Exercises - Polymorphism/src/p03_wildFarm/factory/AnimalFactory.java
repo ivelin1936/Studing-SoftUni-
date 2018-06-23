@@ -20,13 +20,13 @@ public abstract class AnimalFactory {
         switch (type) {
             case ConfigConstants.CAT_TYPE:
                 String breed = animalTokens[ConfigConstants.BREED_INDEX];
-                return new Cat(name, type, weight, livingRegion, breed);
+                return new Cat(name, weight, livingRegion, breed);
             case ConfigConstants.TIGER_TYPE:
-                return new Tiger(name, type, weight, livingRegion);
+                return new Tiger(name, weight, livingRegion);
             case ConfigConstants.ZEBRA_TYPE:
-                return new Zebra(name, type, weight, livingRegion);
+                return new Zebra(name, weight, livingRegion);
             case ConfigConstants.MOUSE_TYPE:
-                return new Mouse(name, type, weight, livingRegion);
+                return new Mouse(name, weight, livingRegion);
             default:
                 throw new IllegalArgumentException(ConfigExMessage.INVALID_ANIMAL_TYPE_EX_MESSAGE);
         }

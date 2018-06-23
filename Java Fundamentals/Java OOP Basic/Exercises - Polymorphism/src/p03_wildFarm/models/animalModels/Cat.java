@@ -1,19 +1,18 @@
 package p03_wildFarm.models.animalModels;
 
-import p03_wildFarm.models.foodModels.Food;
 import p03_wildFarm.util.ConfigConstants;
 import p03_wildFarm.util.ConfigExMessage;
 
 import java.text.DecimalFormat;
 
-public class Cat extends Felime {
+public class Cat extends Feline {
 
     private static final String DEFAULT_SOUND = "Meowwww";
 
     private String breed;
 
-    public Cat(String name, String type, double weight, String livingRegion, String breed) {
-        super(name, type, weight, livingRegion);
+    public Cat(String name, double weight, String livingRegion, String breed) {
+        super(name, weight, livingRegion);
         this.setBreed(breed);
     }
 
@@ -34,15 +33,10 @@ public class Cat extends Felime {
     }
 
     @Override
-    public void eat(Food food) {
-        this.setFoodEaten(this.getFoodEaten() + food.getQuantity());
-    }
-
-    @Override
     public String toString() {
 //        {AnimalType} [{AnimalName}, {CatBreed}, {AnimalWeight}, {AnimalLivingRegion}, {FoodEaten}]
         return String.format(ConfigConstants.CAT_TO_STRING_PATTERN,
-                this.getType(),
+                this.getClass().getSimpleName(),
                 this.getName(),
                 this.getBreed(),
                 new DecimalFormat(ConfigConstants.DECIMAL_FORMAT_PATTERN).format(this.getWeight()),

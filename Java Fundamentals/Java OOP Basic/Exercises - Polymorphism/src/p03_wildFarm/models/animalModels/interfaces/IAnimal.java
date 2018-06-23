@@ -1,4 +1,4 @@
-package p03_wildFarm.models.animalModels;
+package p03_wildFarm.models.animalModels.interfaces;
 
 import p03_wildFarm.models.foodModels.Food;
 
