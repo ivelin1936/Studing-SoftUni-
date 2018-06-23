@@ -19,7 +19,7 @@ public final class ConfigConstants {
 
     public static final String MAMMAL_TO_STRING_PATTERN = "%s[%s, %s, %s, %d]";
     public static final String CAT_TO_STRING_PATTERN = "%s[%s, %s, %s, %s, %d]";
-    public static final String DECIMAL_FORMAT_PATTERN = "#########0.##";
+    public static final String DECIMAL_FORMAT_PATTERN = "##########.##";
 
     private ConfigConstants() {
     }
