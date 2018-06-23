@@ -4,12 +4,12 @@ import p03_wildFarm.models.animalModels.*;
 import p03_wildFarm.util.ConfigConstants;
 import p03_wildFarm.util.ConfigExMessage;
 
-public final class AnimalFactory {
+public abstract class AnimalFactory {
 
-    public AnimalFactory() {
+    private AnimalFactory() {
     }
 
-    public Animal produceAnimal(String line) {
+    public static Animal produceAnimal(String line) {
         String[] animalTokens = line.split("\\s+");
 //        {AnimalType} {AnimalName} {AnimalWeight} {AnimalLivingRegion} [{CatBreed} = Only if its cat]
         String type = animalTokens[ConfigConstants.TYPE_INDEX];

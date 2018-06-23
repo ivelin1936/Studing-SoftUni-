@@ -12,24 +12,21 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        AnimalFactory animalFactory = new AnimalFactory();
-        FoodFactory foodFactory = new FoodFactory();
         ConsoleIO consoleIO = new ConsoleIO();
-
         List<Animal> animalsDB = new LinkedList<>();
 
         String line;
         while (!ConfigConstants.STOP.equalsIgnoreCase(line = consoleIO.readLine())) {
             Animal animal = null;
             try {
-                animal = animalFactory.produceAnimal(line);
+                animal = AnimalFactory.produceAnimal(line);
             } catch (IllegalArgumentException iae) {
                 consoleIO.writeLine(iae.getMessage());
             }
 
             Food food = null;
             try {
-                food = foodFactory.produceFood(consoleIO);
+                food = FoodFactory.produceFood(consoleIO);
             } catch (IllegalArgumentException iae) {
                 consoleIO.writeLine(iae.getMessage());
             }

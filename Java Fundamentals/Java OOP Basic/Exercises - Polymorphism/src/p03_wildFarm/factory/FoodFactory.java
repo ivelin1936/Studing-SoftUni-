@@ -7,12 +7,12 @@ import p03_wildFarm.models.foodModels.Vegetable;
 import p03_wildFarm.util.ConfigConstants;
 import p03_wildFarm.util.ConfigExMessage;
 
-public final class FoodFactory {
+public abstract class FoodFactory {
 
-    public FoodFactory() {
+    private FoodFactory() {
     }
 
-    public Food produceFood(ConsoleIO consoleIO) {
+    public static Food produceFood(ConsoleIO consoleIO) {
         String[] foodTokens = consoleIO.readLine().split("\\s+");
         String type = foodTokens[ConfigConstants.TYPE_INDEX];
         int quantity = Integer.parseInt(foodTokens[ConfigConstants.QUANTITY_INDEX]);
