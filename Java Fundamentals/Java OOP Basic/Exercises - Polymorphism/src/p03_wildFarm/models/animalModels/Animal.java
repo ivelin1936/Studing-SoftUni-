@@ -21,7 +21,7 @@ public abstract class Animal implements IAnimal{
 
     private void setName(String name) {
         if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException(String.format(ConfigExMessage.EMPTY_STRING_EX_MESSAGE, "Animal name"));
+            throw new IllegalArgumentException(ConfigExMessage.EMPTY_ANIMAL_NAME_EX_MESSAGE);
         }
         this.name = name;
     }
@@ -32,7 +32,7 @@ public abstract class Animal implements IAnimal{
 
     private void setType(String type) {
         if (type == null || type.trim().isEmpty()) {
-            throw new IllegalArgumentException(String.format(ConfigExMessage.EMPTY_STRING_EX_MESSAGE, "Animal type"));
+            throw new IllegalArgumentException(ConfigExMessage.EMPTY_ANIMAL_TYPE_EX_MESSAGE);
         }
         this.type = type;
     }

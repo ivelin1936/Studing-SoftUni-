@@ -9,7 +9,6 @@ import java.text.DecimalFormat;
 public class Cat extends Felime {
 
     private static final String DEFAULT_SOUND = "Meowwww";
-    private static final String BREED_STR = "Breed";
 
     private String breed;
 
@@ -20,7 +19,7 @@ public class Cat extends Felime {
 
     private void setBreed(String breed) {
         if (breed == null || breed.trim().isEmpty()) {
-            throw new IllegalArgumentException(String.format(ConfigExMessage.EMPTY_STRING_EX_MESSAGE, BREED_STR));
+            throw new IllegalArgumentException(ConfigExMessage.EMPTY_CAT_BREED_EX_MESSAGE);
         }
         this.breed = breed;
     }
