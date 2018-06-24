@@ -1,4 +1,4 @@
-package p02_vehiclesExtension.models;
+package p02_vehiclesExtension.models.interfaces;
 
 public interface IVenhile {
 

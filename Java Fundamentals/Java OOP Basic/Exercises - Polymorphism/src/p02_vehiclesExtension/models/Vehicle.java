@@ -1,5 +1,6 @@
 package p02_vehiclesExtension.models;
 
+import p02_vehiclesExtension.models.interfaces.IVenhile;
 import p02_vehiclesExtension.util.ConfigExMessage;
 
 public abstract class Vehicle implements IVenhile {

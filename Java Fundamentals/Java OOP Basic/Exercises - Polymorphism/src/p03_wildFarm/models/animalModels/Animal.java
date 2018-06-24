@@ -15,7 +15,7 @@ public abstract class Animal implements IAnimal {
     public Animal(String name, double weight) {
         this.setName(name);
         this.setWeight(weight);
-        this.setFoodEaten(DEFAULT_EATEN_FOOD);
+        this.foodEaten = DEFAULT_EATEN_FOOD;
     }
 
     private void setName(String name) {
@@ -23,10 +23,6 @@ public abstract class Animal implements IAnimal {
             throw new IllegalArgumentException(ConfigExMessage.EMPTY_ANIMAL_NAME_EX_MESSAGE);
         }
         this.name = name;
-    }
-
-    protected void setFoodEaten(int foodAmount) {
-        this.foodEaten = foodAmount;
     }
 
     private void setWeight(double weight) {

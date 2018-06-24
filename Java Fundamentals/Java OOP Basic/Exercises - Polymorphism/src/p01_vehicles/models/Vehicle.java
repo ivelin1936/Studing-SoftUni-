@@ -1,5 +1,6 @@
 package p01_vehicles.models;
 
+import p01_vehicles.models.interfaces.IVenhile;
 import p01_vehicles.util.ConfigExMessage;
 
 public abstract class Vehicle implements IVenhile {
