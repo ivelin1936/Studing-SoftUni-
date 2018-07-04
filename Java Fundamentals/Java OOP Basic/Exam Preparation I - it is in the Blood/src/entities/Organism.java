@@ -24,7 +24,7 @@ public class Organism {
         this.name = name;
     }
 
-    public List<Cluster> getClusters() {
+    protected List<Cluster> getClusters() {
         return Collections.unmodifiableList(this.clusters);
     }
 
