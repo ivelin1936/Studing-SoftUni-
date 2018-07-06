@@ -18,4 +18,12 @@ public abstract class Microbe extends Cell {
     private void setVirulence(int virulence) {
         this.virulence = virulence;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder(super.toString());
+        sb.append(System.lineSeparator())
+                .append(String.format("--------Health: %d | Virulence: %d | Energy: ", super.getHealth(), this.getVirulence()));
+        return sb.toString();
+    }
 }

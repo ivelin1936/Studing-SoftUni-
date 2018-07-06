@@ -26,7 +26,7 @@ public abstract class Cell {
         return health;
     }
 
-    private void setHealth(int health) {
+    public void setHealth(int health) {
         this.health = health;
     }
 
@@ -34,7 +34,7 @@ public abstract class Cell {
         return positionRow;
     }
 
-    private void setPositionRow(int positionRow) {
+    public void setPositionRow(int positionRow) {
         this.positionRow = positionRow;
     }
 
@@ -42,18 +42,17 @@ public abstract class Cell {
         return positionCol;
     }
 
-    private void setPositionCol(int positionCol) {
+    public void setPositionCol(int positionCol) {
         this.positionCol = positionCol;
     }
 
+    public abstract int getEnergy(); // FORMULITE V DOC-a
+
     @Override
     public String toString() {
-        //TODO....
-        return "Cell{" +
-                "id='" + id + '\'' +
-                ", health=" + health +
-                ", positionRow=" + positionRow +
-                ", positionCol=" + positionCol +
-                '}';
+        return String.format("------Cell %s [%d,%d]",
+                this.getId(),
+                this.getPositionRow(),
+                this.getPositionCol());
     }
 }

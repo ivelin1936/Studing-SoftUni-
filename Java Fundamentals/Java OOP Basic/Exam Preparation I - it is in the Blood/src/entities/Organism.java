@@ -1,5 +1,6 @@
 package entities;
 
+import entities.cells.Cell;
 import entities.clusters.Cluster;
 
 import java.util.Collections;
@@ -24,7 +25,7 @@ public class Organism {
         this.name = name;
     }
 
-    protected List<Cluster> getClusters() {
+    public List<Cluster> getClusters() {
         return Collections.unmodifiableList(this.clusters);
     }
 
@@ -36,22 +37,55 @@ public class Organism {
         this.clusters.add(cluster);
     }
 
+    private int getCellsCount() {
+        int count = 0;
+        for (Cluster cluster : clusters) {
+            for (Cell[] cells : cluster.getCells()) {
+                for (Cell cell : cells) {
+                    if (cell != null) {
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
+    }
+
+    public Cluster getClusterById(String clusterId) {
+        for (Cluster cluster : clusters) {
+            if (cluster.getId().equals(clusterId)) {
+                return cluster;
+            }
+        }
+
+        return null;
+    }
+
+    public void moveClusterToTheEnd() {
+        Cluster cluster = this.getClusters().get(0);
+        this.clusters.remove(0);
+        this.clusters.add(cluster);
+    }
+
     @Override
     public String toString() {
-        //TODO - not sure this work
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Organism - %s", this.getName()))
                 .append(System.lineSeparator())
                 .append(String.format("--Clusters: %d", this.getClusters().size()))
-                .append(System.lineSeparator());
+                .append(System.lineSeparator())
+                .append(String.format("--Cells: %d", this.getCellsCount()));
 
-        int count = 0;
-        for (Cluster c: this.getClusters()) {
-            count += c.getCells().size();
+        if (this.getClusters().size() > 0) {
+            sb.append(System.lineSeparator());
         }
-        sb.append(String.format("--Cells: %d", count));
+
+        for (Cluster cluster : clusters) {
+            sb.append(cluster.toString());
+        }
 
         return sb.toString();
 
     }
+
 }

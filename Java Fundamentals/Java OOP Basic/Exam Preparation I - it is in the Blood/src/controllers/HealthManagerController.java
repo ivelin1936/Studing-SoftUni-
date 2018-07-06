@@ -6,7 +6,7 @@ public interface HealthManagerController {
 
     String createOrganism(String name);
 
-    String addCluster(String organismName, String id, int rows, int cols);
+    String addCluster(String organismName, String clusterId, int rows, int cols);
 
     String addCell(String organismName, String clusterId, String cellType, String cellId, int health, int positionRow, int positionCol, int additionalProperty);
 

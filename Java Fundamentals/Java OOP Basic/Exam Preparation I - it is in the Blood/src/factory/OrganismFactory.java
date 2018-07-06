@@ -2,12 +2,12 @@ package factory;
 
 import entities.Organism;
 
-public class OrganismFactory {
+public final class OrganismFactory {
 
-    public OrganismFactory() {
+    private OrganismFactory() {
     }
 
-    public Organism createOrganism(String name) {
+    public static Organism createOrganism(String name) {
         return new Organism(name);
     }
 }

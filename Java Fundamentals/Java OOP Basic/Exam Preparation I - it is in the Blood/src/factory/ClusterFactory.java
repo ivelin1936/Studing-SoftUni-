@@ -1,9 +1,13 @@
 package factory;
 
-public class ClusterFactory {
+import entities.clusters.Cluster;
 
-    public ClusterFactory() {
+public final class ClusterFactory {
+
+    private ClusterFactory() {
     }
 
-    //TODO....
+    public static Cluster createCluster(String id, int rows, int cols) {
+        return new Cluster(id, rows, cols);
+    }
 }
