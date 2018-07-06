@@ -90,7 +90,6 @@ public class HealthManager implements HealthManagerController {
 
     @Override
     public String activateCluster(String organismName) {
-        //TODO...
         /** FINDS the organism with the given name
          o	ACTIVATES the next cluster in order
          o	RETURNS message "Organism <organism name>: Activated cluster <cluster id>. Cells left: <cells count>"
