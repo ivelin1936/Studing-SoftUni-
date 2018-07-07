@@ -18,4 +18,5 @@ public interface Manager {
 
     void tune(int tuneIndex, String addOn);
 
+    void open(int id, String type, int length, String route, int prizePool, int extraParameter);
 }

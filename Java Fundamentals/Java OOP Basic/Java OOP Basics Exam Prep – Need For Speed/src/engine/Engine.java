@@ -104,7 +104,12 @@ public class Engine {
         String route = commArgs[4];
         int prizePool = Integer.parseInt(commArgs[5]);
 
-        this.carManager.open(id, type, length, route, prizePool);
+        if (commArgs.length == 6) {
+            this.carManager.open(id, type, length, route, prizePool);
+        } else {
+            int extraParameter = Integer.parseInt(commArgs[6]);
+            this.carManager.open(id, type, length, route, prizePool, extraParameter);
+        }
     }
 
     private void executeCheckCarInfo(String[] commArgs) {

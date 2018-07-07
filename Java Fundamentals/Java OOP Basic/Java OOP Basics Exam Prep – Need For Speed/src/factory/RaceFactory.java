@@ -1,9 +1,6 @@
 package factory;
 
-import entity.raceDto.CasualRace;
-import entity.raceDto.DragRace;
-import entity.raceDto.DriftRace;
-import entity.raceDto.Race;
+import entity.raceDto.*;
 
 public final class RaceFactory {
 
@@ -25,6 +22,19 @@ public final class RaceFactory {
                 break;
         }
 
+        return race;
+    }
+
+    public static Race createSpecialRace(String type, int length, String route, int prizePool, int extraParameter) {
+        Race race = null;
+        switch (type){
+            case "TimeLimit":
+                race = new TimeLimitRace(length, route, prizePool, extraParameter);
+                break;
+            case "Circuit":
+                race = new CircuitRace(length, route, prizePool, extraParameter);
+                break;
+        }
         return race;
     }
 }

@@ -74,9 +74,17 @@ public abstract class Car {
         return this.getSuspension() + this.getDurability();
     }
 
+    public int getTimePerformance(int raceLength) {
+        return raceLength * (this.getHorsepower() / 100) * this.getAcceleration();
+    }
+
     public void tune(int tuneIndex, String tuneAddOn) {
         this.horsepower += tuneIndex;
         this.suspension += tuneIndex / 2;
+    }
+
+    public void decreaseDurability(int dur) {
+        this.durability -= dur;
     }
 
     @Override

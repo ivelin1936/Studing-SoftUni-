@@ -36,7 +36,6 @@ public class CarManager implements Manager {
         if (!this.carsDB.containsKey(id)) {
             throw new IllegalArgumentException();
         }
-
         return this.carsDB.get(id).toString();
     }
 
@@ -45,6 +44,14 @@ public class CarManager implements Manager {
         /** OPENS a race of the given type, with the given id, and stats.
          o	The race type will be either “Casual”, “Drag” or “Drift”.*/
         Race race = RaceFactory.createRace(type, length, route, prizePool);
+        this.racesDB.putIfAbsent(id, race);
+    }
+
+    @Override
+    public void open(int id, String type, int length, String route, int prizePool, int extraParameter) {
+        /** OPENS a race of the given type, with the given id, and stats.
+         o	BONUS Task - add 2 new special races */
+        Race race = RaceFactory.createSpecialRace(type, length, route, prizePool, extraParameter);
         this.racesDB.putIfAbsent(id, race);
     }
 
@@ -61,14 +68,13 @@ public class CarManager implements Manager {
     @Override
     public String start(int id) {
         /** INITIATES the race with the given id.
-         o	RETURNS detailed information about the race result.
-         */
+         o	RETURNS detailed information about the race result.*/
         //A race CANNOT start without ANY participants.
         //A race CAN start with LESS than three participants.
+
         if (this.racesDB.get(id).hasZeroParticipants()) {
             throw new IllegalArgumentException("Cannot start the race with zero participants.");
         }
-
         String raceResult = this.racesDB.get(id).startRace();
         this.racesDB.remove(id);
         return raceResult;
