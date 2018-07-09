@@ -72,8 +72,8 @@ public class ArenaImpl implements Arena {
                 fight(this.heroes, this.antiHeroes);
             }
 
-            removeDeathHeroes(this.antiHeroes);
-            removeDeathHeroes(this.heroes);
+            this.antiHeroes = removeDeathHeroes(this.antiHeroes);
+            this.heroes = removeDeathHeroes(this.heroes);
 
             if (this.getAntiHeroes().size() == 0) {
                 isHeroesWon = true;
@@ -88,8 +88,10 @@ public class ArenaImpl implements Arena {
         return isHeroesWon;
     }
 
-    private void removeDeathHeroes(List<ComicCharacter> list) {
-       list = list.stream().filter(cc -> cc.getHealth() > 0 ).collect(Collectors.toList());
+    private List<ComicCharacter> removeDeathHeroes(List<ComicCharacter> list) {
+       return list.stream()
+               .filter(cc -> cc.getHealth() > 0 )
+               .collect(Collectors.toList());
     }
 
     private void fight(List<ComicCharacter> firstCharacters, List<ComicCharacter> secondCharacters) {
