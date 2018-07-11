@@ -11,11 +11,11 @@ public class Truple<T, E> {
     }
 
     public T getFirstItem() {
-        return firstItem;
+        return this.firstItem;
     }
 
     public E getSecondItem() {
-        return secondItem;
+        return this.secondItem;
     }
 
     @Override
