@@ -1,4 +1,4 @@
-package p05_nullFinder;
+package p07_genericAddAllMethod;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -45,5 +45,17 @@ public class ListUtils {
             }
         }
         return nulls;
+    }
+
+    public static <T> void flatten(List<? super T> dest, List<List<? extends T>> src) {
+        for (List<? extends T> inner : src) {
+            dest.addAll(inner);
+        }
+    }
+
+    public static <T> void addAll(List<? super T> destination, List<? extends T> source) {
+        for (T element : source) {
+            destination.add(element);
+        }
     }
 }

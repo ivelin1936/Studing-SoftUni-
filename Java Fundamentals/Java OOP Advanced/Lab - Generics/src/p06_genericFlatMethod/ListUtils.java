@@ -1,4 +1,4 @@
-package p05_nullFinder;
+package p06_genericFlatMethod;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -45,5 +45,11 @@ public class ListUtils {
             }
         }
         return nulls;
+    }
+
+    public static <T> void flatten(List<? super T> dest, List<List<? extends T>> src) {
+        for (List<? extends T> inner : src) {
+            dest.addAll(inner);
+        }
     }
 }
