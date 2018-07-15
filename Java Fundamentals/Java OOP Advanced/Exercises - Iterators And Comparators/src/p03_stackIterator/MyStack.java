@@ -47,7 +47,7 @@ public class MyStack<T> implements Iterable<T> {
     /**pop method returns the top element and removes it.
      * If collection is empty -> throw new NoSuchElementException()
      * Else getting the last element from collection,
-     *  set this position on null and return the element.*/
+     *      set this position on null and return the element.*/
     public T pop() {
         if (this.elementCount == 0) {
             throw new NoSuchElementException("No elements");
