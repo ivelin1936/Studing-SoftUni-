@@ -78,11 +78,13 @@ public class Clinic {
     }
 
     public boolean release() {
+        //Strange but this solution don't work (60/100 in Judge). For Debug and fixing the problem!!!
 //        boolean isReleased = executeRelease(this.startIndex, this.rooms.length);
 //        if (isReleased) {
 //            return true;
 //        }
 //        return executeRelease(0, this.startIndex);
+
         for (int i = this.startIndex; i < this.rooms.length; i++) {
             if (this.rooms[i] != null) {
                 this.rooms[i] = null;
@@ -98,9 +100,9 @@ public class Clinic {
         return false;
     }
 
-    private boolean executeRelease(int start, int end) {
+    private boolean executeRelease(int startIndex, int end) {
         boolean isReleased = false;
-        for (int i = start; i < end; i++) {
+        for (int i = startIndex; i < end; i++) {
             if (this.rooms[i] != null) {
                 this.rooms[i] = null;
                 isReleased = true;
