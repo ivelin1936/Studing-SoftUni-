@@ -13,9 +13,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/part2_Annotations/p04_createAnnotation/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
+            <state relative-caret-position="306">
               <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -30,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,7 +48,13 @@
         <option value="$PROJECT_DIR$/src/part1_Enumerations/p02_warningLevels/Logger.java" />
         <option value="$PROJECT_DIR$/src/part1_Enumerations/p02_warningLevels/Main.java" />
         <option value="$PROJECT_DIR$/src/part1_Enumerations/p02_warningLevels/Message.java" />
+        <option value="$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/Coin.java" />
+        <option value="$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/CoffeeType.java" />
+        <option value="$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/CoffeeSize.java" />
+        <option value="$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/Coffee.java" />
         <option value="$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/Main.java" />
+        <option value="$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/CoffeeMachine.java" />
+        <option value="$PROJECT_DIR$/src/part2_Annotations/p04_createAnnotation/Main.java" />
       </list>
     </option>
   </component>
@@ -89,34 +95,14 @@
               <item name="Lab - Enumirations and Annotations" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab - Enumirations and Annotations" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="part1_Enumerations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lab - Enumirations and Annotations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lab - Enumirations and Annotations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="part1_Enumerations" type="462c0819:PsiDirectoryNode" />
-              <item name="p01_weekdays" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lab - Enumirations and Annotations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lab - Enumirations and Annotations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="part1_Enumerations" type="462c0819:PsiDirectoryNode" />
-              <item name="p02_warningLevels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lab - Enumirations and Annotations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lab - Enumirations and Annotations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="part1_Enumerations" type="462c0819:PsiDirectoryNode" />
-              <item name="p03_coffeeMachine" type="462c0819:PsiDirectoryNode" />
+              <item name="part2_Annotations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Lab - Enumirations and Annotations" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab - Enumirations and Annotations" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="part2_Annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="p04_createAnnotation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -142,6 +128,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="part1_Enumerations.p03_coffeeMachine" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -161,7 +150,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="part1_Enumerations.p02_warningLevels.Main" />
       <module name="Lab - Enumirations and Annotations" />
@@ -169,6 +158,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="part1_Enumerations.p02_warningLevels.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="part1_Enumerations.p03_coffeeMachine.Main" />
+      <module name="Lab - Enumirations and Annotations" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part1_Enumerations.p03_coffeeMachine.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -228,9 +228,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -246,45 +248,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531817010818</updated>
-      <workItem from="1531817013957" duration="3469000" />
+      <workItem from="1531817013957" duration="7032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3469000" />
+    <option name="totallyTimeSpent" value="7032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3297062" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16875" />
-      <window_info anchor="right" id="Database" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28400436" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Messages" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.3297062" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.16875" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info id="UI Designer" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.28400436" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +305,7 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -312,13 +314,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/part2_Annotations/p05_createAnnotation/Main.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/part2_Annotations/p04_createAnnotation/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/part2_Annotations/p05_codingTracker/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -448,7 +443,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
+        <state relative-caret-position="962">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/CoffeeMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/Coffee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1251#1252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/CoffeeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#202#203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/Coin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+          <folding>
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/part1_Enumerations/p03_coffeeMachine/CoffeeSize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/part2_Annotations/p04_createAnnotation/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
