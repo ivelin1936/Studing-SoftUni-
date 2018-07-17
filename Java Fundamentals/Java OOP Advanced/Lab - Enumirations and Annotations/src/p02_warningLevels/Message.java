@@ -1,4 +1,4 @@
-package part1_Enumerations.p02_warningLevels;
+package p02_warningLevels;
 
 public class Message {
 

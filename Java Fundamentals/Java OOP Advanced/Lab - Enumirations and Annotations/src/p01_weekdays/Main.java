@@ -1,4 +1,4 @@
-package part1_Enumerations.p01_weekdays;
+package p01_weekdays;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

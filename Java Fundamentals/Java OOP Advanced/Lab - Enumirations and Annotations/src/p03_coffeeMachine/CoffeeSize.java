@@ -1,4 +1,4 @@
-package part1_Enumerations.p03_coffeeMachine;
+package p03_coffeeMachine;
 
 public enum CoffeeSize {
     SMALL(50, 50), NORMAL(100, 75), DOUBLE(200, 100);

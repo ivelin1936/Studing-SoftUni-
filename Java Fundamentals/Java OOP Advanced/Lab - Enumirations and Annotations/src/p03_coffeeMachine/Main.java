@@ -1,4 +1,4 @@
-package part1_Enumerations.p03_coffeeMachine;
+package p03_coffeeMachine;
 
 import java.io.BufferedReader;
 import java.io.IOException;

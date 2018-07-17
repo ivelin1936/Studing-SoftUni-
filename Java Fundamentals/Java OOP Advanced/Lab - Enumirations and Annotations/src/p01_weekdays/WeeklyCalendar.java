@@ -1,4 +1,4 @@
-package part1_Enumerations.p01_weekdays;
+package p01_weekdays;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -18,11 +18,11 @@ public class WeeklyCalendar {
         return Comparator.comparing(WeeklyEntry::getWeekday);
     }
 
-    void addEntry(String weekday, String notes) {
+    public void addEntry(String weekday, String notes) {
         this.weeklyEntries.add(new WeeklyEntry(weekday, notes));
     }
 
-    Iterable<WeeklyEntry> getWeeklySchedule(){
+    public Iterable<WeeklyEntry> getWeeklySchedule(){
         this.weeklyEntries.sort(WEEKLY_ENTRY_COMPARATOR_BY_DAY_ASC);
         return this.weeklyEntries;
     }

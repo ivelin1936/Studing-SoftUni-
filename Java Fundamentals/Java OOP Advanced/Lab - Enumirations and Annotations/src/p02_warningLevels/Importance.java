@@ -1,7 +1,7 @@
-package part1_Enumerations.p03_coffeeMachine;
+package p02_warningLevels;
 
-public enum CoffeeType {
-    ESPRESSO, LATTE, IRISH;
+public enum Importance {
+    LOW, NORMAL, MEDIUM, HIGH;
 
     @Override
     public String toString() {
