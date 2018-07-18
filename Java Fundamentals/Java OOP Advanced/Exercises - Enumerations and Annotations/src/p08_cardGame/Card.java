@@ -1,4 +1,6 @@
-package p05_cardCompareTo;
+package p08_cardGame;
+
+import java.util.Objects;
 
 public class Card implements Comparable<Card> {
 
@@ -33,6 +35,15 @@ public class Card implements Comparable<Card> {
     @Override
     public int compareTo(Card other) {
         return Integer.compare(this.getPower(), other.getPower());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Card)) return false;
+        Card card = (Card) o;
+        return getCardRank() == card.getCardRank() &&
+                getCardSuits() == card.getCardSuits();
     }
 
     @Override

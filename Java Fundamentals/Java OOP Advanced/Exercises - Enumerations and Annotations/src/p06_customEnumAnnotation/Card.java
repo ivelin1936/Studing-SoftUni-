@@ -1,4 +1,4 @@
-package p05_cardCompareTo;
+package p06_customEnumAnnotation;
 
 public class Card implements Comparable<Card> {
 

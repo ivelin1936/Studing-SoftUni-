@@ -1,4 +1,4 @@
-package p05_cardCompareTo;
+package p07_deckOfCards;
 
 public class Card implements Comparable<Card> {
 
