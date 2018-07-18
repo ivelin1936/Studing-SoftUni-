@@ -1,6 +1,15 @@
-package p10_infernoInfinity;
+package p10_infernoInfinity.entity;
 
-public class Weapon {
+import p10_infernoInfinity.annotations.ClassInfoAnnotation;
+import p10_infernoInfinity.enums.Gem;
+import p10_infernoInfinity.enums.WeaponType;
+
+@ClassInfoAnnotation(
+        author = "Pesho",
+        revision = 3,
+        description = "Used for Java OOP Advanced course - Enumerations and Annotations.",
+        reviewers = {"Pesho", "Svetlio"})
+public class Weapon implements Comparable<Weapon> {
 
     private String name;
     private WeaponType weaponType;
@@ -79,6 +88,16 @@ public class Weapon {
             }
         }
         return vitality;
+    }
+
+    public double getItemLevel() {
+        return ((this.getMinDamage() + this.getMaxDamage()) / 2.0)
+                + this.getStrength() + this.getAgility() + this.getVitality();
+    }
+
+    @Override
+    public int compareTo(Weapon other) {
+        return Double.compare(this.getItemLevel(), other.getItemLevel());
     }
 
     @Override

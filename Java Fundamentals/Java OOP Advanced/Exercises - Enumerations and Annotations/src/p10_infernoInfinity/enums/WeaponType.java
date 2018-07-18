@@ -1,4 +1,4 @@
-package p10_infernoInfinity;
+package p10_infernoInfinity.enums;
 
 public enum WeaponType {
     AXE(5, 10, 4),

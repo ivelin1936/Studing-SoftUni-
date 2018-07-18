@@ -1,4 +1,4 @@
-package p10_infernoInfinity;
+package p10_infernoInfinity.enums;
 
 public enum Gem {
     RUBY(7, 2, 5),
