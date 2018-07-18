@@ -5,7 +5,7 @@ import p10_infernoInfinity.enums.Gem;
 import p10_infernoInfinity.enums.WeaponType;
 
 @ClassInfoAnnotation(
-        author = "Pesho",
+        author = "Ivelin",
         revision = 3,
         description = "Used for Java OOP Advanced course - Enumerations and Annotations.",
         reviewers = {"Pesho", "Svetlio"})
