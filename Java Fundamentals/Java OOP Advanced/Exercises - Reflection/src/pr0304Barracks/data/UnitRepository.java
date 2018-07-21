@@ -1,6 +1,5 @@
 package pr0304Barracks.data;
 
-import jdk.jshell.spi.ExecutionControl;
 import pr0304Barracks.contracts.Repository;
 import pr0304Barracks.contracts.Unit;
 
@@ -8,6 +7,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class UnitRepository implements Repository {
+
+	private final String NO_SUCH_UNIT_EXCEPTION_MSG = "No such units in repository.";
 
 	private Map<String, Integer> amountOfUnits;
 
@@ -38,8 +39,14 @@ public class UnitRepository implements Repository {
 		return statBuilder.toString();
 	}
 
-	public void removeUnit(String unitType) throws ExecutionControl.NotImplementedException {
-		// TODO: implement for problem 4
-		throw new ExecutionControl.NotImplementedException("message");
+	public void removeUnit(String unitType) {
+		// TODO: implement for problem 4 ==> READY!!!
+		if (!this.amountOfUnits.containsKey(unitType) ||
+				this.amountOfUnits.get(unitType) == 0) {
+			throw new IllegalArgumentException(NO_SUCH_UNIT_EXCEPTION_MSG);
+		}
+
+		int newAmount = this.amountOfUnits.get(unitType) - 1;
+		this.amountOfUnits.replace(unitType, newAmount);
 	}
 }
