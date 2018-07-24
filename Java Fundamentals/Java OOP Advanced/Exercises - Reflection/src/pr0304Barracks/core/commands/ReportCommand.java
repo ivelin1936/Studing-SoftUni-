@@ -1,17 +1,20 @@
 package pr0304Barracks.core.commands;
 
+import pr0304Barracks.contracts.Executable;
 import pr0304Barracks.contracts.Repository;
-import pr0304Barracks.contracts.UnitFactory;
+import pr0304Barracks.core.annotations.Inject;
 
-public class ReportCommand extends BaseCommand {
+public class ReportCommand implements Executable {
 
-    public ReportCommand(String[] data, Repository repository, UnitFactory unitFactory) {
-        super(data, repository, unitFactory);
+    @Inject
+    private Repository repository;
+
+    public ReportCommand() {
     }
 
     @Override
     public String execute() {
-        String output = super.getRepository().getStatistics();
+        String output = this.repository.getStatistics();
         return output;
     }
 }

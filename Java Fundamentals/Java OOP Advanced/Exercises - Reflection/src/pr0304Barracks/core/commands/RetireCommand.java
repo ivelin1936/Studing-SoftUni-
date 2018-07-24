@@ -1,23 +1,28 @@
 package pr0304Barracks.core.commands;
 
+import pr0304Barracks.contracts.Executable;
 import pr0304Barracks.contracts.Repository;
-import pr0304Barracks.contracts.Unit;
-import pr0304Barracks.contracts.UnitFactory;
+import pr0304Barracks.core.annotations.Inject;
 
-public class RetireCommand extends BaseCommand {
+public class RetireCommand implements Executable {
 
     private final String UNIT_RETIRED_MSG = "%s retired!";
 
-    public RetireCommand(String[] data, Repository repository, UnitFactory unitFactory) {
-        super(data, repository, unitFactory);
+    @Inject
+    private String[] data;
+
+    @Inject
+    private Repository repository;
+
+    public RetireCommand() {
     }
 
     @Override
     public String execute() {
-        String unitType = super.getData()[1];
+        String unitType = this.data[1];
 
         try {
-            super.getRepository().removeUnit(unitType);
+            this.repository.removeUnit(unitType);
         } catch (IllegalArgumentException iae) {
             return iae.getLocalizedMessage();
         }

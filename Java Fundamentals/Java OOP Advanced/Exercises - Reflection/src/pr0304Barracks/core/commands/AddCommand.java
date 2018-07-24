@@ -1,20 +1,30 @@
 package pr0304Barracks.core.commands;
 
+import pr0304Barracks.contracts.Executable;
 import pr0304Barracks.contracts.Repository;
 import pr0304Barracks.contracts.Unit;
 import pr0304Barracks.contracts.UnitFactory;
+import pr0304Barracks.core.annotations.Inject;
 
-public class AddCommand extends BaseCommand {
+public class AddCommand implements Executable {
 
-    public AddCommand(String[] data, Repository repository, UnitFactory unitFactory) {
-        super(data, repository, unitFactory);
+    @Inject
+    private String[] data;
+
+    @Inject
+    private UnitFactory unitFactory;
+
+    @Inject
+    private Repository repository;
+
+    public AddCommand() {
     }
 
     @Override
     public String execute() {
-        String unitType = super.getData()[1];
-        Unit unitToAdd = super.getUnitFactory().createUnit(unitType);
-        super.getRepository().addUnit(unitToAdd);
+        String unitType = this.data[1];
+        Unit unitToAdd = this.unitFactory.createUnit(unitType);
+        this.repository.addUnit(unitToAdd);
         String output = unitType + " added!";
         return output;
     }
