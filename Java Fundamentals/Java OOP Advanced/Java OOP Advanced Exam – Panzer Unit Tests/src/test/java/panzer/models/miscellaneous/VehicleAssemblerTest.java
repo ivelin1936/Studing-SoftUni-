@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 
 public class VehicleAssemblerTest {
 
-    private static final String DEFAULT_MSG = "Wrong result: ";
+    private static final String DEFAULT_MSG = "Test failed. Wrong result: ";
     private static final int DEFAULT_ATTACK_MODIFIER = 123123;
     private static final int DEFAULT_DEFENSE_MODIFIER = 350;
     private static final int DEFAULT_HIT_POINTS_MODIFIER = 1250;
@@ -68,44 +68,79 @@ public class VehicleAssemblerTest {
 
     @Test
     public void getTotalAttackModification() {
-        Mockito.when(this.fakeAttModifyingPart.getAttackModifier()).thenReturn(DEFAULT_ATTACK_MODIFIER);
+        AttackModifyingPart mockAttModify = Mockito.mock(AttackModifyingPart.class);
+        this.assembler.addArsenalPart(mockAttModify);
+        Mockito.when(mockAttModify.getAttackModifier()).thenReturn(Integer.MAX_VALUE);
+        Mockito.when(this.fakeAttModifyingPart.getAttackModifier()).thenReturn(Integer.MAX_VALUE);
 
         long actual = this.assembler.getTotalAttackModification();
-        long expected = DEFAULT_ATTACK_MODIFIER;
+        long expected = (long) Integer.MAX_VALUE + Integer.MAX_VALUE;
 
         Assert.assertEquals(DEFAULT_MSG, expected, actual);
     }
 
     @Test
     public void getTotalDefenseModification() {
-        Mockito.when(this.fakeDefModifyPart.getDefenseModifier()).thenReturn(DEFAULT_DEFENSE_MODIFIER);
+        DefenseModifyingPart mockDefModify = Mockito.mock(DefenseModifyingPart.class);
+        this.assembler.addShellPart(mockDefModify);
+        Mockito.when(mockDefModify.getDefenseModifier()).thenReturn(Integer.MAX_VALUE);
+        Mockito.when(this.fakeDefModifyPart.getDefenseModifier()).thenReturn(Integer.MAX_VALUE);
 
         long actual = this.assembler.getTotalDefenseModification();
-        long expected = DEFAULT_DEFENSE_MODIFIER;
+        long expected = (long)Integer.MAX_VALUE * 2;
 
         Assert.assertEquals(DEFAULT_MSG, expected, actual);
     }
 
     @Test
     public void getTotalHitPointModification() {
-        Mockito.when(this.fakeHitPtModifyPart.getHitPointsModifier()).thenReturn(DEFAULT_HIT_POINTS_MODIFIER);
+        HitPointsModifyingPart mockHitPtModify = Mockito.mock(HitPointsModifyingPart.class);
+        this.assembler.addEndurancePart(mockHitPtModify);
+        Mockito.when(mockHitPtModify.getHitPointsModifier()).thenReturn(Integer.MAX_VALUE);
+        Mockito.when(this.fakeHitPtModifyPart.getHitPointsModifier()).thenReturn(Integer.MAX_VALUE);
 
         long actual = this.assembler.getTotalHitPointModification();
-        long expected = DEFAULT_HIT_POINTS_MODIFIER;
+        long expected = (long)Integer.MAX_VALUE * 2;
 
         Assert.assertEquals(DEFAULT_MSG, expected, actual);
     }
 
     @Test
     public void addArsenalPart() {
-        
+        AttackModifyingPart mockAttModifyPart = Mockito.mock(AttackModifyingPart.class);
+        this.assembler.addArsenalPart(mockAttModifyPart);
+        Mockito.when(mockAttModifyPart.getAttackModifier()).thenReturn(DEFAULT_ATTACK_MODIFIER);
+        Mockito.when(this.fakeAttModifyingPart.getAttackModifier()).thenReturn(DEFAULT_ATTACK_MODIFIER);
+
+        long actual = this.assembler.getTotalAttackModification();
+        long expected = DEFAULT_ATTACK_MODIFIER * 2;
+
+        Assert.assertEquals(DEFAULT_MSG, expected, actual);
     }
 
     @Test
     public void addShellPart() {
+        DefenseModifyingPart mockDefModifyPart = Mockito.mock(DefenseModifyingPart.class);
+        this.assembler.addShellPart(mockDefModifyPart);
+        Mockito.when(mockDefModifyPart.getDefenseModifier()).thenReturn(DEFAULT_DEFENSE_MODIFIER);
+        Mockito.when(this.fakeDefModifyPart.getDefenseModifier()).thenReturn(DEFAULT_DEFENSE_MODIFIER);
+
+        long actual = this.assembler.getTotalDefenseModification();
+        long expected = DEFAULT_DEFENSE_MODIFIER * 2;
+
+        Assert.assertEquals(DEFAULT_MSG, expected, actual);
     }
 
     @Test
     public void addEndurancePart() {
+        HitPointsModifyingPart mockHitPoints = Mockito.mock(HitPointsModifyingPart.class);
+        this.assembler.addEndurancePart(mockHitPoints);
+        Mockito.when(mockHitPoints.getHitPointsModifier()).thenReturn(DEFAULT_HIT_POINTS_MODIFIER);
+        Mockito.when(this.fakeHitPtModifyPart.getHitPointsModifier()).thenReturn(DEFAULT_HIT_POINTS_MODIFIER);
+
+        long actual = this.assembler.getTotalHitPointModification();
+        long expected = DEFAULT_HIT_POINTS_MODIFIER * 2;
+
+        Assert.assertEquals(DEFAULT_MSG, expected, actual);
     }
 }

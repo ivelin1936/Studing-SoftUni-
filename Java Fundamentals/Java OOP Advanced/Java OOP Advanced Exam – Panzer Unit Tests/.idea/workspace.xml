@@ -64,8 +64,8 @@
       <file leaf-file-name="VehicleAssembler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/panzer/models/miscellaneous/VehicleAssembler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="49" column="80" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="80" />
+            <state relative-caret-position="681">
+              <caret line="75" column="5" lean-forward="true" selection-start-line="72" selection-start-column="4" selection-end-line="75" selection-end-column="5" />
               <folding>
                 <element signature="e#1922#1923#0" expanded="true" />
                 <element signature="e#1993#1994#0" expanded="true" />
@@ -81,10 +81,11 @@
       <file leaf-file-name="VehicleAssemblerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/panzer/models/miscellaneous/VehicleAssemblerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+            <state relative-caret-position="3990">
+              <caret line="143" column="59" lean-forward="true" selection-start-line="143" selection-start-column="59" selection-end-line="143" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#initializer#0;class#VehicleAssemblerTest#0" />
               </folding>
             </state>
           </provider>
@@ -133,7 +134,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1378" />
@@ -341,6 +342,29 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="VehicleAssemblerTest.addEndurancePart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java OOP Advanced Exam Panzer Unit Tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="panzer.models.miscellaneous.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="panzer.models.miscellaneous" />
+      <option name="MAIN_CLASS_NAME" value="panzer.models.miscellaneous.VehicleAssemblerTest" />
+      <option name="METHOD_NAME" value="addEndurancePart" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="VehicleAssemblerTest.getTotalAttackModification" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java OOP Advanced Exam Panzer Unit Tests" />
       <extension name="coverage">
@@ -410,29 +434,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VehicleAssemblerTest.getTotalWeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java OOP Advanced Exam Panzer Unit Tests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="panzer.models.miscellaneous.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="panzer.models.miscellaneous" />
-      <option name="MAIN_CLASS_NAME" value="panzer.models.miscellaneous.VehicleAssemblerTest" />
-      <option name="METHOD_NAME" value="getTotalWeight" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -472,7 +473,7 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.VehicleAssemblerTest.getTotalWeight" />
+      <item itemvalue="JUnit.VehicleAssemblerTest.addEndurancePart" />
       <item itemvalue="JUnit.VehicleAssemblerTest.getTotalAttackModification" />
       <item itemvalue="JUnit.VehicleAssemblerTest.getTotalDefenseModification" />
       <item itemvalue="JUnit.VehicleAssemblerTest.getTotalHitPointModification" />
@@ -483,8 +484,8 @@
         <item itemvalue="JUnit.VehicleAssemblerTest" />
         <item itemvalue="JUnit.VehicleAssemblerTest.getTotalHitPointModification" />
         <item itemvalue="JUnit.VehicleAssemblerTest.getTotalDefenseModification" />
-        <item itemvalue="JUnit.VehicleAssemblerTest.getTotalWeight" />
         <item itemvalue="JUnit.VehicleAssemblerTest.getTotalAttackModification" />
+        <item itemvalue="JUnit.VehicleAssemblerTest.addEndurancePart" />
       </list>
     </recent_temporary>
   </component>
@@ -498,44 +499,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532520679260</updated>
-      <workItem from="1532520680590" duration="3200000" />
+      <workItem from="1532520680590" duration="5129000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VehicleAssemblerTest_getTotalPrice - 2018.07.25 at 15h 56m 15s.xml">
-      <configuration name="VehicleAssemblerTest.getTotalPrice" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_addArsenalPart - 2018.07.25 at 16h 36m 19s.xml">
+      <configuration name="VehicleAssemblerTest.addArsenalPart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VehicleAssemblerTest_getTotalPrice - 2018.07.25 at 15h 56m 25s.xml">
-      <configuration name="VehicleAssemblerTest.getTotalPrice" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_addArsenalPart - 2018.07.25 at 16h 36m 40s.xml">
+      <configuration name="VehicleAssemblerTest.addArsenalPart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VehicleAssemblerTest_getTotalPrice - 2018.07.25 at 15h 56m 31s.xml">
-      <configuration name="VehicleAssemblerTest.getTotalPrice" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_addShellPart - 2018.07.25 at 16h 38m 08s.xml">
+      <configuration name="VehicleAssemblerTest.addShellPart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VehicleAssemblerTest_getTotalAttackModification - 2018.07.25 at 16h 01m 36s.xml">
+    <history-entry file="VehicleAssemblerTest_addShellPart - 2018.07.25 at 16h 38m 40s.xml">
+      <configuration name="VehicleAssemblerTest.addShellPart" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehicleAssemblerTest_addEndurancePart - 2018.07.25 at 16h 41m 11s.xml">
+      <configuration name="VehicleAssemblerTest.addEndurancePart" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VehicleAssemblerTest_getTotalAttackModification - 2018.07.25 at 16h 44m 14s.xml">
       <configuration name="VehicleAssemblerTest.getTotalAttackModification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VehicleAssemblerTest_getTotalWeight - 2018.07.25 at 16h 03m 27s.xml">
-      <configuration name="VehicleAssemblerTest.getTotalWeight" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_getTotalAttackModification - 2018.07.25 at 16h 44m 46s.xml">
+      <configuration name="VehicleAssemblerTest.getTotalAttackModification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VehicleAssemblerTest_getTotalWeight - 2018.07.25 at 16h 05m 52s.xml">
-      <configuration name="VehicleAssemblerTest.getTotalWeight" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehicleAssemblerTest_getTotalDefenseModification - 2018.07.25 at 16h 07m 22s.xml">
+    <history-entry file="VehicleAssemblerTest_getTotalDefenseModification - 2018.07.25 at 16h 46m 15s.xml">
       <configuration name="VehicleAssemblerTest.getTotalDefenseModification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VehicleAssemblerTest_getTotalDefenseModification - 2018.07.25 at 16h 07m 38s.xml">
-      <configuration name="VehicleAssemblerTest.getTotalDefenseModification" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VehicleAssemblerTest_getTotalHitPointModification - 2018.07.25 at 16h 09m 23s.xml">
+    <history-entry file="VehicleAssemblerTest_getTotalHitPointModification - 2018.07.25 at 16h 47m 21s.xml">
       <configuration name="VehicleAssemblerTest.getTotalHitPointModification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VehicleAssemblerTest - 2018.07.25 at 16h 09m 30s.xml">
+    <history-entry file="VehicleAssemblerTest - 2018.07.25 at 16h 47m 39s.xml">
       <configuration name="VehicleAssemblerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3200000" />
+    <option name="totallyTimeSpent" value="5129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -579,7 +580,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -668,8 +669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panzer/models/miscellaneous/VehicleAssembler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="49" column="80" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="80" />
+        <state relative-caret-position="681">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="72" selection-start-column="4" selection-end-line="75" selection-end-column="5" />
           <folding>
             <element signature="e#1922#1923#0" expanded="true" />
             <element signature="e#1993#1994#0" expanded="true" />
@@ -683,10 +684,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/panzer/models/miscellaneous/VehicleAssemblerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+        <state relative-caret-position="3990">
+          <caret line="143" column="59" lean-forward="true" selection-start-line="143" selection-start-column="59" selection-end-line="143" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#initializer#0;class#VehicleAssemblerTest#0" />
           </folding>
         </state>
       </provider>
