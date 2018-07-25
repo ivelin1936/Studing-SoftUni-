@@ -50,9 +50,6 @@ public class HeroTestWithMocking {
         Hero hero = new Hero(HERO_NAME, this.fakeWeapon);
         hero.attack(this.fakeTarget);
 
-        Assert.assertEquals(
-                "Wrong inventory size.",
-                1,
-                hero.getInventorySize());
+        Assert.assertEquals("Wrong inventory size.", 1, hero.getInventorySize());
     }
 }
