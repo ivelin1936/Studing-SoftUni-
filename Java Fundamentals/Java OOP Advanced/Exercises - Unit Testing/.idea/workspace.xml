@@ -68,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListIteratorTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ListIteratorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/p03_iteratorTest/ListIteratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -83,6 +83,28 @@
                 <element signature="e#3590#3591#0" expanded="true" />
                 <element signature="e#3652#3653#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bubble.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/p04_bubbleSortTest/Bubble.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="14" column="53" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="53" />
+              <folding>
+                <element signature="e#1062#1063#0" expanded="true" />
+                <element signature="e#1093#1094#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BubbleTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/p04_bubbleSortTest/BubbleTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -124,6 +146,8 @@
         <option value="$PROJECT_DIR$/src/main/java/p03_iteratorTest/ListIterator.java" />
         <option value="$PROJECT_DIR$/src/main/java/p03_iteratorTest/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/p03_iteratorTest/ListIteratorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/p04_bubbleSortTest/Bubble.java" />
+        <option value="$PROJECT_DIR$/src/test/java/p04_bubbleSortTest/BubbleTest.java" />
       </list>
     </option>
   </component>
@@ -210,6 +234,14 @@
               <item name="Exercises - Unit Testing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exercises - Unit Testing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="p04_bubbleSortTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises - Unit Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises - Unit Testing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -260,6 +292,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="p04_bubbleSortTest" />
       <recent name="p03_iteratorTest" />
       <recent name="p02_extendedDatabase" />
       <recent name="p01_database" />
@@ -280,9 +313,101 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ListIteratorTest">
+  <component name="RunManager" selected="JUnit.BubbleTest.sort">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="BubbleTest.constructorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Exercises - Unit Testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="p04_bubbleSortTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="p04_bubbleSortTest" />
+      <option name="MAIN_CLASS_NAME" value="p04_bubbleSortTest.BubbleTest" />
+      <option name="METHOD_NAME" value="constructorTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BubbleTest.constructorTestWithPassedNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Exercises - Unit Testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="p04_bubbleSortTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="p04_bubbleSortTest" />
+      <option name="MAIN_CLASS_NAME" value="p04_bubbleSortTest.BubbleTest" />
+      <option name="METHOD_NAME" value="constructorTestWithPassedNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BubbleTest.getArrTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Exercises - Unit Testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="p04_bubbleSortTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="p04_bubbleSortTest" />
+      <option name="MAIN_CLASS_NAME" value="p04_bubbleSortTest.BubbleTest" />
+      <option name="METHOD_NAME" value="getArrTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BubbleTest.sort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Exercises - Unit Testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="p04_bubbleSortTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="p04_bubbleSortTest" />
+      <option name="MAIN_CLASS_NAME" value="p04_bubbleSortTest.BubbleTest" />
+      <option name="METHOD_NAME" value="sort" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="ListIteratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Exercises - Unit Testing" />
@@ -298,98 +423,6 @@
       <option name="MAIN_CLASS_NAME" value="p03_iteratorTest.ListIteratorTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ListIteratorTest.printTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Exercises - Unit Testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="p03_iteratorTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="p03_iteratorTest" />
-      <option name="MAIN_CLASS_NAME" value="p03_iteratorTest.ListIteratorTest" />
-      <option name="METHOD_NAME" value="printTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ListIteratorTest.testConstructorWithCollection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Exercises - Unit Testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="p03_iteratorTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="p03_iteratorTest" />
-      <option name="MAIN_CLASS_NAME" value="p03_iteratorTest.ListIteratorTest" />
-      <option name="METHOD_NAME" value="testConstructorWithCollection" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ListIteratorTest.testConstructorWithPassedEmptyCollection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Exercises - Unit Testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="p03_iteratorTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="p03_iteratorTest" />
-      <option name="MAIN_CLASS_NAME" value="p03_iteratorTest.ListIteratorTest" />
-      <option name="METHOD_NAME" value="testConstructorWithPassedEmptyCollection" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ListIteratorTest.testConstructorWithPassedNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Exercises - Unit Testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="p03_iteratorTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="p03_iteratorTest" />
-      <option name="MAIN_CLASS_NAME" value="p03_iteratorTest.ListIteratorTest" />
-      <option name="METHOD_NAME" value="testConstructorWithPassedNull" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -438,19 +471,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.ListIteratorTest.printTest" />
-      <item itemvalue="JUnit.ListIteratorTest.testConstructorWithPassedNull" />
-      <item itemvalue="JUnit.ListIteratorTest.testConstructorWithPassedEmptyCollection" />
-      <item itemvalue="JUnit.ListIteratorTest.testConstructorWithCollection" />
       <item itemvalue="JUnit.ListIteratorTest" />
+      <item itemvalue="JUnit.BubbleTest.constructorTestWithPassedNull" />
+      <item itemvalue="JUnit.BubbleTest.constructorTest" />
+      <item itemvalue="JUnit.BubbleTest.getArrTest" />
+      <item itemvalue="JUnit.BubbleTest.sort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BubbleTest.sort" />
+        <item itemvalue="JUnit.BubbleTest.getArrTest" />
+        <item itemvalue="JUnit.BubbleTest.constructorTest" />
+        <item itemvalue="JUnit.BubbleTest.constructorTestWithPassedNull" />
         <item itemvalue="JUnit.ListIteratorTest" />
-        <item itemvalue="JUnit.ListIteratorTest.testConstructorWithCollection" />
-        <item itemvalue="JUnit.ListIteratorTest.testConstructorWithPassedEmptyCollection" />
-        <item itemvalue="JUnit.ListIteratorTest.testConstructorWithPassedNull" />
-        <item itemvalue="JUnit.ListIteratorTest.printTest" />
       </list>
     </recent_temporary>
   </component>
@@ -464,23 +497,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532526834399</updated>
-      <workItem from="1532526835560" duration="20604000" />
+      <workItem from="1532526835560" duration="22865000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ListIteratorTest_hasNextIfTheIndexIsAlreadyAtTheLastElement - 2018.07.26 at 13h 55m 25s.xml">
-      <configuration name="ListIteratorTest.hasNextIfTheIndexIsAlreadyAtTheLastElement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ListIteratorTest_hasNextIfTheIndexIsAlreadyAtTheLastElement - 2018.07.26 at 13h 55m 32s.xml">
-      <configuration name="ListIteratorTest.hasNextIfTheIndexIsAlreadyAtTheLastElement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ListIteratorTest_hasNextIfTheIndexIsAlreadyAtTheLastElement - 2018.07.26 at 13h 55m 38s.xml">
-      <configuration name="ListIteratorTest.hasNextIfTheIndexIsAlreadyAtTheLastElement" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ListIteratorTest_moveIfHasNextElement - 2018.07.26 at 13h 57m 19s.xml">
-      <configuration name="ListIteratorTest.moveIfHasNextElement" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ListIteratorTest_moveIfThereIsNoNextElement - 2018.07.26 at 13h 57m 47s.xml">
       <configuration name="ListIteratorTest.moveIfThereIsNoNextElement" configurationId="JUnit" />
     </history-entry>
@@ -499,12 +520,25 @@
     <history-entry file="ListIteratorTest - 2018.07.26 at 14h 03m 17s.xml">
       <configuration name="ListIteratorTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BubbleTest_constructorTestWithPassedNull - 2018.07.26 at 15h 29m 17s.xml">
+      <configuration name="BubbleTest.constructorTestWithPassedNull" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleTest_constructorTest - 2018.07.26 at 15h 31m 51s.xml">
+      <configuration name="BubbleTest.constructorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleTest_getArrTest - 2018.07.26 at 15h 32m 56s.xml">
+      <configuration name="BubbleTest.getArrTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleTest_sort - 2018.07.26 at 15h 41m 14s.xml">
+      <configuration name="BubbleTest.sort" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20604000" />
+    <option name="totallyTimeSpent" value="22865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -520,7 +554,7 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16822916" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16822916" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -770,6 +804,24 @@
             <element signature="e#3590#3591#0" expanded="true" />
             <element signature="e#3652#3653#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/p04_bubbleSortTest/Bubble.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="53" />
+          <folding>
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1093#1094#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/p04_bubbleSortTest/BubbleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
         </state>
       </provider>
     </entry>
