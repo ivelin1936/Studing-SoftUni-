@@ -4,6 +4,7 @@ import interfaces.Attack;
 import interfaces.Behavior;
 import models.Blob;
 import observers.Subject;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -14,14 +15,15 @@ public class InflatedTest {
 
     private final String DEFAULT_NAME = "Boko";
     private final int DEFAULT_DAMAGE = 50;
-    private final int DEFAULT_HEALTH = 20;
-    private final int AGGRESSIVE_DAMAGE_DECREMENT = 5;
+    private final int DEFAULT_HEALTH = 100;
+    private static final int INFLATED_HEALTH_INCREMENT = 50;
+    private static final int INFLATED_HEALTH_DECREMENT = 10;
 
     private Behavior inflated;
     private Blob blob;
 
     @Before
-    public void init() throws Exception {
+    public void init() {
         this.inflated = new Inflated();
         Attack attack = Mockito.mock(Attack.class);
         Subject subject = Mockito.mock(Subject.class);
@@ -37,11 +39,28 @@ public class InflatedTest {
 
     @Test
     public void trigger() {
-        //TODO...
+        this.inflated.trigger(this.blob);
+
+        int actual = this.blob.getHealth();
+        int expected = DEFAULT_HEALTH + INFLATED_HEALTH_INCREMENT;
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void triggerWhenIsAlreadyTriggered() {
+        this.inflated.trigger(this.blob);
+        this.inflated.trigger(this.blob);
     }
 
     @Test
     public void applyRecurrentEffect() {
-        //TODO...
+        this.inflated.applyRecurrentEffect(this.blob);
+        this.inflated.applyRecurrentEffect(this.blob);
+
+        int actual = this.blob.getHealth();
+        int expected = DEFAULT_HEALTH - INFLATED_HEALTH_DECREMENT;
+
+        Assert.assertEquals(expected, actual);
     }
 }
