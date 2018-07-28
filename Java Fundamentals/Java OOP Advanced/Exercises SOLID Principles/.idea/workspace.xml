@@ -13,46 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Blob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/models/Blob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-              <folding>
-                <element signature="e#806#807#0" expanded="true" />
-                <element signature="e#847#848#0" expanded="true" />
-                <element signature="e#1185#1186#0" expanded="true" />
-                <element signature="e#1219#1220#0" expanded="true" />
-                <element signature="e#1957#1958#0" expanded="true" />
-                <element signature="e#1993#1994#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Behavior.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/interfaces/Behavior.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Aggressive.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/Aggressive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="523">
+              <caret line="30" column="13" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Blobplode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/models/attacks/Blobplode.java">
+      <file leaf-file-name="AggressiveTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/models/behavors/AggressiveTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="612">
+              <caret line="33" column="25" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,73 +34,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/core/Engine.java">
+      <file leaf-file-name="BlobTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/models/BlobTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="52" column="12" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="19" column="42" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlobFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/factories/BlobFactory.java">
+      <file leaf-file-name="Inflated.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/Inflated.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="124">
+              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/core/commands/CreateCommand.java">
+      <file leaf-file-name="InflatedTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/models/behavors/InflatedTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Subject.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/observers/Subject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#160#161#0" expanded="true" />
-                <element signature="e#204#205#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractObserver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/observers/AbstractObserver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="723">
+              <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -139,6 +69,7 @@
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -178,8 +109,14 @@
         <option value="$PROJECT_DIR$/src/main/java/core/Engine.java" />
         <option value="$PROJECT_DIR$/src/main/java/factories/BlobFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/commands/CreateCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Blob.java" />
         <option value="$PROJECT_DIR$/src/main/java/observers/AbstractObserver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Blob.java" />
+        <option value="$PROJECT_DIR$/src/test/java/models/BlobTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/models/attacks/PutridFartTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/models/attacks/BlobplodeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/repositories/impl/BlobRepoImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/models/behavors/AggressiveTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/models/behavors/InflatedTest.java" />
       </list>
     </option>
   </component>
@@ -294,24 +231,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="attacks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
               <item name="behavors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="observers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
@@ -325,7 +245,40 @@
               <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -336,15 +289,23 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="models.behavors" />
+      <recent name="repositories.impl" />
+      <recent name="models.attacks" />
+      <recent name="models" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\Studing-SoftUni-\Java Fundamentals\Java OOP Advanced\Exercises SOLID Principles\src\main\java\observers\documentation" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="factories" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="core.commands" />
@@ -354,6 +315,9 @@
       <recent name="C:\Users\Admin\Desktop\Studing-SoftUni-\Java Fundamentals\Java OOP Advanced\Exercises SOLID Principles\src\main\java\io\impl" />
       <recent name="C:\Users\Admin\Desktop\Studing-SoftUni-\Java Fundamentals\Java OOP Advanced\Exercises SOLID Principles\src\main\java\io\interfaces" />
       <recent name="C:\Users\Admin\Desktop\Studing-SoftUni-\Java Fundamentals\Java OOP Advanced\Exercises SOLID Principles\src\main\java" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="factories" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -368,14 +332,118 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Exercises SOLID Principles" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
+  <component name="RunManager" selected="JUnit.AggressiveTest.applyRecurrentEffectTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="AggressiveTest.applyRecurrentEffect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Exercises SOLID Principles" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="models.behavors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="models.behavors" />
+      <option name="MAIN_CLASS_NAME" value="models.behavors.AggressiveTest" />
+      <option name="METHOD_NAME" value="applyRecurrentEffect" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="AggressiveTest.applyRecurrentEffectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Exercises SOLID Principles" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="models.behavors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="models.behavors" />
+      <option name="MAIN_CLASS_NAME" value="models.behavors.AggressiveTest" />
+      <option name="METHOD_NAME" value="applyRecurrentEffectTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="AggressiveTest.trigger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Exercises SOLID Principles" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="models.behavors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="models.behavors" />
+      <option name="MAIN_CLASS_NAME" value="models.behavors.AggressiveTest" />
+      <option name="METHOD_NAME" value="trigger" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="All in Exercises SOLID Principles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Exercises SOLID Principles" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BlobRepoImplTest.addTestIfCollectionSizeGrow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Exercises SOLID Principles" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repositories.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="repositories.impl" />
+      <option name="MAIN_CLASS_NAME" value="repositories.impl.BlobRepoImplTest" />
+      <option name="METHOD_NAME" value="addTestIfCollectionSizeGrow" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -415,9 +483,20 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.All in Exercises SOLID Principles" />
+      <item itemvalue="JUnit.BlobRepoImplTest.addTestIfCollectionSizeGrow" />
+      <item itemvalue="JUnit.AggressiveTest.trigger" />
+      <item itemvalue="JUnit.AggressiveTest.applyRecurrentEffect" />
+      <item itemvalue="JUnit.AggressiveTest.applyRecurrentEffectTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AggressiveTest.applyRecurrentEffectTest" />
+        <item itemvalue="JUnit.AggressiveTest.applyRecurrentEffect" />
+        <item itemvalue="JUnit.AggressiveTest.trigger" />
+        <item itemvalue="JUnit.BlobRepoImplTest.addTestIfCollectionSizeGrow" />
+        <item itemvalue="JUnit.All in Exercises SOLID Principles" />
       </list>
     </recent_temporary>
   </component>
@@ -431,12 +510,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532773336377</updated>
-      <workItem from="1532773337681" duration="9627000" />
+      <workItem from="1532773337681" duration="17554000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="BlobRepoImplTest - 2018.07.28 at 19h 37m 12s.xml">
+      <configuration name="BlobRepoImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Exercises_SOLID_Principles - 2018.07.28 at 19h 37m 23s.xml">
+      <configuration name="All in Exercises SOLID Principles" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BlobRepoImplTest_addTestIfCollectionSizeGrow - 2018.07.28 at 19h 38m 12s.xml">
+      <configuration name="BlobRepoImplTest.addTestIfCollectionSizeGrow" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AggressiveTest_trigger - 2018.07.28 at 19h 45m 42s.xml">
+      <configuration name="AggressiveTest.trigger" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AggressiveTest_trigger - 2018.07.28 at 19h 49m 24s.xml">
+      <configuration name="AggressiveTest.trigger" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AggressiveTest_applyRecurrentEffect - 2018.07.28 at 19h 51m 58s.xml">
+      <configuration name="AggressiveTest.applyRecurrentEffect" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AggressiveTest_applyRecurrentEffect - 2018.07.28 at 19h 52m 46s.xml">
+      <configuration name="AggressiveTest.applyRecurrentEffect" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AggressiveTest_applyRecurrentEffect - 2018.07.28 at 19h 53m 01s.xml">
+      <configuration name="AggressiveTest.applyRecurrentEffect" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AggressiveTest_applyRecurrentEffect - 2018.07.28 at 19h 53m 37s.xml">
+      <configuration name="AggressiveTest.applyRecurrentEffect" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AggressiveTest_applyRecurrentEffectTest - 2018.07.28 at 19h 56m 54s.xml">
+      <configuration name="AggressiveTest.applyRecurrentEffectTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9627000" />
+    <option name="totallyTimeSpent" value="17554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -470,6 +581,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" side_tool="true" weight="0.3296875" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +600,7 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -510,16 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/attacks/PutridFart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,26 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/impl/BlobRepoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,27 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/AbstractBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/Inflated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/commands/AttackCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -722,34 +783,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/attacks/Blobplode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/interfaces/Behavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/Aggressive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -763,10 +800,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/observers/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#160#161#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="54" column="57" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfaces/Behavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/attacks/PutridFartTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="41" column="46" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="41" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/attacks/Blobplode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="93" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/attacks/PutridFart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/attacks/BlobplodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1550">
+          <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/impl/BlobRepoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="16" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/repositories/impl/BlobRepoImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3074">
+          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+          <folding>
+            <element signature="e#793#823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/AbstractBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Blob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        <state relative-caret-position="78">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding>
             <element signature="e#806#807#0" expanded="true" />
             <element signature="e#847#848#0" expanded="true" />
@@ -778,15 +920,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/observers/Subject.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/BlobTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="153">
+          <caret line="19" column="42" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/Aggressive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/Inflated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/behavors/AggressiveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/behavors/InflatedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
         </state>
       </provider>
     </entry>

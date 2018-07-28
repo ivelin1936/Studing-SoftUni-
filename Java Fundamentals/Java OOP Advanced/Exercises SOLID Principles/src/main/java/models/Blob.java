@@ -5,6 +5,8 @@ import interfaces.Behavior;
 import observers.AbstractObserver;
 import observers.Subject;
 
+import java.util.Objects;
+
 public class Blob extends AbstractObserver {
 
     private final int ZERO_HEALTH = 0;
@@ -17,6 +19,9 @@ public class Blob extends AbstractObserver {
     private int initialHealth;
 
     public Blob(String name, int health, int damage, Behavior behavior, Attack attack, Subject subject) {
+        if (behavior == null || attack == null) {
+            throw new IllegalStateException();
+        }
         this.name = name;
         this.currentHealth = health;
         this.damage = damage;
@@ -79,4 +84,5 @@ public class Blob extends AbstractObserver {
 
         return String.format("Blob %s: %s HP, %s Damage", this.getName(), this.getHealth(), this.getDamage());
     }
+
 }
