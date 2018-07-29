@@ -17,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/Aggressive.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="523">
-              <caret line="30" column="13" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="13" />
+              <caret line="30" column="13" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -26,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/models/behavors/AggressiveTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
-              <caret line="33" column="25" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
+              <caret line="33" column="25" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/models/BlobTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="19" column="42" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="42" />
+              <caret line="19" column="42" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -83,11 +83,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InflatedTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InflatedTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/models/behavors/InflatedTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="1815">
+              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1000">
+              <caret line="40" column="12" selection-start-line="10" selection-start-column="3" selection-end-line="40" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -234,40 +243,25 @@
               <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="attacks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercises SOLID Principles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercises SOLID Principles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="behavors" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -499,7 +493,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532773336377</updated>
-      <workItem from="1532773337681" duration="18832000" />
+      <workItem from="1532773337681" duration="22164000" />
     </task>
     <servers />
   </component>
@@ -536,10 +530,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18832000" />
+    <option name="totallyTimeSpent" value="22164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -592,13 +587,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/attacks/AbstractAttack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -880,21 +868,21 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/models/BlobTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="42" />
+          <caret line="19" column="42" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/behavors/Aggressive.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="13" />
+          <caret line="30" column="13" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/models/behavors/AggressiveTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="33" column="25" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
+          <caret line="33" column="25" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -937,8 +925,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/models/behavors/InflatedTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        <state relative-caret-position="1815">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="40" column="12" selection-start-line="10" selection-start-column="3" selection-end-line="40" selection-end-column="12" />
         </state>
       </provider>
     </entry>
