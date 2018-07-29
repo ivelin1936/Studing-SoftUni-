@@ -12,7 +12,7 @@ import models.loggers.MessageLogger;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Engine implements Runnable {
+public class Engine implements Runnable{
 
     private final String TERMINATE_PROGRAM = "END";
     private final String DEFAULT_LOGGER_PREFIX = "log";

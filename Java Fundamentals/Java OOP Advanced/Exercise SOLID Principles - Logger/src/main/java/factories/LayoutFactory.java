@@ -1,6 +1,5 @@
 package factories;
 
-import interfaces.Appender;
 import interfaces.Layout;
 
 import java.lang.reflect.Constructor;

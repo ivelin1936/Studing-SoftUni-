@@ -4,7 +4,6 @@ import interfaces.Layout;
 import models.enums.ReportLevel;
 
 public class SimpleLayout implements Layout {
-    //displays logs in the format "<date-time> - <report level> - <message>")
 
     public SimpleLayout() {
     }

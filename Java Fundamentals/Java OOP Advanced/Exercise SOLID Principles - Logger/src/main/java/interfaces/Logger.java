@@ -1,9 +1,9 @@
 package interfaces;
 
 import io.interfaces.Writer;
-import models.enums.ReportLevel;
 
 public interface Logger {
+
     void logInfo(String date, String message);
 
     void logWarning(String date, String message);
