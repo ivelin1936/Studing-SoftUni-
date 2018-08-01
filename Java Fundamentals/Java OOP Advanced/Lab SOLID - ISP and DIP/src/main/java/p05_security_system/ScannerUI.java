@@ -2,6 +2,7 @@ package p05_security_system;
 
 import java.util.Scanner;
 
+//TODO...
 public class ScannerUI implements SecurityUI {
 
     private Scanner scanner;

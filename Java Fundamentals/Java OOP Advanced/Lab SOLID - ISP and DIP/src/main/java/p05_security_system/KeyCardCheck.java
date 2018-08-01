@@ -1,5 +1,6 @@
 package p05_security_system;
 
+//TODO...
 public class KeyCardCheck extends SecurityCheck {
 
     private SecurityUI securityUI;

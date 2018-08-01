@@ -3,6 +3,7 @@ package p05_security_system;
 import java.io.IOException;
 import java.util.Scanner;
 
+//TODO...
 public class SecurityManager {
 
     private KeyCardCheck keyCardCheck;
