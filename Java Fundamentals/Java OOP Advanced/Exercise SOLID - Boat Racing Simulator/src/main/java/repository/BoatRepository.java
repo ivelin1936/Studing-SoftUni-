@@ -1,4 +1,4 @@
-package database;
+package repository;
 
 import Utility.Constants;
 import contracts.Boat;

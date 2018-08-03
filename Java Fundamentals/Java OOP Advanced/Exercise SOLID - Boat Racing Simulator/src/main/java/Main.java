@@ -3,8 +3,8 @@ import Core.CommandHandlerImpl;
 import contracts.*;
 import contracts.Runnable;
 import controllers.BoatSimulatorControllerImpl;
-import database.BoatRepository;
-import database.EngineRepository;
+import repository.BoatRepository;
+import repository.EngineRepository;
 import io.ConsoleReader;
 import io.ConsoleWriter;
 

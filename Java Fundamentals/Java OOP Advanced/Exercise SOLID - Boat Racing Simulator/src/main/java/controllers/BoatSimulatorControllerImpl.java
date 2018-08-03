@@ -27,6 +27,35 @@ public class BoatSimulatorControllerImpl implements BoatSimulatorController {
         this.notFinished = new LinkedList<>();
     }
 
+    private void runRace(List<Boat> participants) {
+        for (Boat participant : participants) {
+            double speed = participant.calculateRaceSpeed(this.currentRace);
+            double time = this.currentRace.getDistance() / speed;
+
+            if (time <= 0) {
+                this.notFinished.add(participant);
+            } else {
+                this.winners.put(participant, time);
+            }
+        }
+
+        if (this.winners.size() >= 3) {
+            this.notFinished.clear();
+        }
+    }
+
+    private void validateRaceIsSet() throws NoSetRaceException {
+        if (this.currentRace == null) {
+            throw new NoSetRaceException(Constants.NO_SET_RACE_MESSAGE);
+        }
+    }
+
+    private void validateRaceIsEmpty() throws RaceAlreadyExistsException {
+        if (this.currentRace != null) {
+            throw new RaceAlreadyExistsException(Constants.RACE_ALREADY_EXISTS_MESSAGE);
+        }
+    }
+
     @Override
     public String createBoatEngine(String model, int horsepower, int displacement, EngineType engineType) throws DuplicateModelException {
         Engine engine = EngineFactory.create(model, horsepower, displacement, engineType);
@@ -74,10 +103,9 @@ public class BoatSimulatorControllerImpl implements BoatSimulatorController {
         this.validateRaceIsEmpty();
         this.currentRace = RaceFactory.create(distance, windSpeed, oceanCurrentSpeed, allowsMotorboats);
 
-        return
-                String.format(
-                        "A new race with distance %s meters, wind speed %s m/s and ocean current speed %s m/s has been set.",
-                        distance, windSpeed, oceanCurrentSpeed);
+        return String.format(
+                "A new race with distance %s meters, wind speed %s m/s and ocean current speed %s m/s has been set.",
+                    distance, windSpeed, oceanCurrentSpeed);
     }
 
     public String signUpBoat(String model)
@@ -94,7 +122,6 @@ public class BoatSimulatorControllerImpl implements BoatSimulatorController {
         return String.format("Boat with model %s has signed up for the current Race.", model);
     }
 
-    //TODO...
     public String startRace() throws InsufficientContestantsException, NoSetRaceException {
         this.validateRaceIsSet();
 
@@ -102,7 +129,6 @@ public class BoatSimulatorControllerImpl implements BoatSimulatorController {
             throw new InsufficientContestantsException(Constants.INSUFFICIENT_CONTESTANTS_MESSAGE);
         }
 
-//        int turnsCount = this.currentRace.getParticipants().size();
         for (int i = 0; i < 3; i++) {
             runRace(this.currentRace.getParticipants());
         }
@@ -137,7 +163,9 @@ public class BoatSimulatorControllerImpl implements BoatSimulatorController {
 
         this.currentRace = null;
         this.winners.clear();
+        this.winners = new LinkedHashMap<>();
         this.notFinished.clear();
+        this.notFinished = new LinkedList<>();
 
         return result.toString().trim();
     }
@@ -165,34 +193,5 @@ public class BoatSimulatorControllerImpl implements BoatSimulatorController {
                 });
 
         return statistic.toString().trim();
-    }
-
-    private void runRace(List<Boat> participants) {
-        for (Boat participant : participants) {
-            double speed = participant.calculateRaceSpeed(this.currentRace);
-            double time = this.currentRace.getDistance() / speed;
-
-            if (time <= 0) {
-                this.notFinished.add(participant);
-            } else {
-                this.winners.put(participant, time);
-            }
-        }
-
-        if (this.winners.size() >= 3) {
-            this.notFinished.clear();
-        }
-    }
-
-    private void validateRaceIsSet() throws NoSetRaceException {
-        if (this.currentRace == null) {
-            throw new NoSetRaceException(Constants.NO_SET_RACE_MESSAGE);
-        }
-    }
-
-    private void validateRaceIsEmpty() throws RaceAlreadyExistsException {
-        if (this.currentRace != null) {
-            throw new RaceAlreadyExistsException(Constants.RACE_ALREADY_EXISTS_MESSAGE);
-        }
     }
 }
