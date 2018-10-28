@@ -394,3 +394,5 @@ Check also our article ArrayList vs. LinkedList.
 * out
 * config
 * pageContext
+
+##For More interview questions on all technologies [click here](https://github.com/MaximAbramchuck/awesome-interview-questions/blob/master/README.md)
