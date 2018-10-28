@@ -6,10 +6,10 @@
 
 ### [Programming Fundamentals](https://github.com/ivelin1936/Java/tree/master/Programming%20Fundamentals)
 
-### [Java Fundamentals](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals)
-#### [Java Advanced](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20Advanced)
-#### [Java OOP Basic](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20OOP%20Basic)
-#### [Java OOP Advanced](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20OOP%20Advanced)
+### [Java Fundamentals:](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals)
+* #### [Java Advanced](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20Advanced)
+* #### [Java OOP Basic](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20OOP%20Basic)
+* #### [Java OOP Advanced](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20OOP%20Advanced)
 
 ### [Databases Frameworks - Hibernate & Spring Data](https://github.com/ivelin1936/Java/tree/master/Databases%20Frameworks%20-%20Hibernate%20%26%20Spring%20Data%20-%20%D0%BC%D0%B0%D1%80%D1%82%202018)
 
