@@ -1,4 +1,4 @@
-# My Studing in SoftUni
+# My Studing in SoftUni - Java
 
 ### [Programming Basics](https://github.com/ivelin1936/Java/tree/master/Programing%20Basic)
 
