@@ -16,3 +16,19 @@
 # Utils
 
 ## [Java Interview Questions and Answers – The ULTIMATE List](https://github.com/ivelin1936/Java/blob/master/JavaUltimateList.md)
+
+## Technologies
+
+* Java 1.8-10 - [JDK10](https://www.oracle.com/technetwork/java/javase/10-relnote-issues-4108729.html)
+
+## IDE 
+
+* IntelliJ Idea Ultimate - [JetBrains](https://www.jetbrains.com/idea/)
+
+## Author
+
+**Ivelin DImitrov** - [ivelin1936](https://github.com/ivelin1936)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
