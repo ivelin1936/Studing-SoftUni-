@@ -10,7 +10,7 @@
 <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" />
 Author: 
 <strong>
-<a title="LinkedIn Ivelin DImitrov" href="https://www.linkedin.com/in/radoslav-astardzhiev-727602137" target="_blank">
+<a title="LinkedIn Ivelin DImitrov" href="https://www.linkedin.com/in/ivelin-dimitrov-42b13a151/" target="_blank">
 Ivelin Dimitrov
 </a>
 </strong></p>
