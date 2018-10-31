@@ -4,14 +4,14 @@
 <td align="center" width="33%"><img style="text-align: ce;" src="http://conf.softuni.bg/wp-content/uploads/2015/01/SoftUni-Logo-Flat_square-blue-300x235.png" alt="" /></td>
 <td align="center" width="33%">
 <h1><a href="https://softuni.bg/">SoftUni</a></h1>
-<h2>C#</h2>
+<h2>Java</h2>
 </td>
 <td align="center" width="33%"><img src="https://avatars1.githubusercontent.com/u/24620088?v=3&amp;u=5e1a11ac5228356808410702d2f8c5ff3209d2a9&amp;s=400" alt="" />
 <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" />
 Author: 
 <strong>
-<a title="LinkedIn Radoslav Astardzhiev" href="https://www.linkedin.com/in/radoslav-astardzhiev-727602137" target="_blank">
-Radoslav Astardzhiev
+<a title="LinkedIn Ivelin DImitrov" href="https://www.linkedin.com/in/radoslav-astardzhiev-727602137" target="_blank">
+Ivelin Dimitrov
 </a>
 </strong></p>
 </td>
