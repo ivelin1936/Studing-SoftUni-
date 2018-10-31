@@ -6,7 +6,7 @@
 <h1><a href="https://softuni.bg/">SoftUni</a></h1>
 <h2>Java</h2>
 </td>
-<td align="center" width="33%"><img src="https://media.licdn.com/dms/image/C4D03AQHgLmif0-wQzQ/profile-displayphoto-shrink_200_200/0?e=1546473600&v=beta&t=YbFA08n4cOli-MPOD5bbbBPPwaAZtdro3GBG0-PxkPo" alt="" />
+<td align="center" width="33%"><img src="https://avatars1.githubusercontent.com/u/4662382?s=400&u=17bf06835f75e1935dabe4bb1b1c7ae7ab589da6&v=4" alt="" />
 <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" />
 Author: 
 <strong>
