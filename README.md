@@ -19,7 +19,7 @@ Ivelin Dimitrov
 </tbody>
 </table>
 
-# My Studing in SoftUni - Java
+# My Studing in SoftUni
 
 ### [Programming Basics](https://github.com/ivelin1936/Java/tree/master/Programing%20Basic)
 
