@@ -71,7 +71,7 @@ Ivelin Dimitrov
 
 ## Technologies
 
-* Java 1.8 / 1.9 / 10 
+* Java JDK: 1.8 / 1.9 / 10 
 
 ## IDE 
 
