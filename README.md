@@ -27,8 +27,17 @@ Ivelin Dimitrov
 * #### [Java Basic Syntax - Software Technologies](https://github.com/ivelin1936/Java/tree/master/Software%20Technologies/Java%20Basic%20Syntax%20-%20Software%20Technologies/src/com/company)
 * #### [Java Basics - Exercises - Software Technologies](https://github.com/ivelin1936/Java/tree/master/Software%20Technologies/Java%20Basics%20-%20Exercises%20-%20Software%20Technologies/src/com/company)
 
-### [Programming Fundamentals]:(https://github.com/ivelin1936/Java/tree/master/Programming%20Fundamentals)
-
+### [Programming Fundamentals:](https://github.com/ivelin1936/Java/tree/master/Programming%20Fundamentals)
+  - Conditional Statements and Loops
+  - Git and GitHub
+  - Data Types and Variables
+  - Methods. Debugging and troubleshooting code
+  - Arrays / List / Set / Map
+  - Object and Classes
+  - Files and Exceptions
+  - Strings and Text processing
+  - Regular Expressions REGEX
+  
 ### Java Fundamentals:
 * #### [Java Advanced](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20Advanced)
   - Linear Data Structures
@@ -49,6 +58,12 @@ Ivelin Dimitrov
   - Object Communication and eEvents
 
 ### [Databases Frameworks - Hibernate & Spring Data](https://github.com/ivelin1936/Java/tree/master/Databases%20Frameworks%20-%20Hibernate%20%26%20Spring%20Data%20-%20%D0%BC%D0%B0%D1%80%D1%82%202018)
+  - JDBS
+  - Hibernate
+  - Spring Data
+  - Auto Mapping Objects (model mapper)
+  - JSON Processing (Gson)
+  - XML Processing (JAXB)
 
 ## Utils
 
