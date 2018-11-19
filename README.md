@@ -71,7 +71,7 @@ Ivelin Dimitrov
 
 ## Technologies
 
-* Java 1.8-10 - [JDK10](https://www.oracle.com/technetwork/java/javase/10-relnote-issues-4108729.html)
+* Java 1.8 / 1.9 / 10 
 
 ## IDE 
 
