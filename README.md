@@ -27,7 +27,7 @@ Ivelin Dimitrov
 * #### [Java Basic Syntax - Software Technologies](https://github.com/ivelin1936/Java/tree/master/Software%20Technologies/Java%20Basic%20Syntax%20-%20Software%20Technologies/src/com/company)
 * #### [Java Basics - Exercises - Software Technologies](https://github.com/ivelin1936/Java/tree/master/Software%20Technologies/Java%20Basics%20-%20Exercises%20-%20Software%20Technologies/src/com/company)
 
-### [Programming Fundamentals](https://github.com/ivelin1936/Java/tree/master/Programming%20Fundamentals)
+### [Programming Fundamentals]:(https://github.com/ivelin1936/Java/tree/master/Programming%20Fundamentals)
 
 ### Java Fundamentals:
 * #### [Java Advanced](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20Advanced)
