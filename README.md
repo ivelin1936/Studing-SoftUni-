@@ -31,8 +31,22 @@ Ivelin Dimitrov
 
 ### Java Fundamentals:
 * #### [Java Advanced](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20Advanced)
+  - Linear Data Structures
+  - Sets and Maps
+  - Input/Output, Files and Directories
+  - String processing
+  - Functional Programming
+  - Stream API
 * #### [Java OOP Basic](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20OOP%20Basic)
+  - Classes and OOP Principles
 * #### [Java OOP Advanced](https://github.com/ivelin1936/Java/tree/master/Java%20Fundamentals/Java%20OOP%20Advanced)
+  - Generics
+  - Iterators and Comparators
+  - Enums and Annotations
+  - Reflection
+  - Unit Testing (jUnit + Mockito)
+  - SOLID Principles
+  - Object Communication and eEvents
 
 ### [Databases Frameworks - Hibernate & Spring Data](https://github.com/ivelin1936/Java/tree/master/Databases%20Frameworks%20-%20Hibernate%20%26%20Spring%20Data%20-%20%D0%BC%D0%B0%D1%80%D1%82%202018)
 
