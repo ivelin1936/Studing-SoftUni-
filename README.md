@@ -58,9 +58,14 @@ Ivelin Dimitrov
   - Object Communication and eEvents
 
 ### [Databases Frameworks - Hibernate & Spring Data](https://github.com/ivelin1936/Java/tree/master/Databases%20Frameworks%20-%20Hibernate%20%26%20Spring%20Data%20-%20%D0%BC%D0%B0%D1%80%D1%82%202018)
+  - Maven build automation tool
   - JDBS
+    - Fetching ResultSets with JDBS
+    - JPQL
   - Hibernate ORM
+    - Hibernate Code First + Entity Relations
   - Spring Data (Spring Boot)
+    - JPA Repositories
   - Auto Mapping Objects (model mapper)
   - JSON Processing (Gson)
   - XML Processing (JAXB)
