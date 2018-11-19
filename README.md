@@ -59,8 +59,8 @@ Ivelin Dimitrov
 
 ### [Databases Frameworks - Hibernate & Spring Data](https://github.com/ivelin1936/Java/tree/master/Databases%20Frameworks%20-%20Hibernate%20%26%20Spring%20Data%20-%20%D0%BC%D0%B0%D1%80%D1%82%202018)
   - JDBS
-  - Hibernate
-  - Spring Data
+  - Hibernate ORM
+  - Spring Data (Spring Boot)
   - Auto Mapping Objects (model mapper)
   - JSON Processing (Gson)
   - XML Processing (JAXB)
