@@ -19,7 +19,7 @@ Ivelin Dimitrov
 </tbody>
 </table>
 
-# Description
+<h1 align="center">Description</h1>
 
 ### [Programming Basics](https://github.com/ivelin1936/Java/tree/master/Programing%20Basic)
 
