@@ -1,0 +1,40 @@
+section.welcome {
+    margin: 30px 150px 60px 150px;
+    /* background: url('http://www.vitoshacademy.com/wp-content/uploads/2014/06/images.jpg') no-repeat; */
+    background: url('../images/welcome-img.jpg') no-repeat;
+    background-size: cover;
+    align-items: center;
+    box-shadow: 1px 1px 38px 9px #4C3400;
+    border-radius: 20px;
+}
+
+body > main > section > h1 {
+    padding: 150px;
+    padding-bottom: 0px;
+    color: white;
+}
+
+body > main > section > img {
+    width: 20%;
+    float: right;
+    margin-right: -60px;
+    transform: rotate(-22deg);
+    margin-top: 151px;
+}
+
+section.welcome button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    margin-left: 43%;
+    margin-bottom: 15%;
+    margin-top: 6%;
+}
+
+section.welcome button:hover {
+    background-color: #FEAE00;
+    border: 2px solid #FEAE00;
+    cursor: pointer;
+}
