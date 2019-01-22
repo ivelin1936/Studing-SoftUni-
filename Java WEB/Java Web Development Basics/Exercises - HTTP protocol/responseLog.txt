@@ -1,0 +1,8 @@
+Data: Tue Jan 22 12:43:29 EET 2019
+--------------------------------------------------
+Response: HTTP/1.1 200 OK
+Host: localhost:8000
+Date: 17/01/2019
+Content-Type: application/xml
+
+Greetings Pesho! You have successfully created Yum with quantity - 50, price - 10.
