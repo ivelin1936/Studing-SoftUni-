@@ -84,6 +84,17 @@
             height: 1px;
             box-shadow: 0 0 10px 1px black;
         }
+
+        body > a:nth-child(6) {
+            color: #B3483A;
+            border-color: #B3483A;
+            margin-left: 10px;
+        }
+        body > a:nth-child(6):hover {
+            background-color: #B3483A;
+            border-color: #B3483A;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -92,5 +103,16 @@
     {{catsContent}}
     <hr/>
     <a href="/">Back to Home</a>
+    <a href="/cats/create">Create Cat</a>
+
+    <footer style="
+    opacity: 0.7;
+    margin: 5px auto;
+    position:absolute;
+    bottom:0;
+    height: 20px;
+    width:100%;">
+        &copy; FDMC-2019 All rights reserved. Created by Ivelin Dimitrov
+    </footer>
 </body>
 </html>
