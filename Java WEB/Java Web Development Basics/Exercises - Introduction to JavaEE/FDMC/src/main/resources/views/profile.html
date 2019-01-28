@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FDMC profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Hammersmith One', sans-serif;
+            background-color: powderblue;
+            text-align: center;
+            background-image: url("https://www.publicdomainpictures.net/pictures/60000/nahled/cat-portrait-vintage-background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        body > h4 {
+            opacity: 0.6;
+        }
+
+        p {
+            display: inline-block;
+            text-align: left;
+            padding: 2px;
+            margin: 0 auto;
+            color: rebeccapurple;
+            opacity: 0.5;
+        }
+
+        a {
+            border: 2px solid white;
+            padding: 5px 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            border-color: white;
+            color: #B3483A;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        section {
+            max-width: 450px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        body > hr:nth-child(4) {
+            margin-bottom: 30px;
+        }
+
+        .cat-info {
+            border-radius: 5px;
+            background: powderblue;
+            background-image: url("https://www.publicdomainpictures.net/pictures/60000/nahled/cat-silhouette-vintage-background.jpg");
+            padding: 25px;
+            margin: 50px 0;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            box-shadow: 0 0 10px 1px black;
+        }
+    </style>
+</head>
+<body>
+<h1>C<p><i class="fas fa-cat"></i></p>t - {{catName}}</h1>
+<hr/>
+<section>
+    <section class="cat-info">
+        <h2><p>Breed:</p> {{catBreed}}</h2>
+        <h2><p>Color:</p> {{catColor}}</h2>
+        <h2><p>Age:</p> {{catAge}}</h2>
+    </section>
+</section>
+<hr/>
+<a href="/cats/all">Back</a>
+
+<footer style="
+    opacity: 0.7;
+    margin: 5px auto;
+    position:absolute;
+    bottom:0;
+    height: 20px;
+    width:100%;">
+    &copy; FDMC-2019 All rights reserved. Created by Ivelin Dimitrov
+</footer>
+</body>
+</html>
