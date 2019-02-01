@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+
+    <title>Chushka</title>
+    <style>
+        body {
+            font-family: 'Hammersmith One', sans-serif;
+            background-color: powderblue;
+            text-align: center;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/55/Charleston_Hot_peppers_white_background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        footer {
+            padding-top: 5px;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            background-color: rgba(135, 206, 235, 0.9);
+            text-align: center;
+        }
+        header {
+            margin-bottom: 40px;
+        }
+        body > div > main > section > div > div > a {
+            margin-top: 20px;
+        }
+        body > div > main > section.jumbotron {
+            background-color: rgba(239, 239, 239, 0.7);
+            padding: 1.5em 1.5em;
+        }
+        body > div > header > main > section > div > div > h1 {
+            margin-top: 20px;
+        }
+        body > div > header > main > section > div > div > p {
+            background-color: skyblue;
+            text-align: left;
+            margin-right: 20px;
+            padding-left: 10px;
+            width: 35%;
+            float: right;
+            border-radius: 5px;
+        }
+        body > div > header > main > section > div > div > hr {
+            width: 60%;
+            display: inline-block;
+            background-color: skyblue;
+            opacity: 0.8;
+        }
+        .trans--grow{
+            -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+            transition: width 1s  ease-out;
+            width : 0%;
+        }
+        .grow{
+            width:60%;
+        }
+        ul {
+            margin: 0 auto;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <main>
+            <section >
+                <div class="row d-flex justify-content-center">
+                    <div class="col col-md-12">
+                        <h1>Product Details</h1>
+                        <hr class="trans--grow"/>
+                        <p>Exercises: Java EE: Servlet API 4.0</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </header>
+
+    <main>
+        <section class="jumbotron">
+            <div class="row">
+                <div class="col col-md-12">
+                    <h3>{{productName}}</h3>
+                    <hr/>
+                    <p>{{productDescription}}</p>
+                    <p>{{productType}}</p>
+                    <hr/>
+                    <a href="/">Back to Home page.</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Chushka-2019 <br/>All rights reserved. Created by
+        <a href="https://www.linkedin.com/in/ivelin-dimitrov-42b13a151/">Ivelin Dimitrov</a>
+    </footer>
+</div>
+
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    jQuery(document).ready(function($){
+        setTimeout(function(){
+            $('.trans--grow').addClass('grow');
+        }, 275);
+    });
+</script>
+</body>
+</html>
