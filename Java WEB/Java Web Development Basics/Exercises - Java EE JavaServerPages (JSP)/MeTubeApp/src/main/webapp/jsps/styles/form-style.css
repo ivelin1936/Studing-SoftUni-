@@ -1,0 +1,11 @@
+form {
+    width: 50%;
+    margin: 0 auto;
+    color: beige;
+}
+section.jumbotron {
+    background: transparent; !important;
+    padding: 0; !important;
+    /*background-color: rgba(239, 239, 239, 0.4);*/
+    /*padding: 1.5em 1.5em;*/
+}

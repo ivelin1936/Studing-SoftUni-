@@ -1,0 +1,71 @@
+body {
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: powderblue;
+    text-align: center;
+    background-image: url("https://vignette.wikia.nocookie.net/tube-heroes/images/5/50/Wiki-background/revision/latest?cb=20150805181303");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    min-height: 65%;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+body > section > header > section > div > div > h1 {
+    margin-top: 20px;
+    color: white;
+}
+body > section > header > section > div > div > h1 > span:nth-child(2) {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 5px;
+}
+body > section > main > section > div > div > a {
+    margin-top: 20px;
+}
+section.jumbotron {
+    background-color: rgba(239, 239, 239, 0.4);
+    padding: 1.5em 1.5em;
+}
+body > section > header > section > div > div > p {
+    background-color: rebeccapurple;
+    color: white;
+    text-align: left;
+    margin-right: 20px;
+    padding-left: 10px;
+    width: 35%;
+    float: right;
+    border-radius: 5px;
+}
+body > section > header > section > div > div > hr {
+    width: 60%;
+    display: inline-block;
+    background-color: rebeccapurple;
+    opacity: 0.8;
+}
+.trans--grow{
+    -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+    transition: width 1s  ease-out;
+    width : 0%;
+}
+.grow{
+    width:60%;
+}
+
+.footer {
+    color: #ffffff;
+    /*background-color: rebeccapurple;*/
+    background: linear-gradient(90deg, rgba(43,21,65,0.22172619047619047) 5%, rgba(102,51,153,1) 51%, rgba(42,21,64,0.2553396358543417) 100%);
+    padding: 5px auto;
+}
+
+body > section > header > section > div > div > h1 > span {
+    color: rebeccapurple;
+}

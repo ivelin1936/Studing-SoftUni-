@@ -1,0 +1,16 @@
+body > section > main > section > div:nth-child(2) > div:nth-child(1) > a.details-link {
+    text-decoration: none;
+}
+
+body > section > main > section > div:nth-child(2) > div:nth-child(2) > p > i {
+    color: #007bff;
+}
+
+body > section > main > section > div:nth-child(1) > div > h3 > i {
+    color: red;
+}
+
+section.jumbotron {
+    background: transparent;
+    color: white;
+}

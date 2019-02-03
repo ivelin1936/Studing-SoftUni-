@@ -1,0 +1,11 @@
+ul {
+    list-style-type: none;
+}
+
+body > section > main > section > div > div > ul > li > a > i {
+    color: red;
+}
+
+body > section > main > section > div > div > h3 > i {
+    color: #007bff !important;
+}
