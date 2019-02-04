@@ -29,17 +29,18 @@
         <section class="jumbotron">
             <div class="row">
                 <div class="col col-md-8">
-                    <h3><span style="color: #FF642F">404 Error!</span> Not found</h3>
+                    <h3><span style="color: #FF642F">400 Error!</span> Bad Request</h3>
                     <hr/>
-                    <p>The page you are looking for no longer exist. Perhaps you can return back to the site's <a href="/">homepage</a> and see if you can find what you are looking for.
-                        Or you can browse over our <a href="/tubes/all">Tube Collection</a> again.</p>
+                    <p>Something went wrong! Cannot create this Tube. Perhaps you can return back to the site's <a href="/">homepage</a> and see if you can find what you are looking for.
+                        Or you can try <a href="/tubes/create">create Tube</a> again.</p>
                     <br/>
                     <a href="/tubes/all" class="btn btn-info">Back to Collection</a>
                 </div>
                 <div class="col col-md-4">
-                    <img class="image" src="https://www.emyspot.com/medias/images/page404.png" alt="404 image"/>
+                    <img class="image" src="https://cdn4.iconfinder.com/data/icons/application-windows-3/32/Bad-Request-Server-512.png" style="width: 222px; height: auto" alt="404 image"/>
                 </div>
             </div>
+
         </section>
     </main>
 

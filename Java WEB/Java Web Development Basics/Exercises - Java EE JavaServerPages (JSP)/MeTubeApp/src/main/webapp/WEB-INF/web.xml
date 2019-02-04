@@ -3,4 +3,10 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <!-- Java EE Ex handling more info: https://www.baeldung.com/servlet-exceptions -->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/jsps/400-create-error-page.jsp</location> <!-- /src/main/webapp/error-page.html-->
+    </error-page>
 </web-app>

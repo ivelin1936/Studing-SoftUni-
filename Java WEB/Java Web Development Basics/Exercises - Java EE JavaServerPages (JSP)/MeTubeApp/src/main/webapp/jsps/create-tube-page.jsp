@@ -31,22 +31,25 @@
                         <form action="/tubes/create" method="post">
                             <div class="form-group">
                                 <label for="titleInput">Title</label>
-                                <input name="name" type="text" class="form-control" id="titleInput" placeholder="Insert title">
+                                <input name="name" type="text" class="form-control" id="titleInput" placeholder="Insert title (Require)">
                             </div>
 
                             <div class="form-group">
                                 <label for="descriptionInput">Description</label>
-                                <textarea name="description" class="form-control" id="descriptionInput" rows="3" placeholder="Description..."></textarea>
+                                <textarea name="description" class="form-control" id="descriptionInput" rows="3" placeholder="Description... (Require)"></textarea>
                             </div>
 
+                            <img class="tips-img" src="https://hc.weebly.com/hc/en-us/article_attachments/203583357/youtube_share.png">
                             <div class="form-group">
-                                <label for="youTubeLinkInput">YouTube Link</label>
-                                <input name="youTubeLink" type="text" class="form-control" id="youTubeLinkInput" placeholder="Insert YouTube link">
+                                <label for="youTubeLinkInput">YouTube Link
+                                    <a onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" style="text-decoration: none" href="#">Tips</a>
+                                </label>
+                                <input name="youTubeLink" type="text" class="form-control" id="youTubeLinkInput" placeholder="Example: https://youtu.be/21QDsw0XaFI (Require)">
                             </div>
 
                             <div class="form-group">
                                 <label for="uploaderInput">Uploader</label>
-                                <input name="uploader" type="text" class="form-control" id="uploaderInput" placeholder="Insert uploader">
+                                <input name="uploader" type="text" class="form-control" id="uploaderInput" placeholder="Insert uploader  (Require: min length 2)">
                             </div>
 
                             <button class="btn btn-info" type="submit">Create</button>
@@ -68,6 +71,14 @@
                 $('.trans--grow').addClass('grow');
             }, 275);
         });
+
+        function mouseOver(e) {
+            $("img.tips-img").css("display", "inherit");
+        }
+
+        function mouseOut(e) {
+            $("img.tips-img").css("display", "none");
+        }
     </script>
 </body>
 </html>

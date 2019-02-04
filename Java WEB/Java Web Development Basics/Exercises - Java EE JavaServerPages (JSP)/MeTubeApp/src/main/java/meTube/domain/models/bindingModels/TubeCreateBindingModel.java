@@ -1,5 +1,9 @@
 package meTube.domain.models.bindingModels;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 public class TubeCreateBindingModel {
 
     private String name;
@@ -10,6 +14,7 @@ public class TubeCreateBindingModel {
     public TubeCreateBindingModel() {
     }
 
+    @NotNull
     public String getName() {
         return this.name;
     }
@@ -18,6 +23,7 @@ public class TubeCreateBindingModel {
         this.name = name;
     }
 
+    @NotNull
     public String getDescription() {
         return this.description;
     }
@@ -26,6 +32,7 @@ public class TubeCreateBindingModel {
         this.description = description;
     }
 
+    @Pattern(regexp = "https:\\/\\/youtu\\.be\\/\\w{11}")
     public String getYouTubeLink() {
         return this.youTubeLink;
     }
@@ -34,6 +41,8 @@ public class TubeCreateBindingModel {
         this.youTubeLink = youTubeLink;
     }
 
+    @NotNull
+    @Size(min = 2)
     public String getUploader() {
         return this.uploader;
     }

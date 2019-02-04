@@ -4,6 +4,7 @@ import meTube.domain.entities.Tube;
 import meTube.domain.models.serviceModels.TubeServiceModel;
 import meTube.repository.TubeRepository;
 import meTube.utils.ModelMapper;
+import meTube.utils.ValidatorImpl;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -13,18 +14,24 @@ public class TubeServiceImpl implements TubeService {
 
     private final TubeRepository tubeRepository;
     private final ModelMapper modelMapper;
+    private final ValidatorImpl validator;
 
     @Inject
     public TubeServiceImpl(TubeRepository tubeRepository,
-                           ModelMapper modelMapper) {
+                           ModelMapper modelMapper,
+                           ValidatorImpl validator) {
         this.tubeRepository = tubeRepository;
         this.modelMapper = modelMapper;
+        this.validator = validator;
     }
 
     @Override
     public void save(TubeServiceModel tubeServiceModel) {
-        Tube tube = this.modelMapper.map(tubeServiceModel, Tube.class);
+        if (!this.validator.isValid(tubeServiceModel)) {
+            throw new IllegalArgumentException();
+        }
 
+        Tube tube = this.modelMapper.map(tubeServiceModel, Tube.class);
         this.tubeRepository.save(tube);
     }
 

@@ -36,7 +36,6 @@ public class AllTubesServlet extends HttpServlet {
                 .collect(Collectors.toList());
 
         req.setAttribute("AllTubeViewModels", allTSM);
-
         req.getRequestDispatcher("/jsps/all-tube-page.jsp")
                 .forward(req, resp);
     }

@@ -41,11 +41,11 @@
 
             <div class="row">
                 <div class="col col-md-6">
-                    <a href="<%= tdvm.getYouTubeLink() %>" class="details-link" target="_blank"><i
-                            class="fas fa-play"></i> Link to Video.</a>
+                    <a href="<%= tdvm.getYouTubeLink() %>" class="details-link" target="_blank">
+                        <i class="fas fa-play"></i> Link to Video.</a>
                 </div>
                 <div class="col col-md-6">
-                    <p><i class="fas fa-cloud-upload-alt"></i> <%= tdvm.getUploader() %>
+                    <p><i class="fas fa-cloud-upload-alt"></i> <a href="#" title="profile details"><%= tdvm.getUploader() %> </a>
                     </p>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                                 autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                         </iframe>
-                    </div>s
+                    </div>
                 </div>
             <% } %>
 

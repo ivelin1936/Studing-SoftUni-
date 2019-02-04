@@ -2,6 +2,10 @@ body > section > main > section > div:nth-child(2) > div:nth-child(1) > a.detail
     text-decoration: none;
 }
 
+body > section > main > section > div:nth-child(2) > div:nth-child(2) > p > a {
+    text-decoration: none;
+}
+
 body > section > main > section > div:nth-child(2) > div:nth-child(2) > p > i {
     color: #007bff;
 }

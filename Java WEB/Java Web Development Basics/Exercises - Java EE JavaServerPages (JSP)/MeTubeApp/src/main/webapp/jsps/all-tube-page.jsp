@@ -35,6 +35,7 @@
                 <div class="col col-md-12">
                     <h3><i class="fas fa-database"></i> Tube DB</h3>
                     <hr/>
+                    <% if (allTVM.size() > 0) { %>
                         <ul>
                             <% for (TubeViewModel tubeViewModel : allTVM) { %>
                                 <li onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
@@ -44,6 +45,10 @@
                                 </li>
                             <% } %>
                         </ul>
+                    <% } else { %>
+                        <h3>No Tubes into DataBase...</h3>
+                        <p>Click on link below to create the first one Tube!</p>
+                    <% } %>
                     <hr/>
                     <a href="/tubes/create" class="btn btn-info">Add Tube</a>
                     <br/><br/>
