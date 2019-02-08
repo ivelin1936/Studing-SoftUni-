@@ -1,0 +1,9 @@
+body > section > main > div > div > div:nth-child(1) > p {
+    margin-top: 10px !important;
+    margin-right: 10px;
+    float: right;
+}
+
+body > section > main > div > div > div:nth-child(1) > p > i {
+    color: #007bff;
+}

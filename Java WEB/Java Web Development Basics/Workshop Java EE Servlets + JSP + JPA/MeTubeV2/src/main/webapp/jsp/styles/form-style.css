@@ -1,0 +1,22 @@
+form {
+    width: 60%;
+    margin: 0 auto;
+    color: beige;
+}
+section.jumbotron {
+    background: transparent; !important;
+    padding: 0; !important;
+    /*background-color: rgba(239, 239, 239, 0.4);*/
+    /*padding: 1.5em 1.5em;*/
+}
+
+img.tips-img {
+    width: 250px;
+    height: auto;
+    display: none;
+    position:absolute;
+    margin-left: 25%;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 1px 27px 4px rebeccapurple;
+    box-shadow: 2px 1px 27px 4px rebeccapurple;
+}
