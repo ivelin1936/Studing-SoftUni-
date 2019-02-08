@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="meTube.domain.models.view.HomeTubeViewModel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -24,13 +26,25 @@
     </header>
 
     <main>
+        <%--<% List<HomeTubeViewModel> tubeViewModels = (List<HomeTubeViewModel>) request.getAttribute("viewModels"); %>--%>
+
         <hr class="my-2"/>
         <div class="text-center mt-3">
             <h4 class="h4 text-info">Welcome, <%= request.getSession().getAttribute("username") %></h4>
         </div>
         <hr class="my-4">
-        <div class="container">
-            ${allTubes}
+        <div class="container-fluid">
+            <%--<% for (HomeTubeViewModel model : tubeViewModels) { %>--%>
+            <%--<figure style="width: 31%; height: auto">--%>
+                <%--<a href="/tube/details?id=<%= model.getId() %>">--%>
+                    <%--<img title="" src="https://img.youtube.com/vi/<%= model.getYouTubeId() %>/sddefault.jpg" alt="" width="500" height="340">--%>
+                <%--</a>--%>
+                <%--<figcaption>--%>
+                    <%--<%= model.getTitle() %>--%>
+                    <%--<p><%= model.getUploader() %></p>--%>
+                <%--</figcaption>--%>
+            <%--</figure>--%>
+            <%--<% } %>--%>
         </div>
         <hr class="my-3"/>
     </main>

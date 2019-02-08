@@ -1,6 +1,7 @@
 package meTube.web.servlets;
 
 import meTube.domain.models.service.UserServiceModel;
+import meTube.domain.models.view.UserProfileViewModel;
 import meTube.service.interfaces.UserService;
 import org.modelmapper.ModelMapper;
 
@@ -29,8 +30,9 @@ public class ProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String loggedUserName = (String) req.getSession().getAttribute("username");
         UserServiceModel serviceModel = this.userService.findByName(loggedUserName);
+        UserProfileViewModel viewModel = this.modelMapper.map(serviceModel, UserProfileViewModel.class);
 
-        req.setAttribute("model", serviceModel);
+        req.setAttribute("model", viewModel);
 
         req.getRequestDispatcher("/jsp/profile.jsp").forward(req, resp);
     }

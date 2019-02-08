@@ -35,10 +35,7 @@ public class LoginServlet extends HttpServlet {
             String errorMessage = "Invalid credentials!";
             req.setAttribute("errorMessage", errorMessage);
 
-            RequestDispatcher dispatcher = this.getServletContext()
-                    .getRequestDispatcher("/jsp/login.jsp");
-
-            dispatcher.forward(req, resp);
+            req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
             return;
         }
 

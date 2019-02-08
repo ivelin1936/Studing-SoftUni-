@@ -7,6 +7,8 @@ import meTube.service.interfaces.TubeService;
 import org.modelmapper.ModelMapper;
 
 import javax.inject.Inject;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class TubeServiceImpl implements TubeService {
 
@@ -40,5 +42,15 @@ public class TubeServiceImpl implements TubeService {
         Tube updatedTube = this.tubeRepo.update(this.modelMapper.map(tubeServiceModel, Tube.class));
 
         return this.modelMapper.map(updatedTube, TubeServiceModel.class);
+    }
+
+    @Override
+    public List<TubeServiceModel> findAll() {
+        List<TubeServiceModel> tubes = this.tubeRepo.findAll()
+                .stream()
+                .map(tube -> this.modelMapper.map(tube, TubeServiceModel.class))
+                .collect(Collectors.toList());
+
+        return tubes;
     }
 }

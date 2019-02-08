@@ -1,5 +1,4 @@
-<%@ page import="meTube.domain.models.service.UserServiceModel" %>
-<%@ page import="meTube.domain.models.service.TubeServiceModel" %>
+<%@ page import="meTube.domain.models.view.UserProfileViewModel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -26,7 +25,7 @@
     </header>
 
     <main>
-        <% UserServiceModel model = (UserServiceModel) request.getAttribute("model"); %>
+        <% UserProfileViewModel model = (UserProfileViewModel) request.getAttribute("model"); %>
 
         <hr class="my-2"/>
         <div class="text-center mt-3">
