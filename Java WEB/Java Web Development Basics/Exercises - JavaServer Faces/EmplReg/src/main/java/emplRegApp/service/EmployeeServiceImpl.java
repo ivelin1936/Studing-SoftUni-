@@ -31,11 +31,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public void delete(EmployeeServiceModel employeeServiceModel) {
-        Employee employee = this.modelMapper
-                .map(employeeServiceModel, Employee.class);
-
-        this.emplRepo.delete(employee);
+    public void remove(String id) {
+        this.emplRepo.delete(id);
     }
 
     @Override

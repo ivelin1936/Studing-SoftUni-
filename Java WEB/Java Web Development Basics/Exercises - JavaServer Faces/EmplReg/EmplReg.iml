@@ -14,6 +14,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="EmployeeRegister" />
+          <factory-entry name="register" value="37890bec-fa6f-45ff-b501-661a7e4b23a2" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />

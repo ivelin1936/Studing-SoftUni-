@@ -1,7 +1,7 @@
 package emplRegApp.web.manageBeans;
 
 import emplRegApp.domain.models.service.EmployeeServiceModel;
-import emplRegApp.domain.models.view.EmployeeRegisterBindingModel;
+import emplRegApp.domain.models.binding.EmployeeRegisterBindingModel;
 import emplRegApp.service.EmployeeService;
 import org.modelmapper.ModelMapper;
 

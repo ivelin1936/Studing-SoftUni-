@@ -24,11 +24,11 @@ public class EmployeeRepoImpl implements EmployeeRepository {
     }
 
     @Override
-    public void delete(Employee entity) {
+    public void delete(String id) {
         this.entityManager.getTransaction().begin();
         this.entityManager
                 .createQuery("DELETE FROM Employee e WHERE e.id = :id")
-                .setParameter("id", entity.getId())
+                .setParameter("id", id)
                 .executeUpdate();
         this.entityManager.getTransaction().commit();
     }

@@ -8,7 +8,7 @@ public interface EmployeeService {
 
     EmployeeServiceModel save(EmployeeServiceModel employeeServiceModel);
 
-    void delete(EmployeeServiceModel employeeServiceModel);
+    void remove(String id);
 
     List<EmployeeServiceModel> findAll();
 

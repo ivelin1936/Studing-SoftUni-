@@ -6,7 +6,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
 <h:head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
@@ -21,6 +23,7 @@
         <hr style="height: 2px;" class="bg-dark"/>
         <h1 class="text-center">Employee Register</h1>
         <hr style="height: 2px;" class="bg-dark"/>
+
         <table class="table">
             <thead>
             <tr class="row">
@@ -34,92 +37,71 @@
             </tr>
             </thead>
             <tbody>
-            <tr class="row">
-                <th scope="row" class="col-md-1">1</th>
-                <td class="col-md-2">Mark</td>
-                <td class="col-md-2">Otto</td>
-                <td class="col-md-3">Computer Specialist</td>
-                <td class="col-md-1">$5500.00</td>
-                <td class="col-md-1">29</td>
-                <td class="col-md-2">
-                    <button class="btn btn-danger">Remove</button>
-                </td>
-            </tr>
-            <tr class="row">
-                <th scope="row" class="col-md-1">2</th>
-                <td class="col-md-2">Donald</td>
-                <td class="col-md-2">Fitzgerald</td>
-                <td class="col-md-3">Marketing Manager</td>
-                <td class="col-md-1">$2500.00</td>
-                <td class="col-md-1">34</td>
-                <td class="col-md-2">
-                    <button class="btn btn-danger">Remove</button>
-                </td>
-            </tr>
-            <tr class="row">
-                <th scope="row" class="col-md-1">1</th>
-                <td class="col-md-2">Casio</td>
-                <td class="col-md-2">Florenco</td>
-                <td class="col-md-3">Graphic Designer</td>
-                <td class="col-md-1">$4000.00</td>
-                <td class="col-md-1">27</td>
-                <td class="col-md-2">
-                    <button class="btn btn-danger">Remove</button>
-                </td>
-            </tr>
-            <tr class="row">
-                <th scope="row" class="col-md-1">1</th>
-                <td class="col-md-2">Isacc</td>
-                <td class="col-md-2">Netero</td>
-                <td class="col-md-3">Tech Support</td>
-                <td class="col-md-1">$4900.00</td>
-                <td class="col-md-1">30</td>
-                <td class="col-md-2">
-                    <button class="btn btn-danger">Remove</button>
-                </td>
-            </tr>
+            <p:repeat value="#{employeeListBean.employees}" var="employee">
+                <tr class="row">
+                    <th scope="row" class="col-md-1">#{employeeListBean.employees.indexOf(employee) + 1}</th>
+                    <td class="col-md-2">#{employee.firstName}</td>
+                    <td class="col-md-2">#{employee.lastName}</td>
+                    <td class="col-md-3">#{employee.position}</td>
+                    <td class="col-md-1">$#{employee.salary}</td>
+                    <td class="col-md-1">#{employee.age}</td>
+                    <td class="col-md-2">
+                        <h:form>
+                            <h:commandButton
+                                    class="btn btn-danger"
+                                    action="#{employeeRemoveBean.remove(employee.id)}"
+                                    value="Remove"/>
+                        </h:form>
+                    </td>
+                </tr>
+            </p:repeat>
             </tbody>
         </table>
+
         <hr style="height: 2px;" class="bg-dark"/>
-        <h:form class="form">
+
+        <h:form styleClass="form">
             <div class="names-holder d-flex justify-content-between">
                 <div class="form-group w-25">
                     <h:outputLabel for="firstName" value="First Name"/>
-                    <h:inputText value="#{employeeRegisterBean.employeeRegisterBindingModel.firstName}" class="form-control"
-                                 id="firstName" placeholder="First Name..."/>
+                    <h:inputText value="#{employeeRegisterBean.employeeRegisterBindingModel.firstName}" styleClass="form-control"
+                                 id="firstName" a:placeholder="First Name..."/>
                 </div>
                 <div class="form-group w-25">
                     <h:outputLabel for="lastName" value="Last Name"/>
-                    <h:inputText value="#{employeeRegisterBean.employeeRegisterBindingModel.lastName}" class="form-control"
-                                 id="lastName" placeholder="Last Name..."/>
+                    <h:inputText value="#{employeeRegisterBean.employeeRegisterBindingModel.lastName}" styleClass="form-control"
+                                 id="lastName" a:placeholder="Last Name..."/>
                 </div>
                 <div class="form-group w-25">
                     <h:outputLabel for="position" value="Position"/>
-                    <h:inputText value="#{employeeRegisterBean.employeeRegisterBindingModel.position}" class="form-control"
-                                 id="position" placeholder="Position..."/>
+                    <h:inputText value="#{employeeRegisterBean.employeeRegisterBindingModel.position}" styleClass="form-control"
+                                 id="position" a:placeholder="Position..."/>
                 </div>
             </div>
             <div class="numbers-holders d-flex justify-content-between">
                 <div class="form-group w-25">
-                    <p:outputLabel for="salary" value="Salary"/>
+                    <h:outputLabel for="salary" value="Salary"/>
                     <p:inputNumber value="#{employeeRegisterBean.employeeRegisterBindingModel.salary}" styleClass="form-control-range"
                                    id="salary" placeholder="Salary..."/>
                 </div>
                 <div class="form-submit-holder d-flex justify-content-center w-25">
-                    <h:commandButton action="#{employeeRegisterBean.register}" class="btn btn-success mt-4 mb-3 mx-auto w-100" value="Register"/>
+                    <h:commandButton action="#{employeeRegisterBean.register}" styleClass="btn btn-success mt-4 mb-3 mx-auto w-100" value="Register"/>
                 </div>
                 <div class="form-group w-25">
-                    <p:outputLabel for="age" value="Age"/>
+                    <h:outputLabel for="age" value="Age"/>
                     <p:inputNumber value="#{employeeRegisterBean.employeeRegisterBindingModel.age}" styleClass="form-control-range"
                                    id="age" placeholder="Age..."/>
                 </div>
             </div>
         </h:form>
+
         <hr style="height: 2px;" class="bg-dark"/>
+
         <div class="d-flex justify-content-between">
-            <h5 class="w-50">Total Money Needed: $16900.00</h5>
-            <h5 class="w-50 text-right">Average Salary: $4225.00</h5>
+            <h5 class="w-50">Total Money Needed: $#{employeeListBean.totalMoney}</h5>
+            <h5 class="w-50 text-right">Average Salary: $#{employeeListBean.averageSalary}</h5>
         </div>
+
         <hr style="height: 2px;" class="bg-dark"/>
     </div>
 </h:body>
