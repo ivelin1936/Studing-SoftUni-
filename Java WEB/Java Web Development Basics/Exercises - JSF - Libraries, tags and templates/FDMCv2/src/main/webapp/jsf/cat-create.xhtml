@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Ivelin Dimitrov
+  Date: 13.2.2019 г.
+  Time: 15:42
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-content">
+        <div class="jumbotron justify-content-center jumbotron-background">
+            <div class="row">
+                <div class="col col-md-12 d-flex justify-content-center">
+                    <h1>Create Cat!</h1>
+                </div>
+            </div>
+            <hr class="hr-background"/>
+
+            <h:form styleClass="text-center">
+                <div class="row">
+                    <div class="col-md-12  d-flex justify-content-center">
+                        <div class="form-group">
+                            <h:outputLabel for="name" value="Name"/>
+                            <h:inputText id="name" value="#{createCatManageBean.bindingModel.name}" styleClass="form-control"
+                                         required="true"  requiredMessage="Name is required" label="Name">
+                                <f:validateLength minimum="2" maximum="10" />
+                            </h:inputText>
+                        </div>
+                    </div>
+                    <h:message id="m1" for="name" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-group">
+                            <h:outputLabel for="breed" value="Breed"/>
+                            <h:inputText id="breed" value="#{createCatManageBean.bindingModel.breed}" styleClass="form-control"
+                                         required="true" requiredMessage="Breed is required" label="Breed">
+                                <f:validateLength minimum="2" maximum="10" />
+                            </h:inputText>
+                        </div>
+                    </div>
+                    <h:message id="m2" for="breed" style="color:red; margin: 0 auto;"/>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-group">
+                            <h:outputLabel for="color" value="Color"/>
+                            <h:inputText id="color" value="#{createCatManageBean.bindingModel.color}" styleClass="form-control"
+                                         required="true" requiredMessage="Color is required"/>
+                        </div>
+                    </div>
+                    <h:message id="m3" for="color" style="color:red; margin: 0 auto;"/>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-group">
+                            <h:outputLabel for="age" value="Age"/>
+                            <p:inputNumber id="age" value="#{createCatManageBean.bindingModel.age}" styleClass="form-control-range"
+                                           required="true" validatorMessage="Age must be an integer between 1 and 31." label="Age">
+                                <f:validateLongRange maximum="31" minimum="1" for="age"/>
+                            </p:inputNumber>
+                        </div>
+                    </div>
+                    <h:message id="m4" for="age" style="color:red; margin: 0 auto;"/>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-group">
+                            <h:outputLabel for="price" value="Price"/>
+                            <p:inputNumber id="price" value="#{createCatManageBean.bindingModel.price}" styleClass="form-control-range"
+                                           required="true" validatorMessage="Price value, must be at least 0.01" label="Price">
+                                <f:validateDoubleRange minimum="0.01" for="price"/>
+                            </p:inputNumber>
+                        </div>
+                    </div>
+                    <h:message id="m5" for="price" style="color:red; margin: 0 auto;"/>
+                </div>
+                <hr class="hr-background"/>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h:outputLabel styleClass="mr-4" for="gender" value="Gender"/>
+                        <h:selectOneRadio value="#{createCatManageBean.bindingModel.gender}" id="gender" required="true" requiredMessage="Gender is required">
+                            <f:selectItem itemValue="Male" itemLabel="Male" />
+                            <f:selectItem itemValue="Female" itemLabel="Female" />
+                        </h:selectOneRadio>
+                    </div>
+                    <h:message id="m6" for="gender" style="color:red; margin: 0 auto;"/>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-check">
+                            <h:selectBooleanCheckbox id="hasPassport" value="#{createCatManageBean.bindingModel.hasPassport}"
+                                                     styleClass="form-check-input"/>
+                            <h:outputLabel styleClass="form-check-label mr-4" for="hasPassport" value="Has Passport"/>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="hr-background"/>
+
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-group">
+                            <h:outputLabel for="addedOn" value="Added On" /><br/>
+                            <p:calendar id="addedOn" value="#{createCatManageBean.bindingModel.addedOn}" pattern="MM/dd/yyyy"
+                                        required="true" requiredMessage="Added On Date is required"/>
+
+                            <script id="j_id_p:catAddedOnInput_s" type="text/javascript">$(function () {
+                                PrimeFaces.cw("Calendar", "widget_j_id_p_catAddedOnInput", {
+                                    id: "j_id_p:catAddedOnInput",
+                                    popup: true,
+                                    locale: "en_US",
+                                    dateFormat: "m\/d\/y"
+                                });
+                            });</script>
+                        </div>
+                    </div>
+                    <h:message id="m7" for="addedOn" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <hr class="hr-background"/>
+
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h:commandButton action="#{createCatManageBean.create}" styleClass="btn btn-success" value="Create cat" />
+                    </div>
+                </div>
+                <!--<input type="hidden" name="j_id_p_SUBMIT" value="1"/>-->
+                <!--<input type="hidden" name="javax.faces.ViewState"-->
+                       <!--id="j_id__v_0:javax.faces.ViewState:1"-->
+                       <!--value="QUZFNzkwODE2RkY4RURCOTAwMDAwMDAx"-->
+                       <!--autocomplete="off"/>-->
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Ivelin Dimitrov
+  Date: 13.2.2019 г.
+  Time: 15:42
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-content">
+        <div class="jumbotron justify-content-center jumbotron-background">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <h1>Welcome to Fluffy Duffy Munchkin Cats!</h1>
+                </div>
+            </div>
+            <hr class="hr-background" />
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <p>Sweet kitty app! ^_^</p>
+                </div>
+            </div>
+
+            <p:contentFlow value="#{imagesViewBean.images}" var="image" style="background-color: transparent; border: 0px;">
+                <p:graphicImage name="/images/#{image}" styleClass="content"/>
+                <div class="caption">Details: #{image}</div>
+            </p:contentFlow>
+        </div>
+
+    </ui:define>
+</ui:composition>
+
+</html>
