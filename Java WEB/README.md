@@ -1,4 +1,4 @@
-### Comparing RESOURCE_LOCAL and JTA persistence contexts
+### Comparing ```RESOURCE_LOCAL``` and ```JTA``` persistence contexts
 
 #### With ```<persistence-unit transaction-type="RESOURCE_LOCAL">``` YOU are responsible for EntityManager (PersistenceContext/Cache) creating and tracking...
 
