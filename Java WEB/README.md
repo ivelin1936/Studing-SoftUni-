@@ -22,4 +22,4 @@
   - Everyone with an EntityManager reference to the same unit in the same transaction will automatically have a reference to the same PersistenceContext/Cache
   - The PersistenceContext/Cache is flushed and cleared at JTA commit time
 
-* Read More: [JPA Concepts: JPA 101.](http://tomee.apache.org/jpa-concepts.html)
+Read More: [JPA Concepts: JPA 101.](http://tomee.apache.org/jpa-concepts.html)
