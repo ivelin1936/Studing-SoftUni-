@@ -23,3 +23,5 @@
   - The PersistenceContext/Cache is flushed and cleared at JTA commit time
 
 Read More: [JPA Concepts: JPA 101.](http://tomee.apache.org/jpa-concepts.html)
+
+Util: [Java Persistence/JPQL](https://en.wikibooks.org/wiki/Java_Persistence/JPQL)
