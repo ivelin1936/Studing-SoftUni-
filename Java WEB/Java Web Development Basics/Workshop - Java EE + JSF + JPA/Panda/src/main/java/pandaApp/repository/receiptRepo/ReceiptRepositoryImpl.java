@@ -2,31 +2,33 @@ package pandaApp.repository.receiptRepo;
 
 import pandaApp.domain.entities.Receipt;
 import pandaApp.repository.genericRepo.GenericRepositoryImpl;
+import pandaApp.utils.AppConstants;
 
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ReceiptRepositoryImpl extends GenericRepositoryImpl<Receipt, String> implements ReceiptRepository {
 
-    private EntityManager entityManager;
+    private static final Logger LOG = Logger.getLogger(ReceiptRepositoryImpl.class.getName());
 
-    @Inject
-    public ReceiptRepositoryImpl(EntityManager entityManager) {
-        this.entityManager = entityManager;
+    @Override
+    protected Logger logger() {
+        return LOG;
     }
 
     @Override
     public List<Receipt> findAllByUsername(String username) {
         try {
-            List<Receipt> Receipt = this.entityManager
+            List<Receipt> Receipt = super.entityManager
                     .createQuery("SELECT r FROM Receipt r WHERE r.recipient.username = :username", Receipt.class)
-                    .setParameter("username", username)
+                    .setParameter(AppConstants.USERNAME, username)
                     .getResultList();
 
             return Receipt;
         } catch (IllegalStateException | IllegalArgumentException ex) {
             //LOG here...
+            LOG.log(Level.SEVERE, "No Receipts found by username: " + username, ex);
             return List.of();
         }
     }

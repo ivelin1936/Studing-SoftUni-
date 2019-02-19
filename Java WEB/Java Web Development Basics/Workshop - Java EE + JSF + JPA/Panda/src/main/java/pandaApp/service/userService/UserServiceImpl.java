@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import pandaApp.domain.entities.User;
 import pandaApp.domain.models.service.UserServiceModel;
 import pandaApp.repository.userRepo.UserRepository;
+import pandaApp.utils.AppConstants;
 import pandaApp.utils.PasswordHasher;
 
 import javax.inject.Inject;
@@ -62,7 +63,7 @@ public class UserServiceImpl implements UserService {
     }
 
     private void setUserRole(User user) {
-        String role = this.userRepository.size() == 0 ? "Admin" : "User";
+        String role = this.userRepository.size() == 0 ? AppConstants.ADMIN : AppConstants.USER;
         user.setRole(role);
     }
 }

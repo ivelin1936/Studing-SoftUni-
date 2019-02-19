@@ -5,6 +5,7 @@ import pandaApp.domain.entities.enumerations.Status;
 import pandaApp.domain.models.service.PackageServiceModel;
 import pandaApp.domain.models.view.HomePackageViewModel;
 import pandaApp.service.packageService.PackageService;
+import pandaApp.utils.AppConstants;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
@@ -12,12 +13,14 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.HttpSession;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Named
 @RequestScoped
-public class UserHomeBean {
+public class UserHomeBean implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private List<HomePackageViewModel> pendingViewModels;
     private List<HomePackageViewModel> shippedViewModels;
@@ -41,7 +44,7 @@ public class UserHomeBean {
         HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
                 .getExternalContext()
                 .getSession(false);
-        String username = (String) session.getAttribute("username");
+        String username = (String) session.getAttribute(AppConstants.USERNAME);
 
         List<PackageServiceModel> serviceModels = this.packageService.findAllByUsername(username);
         allocatePackagesByStatus(serviceModels);

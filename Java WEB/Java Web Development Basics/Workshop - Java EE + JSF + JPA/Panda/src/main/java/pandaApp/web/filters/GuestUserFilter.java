@@ -1,5 +1,7 @@
 package pandaApp.web.filters;
 
+import pandaApp.utils.AppConstants;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +23,8 @@ public class GuestUserFilter implements Filter {
 
         HttpSession session = req.getSession();
 
-        if (session.getAttribute("username") == null) {
+        //If current user isn't loggedIn (it's a guest), should be redirect to login page
+        if (session.getAttribute(AppConstants.USERNAME) == null) {
             resp.sendRedirect("/faces/view/login.xhtml");
         } else {
             chain.doFilter(req, resp);

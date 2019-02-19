@@ -7,20 +7,20 @@ import pandaApp.service.packageService.PackageService;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
-import javax.faces.application.ViewHandler;
-import javax.faces.component.UIViewRoot;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Named
 @RequestScoped
-public class PendingPackagesBean {
+public class PendingPackagesBean implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private List<PendingPackageViewModel> packagesViewModel;
 

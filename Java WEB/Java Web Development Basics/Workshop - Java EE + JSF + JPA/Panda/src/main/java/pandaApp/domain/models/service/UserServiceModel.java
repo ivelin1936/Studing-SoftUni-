@@ -1,13 +1,25 @@
 package pandaApp.domain.models.service;
 
-import java.util.List;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 public class UserServiceModel {
 
     private String id;
+
+    @NotNull
+    @Size(min = 3)
     private String username;
+
+    @NotNull
+    @Size(min = 5)
     private String password;
+
+    @NotNull
+    @Pattern(regexp = "^[^@]+@[^@]+\\.[^@]+$")
     private String email;
+
     private String role;
 
     public String getId() {

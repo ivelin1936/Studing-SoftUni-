@@ -14,12 +14,14 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Named
 @RequestScoped
-public class DeliveredPackagesBean {
+public class DeliveredPackagesBean implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private List<DeliveredPackageViewModel> packagesViewModel;
 

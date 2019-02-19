@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import pandaApp.domain.entities.enumerations.Status;
 import pandaApp.domain.models.view.ShippedPackageViewModel;
 import pandaApp.service.packageService.PackageService;
+import pandaApp.utils.AppConstants;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
@@ -13,13 +14,15 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Named
 @RequestScoped
-public class ShippedPackagesBean {
+public class ShippedPackagesBean implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private List<ShippedPackageViewModel> packageViewModels;
 
@@ -46,7 +49,7 @@ public class ShippedPackagesBean {
 
                     packageViewModel.setRecipient(packageServiceModel.getRecipient().getUsername());
 
-                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern(AppConstants.DATE_FORMATTER_PATTERN);
                     String formatDate = packageServiceModel.getEstimatedDeliveryDate().format(formatter);
                     packageViewModel.setEstimatedDeliveryDate(formatDate);
 

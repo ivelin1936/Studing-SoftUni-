@@ -2,16 +2,29 @@ package pandaApp.domain.models.service;
 
 import pandaApp.domain.entities.enumerations.Status;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 public class PackageServiceModel {
 
     private String id;
+
+    @NotNull
+    @NotBlank
     private String description;
+
+    @NotNull
     private Double weight;
+
+    @NotNull
+    @NotBlank
     private String shippingAddress;
+
     private Status status;
+
     private LocalDateTime estimatedDeliveryDate;
+
     private UserServiceModel recipient;
 
     public PackageServiceModel() {

@@ -14,22 +14,27 @@
             <hr class="hr-2 bg-panda w-50"/>
             <div class="d-flex">
                 <h:form class="w-50 mx-auto">
+                    <!-- Show validation failed error message -->
+                    <h:messages globalOnly="true" style="color: red; margin: 8px; text-align: center" />
 
                     <div class="form-group">
                         <h:outputLabel for="description" value="Description"/>
                         <h:inputText styleClass="form-control" id="description" placeholder="Description..."
-                                     value="#{createPackageBean.packageBindingModel.description}"/>
+                                     value="#{createPackageBean.packageBindingModel.description}" label="Description"/>
+                        <h:message id="m1" for="description" style="color:red; margin: 0 auto;"/>
                     </div>
                     <div class="weight-and-address-holder d-flex justify-content-between">
                         <div class="form-group w-50 pr-5">
                             <h:outputLabel for="weight" value="Weight"/>
                             <h:inputText type="number" class="form-control" id="weight" placeholder="Weight..."
-                                         value="#{createPackageBean.packageBindingModel.weight}"/>
+                                         value="#{createPackageBean.packageBindingModel.weight}" label="Weight"/>
+                            <h:message id="m2" for="weight" style="color:red; margin: 0 auto;"/>
                         </div>
                         <div class="form-group w-50 pl-5">
                             <h:outputLabel for="address" value="Shipping Address"/>
                             <h:inputText styleClass="form-control" id="address" placeholder="Shipping Address..."
-                                         value="#{createPackageBean.packageBindingModel.shippingAddress}"/>
+                                         value="#{createPackageBean.packageBindingModel.shippingAddress}" label="Address"/>
+                            <h:message id="m3" for="address" style="color:red; margin: 0 auto;"/>
                         </div>
                     </div>
 

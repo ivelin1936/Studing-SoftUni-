@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import pandaApp.domain.models.binding.UserLoginBindingModel;
 import pandaApp.domain.models.service.UserServiceModel;
 import pandaApp.service.userService.UserService;
+import pandaApp.utils.AppConstants;
 
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
@@ -13,10 +14,12 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.Serializable;
 
 @Named
 @RequestScoped
-public class UserLoginBean {
+public class UserLoginBean implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private UserLoginBindingModel userLoginBindingModel;
 
@@ -53,15 +56,15 @@ public class UserLoginBean {
         if (userServiceModel == null) {
             FacesContext facesContext = FacesContext.getCurrentInstance();
             //Send an error message on Login Failure
-            facesContext.addMessage(null, new FacesMessage("Authentication Failed. Invalid credentials."));
+            facesContext.addMessage(null, new FacesMessage(AppConstants.AUTHENTICATION_FAILED_FACES_MSG));
             return;
         }
 
         //If login is successful, should set session attributes
         HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
                 .getExternalContext().getSession(false);
-        session.setAttribute("username", userServiceModel.getUsername());
-        session.setAttribute("role", userServiceModel.getRole());
+        session.setAttribute(AppConstants.USERNAME, userServiceModel.getUsername());
+        session.setAttribute(AppConstants.ROLE, userServiceModel.getRole());
 
         //Redirect to home page
         ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();

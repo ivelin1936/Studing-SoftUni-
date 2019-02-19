@@ -1,6 +1,7 @@
 package pandaApp.Config;
 
 import org.modelmapper.ModelMapper;
+import pandaApp.utils.AppConstants;
 
 import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
@@ -15,7 +16,7 @@ public class ApplicationBeanConfiguration {
 
     @Produces
     public EntityManager entityManager() {
-        return Persistence.createEntityManagerFactory("pandaPU")
+        return Persistence.createEntityManagerFactory(AppConstants.PERSISTENCE_UNIT)
                 .createEntityManager();
     }
 }

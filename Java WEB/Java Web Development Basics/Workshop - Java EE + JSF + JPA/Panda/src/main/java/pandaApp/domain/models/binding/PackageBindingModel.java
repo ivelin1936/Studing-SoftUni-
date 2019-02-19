@@ -1,10 +1,23 @@
 package pandaApp.domain.models.binding;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 public class PackageBindingModel {
 
+    @NotNull
+    @NotBlank(message = "May not be blank")
     private String description;
+
+    @NotNull
     private Double weight;
+
+    @NotNull
+    @NotBlank(message = "May not be blank")
     private String shippingAddress;
+
+    @NotNull
+    @NotBlank(message = "May not be blank")
     private String recipient;
 
     public PackageBindingModel() {

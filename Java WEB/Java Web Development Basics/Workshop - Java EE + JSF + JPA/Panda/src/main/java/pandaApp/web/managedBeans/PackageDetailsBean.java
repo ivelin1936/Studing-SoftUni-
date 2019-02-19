@@ -5,17 +5,20 @@ import pandaApp.domain.entities.enumerations.Status;
 import pandaApp.domain.models.service.PackageServiceModel;
 import pandaApp.domain.models.view.PackageDetailsViewModel;
 import pandaApp.service.packageService.PackageService;
+import pandaApp.utils.AppConstants;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
 
 @Named
 @RequestScoped
-public class PackageDetailsBean {
+public class PackageDetailsBean implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private PackageDetailsViewModel detailsViewModel;
 
@@ -38,7 +41,7 @@ public class PackageDetailsBean {
         String packageId = FacesContext.getCurrentInstance()
                 .getExternalContext()
                 .getRequestParameterMap()
-                .get("packageId");
+                .get(AppConstants.PACKAGE_ID);
 
         //If dont exist package with passed ID, packageService will throw IllegalArgumentException
         try {
@@ -49,11 +52,11 @@ public class PackageDetailsBean {
             //Set recipient username
             this.detailsViewModel.setRecipient(packageServiceModel.getRecipient().getUsername());
 
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(AppConstants.DATE_FORMATTER_PATTERN);
             //If have delivery date -> format it, otherwise set to N/A
-            String formatDate = packageServiceModel.getEstimatedDeliveryDate() == null ? "N/A"
-                    : packageServiceModel.getStatus().equals(Status.Delivered) ? "Delivered"
-                    : packageServiceModel.getStatus().equals(Status.Acquired) ? "Delivered"
+            String formatDate = packageServiceModel.getEstimatedDeliveryDate() == null ? AppConstants.NO_DATE
+                    : packageServiceModel.getStatus().equals(Status.Delivered) ? AppConstants.DELIVERED_PACKAGE_DATE
+                    : packageServiceModel.getStatus().equals(Status.Acquired) ? AppConstants.DELIVERED_PACKAGE_DATE
                     : packageServiceModel.getEstimatedDeliveryDate().format(formatter);
             //Set estimate delivery date
             this.detailsViewModel.setEstimatedDeliveryDate(formatDate);

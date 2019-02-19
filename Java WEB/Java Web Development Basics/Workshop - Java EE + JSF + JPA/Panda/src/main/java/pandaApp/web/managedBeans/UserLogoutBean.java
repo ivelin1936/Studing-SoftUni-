@@ -6,10 +6,12 @@ import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.Serializable;
 
 @Named
 @RequestScoped
-public class UserLogoutBean {
+public class UserLogoutBean implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     //Logout action
     public void logout() throws IOException {

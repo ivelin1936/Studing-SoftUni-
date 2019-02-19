@@ -4,17 +4,20 @@ import org.modelmapper.ModelMapper;
 import pandaApp.domain.models.service.ReceiptServiceModel;
 import pandaApp.domain.models.view.ReceiptDetailsViewModel;
 import pandaApp.service.receiptService.ReceiptService;
+import pandaApp.utils.AppConstants;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
 
 @Named
 @RequestScoped
-public class ReceiptDetailsBean {
+public class ReceiptDetailsBean implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private ReceiptDetailsViewModel receiptDetailsViewModel;
 
@@ -37,7 +40,7 @@ public class ReceiptDetailsBean {
         String receiptId = FacesContext.getCurrentInstance()
                 .getExternalContext()
                 .getRequestParameterMap()
-                .get("id");
+                .get(AppConstants.ID);
 
         try {
             //Find receipt by passed receiptId
@@ -51,7 +54,7 @@ public class ReceiptDetailsBean {
                     .setRecipient(receiptServiceModel.getRecipient().getUsername());
 
             //Format date with wanted formatter
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(AppConstants.DATE_FORMATTER_PATTERN);
             this.receiptDetailsViewModel.setIssuedOn(receiptServiceModel.getIssuedOn().format(formatter));
         } catch (IllegalArgumentException ex) {
             //LOG here...

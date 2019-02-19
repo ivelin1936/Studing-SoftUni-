@@ -2,30 +2,32 @@ package pandaApp.repository.userRepo;
 
 import pandaApp.domain.entities.User;
 import pandaApp.repository.genericRepo.GenericRepositoryImpl;
+import pandaApp.utils.AppConstants;
 
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class UserRepositoryImpl extends GenericRepositoryImpl<User, String> implements UserRepository {
 
-    private EntityManager entityManager;
+    private static final Logger LOG = Logger.getLogger(UserRepositoryImpl.class.getName());
 
-    @Inject
-    public UserRepositoryImpl(EntityManager entityManager) {
-        this.entityManager = entityManager;
+    @Override
+    protected Logger logger() {
+        return LOG;
     }
 
     @Override
     public User findByUsername(String username) {
         try {
-            User user = this.entityManager
+            User user = super.entityManager
                     .createQuery("SELECT u FROM User u WHERE u.username = :username", User.class)
-                    .setParameter("username", username)
+                    .setParameter(AppConstants.USERNAME, username)
                     .getSingleResult();
 
             return user;
         } catch (Exception ex) {
             //LOG here...
+            logger().log(Level.SEVERE, "Invalid arguments for find User entity provided: " + username, ex);
             return null;
         }
     }
@@ -33,11 +35,12 @@ public class UserRepositoryImpl extends GenericRepositoryImpl<User, String> impl
     @Override
     public Long size() {
         try {
-            return this.entityManager
+            return super.entityManager
                     .createQuery("SELECT count(u) FROM User u", Long.class)
                     .getSingleResult();
         } catch (Exception ex) {
             //LOG Here...
+            logger().log(Level.SEVERE, "Failed to get Users count: " + ex);
             return Long.MIN_VALUE;
         }
     }
