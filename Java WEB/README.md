@@ -1,5 +1,6 @@
-Comparing RESOURCE_LOCAL and JTA persistence contexts
-With <persistence-unit transaction-type="RESOURCE_LOCAL"> YOU are responsible for EntityManager (PersistenceContext/Cache) creating and tracking...
+### Comparing RESOURCE_LOCAL and JTA persistence contexts
+
+#### With <persistence-unit transaction-type="RESOURCE_LOCAL"> YOU are responsible for EntityManager (PersistenceContext/Cache) creating and tracking...
 
 You must use the EntityManagerFactory to get an EntityManager
 The resulting EntityManager instance is a PersistenceContext/Cache
@@ -10,7 +11,7 @@ Calling entityManagerFactory.createEntityManager() twice results in two separate
 It is almost never a good idea to have more than one instance of an EntityManager in use (don't create a second one unless you've destroyed the first)
 
 
-With <persistence-unit transaction-type="JTA"> the CONTAINER will do EntityManager (PersistenceContext/Cache) creating and tracking...
+#### With <persistence-unit transaction-type="JTA"> the CONTAINER will do EntityManager (PersistenceContext/Cache) creating and tracking...
 
 You cannot use the EntityManagerFactory to get an EntityManager
 You can only get an EntityManager supplied by the container
