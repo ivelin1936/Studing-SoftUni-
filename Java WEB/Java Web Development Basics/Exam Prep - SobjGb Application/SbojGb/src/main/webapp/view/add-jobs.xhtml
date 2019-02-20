@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-content">
+
+        <main>
+            <hr class="my-3"/>
+            <h1 class="text-center">Add Job</h1>
+            <hr class="hr-3"/>
+
+            <h:form styleClass="mx-auto w-15" method="post" action="/jobs/add">
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel for="sector" styleClass="h3 mb-2" value="Sector"/>
+                    </div>
+                    <!--<h:inputText styleClass="form-control" id="sector" value="#{addJobBean.bindingModel.sector}" label="Sector"/>-->
+                    <h:selectOneMenu styleClass="custom-select" id="sector" value="#{addJobBean.bindingModel.sector}" label="Sector">
+                        <f:selectItem itemLabel="-- Choose Sector --" itemDisabled="true"/>
+                        <f:selectItems value="#{addJobBean.jobSectors}" var="sector"
+                                       itemValue="#{sector}" itemLabel="#{sector}" />
+                    </h:selectOneMenu>
+                    <h:message id="m1" for="sector" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel for="profession" styleClass="h3 mb-2" value="Profession"/>
+                    </div>
+                    <h:inputText styleClass="form-control" id="profession" value="#{addJobBean.bindingModel.profession}" label="Profession"/>
+                    <h:message id="m2" for="profession" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel for="salary" styleClass="h3 mb-2" value="Salary"/>
+                    </div>
+                    <h:inputText styleClass="form-control" id="salary" value="#{addJobBean.bindingModel.salary}" label="Salary"/>
+                    <h:message id="m3" for="salary" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel for="description" styleClass="h3 mb-2" value="Description"/>
+                    </div>
+                    <h:inputTextarea rows="4" styleClass="form-control" id="description" value="#{addJobBean.bindingModel.description}" label="Description"/>
+                    <h:message id="m4" for="description" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <div class="button-holder d-flex justify-content-center">
+                    <h:commandButton styleClass="btn btn-info text-white" action="#{addJobBean.add}" value="Add"/>
+                </div>
+            </h:form>
+
+            <hr class="my-3"/>
+        </main>
+
+    </ui:define>
+</ui:composition>
+
+</html>

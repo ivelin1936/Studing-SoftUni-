@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-content">
+
+        <main>
+            <hr class="my-3"/>
+            <h1 class="text-center">Register</h1>
+            <hr class="hr-3"/>
+            <h:form styleClass="mx-auto w-15">
+                <!-- Show validation failed error message -->
+                <h:messages globalOnly="true" style="color: red; margin: 8px; text-align: center" />
+
+
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel for="username" styleClass="h3 mb-2" value="Username"/>
+                    </div>
+                    <h:inputText styleClass="form-control" id="username"
+                                 value="#{userRegisterBean.userRegisterBindingModel.username}" label="Username"/>
+                    <h:message id="m1" for="username" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel for="password" class="h3 mb-2" value="Password"/>
+                    </div>
+                    <h:inputSecret styleClass="form-control" id="password"
+                                   value="#{userRegisterBean.userRegisterBindingModel.password}" label="Password"/>
+                    <h:message id="m2" for="password" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel for="confirmPassword" class="h3 mb-2" value="Confirm Password"/>
+                    </div>
+                    <h:inputSecret styleClass="form-control" id="confirmPassword"
+                                   value="#{userRegisterBean.userRegisterBindingModel.confirmPassword}" label="Confirm Password"/>
+                    <h:message id="m3" for="confirmPassword" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel for="email" class="h3 mb-2" value="Email"/>
+                    </div>
+                    <h:inputText styleClass="form-control" id="email"
+                                 value="#{userRegisterBean.userRegisterBindingModel.email}" label="Email"/>
+                    <h:message id="m4" for="email" style="color:red; margin: 0 auto;"/>
+                </div>
+
+                <div class="button-holder d-flex justify-content-center">
+                    <h:commandButton action="#{userRegisterBean.register}" styleClass="btn btn-info text-white"
+                                     value="Register"/>
+                </div>
+            </h:form>
+            <hr class="my-3"/>
+        </main>
+
+    </ui:define>
+</ui:composition>
+
+</html>
