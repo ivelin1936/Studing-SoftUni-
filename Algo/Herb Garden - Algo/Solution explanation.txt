@@ -1,0 +1,45 @@
+Herb Garden Solution - Console Application
+
+ - Read input plants from the console (input example "2, 7, 5, 3")
+	- split by pattern (", ")
+	- map every element to integer
+	- return an array containing the elements of this stream
+	
+ - On second row reading an integer representing the number of days over which we're trying to maximize 
+	the number of total leaves we can collect. This is also equal to the number of times we will harvest 
+	a plant, since we harvest one each day.
+	
+ - Create method herbGarden(int[] plants, int numberOfDays); which return an integer representing the 
+	maximum total number of leaves you can harvest in the given number of days.
+	- Initialize an integer variable (int totalHarvestedLeaves = 0;), which will hold the total harvested leaves.
+		It's primitive type, so by default will be equal to 0, but to be clear we will initialize it equal to zero.
+	- With for loop we will go through every day 
+		1. incrementing totalHarvestedLeaves variable with return value of harvest(plants) method.
+		2. Every night, each of the plants grows 2 new leaves using growsPlants(plants); method.
+	- Return totalHarvestedLeaves
+	
+ - Create method findBiggestPlantIndex(int[] plants), which accept as parrameters an integer array of all plants
+	and find and return index of the biggest plant; This is also equal to the index of the biggest plant, which we will harvest,
+	because for maximum total number of leaves we can harvest in the given number of days, we need to harvest every day 
+	the biggest plant for optimal solution.
+	- Initialize an integer variable (int biggestPlantIndex = 0;), which will hold the index of the biggest plant.
+	- Using for loop, which starting from "int currentPlantIndex = 1", iterate till currentPlantIndex is smaller 
+	  than plants array length, with step equal to 1; For every plant we make a check if the plant's leaves on the current index
+	  are more than plant's leaves on the biggestPlantIndex. If this condition is true - biggestPlantIndex = currentPlantIndex;
+	- Return biggestPlantIndex;
+	
+ - Create method harvest(int[] plants) 
+	- Find index of the biggest plant with using findBiggestPlantIndex(plants) method
+	- Harvest half of it's leaves (rounded down) and keep the result into harvestedLeaves variable.
+	- Reduce the plant's leaves of this position by harvestedLeaves
+	- Return harvested leaves.
+ 
+ - Create method growsPlants(int[] plants) 
+	- Using for loop, which iterate over the plants and incrementing every plant's leaves with 2
+	
+ - Print result of herbGarden(plants, days) - an integer representing the maximum total number of leaves
+	you can harvest in the given number of days.
+
+Example input:
+2, 7, 5, 3
+3
