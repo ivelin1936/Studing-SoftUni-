@@ -21,28 +21,28 @@
 
                 <div class="form-group">
                     <h:outputLabel for="username" styleClass="text-exodia" value="Username"/>
-                    <h:inputText styleClass="form-control" id="username" placeholder="Username..."
+                    <h:inputText styleClass="form-control" id="username" a:placeholder="Username..."
                                  value="#{userRegisterBean.userRegisterBindingModel.username}" label="Username"/>
                     <h:message id="m1" for="username" style="color:red; margin: 0 auto;"/>
                 </div>
 
                 <div class="form-group">
                     <h:outputLabel for="password" styleClass="text-exodia" value="Password"/>
-                    <h:inputSecret class="form-control" id="password" placeholder="Password..."
+                    <h:inputSecret class="form-control" id="password" a:placeholder="Password..."
                                    value="#{userRegisterBean.userRegisterBindingModel.password}" label="Password"/>
                     <h:message id="m2" for="password" style="color:red; margin: 0 auto;"/>
                 </div>
 
                 <div class="form-group">
                     <h:outputLabel for="confirmPassword" styleClass="text-exodia" value="Confirm Password"/>
-                    <h:inputSecret class="form-control" id="confirmPassword" placeholder="Confirm Password..."
+                    <h:inputSecret class="form-control" id="confirmPassword" a:placeholder="Confirm Password..."
                                    value="#{userRegisterBean.userRegisterBindingModel.confirmPassword}" label="Confirm Password"/>
                     <h:message id="m3" for="confirmPassword" style="color:red; margin: 0 auto;"/>
                 </div>
 
                 <div class="form-group">
                     <h:outputLabel for="email" styleClass="text-exodia" value="Email"/>
-                    <h:inputText class="form-control" id="email" a:placeholder="example@mail.com"
+                    <h:inputText class="form-control" id="email" a:placeholder="Email..."
                                  value="#{userRegisterBean.userRegisterBindingModel.email}" label="Email"/>
                     <h:message id="m4" for="email" style="color:red; margin: 0 auto;"/>
                 </div>

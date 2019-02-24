@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 
 <ui:composition template="templates/base-layout.xhtml">
     <ui:define name="main-content">
@@ -23,7 +23,7 @@
                     <div class="label-center d-flex justify-content-center">
                         <h:outputLabel for="title" styleClass="text-exodia" value="Title"/>
                     </div>
-                    <h:inputText styleClass="form-control" id="title" placeholder="Title..." label="Title"
+                    <h:inputText styleClass="form-control" id="title" a:placeholder="Title..." label="Title"
                                  value="#{scheduleBean.bindingModel.title}"/>
                     <h:message id="m1" for="title" style="color:red; margin: 0 auto;"/>
                 </div>
@@ -32,7 +32,7 @@
                     <div class="label-center d-flex justify-content-center">
                         <h:outputLabel for="content" styleClass="text-exodia h3" value="Content"/>
                     </div>
-                    <h:inputTextarea styleClass="form-control" rows="10" id="content" placeholder="Content..." label="Content"
+                    <h:inputTextarea styleClass="form-control" rows="10" id="content" a:placeholder="Content..." label="Content"
                                  value="#{scheduleBean.bindingModel.content}"/>
                     <h:message id="m2" for="content" style="color:red; margin: 0 auto;"/>
                 </div>
