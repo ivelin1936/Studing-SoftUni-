@@ -1,9 +1,18 @@
 package com.softuni.exodia.domain.models.service;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 public class DocumentServiceModel {
 
     private String id;
+
+    @NotNull
+    @NotEmpty(message = "Cannot be empty.")
     private String title;
+
+    @NotNull
+    @NotEmpty(message = "Cannot be empty.")
     private String content;
 
     public DocumentServiceModel() {

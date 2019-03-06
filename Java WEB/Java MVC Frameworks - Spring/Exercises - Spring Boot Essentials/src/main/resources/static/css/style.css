@@ -20,3 +20,7 @@ textarea {
     grid-template-rows: auto;
     grid-gap: 1.5rem 3rem;
 }
+
+.help-block {
+    color: red;
+}

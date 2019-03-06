@@ -7,10 +7,13 @@ import com.softuni.exodia.service.documentService.DocumentService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 @Controller
 public class DocumentController extends BaseController {
@@ -30,11 +33,20 @@ public class DocumentController extends BaseController {
         if (session.getAttribute("username") == null) {
             return this.redirect("login");
         }
+        modelAndView.addObject("bindingModel", new DocumentScheduleBindingModel());
         return this.view("schedule", modelAndView);
     }
 
     @PostMapping("/schedule")
-    public ModelAndView shcedule(@ModelAttribute(name = "bindingModel") DocumentScheduleBindingModel bindingModel) {
+    public ModelAndView shcedule(@ModelAttribute(name = "bindingModel") @Valid DocumentScheduleBindingModel bindingModel,
+                                 BindingResult bindingResult,
+                                 ModelAndView modelAndView,
+                                 RedirectAttributes redirectAttributes) {
+        //check for errors
+        if (bindingResult.hasErrors()) {
+            return this.view("schedule", modelAndView);
+        }
+
         DocumentServiceModel serviceModel = this.modelMapper.map(bindingModel, DocumentServiceModel.class);
 
         try {
@@ -42,6 +54,9 @@ public class DocumentController extends BaseController {
             return this.redirect("details/" + document.getId());
         } catch (IllegalArgumentException iae) {
             iae.printStackTrace();
+
+            redirectAttributes.addFlashAttribute("title", bindingModel.getTitle());
+            redirectAttributes.addFlashAttribute("content", bindingModel.getContent());
             return this.redirect("schedule");
         }
     }

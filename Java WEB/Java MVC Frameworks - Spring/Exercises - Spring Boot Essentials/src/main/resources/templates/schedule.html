@@ -14,19 +14,21 @@
         <h1 class="text-center text-exodia">Schedule</h1>
         <hr class="bg-exodia hr-2 w-75"/>
 
-        <form class="mx-auto w-75" method="post" th:action="@{/schedule}">
+        <form class="mx-auto w-75" method="post" th:action="@{/schedule}" th:object="${bindingModel}">
             <div class="form-group">
                 <div class="label-center d-flex justify-content-center">
                     <label for="title" class="text-exodia h3">Title</label>
                 </div>
-                <input type="text" class="form-control" id="title" placeholder="Title..." name="title">
+                <input type="text" class="form-control" id="title" placeholder="Title..." name="title" th:value="${title}" th:field="*{title}">
+                <span th:if="${#fields.hasErrors('title')}" class="help-block" th:errors="*{title}"></span>
             </div>
 
             <div class="form-group">
                 <div class="label-center d-flex justify-content-center">
                     <label for="content" class="text-exodia h3">Content</label>
                 </div>
-                <textarea class="form-control" id="content" name="content" rows="10" placeholder="Content..."></textarea>
+                <textarea class="form-control" id="content" name="content" rows="10" placeholder="Content..." th:text="${content}" th:field="*{content}"></textarea>
+                <span th:if="${#fields.hasErrors('content')}" class="help-block" th:errors="*{content}"></span>
             </div>
 
             <hr class="bg-exodia hr-2"/>
