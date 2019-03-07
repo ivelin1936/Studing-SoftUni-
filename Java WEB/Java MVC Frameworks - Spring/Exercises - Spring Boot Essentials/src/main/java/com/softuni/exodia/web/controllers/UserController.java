@@ -7,6 +7,7 @@ import com.softuni.exodia.service.userService.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -54,7 +55,6 @@ public class UserController extends BaseController {
         if (bindingResult.hasErrors()) {
             return this.view("register", modelAndView);
         }
-
         if (!bindingModel.getPassword().equals(bindingModel.getConfirmPassword())) {
             redirectAttributes.addFlashAttribute("username", bindingModel.getUsername());
             redirectAttributes.addFlashAttribute("email", bindingModel.getEmail());
@@ -88,7 +88,8 @@ public class UserController extends BaseController {
     public ModelAndView login(@ModelAttribute(name = "bindingModel") @Valid UserLoginBindingModel bindingModel,
                               BindingResult bindingResult,
                               ModelAndView modelAndView,
-                              HttpSession session) {
+                              HttpSession session,
+                              ModelMap model) {
         if (session.getAttribute("username") != null) {
             return this.redirect("home");
         }
@@ -102,6 +103,7 @@ public class UserController extends BaseController {
                 .login(this.modelMapper.map(bindingModel, UserServiceModel.class));
         if (serviceModel == null) {
             //Show invalid credentials error message
+//            modelAndView.addObject("errorMessage", "Invalid credentials!");
             return this.redirect("login");
         }
 

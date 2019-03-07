@@ -15,6 +15,8 @@
         <h1 class="text-center text-exodia">Login</h1>
         <hr class="bg-exodia w-25 hr-2"/>
 
+        <!--<span th:if="${errorMessage}" class="help-block" th:value="${errorMessage}"></span>-->
+
         <form class="mx-auto w-25" method="post" th:action="@{/login}" th:object="${bindingModel}">
             <div class="form-group">
                 <label for="username" class="text-exodia">Username</label>
