@@ -5,6 +5,6 @@ public final class MyConstants {
     private MyConstants() {
     }
 
-    public static final String MY_EMAIL = "softuniapplicationtest@gmail.com";
-    public static final String MY_PASSWORD = "super_secret";
+    public static final String MY_EMAIL = "your_email@gmail.com";
+    public static final String MY_PASSWORD = "your_password_here";
 }

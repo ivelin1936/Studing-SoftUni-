@@ -38,24 +38,24 @@ public class ContactController extends BaseController {
     }
 
     @PostMapping("/contact")
-    public ModelAndView contactAction(@ModelAttribute(name = "bindingModel") ContactFormBindingModel bindingModel,
-                                      ModelAndView modelAndView) {
+    public ModelAndView contactAction(@ModelAttribute(name = "bindingModel") ContactFormBindingModel bindingModel) {
 
         // Create a Simple MailMessage.
         SimpleMailMessage message = new SimpleMailMessage();
 
         message.setTo(MyConstants.MY_EMAIL);
-//        message.setFrom(bindingModel.getFrom());
+        message.setFrom(bindingModel.getFrom());
         message.setSubject(bindingModel.getSubject());
         message.setText(bindingModel.getMessage());
 
         try {
             // Send Message!
             this.emailSender.send(message);
+            return this.redirect("home");
         } catch (MailException e) {
             logger.error("Error Sending email: " + e.getMessage());
+            //Something went wrong
+            return this.redirect("contact");
         }
-
-        return this.view("home", modelAndView);
     }
 }
