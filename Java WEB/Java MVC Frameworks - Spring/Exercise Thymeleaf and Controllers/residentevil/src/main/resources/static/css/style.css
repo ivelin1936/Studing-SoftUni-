@@ -1,0 +1,16 @@
+.bg-re {
+    background-color: #900C45;
+    color: white;
+}
+
+.has-danger input, .has-danger textarea {
+    border-color: red;
+}
+
+.has-danger small {
+    color: red;
+}
+
+small.has-danger, label.has-danger{
+    color: red;
+}
